@@ -500,8 +500,8 @@ section {
             margin-bottom: 1.875rem; }
             #about .wrapper .right-wrapper .content ._re_uy_iu .progress .my-bars {
               background: #E31C25;
-              max-width: 80%;
-              width: 80%; }
+              max-width: 100%;
+              width: 100%; }
       #about .wrapper .right-wrapper ._yt_er_ol {
         display: flex;
         flex-flow: column nowrap;
