@@ -743,9 +743,9 @@ section {
               color: white; /* Change bullet color to white */
             }
 
-            #about .wrapper .left-three-wrapper .content ._re_uy_iu ul li span,
-            #about .wrapper .center-three-wrapper .content ._re_uy_iu ul li span,
-            #about .wrapper .right-three-wrapper .content ._re_uy_iu ul li span {
+            #about .wrapper .left-three-wrapper .content ._re_uy_iu ul li p,
+            #about .wrapper .center-three-wrapper .content ._re_uy_iu ul li p,
+            #about .wrapper .right-three-wrapper .content ._re_uy_iu ul li p {
               list-style-type: disc;
               color: #9e9e9e; /* Adjust color as needed */
               font-size: 1rem; /* Adjust font size as needed */
