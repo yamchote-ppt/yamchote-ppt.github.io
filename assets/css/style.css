@@ -484,10 +484,17 @@ section {
           @media (min-width: 576px) and (max-width: 767.98px) {
             #about .wrapper .right-wrapper .content ._re_uy_iu {
               margin: .625rem 0; } }
+          #about .wrapper .right-wrapper .content ._re_uy_iu h5 {
+            display: flex;
+            flex: 1 1 100%;
+            align-items: center;
+            color: #ff0000;;
+            justify-content: space-between; }
           #about .wrapper .right-wrapper .content ._re_uy_iu ._ol_ew_xs {
             display: flex;
             flex: 1 1 100%;
             align-items: center;
+            color: #ffffff;
             justify-content: space-between; }
             #about .wrapper .right-wrapper .content ._re_uy_iu ._ol_ew_xs span {
               font-size: 1rem;
@@ -636,18 +643,18 @@ section {
             }
             
             @media (min-width: 768px) and (max-width: 991.98px) {
-              #about .wrapper .left-three-wrapper .content .title h2,
-              #about .wrapper .center-three-wrapper .content .title h2,
-              #about .wrapper .right-three-wrapper .content .title h2 {
+              #about .wrapper .left-three-wrapper .content .title h3,
+              #about .wrapper .center-three-wrapper .content .title h3,
+              #about .wrapper .right-three-wrapper .content .title h3 {
                 font-size: 2rem;
                 line-height: 2.375rem;
                 margin-bottom: .625rem;
               }
             }
             
-            #about .wrapper .left-three-wrapper .content .title h2 span,
-            #about .wrapper .center-three-wrapper .content .title h2 span,
-            #about .wrapper .right-three-wrapper .content .title h2 span {
+            #about .wrapper .left-three-wrapper .content .title h3 span,
+            #about .wrapper .center-three-wrapper .content .title h3 span,
+            #about .wrapper .right-three-wrapper .content .title h3 span {
               color: #E31C25;
             }
             
