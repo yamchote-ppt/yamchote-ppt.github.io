@@ -29,7 +29,7 @@
         </div>
             <!-- =================================********================================= -->
             <section id="home">
-                <header>
+                <header >
                     <div class="container">
                         <div class="main-nav">
                             <div class="logo">
@@ -44,12 +44,14 @@
                                     <li><a><i class="flaticon-dribbble"></i></a></li>
                                 </ul>
                             </div>
-                            <div onclick="show_menu()" class="my-toogle">
+                            <div onclick="show_menu()" class="my-toogle" style="position: fixed;">
                                 <span><i class="flaticon-menu"></i></span>
                             </div>
                         </div>
                     </div>
                 </header>
+            <!-- =================================********================================= -->
+
                 <div class="container">
                     <div class="row">
                         <div class="my-wrapper">
@@ -183,6 +185,38 @@
                                                     Studied and gave a talk about current data science and AI tools: Streamlit and Langchain
                                                 </p>
                                             </li>
+
+                                            <li>
+                                                <h4>Invited Mathematics and Computer Teacher</h4>
+                                                <h6>Chanpradittaram-Wittayakom School</h6>
+                                                <span>Oct 2023 – Mar 2024</span>
+                                                <p>
+                                                    Taught Scratch programming to M.1 students for game design<br>
+                                                    Taught Python programming to M.4 students for language processing<br>
+                                                    Taught special course on competitive mathematics to prepare M.1 - M.3 students for international mathematics examination
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <h4>Research Assistant and Assistant Data Scientist</h4>
+                                                <h6>I3-Lab, Faculty of ICT, Mahidol University, supported by Western Digital</h6>
+                                                <span>Aug 2022 – Dec 2023</span>
+                                                <p>
+                                                    Worked on a data science project in the manufacturing for Western Digital<br>
+                                                    Researched and implemented weak supervision technique to improve the prediction accuracy in uncertainty pipeline
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <h4>Data Analyst</h4>
+                                                <h6>KPMG Phoomchai Audit, Ltd.</h6>
+                                                <span>Oct 2020 – Mar 2021</span>
+                                                <p>
+                                                    Prepared dashboards using Power BI from clients’ data<br>
+                                                    Applied analytics to find business insights and audit insight from big data<br>
+                                                    Implemented optimization programming by Python to reducing routine time in the audit report from 5 - 10 minutes per job to 1 - 2 second per job 
+                                                </p>
+                                            </li>
                                         </ol>
                                     </div>
                                 </div>
@@ -277,7 +311,10 @@
                                 <div class="content">
                                     <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" id="research-template" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="true">Research</a>
+                                            <a class="nav-link active" id="public-template" data-toggle="tab" href="#public" role="tab" aria-controls="public" aria-selected="true">Publication</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="research-template" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="true">Research</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="job-template" data-toggle="tab" href="#job" role="tab" aria-controls="job" aria-selected="true">Job</a>
@@ -288,14 +325,21 @@
                                         <li class="nav-item">
                                             <a class="nav-link" id="project-template" data-toggle="tab" href="#project" role="tab" aria-controls="project" aria-selected="true">Project</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="public-template" data-toggle="tab" href="#public" role="tab" aria-controls="public" aria-selected="true">Publication</a>
-                                        </li>
                                     </ul>
 
                                     <div class="tab-content" id="myTabContent">
                                         <!-- ------------***----------- -->
-                                        <div class="tab-pane fade show active" id="research" role="tabpanel" aria-labelledby="research-template">
+                                        <div class="tab-pane fade show active" id="public" role="tabpanel" aria-labelledby="public-template">
+                                            <!-- <div class="content-list"> -->
+                                                <ol>
+                                                    <li style="color: white;">
+                                                        <mark>(1)</mark> <a href="https://www.researchgate.net/publication/349103793_Generalized_Lojasiewicz_Inequality_in_Expansions_of_the_Real_Field">Generalized Lojasiewicz Inequality in expansions of the real field</a> (with Athipat Thamrongthanyalak), Proceedings of Annual Pure and Applied Mathematics Conference (2020), 244-251.
+                                                    </li>
+                                                </ol>
+                                            <!-- </div> -->
+                                        </div>
+                                        <!-- ------------***----------- -->
+                                        <div class="tab-pane fade " id="research" role="tabpanel" aria-labelledby="research-template">
                                             <div class="content-list">
                                                 <ol>
                                                     <li>
@@ -331,11 +375,11 @@
                                         <!-- ------------***----------- -->
                                         <div class="tab-pane fade " id="teaching" role="tabpanel" aria-labelledby="teaching-template">
                                             <div class="content-list">
-                                               <ol>
+                                                <ol>
                                                     <li>
                                                         <div class="_ok-vd_zs">
                                                             <figure>
-                                                                <img src="assets/images/abt/4.jpg">
+                                                                <img src="assets/images/mathJPV24/mathJPV24_6.jpg">
                                                                 <div class="inner-content">
                                                                     <a href="#">Live Preview</a>
                                                                 </div>
@@ -349,7 +393,7 @@
                                         <!-- ------------***----------- -->
                                         <div class="tab-pane fade " id="project" role="tabpanel" aria-labelledby="project-template">
                                             <div class="content-list">
-                                               <ol>
+                                                <ol>
                                                     <li>
                                                         <div class="_ok-vd_zs">
                                                             <figure>
@@ -365,24 +409,7 @@
                                             </div>
                                         </div>
                                         <!-- ------------***----------- -->
-                                        <div class="tab-pane fade " id="public" role="tabpanel" aria-labelledby="public-template">
-                                            <div class="content-list">
-                                               <ol>
-                                                    <li>
-                                                        <div class="_ok-vd_zs">
-                                                            <figure>
-                                                                <img src="assets/images/abt/6.jpg">
-                                                                <div class="inner-content">
-                                                                    <a href="#">Live Preview</a>
-                                                                </div>
-                                                            </figure>
-                                                        </div>
-                                                    </li>
-                                                    
-                                                </ol>
-                                            </div>
-                                        </div>
-                                        <!-- ------------***----------- -->
+                                        
                                     </div>
                                 </div>
                             </div>
