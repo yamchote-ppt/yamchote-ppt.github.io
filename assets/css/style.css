@@ -321,94 +321,152 @@ section {
         #home .my-wrapper .name-box h1 span {
           color: #E31C25; }
 
-#about {
-  background-color: #000;
-  position: relative;
-  overflow: hidden; }
-  @media screen and (max-width: 575.98px) {
-    #about {
-      height: auto; } }
-  #about .copy-right {
-    position: absolute;
-    bottom: 2.5rem;
-    z-index: 2;
-    left: 5%; }
-    #about .copy-right h6 {
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 400;
-      letter-spacing: .5px; }
-  #about .wrapper {
-    display: flex;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    width: 100%;
-    padding: 3.125rem 0;
-    position: relative;
-    transition: all ease .5s;
-    z-index: 2; }
-    @media screen and (max-width: 575.98px) {
-      #about .wrapper {
-        padding: 1.25rem 0; } }
-    @media (min-width: 767px) and (max-width: 991.98px) {
-      #about .wrapper {
-        padding: 0; } }
-    #about .wrapper .inter {
-      position: absolute;
-      left: -15%;
-      top: 25%;
-      z-index: 2;
-      transform: rotate(-90deg); }
-      @media screen and (max-width: 575.98px) {
-        #about .wrapper .inter {
-          display: none; } }
-      #about .wrapper .inter h6 {
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 400;
-        letter-spacing: .5px; }
-    #about .wrapper .left-wrapper {
-      display: flex;
-      flex-direction: column;
-      flex-flow: column nowrap;
-      width: calc(50%);
-      max-width: calc(50%);
-      float: left;
-      padding: .9375rem;
-      position: relative; }
-      @media screen and (max-width: 767.98px) {
-        #about .wrapper .left-wrapper {
-          width: calc(100%);
-          max-width: calc(100%); } }
-      #about .wrapper .left-wrapper .content {
-        display: block;
-        position: relative;
-        padding: .9375rem;
-        margin: 1.25rem 0;
-        transition: all ease .3s; }
-        @media screen and (max-width: 767.98px) {
-          #about .wrapper .left-wrapper .content {
-            margin: 0; } }
-        #about .wrapper .left-wrapper .content .title {
-          display: inline-block;
-          margin: 1.25rem 0;
-          position: relative; }
+          #about {
+            background-color: #000;
+            position: relative;
+            overflow: hidden; 
+          }
+          
+          @media screen and (max-width: 575.98px) {
+            #about {
+              height: auto; 
+            }
+          }
+          
+          #about .copy-right {
+            position: absolute;
+            bottom: 2.5rem;
+            z-index: 2;
+            left: 5%; 
+          }
+          
+          #about .copy-right h6 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: .5px; 
+          }
+          
+          #about .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 100%;
+            max-width: 100%;
+            width: 100%;
+            position: relative;
+            margin: 1.25rem 0;
+            padding: .9375rem;
+            transition: ease .5s; 
+          }
+          
+          @media screen and (max-width: 575.98px) {
+            #about .wrapper {
+              margin: 0; 
+            }
+          }
+          
+          @media (min-width: 767px) and (max-width: 991.98px) {
+            #about .wrapper {
+              padding: 0; 
+            }
+          }
+          
+          #about .wrapper .inter {
+            position: absolute;
+            left: -15%;
+            top: 25%;
+            z-index: 2;
+            transform: rotate(-90deg); 
+          }
+          
+          @media screen and (max-width: 575.98px) {
+            #about .wrapper .inter {
+              display: none; 
+            }
+          }
+          
+          #about .wrapper .inter h6 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: .5px; 
+          }
+          
+          #about .wrapper .left-wrapper,
+          #about .wrapper .right-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-flow: column nowrap;
+            flex: 1 1 50%;
+            width: calc(50%);
+            max-width: calc(50%);
+            padding: .9375rem;
+            position: relative; 
+          }
+          
           @media screen and (max-width: 767.98px) {
-            #about .wrapper .left-wrapper .content .title {
-              margin: 0; } }
-          #about .wrapper .left-wrapper .content .title h4 {
+            #about .wrapper .left-wrapper,
+            #about .wrapper .right-wrapper {
+              flex: 1 1 100%;
+              width: 100%;
+              max-width: 100%;
+            }
+          }
+          
+          #about .wrapper .left-wrapper .content,
+          #about .wrapper .right-wrapper .content {
+            display: block;
+            position: relative;
+            padding: .9375rem;
+            margin: 1.25rem 0;
+            transition: all ease .3s; 
+          }
+          
+          @media screen and (max-width: 767.98px) {
+            #about .wrapper .left-wrapper .content,
+            #about .wrapper .right-wrapper .content {
+              margin: 0; 
+            }
+          }
+          
+          #about .wrapper .left-wrapper .content .title,
+          #about .wrapper .right-wrapper .content .title {
+            display: inline-block;
+            margin: 1.25rem 0;
+            position: relative;
+          }
+          
+          @media screen and (max-width: 767.98px) {
+            #about .wrapper .left-wrapper .content .title,
+            #about .wrapper .right-wrapper .content .title {
+              margin: 0; 
+            }
+          }
+          
+          #about .wrapper .left-wrapper .content .title h4,
+          #about .wrapper .right-wrapper .content .title h4 {
             color: #fff;
             font-size: 1rem;
             display: block;
-            margin: .3125rem 0 3.125rem 0; }
-            @media screen and (max-width: 575.98px) {
-              #about .wrapper .left-wrapper .content .title h4 {
-                margin: 0; } }
-            @media (min-width: 576px) and (max-width: 767.98px) {
-              #about .wrapper .left-wrapper .content .title h4 {
-                margin: .3125rem 0 .625rem 0; } }
-          #about .wrapper .left-wrapper .content .title h2 {
+            margin: .3125rem 0 3.125rem 0; 
+          }
+          
+          @media screen and (max-width: 575.98px) {
+            #about .wrapper .left-wrapper .content .title h4,
+            #about .wrapper .right-wrapper .content .title h4 {
+              margin: 0; 
+            }
+          }
+          
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            #about .wrapper .left-wrapper .content .title h4,
+            #about .wrapper .right-wrapper .content .title h4 {
+              margin: .3125rem 0 .625rem 0; 
+            }
+          }
+          
+          #about .wrapper .left-wrapper .content .title h2,
+          #about .wrapper .right-wrapper .content .title h2 {
             display: block;
             font-size: 2.5rem;
             color: #fff;
@@ -416,38 +474,65 @@ section {
             font-weight: 600;
             line-height: 3.125rem;
             letter-spacing: .0625rem;
-            margin: .3125rem 0 1.875rem 0; }
-            @media screen and (max-width: 575.98px) {
-              #about .wrapper .left-wrapper .content .title h2 {
-                font-size: 1.5625rem;
-                line-height: 2.1875rem;
-                margin: .625rem 0; } }
-            @media (min-width: 576px) and (max-width: 767.98px) {
-              #about .wrapper .left-wrapper .content .title h2 {
-                font-size: 1.875rem;
-                line-height: 2.5rem;
-                margin-bottom: .625rem; } }
-            @media (min-width: 768px) and (max-width: 991.98px) {
-              #about .wrapper .left-wrapper .content .title h2 {
-                font-size: 2rem;
-                line-height: 2.375rem;
-                margin-bottom: .625rem; } }
-            #about .wrapper .left-wrapper .content .title h2 span {
-              color: #E31C25; }
-          #about .wrapper .left-wrapper .content .title p {
+            margin: .3125rem 0 1.875rem 0; 
+          }
+          
+          @media screen and (max-width: 575.98px) {
+            #about .wrapper .left-wrapper .content .title h2,
+            #about .wrapper .right-wrapper .content .title h2 {
+              font-size: 1.5625rem;
+              line-height: 2.1875rem;
+              margin: .625rem 0; 
+            }
+          }
+          
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            #about .wrapper .left-wrapper .content .title h2,
+            #about .wrapper .right-wrapper .content .title h2 {
+              font-size: 1.875rem;
+              line-height: 2.5rem;
+              margin-bottom: .625rem; 
+            }
+          }
+          
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            #about .wrapper .left-wrapper .content .title h2,
+            #about .wrapper .right-wrapper .content .title h2 {
+              font-size: 2rem;
+              line-height: 2.375rem;
+              margin-bottom: .625rem; 
+            }
+          }
+          
+          #about .wrapper .left-wrapper .content .title h2 span,
+          #about .wrapper .right-wrapper .content .title h2 span {
+            color: #E31C25; 
+          }
+          
+          #about .wrapper .left-wrapper .content .title p,
+          #about .wrapper .right-wrapper .content .title p {
             color: #9e9e9e;
             font-size: .9375rem;
             line-height: 1.6875rem;
             display: inline-block;
             margin: 1.25rem 0;
-            text-align: justify; }
-            @media screen and (max-width: 575.98px) {
-              #about .wrapper .left-wrapper .content .title p {
-                font-size: .875rem;
-                margin: .3125rem 0; } }
-            @media (min-width: 576px) and (max-width: 767.98px) {
-              #about .wrapper .left-wrapper .content .title p {
-                margin: .3125rem 0; } }
+            text-align: justify; 
+          }
+          
+          @media screen and (max-width: 575.98px) {
+            #about .wrapper .left-wrapper .content .title p,
+            #about .wrapper .right-wrapper .content .title p {
+              font-size: .875rem;
+              margin: .3125rem 0; 
+            }
+          }
+          
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            #about .wrapper .left-wrapper .content .title p,
+            #about .wrapper .right-wrapper .content .title p {
+              margin: .3125rem 0; 
+            }
+          }
     #about .wrapper .right-wrapper {
       display: flex;
       flex-direction: column;
@@ -477,19 +562,33 @@ section {
         #about .wrapper .right-wrapper .content ._re_uy_iu {
           display: inline-block;
           margin: 1.25rem 0;
-          width: 100%; }
+          width: 100%;
+          color:whitesmoke; }
+        #about .wrapper .right-wrapper .content ._re_uy_iu ol,
+        #about .wrapper .right-wrapper .content ._re_uy_iu ol li {
+          display: inline-block;
+          margin: 0.25rem 0;
+          width: 100%;
+          color:whitesmoke; }
           @media screen and (max-width: 575.98px) {
-            #about .wrapper .right-wrapper .content ._re_uy_iu {
-              margin: 0; } }
+            #about .wrapper .right-wrapper .content ._re_uy_iu,
+            #about .wrapper .right-wrapper .content ._re_uy_iu ol,
+            #about .wrapper .right-wrapper .content ._re_uy_iu ol li {
+              margin: 0;
+              color:whitesmoke; } }
           @media (min-width: 576px) and (max-width: 767.98px) {
-            #about .wrapper .right-wrapper .content ._re_uy_iu {
-              margin: .625rem 0; } }
+            #about .wrapper .right-wrapper .content ._re_uy_iu,
+            #about .wrapper .right-wrapper .content ._re_uy_iu ol,
+            #about .wrapper .right-wrapper .content ._re_uy_iu ol li  {
+              margin: .625rem 0;
+              color:whitesmoke; } }
           #about .wrapper .right-wrapper .content ._re_uy_iu h5 {
             display: flex;
             flex: 1 1 100%;
             align-items: center;
             color: #ff0000;;
             justify-content: space-between; }
+            
           #about .wrapper .right-wrapper .content ._re_uy_iu ._ol_ew_xs {
             display: flex;
             flex: 1 1 100%;
@@ -521,7 +620,6 @@ section {
         @media screen and (max-width: 991.98px) {
           #about .wrapper .right-wrapper ._yt_er_ol {
             padding: 0 .9375rem; } }
-
             #about .wrapper {
               display: flex;
               flex-direction: row;
@@ -849,7 +947,8 @@ section {
         font-weight: 400;
         letter-spacing: .5px;
         text-transform: uppercase; }
-    #resume .my-wrapper .left-wrapper, #resume .my-wrapper .right-wrapper {
+    #resume .my-wrapper .left-wrapper,
+    #resume .my-wrapper .right-wrapper {
       display: flex;
       flex-direction: column;
       flex-flow: column nowrap;
@@ -859,21 +958,25 @@ section {
       padding: .9375rem;
       position: relative; }
       @media screen and (max-width: 767.98px) {
-        #resume .my-wrapper .left-wrapper, #resume .my-wrapper .right-wrapper {
+        #resume .my-wrapper .left-wrapper, 
+        #resume .my-wrapper .right-wrapper {
           flex: 1 1 100%;
           width: calc(100%);
           max-width: calc(100%); } }
-      #resume .my-wrapper .left-wrapper .content, #resume .my-wrapper .right-wrapper .content {
+      #resume .my-wrapper .left-wrapper .content, 
+      #resume .my-wrapper .right-wrapper .content {
         display: block;
         position: relative;
         padding: .9375rem;
         margin: 1.25rem 0;
         transition: all ease .3s; }
         @media screen and (max-width: 575.98px) {
-          #resume .my-wrapper .left-wrapper .content, #resume .my-wrapper .right-wrapper .content {
+          #resume .my-wrapper .left-wrapper .content, 
+          #resume .my-wrapper .right-wrapper .content {
             padding: 0;
             margin: .625rem 0; } }
-        #resume .my-wrapper .left-wrapper .content .head, #resume .my-wrapper .right-wrapper .content .head {
+        #resume .my-wrapper .left-wrapper .content .head, 
+        #resume .my-wrapper .right-wrapper .content .head {
           position: relative;
           text-align: center;
           display: inline-block;
