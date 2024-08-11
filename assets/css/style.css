@@ -517,6 +517,7 @@ section {
           color: #E31C25; }
 
           #about {
+            padding: 1rem 0;
             background-color: #000;
             position: relative;
             overflow: hidden; 
@@ -1263,6 +1264,7 @@ section {
                   line-height: 1.375rem; } }
 
 #portfolio {
+  padding: 1rem 0;
   background: black;
   overflow: hidden; }
   #portfolio .copy-right {
