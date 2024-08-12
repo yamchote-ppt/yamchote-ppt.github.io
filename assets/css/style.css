@@ -517,7 +517,7 @@ section {
           color: #E31C25; }
 
           #about {
-            padding: 1rem 0;
+            padding: 0rem 0;
             background-color: #000;
             position: relative;
             overflow: hidden; 
@@ -1264,8 +1264,8 @@ section {
                   line-height: 1.375rem; } }
 
 #portfolio {
-  padding: 1rem 0;
-  background: black;
+  padding: 0rem 0;
+  background: #000000;
   overflow: hidden; }
   #portfolio .copy-right {
     position: absolute;
@@ -1278,13 +1278,14 @@ section {
       font-weight: 400;
       letter-spacing: .5px; }
   #portfolio .my-wrapper {
+    /* border-top: 5px solid red; */
+    /* border */
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 100%;
     max-width: 100%;
     width: 100%;
-    position: relative;
-    margin: 1.25rem 0; }
+    position: relative; }
     @media screen and (max-width: 767.98px) {
       #portfolio .my-wrapper {
         margin: .625rem 0; } }
