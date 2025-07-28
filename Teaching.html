@@ -200,41 +200,6 @@
                     });
                 </script>
             </div>
-            <p style="padding-bottom: 24px;"></p>
-            <div class="card" style="background: #232323; border-radius: 1rem; padding: 2.5rem; border: none; box-shadow: 0 2px 16px rgba(0,0,0,0.15);">
-                
-                <div class="container">
-                    <h2 style="color: #ff5252; margin-bottom: 1.2rem;">รายวิชาอื่น ๆ</h2>
-                    <div id="university-toggle-list">
-                        <div class="toggle-item">
-                            <button class="toggle-btn" type="button" style="background:#ff5252;color:#fff;border:none;font-size:1.1rem;padding:0.7rem 1.2rem;width:100%;text-align:left;border-radius:0.7rem;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.7rem;">
-                                <span class="arrow" style="display:inline-block;transition:transform 0.2s;">&#9654;</span>
-                                720401 - Information Technology for Business
-                            </button>
-                            <div class="toggle-content" style="display:none;padding-left:1.5rem;margin-bottom:1rem;">
-                                <div class="container" style="background: #fff; border-radius: 0.7rem; padding: 1.5rem; color: #232323;">
-                                    <p>แนะนำเทคโนโลยีสารสนเทศที่ใช้ในธุรกิจ เช่น ระบบฐานข้อมูล การจัดการข้อมูล และการวิเคราะห์ข้อมูล</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-                        btn.addEventListener('click', function() {
-                            var content = this.nextElementSibling;
-                            var arrow = this.querySelector('.arrow');
-                            if (content.style.display === "none" || content.style.display === "") {
-                                content.style.display = "block";
-                                arrow.style.transform = "rotate(90deg)";
-                            } else {
-                                content.style.display = "none";
-                                arrow.style.transform = "rotate(0deg)";
-                            }
-                        });
-                    });
-                </script>
-            </div>
         </div>
         </div>
     </div>
