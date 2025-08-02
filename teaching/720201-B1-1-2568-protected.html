@@ -64,7 +64,16 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
+<body style="display:none;" id="protectedBody">
+    <script>
+        var password = prompt("Enter the password to access this page:");
+        if(password === "123456") {
+            document.getElementById('protectedBody').style.display = '';
+        } else {
+            alert("Incorrect password.");
+            // window.location.href = "https://www.google.com/"; // or any page you want
+        }
+    </script>
     <div id="show_menuitems" class="my-menu">
         <div class="menu-box">
             <span>
@@ -82,7 +91,7 @@
     </div>
     <section id="home-subpage" style="padding: 1.5rem 0;">
         <header>
-            <div class="container">
+            <div class="container" >
                 <div class="main-nav">
                     <div class="logo">
                         <h2><a href="../teaching.html" style="color: rgb(255, 255, 255);">< TEACHING PAGE</a></h2>
