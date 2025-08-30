@@ -58,6 +58,16 @@
     }
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VT36QFMKJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9VT36QFMKJ');
+    </script>
+
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/plugins/owl.carousel.min.css">
     <link rel="stylesheet" href="../assets/font/flaticon.css">
@@ -251,6 +261,62 @@
     <script src="../assets/js/jquery-3.2.1.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    
+    <!-- Simple Analytics Script -->
+    <script>
+        // Page visit counter
+        function trackPageVisit() {
+            const pageKey = 'page_visits_720201';
+            let visits = parseInt(localStorage.getItem(pageKey) || '0');
+            visits++;
+            localStorage.setItem(pageKey, visits.toString());
+            console.log(`Page visits: ${visits}`);
+        }
+
+        // Link click tracking
+        function trackLinkClick(linkText, href) {
+            const clickKey = `link_clicks_${btoa(href).slice(0, 10)}`;
+            let clicks = parseInt(localStorage.getItem(clickKey) || '0');
+            clicks++;
+            localStorage.setItem(clickKey, clicks.toString());
+            console.log(`Link "${linkText}" clicked ${clicks} times`);
+            
+            // Optional: Send to your server
+            // fetch('/analytics', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ type: 'link_click', href: href, text: linkText })
+            // });
+        }
+
+        // Initialize tracking when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track page visit
+            trackPageVisit();
+            
+            // Add click tracking to all links
+            document.querySelectorAll('a[href]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const linkText = this.textContent.trim();
+                    const href = this.getAttribute('href');
+                    trackLinkClick(linkText, href);
+                });
+            });
+        });
+
+        // Function to view analytics (call in browser console)
+        function viewAnalytics() {
+            const analytics = {};
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('page_visits_') || key.startsWith('link_clicks_')) {
+                    analytics[key] = localStorage.getItem(key);
+                }
+            }
+            console.table(analytics);
+            return analytics;
+        }
+    </script>
 
     <footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: var(--darkblue); color: var(--gold); z-index: 100;">
         <div class="container">
