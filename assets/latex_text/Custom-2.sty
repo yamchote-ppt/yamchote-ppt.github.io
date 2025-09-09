@@ -1,0 +1,38 @@
+% !TEX root = BookTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%      COLOURS
+%%%%%%%%%%%%%% TO PRINT IN BLACK AND WHITE, CHANGE ALL COLOURS TO '0,0,0'
+\definecolor{Url}{RGB}{238,34,0}
+\definecolor{Cite}{RGB}{46,112,64}
+\definecolor{Link}{RGB}{4,72,124}
+\definecolor{MarginNote}{RGB}{228,84,54}
+
+
+%%%%%%%%%%%%%%      PAGE FORMAT
+\geometry{
+	a4paper,
+	top=3.5cm,
+	bottom=2.5cm,
+	left=72pt,
+	right=72pt,
+    marginparsep=5pt,
+	marginparwidth=62pt,
+	voffset=0pt,
+	hoffset=0pt,
+	headheight=54pt,
+	headsep=\baselineskip,
+	footskip=20pt,
+	footnotesep=10pt,
+    %showframe
+}
+
+%%%%%%%%%%      FIGURE CAPTIONS
+\usepackage{caption}
+\captionsetup{
+	format=hang,
+	indention=0cm,
+	labelformat= simple,		%%%%%    or 'empty'
+	labelsep=period,		    %%%%%    or 'none', 'colon', 'space'
+	labelfont=bf,
+	width=.6\textwidth,
+	skip=15pt}

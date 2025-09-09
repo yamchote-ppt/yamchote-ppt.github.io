@@ -1,0 +1,113 @@
+\ttl@change@i {\@ne }{part}{4pc}{\addvspace {8pt}}{}{\bfseries }{\color {black!50}\;\;\dotfill \;\bfseries \color {black}\PageName \, \thecontentspage }\relax 
+\ttl@change@v {part}{}{}{}\relax 
+\ttl@change@i {\@ne }{chapter}{4pc}{\addvspace {16pt}\bfseries \thecontentslabel }{\hspace {.5cm}}{}{\color {black!50}\;\;\dotfill \;\bfseries \color {black}\PageName \, \thecontentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{5pc}{\addvspace {2pt}\bfseries \thecontentslabel \normalfont }{\hspace {.5cm}}{}{\color {black!50}\;\;\dotfill \;\normalsize \color {black}\PageName \, \thecontentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{6pc}{\addvspace {2pt}\bfseries \thecontentslabel \normalfont }{\hspace {.5cm}}{}{\color {black!50}\;\;\dotfill \;\normalsize \color {black}\PageName \, \thecontentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\contentsline {part}{Introduction}{V}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}กำหนดการเชิงเส้น (Linear Programming)}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}ความหมายของการกำหนดการเชิงเส้น และการสร้างตัวแบบ}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}ลักษณะของปัญหาที่สามารถเขียนอยู่ในรูปกำหนดการเชิงเส้นได้}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}การสร้างตัวแบบกำหนดการเชิงเส้น}{5}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}แนวคิดพื้นฐานการหาผลเฉลยด้วยกราฟ}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}กรณี 1 ตัวแปรตัดสินใจ}{7}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}กรณี 2 ตัวแปรตัดสินใจ: ฟังก์ชันจุดประสงค์เป็นระนาบ 3 มิติบนบริเวณผลเฉลย 2 มิติ}{8}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}แนวคิดเบื้องต้นของวิธีซิมเพล็กซ์ (Simplex)}{13}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Simplex Method Algorithm}{18}{subsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.1}กรณีที่ 1: เงื่อนไขมีแต่ $\leq $ (จุดกำเนิดเป็น basic feasible solution)}{20}{subsubsection.1.3.1.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.2}กรณีที่ 2: เงื่อนไขมี $\geq $ ที่อาจจะทำให้จุดกำเนิดไม่เป็น basic feasible solution}{28}{subsubsection.1.3.1.2}%
+\contentsline {subsubsection}{\numberline {1.3.1.3}กรณีที่ 3: เงื่อนไขมี $=$ ซึ่งทำให้ feasible ไม่เป็น region เต็มมิติ}{32}{subsubsection.1.3.1.3}%
+\contentsline {section}{\numberline {1.4}การแก้ปัญหาด้วย Excel Solver}{34}{section.1.4}%
+\contentsline {chapter}{\numberline {2}ทฤษฎีการตัดสินใจ (Decision Theory)}{39}{chapter.2}%
+\contentsline {section}{\numberline {2.1}ลักษณะการแสดงข้อมูล}{40}{section.2.1}%
+\contentsline {section}{\numberline {2.2}การตัดสินใจภายใต้สภาวะความแน่นอน}{42}{section.2.2}%
+\contentsline {section}{\numberline {2.3}การตัดสินใจภายใต้สภาวะความเสี่ยง}{43}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}ค่าคาดหวัง (Expected Value)}{43}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}เกณฑ์ผลตอบแทน}{44}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}เกณฑ์ค่าเสียโอกาส (opportunity loss)}{45}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}ค่าคาดหวังของข่าวสารที่สมบูรณ์}{46}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}การตัดสินใจภายใต้สภาวะที่ไม่แน่นอน}{48}{section.2.4}%
+\contentsline {section}{\numberline {2.5}การใช้ต้นไม้การตัดสินใจ}{50}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}การคิดค่าคาดหวังด้วยแผนภาพต้นไม้ความน่าจะเป็นของเหตุการณ์}{50}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}เมื่อมีตัวเลือกเข้ามาเกี่ยวข้อง}{51}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}การใช้โปรแกรม QM for Windows}{55}{section.2.6}%
+\contentsline {chapter}{\numberline {3}ทฤษฎีการจำลองสถานการณ์ (Simulation)}{59}{chapter.3}%
+\contentsline {section}{\numberline {3.1}แนวคิดเบื้องต้นของการจำลอง}{60}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}กรณีตัวอย่าง: การหาค่า $\pi $}{60}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}ตัวแบบและขั้นตอนการจำลองสถานการณ์ (Simulation Process)}{64}{section.3.2}%
+\contentsline {section}{\numberline {3.3}การสุ่มตัวอย่างแบบ Monte Carlo ในการจำลองสถานการณ์ในธุรกิจ}{65}{section.3.3}%
+\contentsline {chapter}{\numberline {4}การวิเคราะห์เชิงมาร์คอฟ (Markov Analysis)}{71}{chapter.4}%
+\contentsline {section}{\numberline {4.1}ลักษณะของปัญหาที่ใช้ตัวแบบมาร์คอฟแก้ปัญหา}{73}{section.4.1}%
+\contentsline {section}{\numberline {4.2}คณิตศาสตร์สำหรับตัวแบบมาร์คอฟ}{74}{section.4.2}%
+\contentsline {section}{\numberline {4.3}การวิเคราะห์สถานะคงที่่}{78}{section.4.3}%
+\contentsline {section}{\numberline {4.4}การคำนวณ Markov โดยใช้ Excel}{80}{section.4.4}%
+\contentsline {section}{\numberline {4.5}หัวข้อพิเศษ: การคูณเมทริกซ์กับเมทริกซ์ในมุมมองของมาร์คอฟ}{81}{section.4.5}%
+\contentsline {chapter}{\numberline {5}การพยากรณ์ (Forecasting)}{83}{chapter.5}%
+\contentsline {section}{\numberline {5.1}ตัวแบบอนุกรมเวลา}{84}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}วิธีการค่าเฉลี่ยรวม}{84}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}วิธีค่าเฉลี่ยเคลื่อนที่ (Moving Average)}{85}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}วิธีค่าเฉลี่ยเคลื่อนที่ถ่วงน้ำหนัก (Weighted Moving Average)}{86}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}วิธีปรับเรียบแบบเอกซ์โพเนเชียล (exponential smoothing)}{87}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}ตัวแบบการถดถอยเชิงเส้น}{89}{section.5.2}%
+\contentsline {section}{\numberline {5.3}การประเมิณผลความแม่นยำในการทำนาย}{92}{section.5.3}%
+\contentsline {section}{\numberline {5.4}การใช้ Excel เพื่อช่วยคำนวณหาตัวแบบต่าง ๆ}{98}{section.5.4}%
+\contentsline {chapter}{\numberline {6}ทฤษฎีเกม (Game Theory)}{99}{chapter.6}%
+\contentsline {section}{\numberline {6.1}บทนำ}{99}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}ความหมายของเกม}{99}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}จุดแตกต่างจากหัวข้อทฤษฎีการตัดสินใจ}{99}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}การวิเคราะห์กลยุทธ์ในเกม}{99}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}แนวคิดพื้นฐาน: maximin vs. minimax}{99}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}กลยุทธ์แท้และค่าของเกม}{99}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}การวิเคราะห์กลยุทธ์ผสม}{99}{section.6.3}%
+\contentsline {section}{\numberline {6.4}การจัดรูปปัญหาเกมผลรวมเป็นศูนย์ให้อยู่ในรูปกำหนดการเชิงเส้น}{106}{section.6.4}%
+\contentsline {chapter}{\numberline {7}ตัวแบบแถวคอย (Queuing Theory)}{107}{chapter.7}%
+\contentsline {section}{\numberline {7.1}บทนำ}{107}{section.7.1}%
+\contentsline {section}{\numberline {7.2}โครงสร้างของระบบแถวคอย}{107}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}ลักษณะของลูกค้า}{107}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}ลักษณะของแถวคอย}{109}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}ลักษณะของหน่วยให้บริการ}{109}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}ตัวแบบแถวคอย}{109}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}ตัวแบบ M/M/1}{109}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}ตัวแบบ M/M/s}{109}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}ตัวแบบ M/G/1}{109}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}ตัวแบบ M/D/1}{109}{subsection.7.3.4}%
+\contentsline {section}{\numberline {7.4}การวิเคราะห์ระบบแถวคอยเพื่อการตัดสินใจทางธุรกิจ}{109}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}การกำหนดจำนวนหน่วยบริการ}{109}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}การตัดสินใจจัดรูปแบบแถวคอย}{109}{subsection.7.4.2}%
+\contentsline {chapter}{\numberline {8}ปัญหาการหาค่าเหมาะสุดต่าง ๆ ในเชิงธุรกิจ (Optimization Problem in Business)}{111}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Transportation Problem}{111}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Scheduling Problem}{111}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Matching Problem}{111}{section.8.3}%
+ \vspace {25pt} \noindent \hskip 2em\relax \hskip 2em\relax \bfseries Appendices\par \vspace {10pt}
+\ttl@change@i {\@ne }{chapter}{4pc}{\addvspace {16pt}\bfseries \thecontentslabel }{\hspace {.5cm}}{}{\color {black!50}\;\;\dotfill \;\bfseries \color {black}\PageName \, \thecontentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\contentsline {chapter}{\numberline {A}คณิตศาสตร์สำหรับการวิเคราะห์เชิงปริมาณ}{1}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}ระบบสมการเชิงเส้น}{2}{section.a.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}ฟังก์ชันเชิงเส้นและสมการเชิงเส้น}{2}{subsection.a.A.1.1}%
+\contentsline {subsubsection}{\numberline {A.1.1.1}ตัวอย่างความสัมพันธ์เชิงเส้น 2 มิติ: กราฟเส้นตรง}{3}{subsubsection.a.A.1.1.1}%
+\contentsline {paragraph}{\numberline {A.1.1.1.1}สมการสู่เส้นตรง}{3}{paragraph.a.A.1.1.1.1}%
+\contentsline {paragraph}{\numberline {A.1.1.1.2}เส้นตรงสู่สมการ}{5}{paragraph.a.A.1.1.1.2}%
+\contentsline {subsubsection}{\numberline {A.1.1.2}ตัวอย่างความสัมพันธ์เชิงเส้น 3 มิติ: กราฟระนาบ $x,y,z$}{7}{subsubsection.a.A.1.1.2}%
+\contentsline {subsection}{\numberline {A.1.2}ระบบสมการเชิงเส้น: ความหมายเชิงรูปภาพของการแก้สมการ}{9}{subsection.a.A.1.2}%
+\contentsline {subsubsection}{\numberline {A.1.2.1}ตัวอย่างระบบสมการเชิงเส้น 2 ตัวแปร: เส้นตรงตัดกัน}{9}{subsubsection.a.A.1.2.1}%
+\contentsline {subsubsection}{\numberline {A.1.2.2}ตัวอย่างระบบสมการเชิงเส้น 3 ตัวแปร: ระนาบตัดกัน}{11}{subsubsection.a.A.1.2.2}%
+\contentsline {subsection}{\numberline {A.1.3}อสมการเชิงเส้น และการวาดกราฟของอสมการเชิงเส้น}{12}{subsection.a.A.1.3}%
+\contentsline {section}{\numberline {A.2}การดำเนินการบนเมทริกซ์}{12}{section.a.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}เมทริกซ์}{12}{subsection.a.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}การคูณเมทริกซ์}{12}{subsection.a.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}การใช้เมทริกซ์สำหรับทฤษฎีกราฟเบื้องต้น}{12}{subsection.a.A.2.3}%
+\contentsline {section}{\numberline {A.3}ความน่าจะเป็นเบื้องต้น}{12}{section.a.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}แนวคิดตั้งต้นสำหรับความน่าจะเป็น}{12}{subsection.a.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}ตัวแปรสุ่ม ค่าคาดหวัง ความอิสระ}{12}{subsection.a.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}กฏของเบย์}{12}{subsection.a.A.3.3}%
+\contentsline {subsection}{\numberline {A.3.4}การแจกแจงความน่าจะเป็น}{12}{subsection.a.A.3.4}%
+\contentsline {section}{\numberline {A.4}พื้นฐานการให้เหตุผลเชิงปริมาณ}{12}{section.a.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}ทักษะการแปรคำพูดเป็นนิพจน์ทางคณิตศาสตร์}{12}{subsection.a.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}การเข้าใจจุดประสงค์และเงื่อนไขของปัญหา}{12}{subsection.a.A.4.2}%
+\contentsline {chapter}{\numberline {B}Homework}{13}{appendix.a.B}%
+\contentsline {chapter}{\numberline {C}Quiz}{21}{appendix.a.C}%
+\contentsline {part}{Bibliography}{31}{section*.83}%
+\contentsline {part}{Analytic Index}{33}{appendix*.85}%
+\contentsfinish 

@@ -1,0 +1,4154 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.28)  9 SEP 2025 17:35
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./BookTemplate.tex
+(BookTemplate.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
+File: bk12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@chapter=\count184
+\c@section=\count185
+\c@subsection=\count186
+\c@subsubsection=\count187
+\c@paragraph=\count188
+\c@subparagraph=\count189
+\c@figure=\count190
+\c@table=\count191
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(Custom.sty) (AuxiliaryFiles/AuxiliaryFiles.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+(AuxiliaryFiles/Packages.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/changebar\changebar.sty
+Package: changebar 2024/07/17 v3.7e Indicate changes with marginal bars
+\cb@nextpoint=\count192
+\cb@topleft=\count193
+\cb@topright=\count194
+\cb@botleft=\count195
+\cb@botright=\count196
+\cb@cnta=\count197
+\cb@cntb=\count198
+\cb@dima=\dimen141
+\cb@curbarwd=\dimen142
+\cb@page=\count199
+\cb@pagecount=\count266
+\cb@odd@left=\dimen143
+\cb@odd@right=\dimen144
+\cb@even@left=\dimen145
+\cb@even@right=\dimen146
+\cb@writexy=\write3
+\cb@readxy=\read2
+\openout3 = `BookTemplate.cb2'.
+
+\changebarwidth=\skip50
+\deletebarwidth=\skip51
+\changebarsep=\skip52
+\c@changebargrey=\count267
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x))
+\cb@write=\write4
+\cb@read=\read3
+\openout4 = `BookTemplate.cb'.
+
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip53
+\f@nch@offset@elh=\skip54
+\f@nch@offset@erh=\skip55
+\f@nch@offset@olh=\skip56
+\f@nch@offset@orh=\skip57
+\f@nch@offset@elf=\skip58
+\f@nch@offset@erf=\skip59
+\f@nch@offset@olf=\skip60
+\f@nch@offset@orf=\skip61
+\f@nch@height=\skip62
+\f@nch@footalignment=\skip63
+\f@nch@widthL=\skip64
+\f@nch@widthC=\skip65
+\f@nch@widthR=\skip66
+\@temptokenb=\toks19
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count268
+\Gm@cntv=\count269
+\c@Gm@tempcnt=\count270
+\Gm@bindingoffset=\dimen147
+\Gm@wd@mp=\dimen148
+\Gm@odd@mp=\dimen149
+\Gm@even@mp=\dimen150
+\Gm@layoutwidth=\dimen151
+\Gm@layoutheight=\dimen152
+\Gm@layouthoffset=\dimen153
+\Gm@layoutvoffset=\dimen154
+\Gm@dimlist=\toks21
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count271
+\calc@Bcount=\count272
+\calc@Adimen=\dimen155
+\calc@Bdimen=\dimen156
+\calc@Askip=\skip67
+\calc@Bskip=\skip68
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count273
+\calc@Cskip=\skip69
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip70
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen157
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen158
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count274
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count275
+\leftroot@=\count276
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count277
+\DOTSCASE@=\count278
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen159
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count279
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count280
+\dotsspace@=\muskip16
+\c@parentequation=\count281
+\dspbrk@lvl=\count282
+\tag@help=\toks23
+\row@=\count283
+\column@=\count284
+\maxfields@=\count285
+\andhelp@=\toks24
+\eqnshift@=\dimen160
+\alignsep@=\dimen161
+\tagshift@=\dimen162
+\tagwidth@=\dimen163
+\totwidth@=\dimen164
+\lineht@=\dimen165
+\@envbody=\toks25
+\multlinegap=\skip71
+\multlinetaggap=\skip72
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+\g_MT_multlinerow_int=\count286
+\l_MT_multwidth_dim=\dimen166
+\origjot=\skip73
+\l_MT_shortvdotswithinadjustabove_dim=\dimen167
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen168
+\l_MT_above_intertext_sep=\dimen169
+\l_MT_below_intertext_sep=\dimen170
+\l_MT_above_shortintertext_sep=\dimen171
+\l_MT_below_shortintertext_sep=\dimen172
+\xmathstrut@box=\box53
+\xmathstrut@dim=\dimen173
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box54
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks30
+))
+\pgf@x=\dimen178
+\pgf@y=\dimen179
+\pgf@xa=\dimen180
+\pgf@ya=\dimen181
+\pgf@xb=\dimen182
+\pgf@yb=\dimen183
+\pgf@xc=\dimen184
+\pgf@yc=\dimen185
+\pgf@xd=\dimen186
+\pgf@yd=\dimen187
+\w@pgf@writea=\write5
+\r@pgf@reada=\read4
+\c@pgf@counta=\count287
+\c@pgf@countb=\count288
+\c@pgf@countc=\count289
+\c@pgf@countd=\count290
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+\pgf@sys@id@count=\count291
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count292
+)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count293
+\pgfsyssoftpath@bigbuffer@items=\count294
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+LaTeX Info: Redefining \color on input line 758.
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen188
+\pgfmath@count=\count295
+\pgfmath@box=\box55
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count296
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen189
+\pgf@picmaxx=\dimen190
+\pgf@picminy=\dimen191
+\pgf@picmaxy=\dimen192
+\pgf@pathminx=\dimen193
+\pgf@pathmaxx=\dimen194
+\pgf@pathminy=\dimen195
+\pgf@pathmaxy=\dimen196
+\pgf@xx=\dimen197
+\pgf@xy=\dimen198
+\pgf@yx=\dimen199
+\pgf@yy=\dimen256
+\pgf@zx=\dimen257
+\pgf@zy=\dimen258
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen259
+\pgf@path@lasty=\dimen260
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen261
+\pgf@shorten@start@additional=\dimen262
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count297
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen263
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen264
+\pgf@pt@y=\dimen265
+\pgf@pt@temp=\dimen266
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen267
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen268
+\pgf@sys@shading@range@num=\count298
+\pgf@shadingcount=\count299
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box59
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box60
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen269
+\pgf@nodesepend=\dimen270
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks37
+\verbatim@line=\toks38
+\verbatim@in@stream=\read5
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
+ty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count300
+)
+\tcb@titlebox=\box61
+\tcb@upperbox=\box62
+\tcb@lowerbox=\box63
+\tcb@phantombox=\box64
+\c@tcbbreakpart=\count301
+\c@tcblayer=\count302
+\c@tcolorbox@number=\count303
+\l__tcobox_tmpa_box=\box65
+\l__tcobox_tmpa_dim=\dimen271
+\tcb@temp=\box66
+\tcb@temp=\box67
+\tcb@temp=\box68
+\tcb@temp=\box69
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code
+.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen272
+\pgffor@skip=\dimen273
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count304
+\pgfplotmarksize=\dimen274
+)
+\tikz@lastx=\dimen275
+\tikz@lasty=\dimen276
+\tikz@lastxsaved=\dimen277
+\tikz@lastysaved=\dimen278
+\tikz@lastmovetox=\dimen279
+\tikz@lastmovetoy=\dimen280
+\tikzleveldistance=\dimen281
+\tikzsiblingdistance=\dimen282
+\tikz@figbox=\box70
+\tikz@figbox@bg=\box71
+\tikz@tempbox=\box72
+\tikz@tempbox@bg=\box73
+\tikztreelevel=\count305
+\tikznumberofchildren=\count306
+\tikznumberofcurrentchild=\count307
+\tikz@fig@count=\count308
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count309
+\pgfmatrixcurrentcolumn=\count310
+\pgf@matrix@numberofcolumns=\count311
+)
+\tikz@expandcount=\count312
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image
+.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill-commo
+n.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfil
+l.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box74
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsa
+w.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.
+code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box75
+\tcb@totalupperbox=\box76
+\tcb@totallowerbox=\box77
+)) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.tex
+Bootstrap'ing: catcodes, docmode,
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrecat.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen283
+\Y@c=\dimen284
+\U@c=\dimen285
+\D@c=\dimen286
+\L@c=\dimen287
+\R@c=\dimen288
+\Edge@c=\toks41
+\X@p=\dimen289
+\Y@p=\dimen290
+\U@p=\dimen291
+\D@p=\dimen292
+\L@p=\dimen293
+\R@p=\dimen294
+\Edge@p=\toks42
+\X@origin=\dimen295
+\Y@origin=\dimen296
+\X@xbase=\dimen297
+\Y@xbase=\dimen298
+\X@ybase=\dimen299
+\Y@ybase=\dimen300
+\X@min=\dimen301
+\Y@min=\dimen302
+\X@max=\dimen303
+\Y@max=\dimen304
+\lastobjectbox@=\box78
+\zerodotbox@=\box79
+\almostz@=\dimen305
+ direction,
+\d@X=\dimen306
+\d@Y=\dimen307
+\K@=\count313
+\KK@=\count314
+\Direction=\count315
+\K@dXdY=\dimen308
+\K@dYdX=\dimen309
+\xyread@=\read6
+\xywrite@=\write6
+\csp@=\count316
+\quotPTK@=\dimen310
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks43
+\connectobjectbox@@=\box80
+ objects,
+\styletoks@=\toks44
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.7
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xytips.tex
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+)
+\XKV@depth=\count317
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.s
+ty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box81
+)
+\tc@llx=\dimen311
+\tc@lly=\dimen312
+\tc@urx=\dimen313
+\tc@ury=\dimen314
+Package trimclip Info: Using driver 'tc-xetex.def'.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
+))
+\adjbox@Width=\dimen315
+\adjbox@Height=\dimen316
+\adjbox@Depth=\dimen317
+\adjbox@Totalheight=\dimen318
+\adjbox@pwidth=\dimen319
+\adjbox@pheight=\dimen320
+\adjbox@pdepth=\dimen321
+\adjbox@ptotalheight=\dimen322
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count318
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box82
+\sift@deathcycles=\count319
+\@vwid@loff=\dimen323
+\@vwid@roff=\dimen324
+)) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks47
+\AP@partial=\box83
+\AP@footins=\box84
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks48
+\thm@bodyfont=\toks49
+\thm@headfont=\toks50
+\thm@notefont=\toks51
+\thm@headpunct=\toks52
+\thm@preskip=\skip74
+\thm@postskip=\skip75
+\thm@headsep=\skip76
+\dth@everypar=\toks53
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count320
+\c@@ppsavesec=\count321
+\c@@ppsaveapp=\count322
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/accents\accents.sty
+Package: accents 2006/05/12 v1.4 Math Accent Tools
+\cc@skew=\dimen325
+\cc@wd=\dimen326
+\cc@code=\count323
+\cc@group=\count324
+\cc@skewchar=\count325
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen327
+\lightrulewidth=\dimen328
+\cmidrulewidth=\dimen329
+\belowrulesep=\dimen330
+\belowbottomsep=\dimen331
+\aboverulesep=\dimen332
+\abovetopsep=\dimen333
+\cmidrulesep=\dimen334
+\cmidrulekern=\dimen335
+\defaultaddspace=\dimen336
+\@cmidla=\count326
+\@cmidlb=\count327
+\@aboverulesep=\dimen337
+\@belowrulesep=\dimen338
+\@thisruleclass=\count328
+\@lastruleclass=\count329
+\@thisrulewidth=\dimen339
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
+ty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count330
+\cp@tempcnt=\count331
+LaTeX Info: Redefining \checkoddpage on input line 59.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/duckuments\duckuments.s
+ty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def
+File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
+\g__graphics_track_int=\count332
+\l__pdf_internal_box=\box85
+\g__pdf_backend_object_int=\count333
+\g__pdf_backend_annotation_int=\count334
+\g__pdf_backend_link_int=\count335
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
+)
+Package: duckuments 2019-10-03 v0.5 minimal working duckuments
+\g_duckuments_blindduck_start_int=\count336
+\g_duckuments_blindduck_end_int=\count337
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/dirtytalk\dirtytalk.sty
+Package: dirtytalk 2010/11/21 A package making "quoting" easier
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@dirtytalk@qdepth=\count338
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/epigraph\epigraph.sty
+Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/nextpage\nextpage.sty
+Package: nextpage 2009/09/03 v1.1a additional page commands
+)
+\beforeepigraphskip=\skip77
+\afterepigraphskip=\skip78
+\epigraphwidth=\skip79
+\epigraphrule=\skip80
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip81
+\enit@outerparindent=\dimen340
+\enit@toks=\toks54
+\enit@inbox=\box86
+\enit@count@id=\count339
+\enitdp@description=\count340
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/hanging\hanging.sty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip82
+\h@ngfstopwd=\skip83
+\h@ngquotewd=\skip84
+\h@ngdquotewd=\skip85
+\h@ngquerywd=\skip86
+\h@ngexclwd=\skip87
+\h@ngcolonwd=\skip88
+\h@ngscolonwd=\skip89
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count341
+\l__lipsum_a_int=\count342
+\l__lipsum_b_int=\count343
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip90
+\LTright=\skip91
+\LTpre=\skip92
+\LTpost=\skip93
+\LTchunksize=\count344
+\LTcapwidth=\dimen341
+\LT@head=\box87
+\LT@firsthead=\box88
+\LT@foot=\box89
+\LT@lastfoot=\box90
+\LT@gbox=\box91
+\LT@cols=\count345
+\LT@rows=\count346
+\c@LT@tables=\count347
+\c@LT@chunks=\count348
+\LT@p@ftn=\toks55
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/marginnote\marginnote.s
+ty
+Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count349
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip94
+\L@UnitsRaiseTextstyle=\skip95
+\L@UnitsRaiseScriptstyle=\skip96
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/polynom\polynom.sty
+Package: polynom 2017/07/17 0.19 (CH,HA)
+\pld@currstage=\count350
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/polynomial\polynomial.s
+ty
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Package: polynomial 
+Invalid UTF-8 byte or sequence at line 32 replaced by U+FFFD.
+\shpol@numcoeff=\count351
+\shpol@coeffnum=\count352
+\shpol@exponent=\count353
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/scalerel\scalerel.sty
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
+ng of objects, relative to a reference object or in absolute terms
+\thesrwidth=\skip97
+\thesrheight=\skip98
+\srblobheight=\skip99
+\srblobdepth=\skip100
+\mnxsrwidth=\skip101
+\LMex=\skip102
+\LMpt=\skip103
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrextend.s
+ty
+Package: scrextend 2025/06/04 v3.45 KOMA-Script package (extend other classes w
+ith features of KOMA-Script classes)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+Package: scrkbase 2025/06/04 v3.45 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2025/06/04 v3.45 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+Package: scrlfile 2025/06/04 v3.45 KOMA-Script package (file load hooks)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+Package: scrlfile-hook 2025/06/04 v3.45 KOMA-Script package (using LaTeX hooks)
+
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2025/06/04 v3.45 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+))) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
+Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
+\SOUL@word=\toks56
+\SOUL@lasttoken=\toks57
+\SOUL@syllable=\toks58
+\SOUL@cmds=\toks59
+\SOUL@buffer=\toks60
+\SOUL@token=\toks61
+\SOUL@syllgoal=\dimen342
+\SOUL@syllwidth=\dimen343
+\SOUL@charkern=\dimen344
+\SOUL@hyphkern=\dimen345
+\SOUL@dimen=\dimen346
+\SOUL@dimeni=\dimen347
+\SOUL@minus=\count354
+\SOUL@comma=\count355
+\SOUL@apo=\count356
+\SOUL@grave=\count357
+\SOUL@spaceskip=\skip104
+\SOUL@ttwidth=\dimen348
+\SOUL@uldp=\dimen349
+\SOUL@ulht=\dimen350
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen351
+\captionmargin=\dimen352
+\caption@leftmargin=\dimen353
+\caption@rightmargin=\dimen354
+\caption@width=\dimen355
+\caption@indent=\dimen356
+\caption@parindent=\dimen357
+\caption@hangindent=\dimen358
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count358
+\c@continuedfloat=\count359
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen359
+\caption@adjustwidth@linewidth=\dimen360
+Package caption Info: longtable package is loaded.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: scrextend package is loaded.
+\caption@addmargin@hsize=\dimen361
+\caption@addmargin@linewidth=\dimen362
+)
+\c@KVtest=\count360
+\sf@farskip=\skip105
+\sf@captopadj=\dimen363
+\sf@capskip=\skip106
+\sf@nearskip=\skip107
+\c@subfigure=\count361
+\c@subfigure@save=\count362
+\c@lofdepth=\count363
+\c@subtable=\count364
+\c@subtable@save=\count365
+\c@lotdepth=\count366
+\sf@top=\skip108
+\sf@bottom=\skip109
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
+Package: titletoc 2023/10/27 v2.16 TOC entries
+\ttl@leftsep=\dimen364
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip110
+\thanksmargin=\skip111
+\droptitle=\skip112
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen365
+\WF@size=\dimen366
+\c@WF@wrappedlines=\count367
+\WF@box=\box92
+\WF@everypar=\toks62
+Package: wrapfig 2003/01/31  v 3.6
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/youngtab\youngtab.sty
+Package: youngtab 1999/05/19 v1.1; Macros for Young-Tableaux
+\y@b@xdim=\dimen367
+\y@boxdim=\dimen368
+\y@linethick=\dimen369
+\y@interspace=\skip113
+\y@counter=\count368
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen370
+\ar@mcellbox=\box93
+\extrarowheight=\dimen371
+\NC@list=\toks63
+\extratabsurround=\skip114
+\backup@length=\skip115
+\ar@cellbox=\box94
+)
+\rotheadsize=\dimen372
+\c@nlinenum=\count369
+\TeXr@lab=\toks64
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+LaTeX Info: Redefining \subref on input line 189.
+Package subcaption Info: The counter `subfigure' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input 
+line 238.
+Package subcaption Info: The counter `subtable' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input 
+line 238.
+) (AuxiliaryFiles/Environments.sty
+\labelbox=\box95
+\mylabelwidth=\skip116
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thmtools.sty
+Package: thmtools 2023/05/04 v0.76
+\thmt@toks=\toks65
+\c@thmt@dummyctr=\count370
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thm-patch.sty
+Package: thm-patch 2023/05/04 v0.76
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\parseargs.sty
+Package: parseargs 2023/05/04 v0.76
+\@parsespec=\toks66
+)) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thm-kv.sty
+Package: thm-kv 2023/05/04 v0.76
+Package thm-kv Info: Theorem names will be uppercased on input line 42.
+Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 158.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thm-autoref.st
+y
+Package: thm-autoref 2023/05/04 v0.76
+ (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\aliasctr.sty
+Package: aliasctr 2023/05/04 v0.76
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thm-listof.sty
+Package: thm-listof 2023/05/04 v0.76
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thm-restate.st
+y
+Package: thm-restate 2023/05/04 v0.76
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thm-amsthm.sty
+Package: thm-amsthm 2023/05/04 v0.76
+\thmt@style@headstyle=\toks67
+))
+Package thmtools Info: Key `within' (with value `section')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=SettingTheorem' on input line 56.
+\c@The=\count371
+Package thmtools Info: Key `qed' (with value `$\square $')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=SettingProof' on input line 79.
+Package thmtools Info: Key `within' (with value `section')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=SettingExa' on input line 92.
+Package thmtools Info: Key `mdframed' (with value `innertopmargin=1pt, innerbot
+tommargin=1pt, innerleftmargin=.4cm, innerrightmargin=.4cm, roundcorner=25pt, b
+ackgroundcolor=black!6, linecolor=white, fontcolor=black, skipabove=5pt, skipbe
+low=0pt')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=SettingExa' on input line 92.
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line
+ 94.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thmdef-mdframe
+d.sty
+Package: thmdef-mdframed 2023/05/04 v0.76
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count372
+Package zref Info: New property: abspage on input line 67.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip117
+\c@mdf@globalstyle@cnt=\count373
+\mdf@skipabove@length=\skip118
+\mdf@skipbelow@length=\skip119
+\mdf@leftmargin@length=\skip120
+\mdf@rightmargin@length=\skip121
+\mdf@innerleftmargin@length=\skip122
+\mdf@innerrightmargin@length=\skip123
+\mdf@innertopmargin@length=\skip124
+\mdf@innerbottommargin@length=\skip125
+\mdf@splittopskip@length=\skip126
+\mdf@splitbottomskip@length=\skip127
+\mdf@outermargin@length=\skip128
+\mdf@innermargin@length=\skip129
+\mdf@linewidth@length=\skip130
+\mdf@innerlinewidth@length=\skip131
+\mdf@middlelinewidth@length=\skip132
+\mdf@outerlinewidth@length=\skip133
+\mdf@roundcorner@length=\skip134
+\mdf@footenotedistance@length=\skip135
+\mdf@userdefinedwidth@length=\skip136
+\mdf@needspace@length=\skip137
+\mdf@frametitleaboveskip@length=\skip138
+\mdf@frametitlebelowskip@length=\skip139
+\mdf@frametitlerulewidth@length=\skip140
+\mdf@frametitleleftmargin@length=\skip141
+\mdf@frametitlerightmargin@length=\skip142
+\mdf@shadowsize@length=\skip143
+\mdf@extratopheight@length=\skip144
+\mdf@subtitleabovelinewidth@length=\skip145
+\mdf@subtitlebelowlinewidth@length=\skip146
+\mdf@subtitleaboveskip@length=\skip147
+\mdf@subtitlebelowskip@length=\skip148
+\mdf@subtitleinneraboveskip@length=\skip149
+\mdf@subtitleinnerbelowskip@length=\skip150
+\mdf@subsubtitleabovelinewidth@length=\skip151
+\mdf@subsubtitlebelowlinewidth@length=\skip152
+\mdf@subsubtitleaboveskip@length=\skip153
+\mdf@subsubtitlebelowskip@length=\skip154
+\mdf@subsubtitleinneraboveskip@length=\skip155
+\mdf@subsubtitleinnerbelowskip@length=\skip156
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box96
+\mdf@footnotebox=\box97
+\mdf@splitbox@one=\box98
+\mdf@splitbox@two=\box99
+\mdf@splitbox@save=\box100
+\mdfsplitboxwidth=\skip157
+\mdfsplitboxtotalwidth=\skip158
+\mdfsplitboxheight=\skip159
+\mdfsplitboxdepth=\skip160
+\mdfsplitboxtotalheight=\skip161
+\mdfframetitleboxwidth=\skip162
+\mdfframetitleboxtotalwidth=\skip163
+\mdfframetitleboxheight=\skip164
+\mdfframetitleboxdepth=\skip165
+\mdfframetitleboxtotalheight=\skip166
+\mdffootnoteboxwidth=\skip167
+\mdffootnoteboxtotalwidth=\skip168
+\mdffootnoteboxheight=\skip169
+\mdffootnoteboxdepth=\skip170
+\mdffootnoteboxtotalheight=\skip171
+\mdftotallinewidth=\skip172
+\mdfboundingboxwidth=\skip173
+\mdfboundingboxtotalwidth=\skip174
+\mdfboundingboxheight=\skip175
+\mdfboundingboxdepth=\skip176
+\mdfboundingboxtotalheight=\skip177
+\mdf@freevspace@length=\skip178
+\mdf@horizontalwidthofbox@length=\skip179
+\mdf@verticalmarginwhole@length=\skip180
+\mdf@horizontalspaceofbox=\skip181
+\mdfsubtitleheight=\skip182
+\mdfsubsubtitleheight=\skip183
+\c@mdfcountframes=\count374
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count375
+\c@mdf@env@i=\count376
+\c@mdf@env@ii=\count377
+\c@mdf@zref@counter=\count378
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+Package thmtools Info: Key `mdframed' (with value `innertopmargin=15pt, innerbo
+ttommargin=5pt, innerleftmargin=.2cm, innerrightmargin=.2cm, roundcorner=50pt, 
+backgroundcolor=black!5, linecolor=white, fontcolor=black, skipabove = -5pt, sk
+ipbelow=-5pt')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=SettingBox' on input line 99.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box101
+\beforetitleunit=\skip184
+\aftertitleunit=\skip185
+\ttl@plus=\dimen373
+\ttl@minus=\dimen374
+\ttl@toksa=\toks68
+\titlewidth=\dimen375
+\titlewidthlast=\dimen376
+\titlewidthfirst=\dimen377
+)) (AuxiliaryFiles/TikZ.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
+ision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.cod
+e.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
+.code.tex
+\t@pgfplots@toka=\toks69
+\t@pgfplots@tokb=\toks70
+\t@pgfplots@tokc=\toks71
+\pgfplots@tmpa=\dimen378
+\c@pgfplots@coordindex=\count379
+\c@pgfplots@scanlineindex=\count380
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
+sysgeneric.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplot
+slibrary.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
+ib\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks72
+\t@pgf@tokb=\toks73
+\t@pgf@tokc=\toks74
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
+ib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sutil.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsliststructure.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsliststructureext.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count381
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsmatrix.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
+plotstableshared.code.tex
+\c@pgfplotstable@counta=\count382
+\t@pgfplotstable@a=\toks75
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsdeque.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sbinary.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sbinary.data.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sutil.verb.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
+arypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count383
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
+rypgfplots.surfshading.pgfsys-xetex.def
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
+rypgfplots.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count384
+))))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+scolormap.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+scolor.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstac
+kedplots.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplot
+handlers.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
+plothandler.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
+plotimage.code.tex)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.sca
+ling.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoor
+dprocessing.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.err
+orbars.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.mar
+kers.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotstick
+s.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.pat
+hs.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen379
+\pgfdecoratedremainingdistance=\dimen380
+\pgfdecoratedinputsegmentcompleteddistance=\dimen381
+\pgfdecoratedinputsegmentremainingdistance=\dimen382
+\pgf@decorate@distancetomove=\dimen383
+\pgf@decorate@repeatstate=\count385
+\pgfdecorationsegmentamplitude=\dimen384
+\pgfdecorationsegmentlength=\dimen385
+)
+\tikz@lib@dec@box=\box102
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count386
+\pgfplots@xmin@reg=\dimen386
+\pgfplots@xmax@reg=\dimen387
+\pgfplots@ymin@reg=\dimen388
+\pgfplots@ymax@reg=\dimen389
+\pgfplots@zmin@reg=\dimen390
+\pgfplots@zmax@reg=\dimen391
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tikz-3dplot\tikz-3dplot
+.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrary3d.code.tex
+File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen392
+)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-base.sty
+2024/01/16 4.21c tkz-base.sty
+Package: tkz-base 2024/01/16 4.21c tkz-base
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryangles.code.tex
+File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen393
+\pgfarrowlength=\dimen394
+\pgfarrowwidth=\dimen395
+\pgfarrowlinewidth=\dimen396
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box103
+\pgf@layerboxsaved@background=\box104
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.markings.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.markings.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.shapes.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.shapes.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.text.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.text.code.tex
+\pgf@lib@dec@text@box=\box105
+)
+\tikz@lib@dec@te@box=\box106
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryintersections.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryintersections.code.tex
+\pgf@intersect@solutions=\count387
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarythrough.code.tex
+File: tikzlibrarythrough.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/numprint\numprint.sty
+Package: numprint 2012/08/20 v1.39 Print numbers (HH)
+\c@nprt@mantissa@digitsbefore=\count388
+\c@nprt@mantissa@digitsafter=\count389
+\c@nprt@exponent@digitsbefore=\count390
+\c@nprt@exponent@digitsafter=\count391
+\nprt@digitwidth=\skip186
+\nprt@sepwidth=\skip187
+\nprt@decimalwidth=\skip188
+\nprt@blockwidth=\skip189
+\nprt@digittoks=\toks76
+\nprt@pretoks=\toks77
+\nprt@posttoks=\toks78
+\nprt@thisdigit=\count392
+\nprt@curpos=\count393
+\nprt@rndpos=\count394
+\c@nprt@digitsfirstblock=\count395
+\c@nprt@blockcnt=\count396
+\c@nprt@cntprint=\count397
+
+No configuration file `numprint.cfg' found.)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
+Package: xfp 2023-10-10 L3 Floating point unit
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count398
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count399
+\FP@xia=\count400
+\FP@xib=\count401
+\FP@xfa=\count402
+\FP@xfb=\count403
+\FP@rega=\count404
+\FP@regb=\count405
+\FP@regs=\count406
+\FP@times=\count407
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count408
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+\tkz@ax=\dimen397
+\tkz@ay=\dimen398
+\tkz@bx=\dimen399
+\tkz@by=\dimen400
+\tkz@cx=\dimen401
+\tkz@cy=\dimen402
+\tkz@dx=\dimen403
+\tkz@dy=\dimen404
+\tkz@tax=\dimen405
+\tkz@tay=\dimen406
+\tkz@tbx=\dimen407
+\tkz@tby=\dimen408
+\tkz@tcx=\dimen409
+\tkz@tcy=\dimen410
+\tkz@tdx=\dimen411
+\tkz@tdy=\dimen412
+\tkz@cntmk=\count409
+
+Local configuration file tkz-base.cfg found and used
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-base.cfg
+2024/01/16 4.21c tkz-base.cfg
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-modu
+les.tex
+2024/01/16 4.21c tkz-tools-modules.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-lib-marks.
+tex
+2024/01/16 4.21c tkz-lib-marks.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-lib-shape.
+tex
+2024/01/16 4.21c tkz-lib-shape.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-base
+.tex
+2024/01/16 4.21c tkz-tools-base.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-util
+ities.tex
+2024/01/16 4.21c tkz-tools-utilities.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-colo
+rs.tex
+2024/01/16 4.21c tkz-tools-colors
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-text
+.tex
+2024/01/16 4.21c tkz-tools-text.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-BB.t
+ex
+2024/01/16 4.21c tkz-obj-BB.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-arit
+h.tex
+2024/01/16 4.21c tkz-tools-arith.tex
+File: tkz-tool-arith.tex tkz-tool-arith 3.02 c
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-prin
+t.tex
+2024/01/16 4.21c tkz-tools-print
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-tools-misc
+.tex
+2024/01/16 4.21c tkz-tools-misc.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-obj-axes.t
+ex
+2024/01/16 4.21c tkz-obj-axes
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-obj-grids.
+tex
+2024/01/16 4.21c tkz-obj-grids.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-obj-marks.
+tex
+2024/01/16 4.21c tkz-obj-marks.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-obj-points
+.tex
+2024/01/16 4.21c tkz-obj-points.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-obj-rep.te
+x
+2024/01/16 4.21c tkz-obj-rep.tex
+)) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-fct\tkz-fct.sty
+2022/01/27 1.7c function tkz-fct
+Package: tkz-fct 2022/01/27 1.7c function 
+\tkz@tkzf@fct=\count410
+( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ( FP-SUB ) )
+) ( FP-EVAL ( FP-UPN ) ) ( FP-EVAL ( FP-UPN ( FP-SUB ) ) ) ( FP-EVAL ( FP-UPN
+) ))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.c
+ode.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryspy.code.tex
+File: tikzlibraryspy.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\tikz@lib@spybox=\box107
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryshadings.code.tex
+File: pgflibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
+arypgfplots.colorbrewer.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarycolorbrewer.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.colormaps.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.fillbetween.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\t
+ikzlibraryfillbetween.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\t
+ikzlibrarydecorations.softclip.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\p
+gflibraryfillbetween.code.tex)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.decorations.softclip.code.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.patchplots.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.polar.code.tex)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide\tkz-euclide
+.sty
+2024/04/19 5.10c tkz-euclide.sty
+Package: tkz-euclide  2024/04/19 5.10c for pure Euclidean Geometry 
+\tkzRadius=\dimen413
+\tkzLength=\dimen414
+\tkz@radi=\dimen415
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-points.tex
+2024/04/19 5.10c tkz-obj-eu-points.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-points-by.tex
+2024/04/19 5.10c tkz-tools-eu-points-by.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/tools\tkz-t
+ools-eu-math.tex
+2024/04/19 5.10c tkz-tools-eu-math.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/tools\tkz-t
+ools-eu-intersections.tex
+2024/04/19 5.10c tkz-tools-eu-intersections.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-points-with.tex
+2024/04/19 5.10c tkz-obj-eu-points-with.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-points-spc.tex
+2024/04/19 5.10c tkz-obj-el-points.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/tools\tkz-t
+ools-eu-angles.tex
+2024/04/19 5.10c tkz-tools-eu-angles.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-circles.tex
+2024/04/19 5.10c tkz-obj-eu-circles.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-circles-by.tex
+2024/04/19 5.10c tkz-obj-eu-circles.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-points-rnd.tex
+2024/04/19 5.10c tkz-obj-eu-points-rnd.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-lines.tex
+2024/04/19 5.10c tkz-obj-eu-lines.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-polygons.tex
+2024/04/19 5.10c tkz-obj-eu-polygons.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/obj\tkz-obj
+-eu-triangles.tex
+2024/04/19 5.10c tkz-obj-eu-triangles.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-lines.tex
+2024/04/19 5.10c tkz-obj-eu-draw-lines.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-circles.tex
+2024/04/19 5.10c tkz-obj-eu-draw-circles.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-ellipses.tex
+2024/04/19 5.10c tkz-obj-eu-draw-ellipses.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-polygons.tex
+2024/04/19 5.10c tkz-obj-eu-polygons.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-arcs.tex
+2024/04/19 5.10c tkz-tool-eu-arcs.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-angles.tex
+2024/04/19 5.10c tkz-tool-eu-angles.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-sectors.tex
+2024/04/19 5.10c tkz-obj-eu-sectors.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-compass.tex
+2024/04/19 5.10c tkz-obj-eu-compass.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-show.tex
+2024/04/19 5.10c tkz-obj-eu-show.tex
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tkz-euclide/drawings\tk
+z-draw-eu-protractor.tex
+2024/04/19 5.10c tkz-obj-eu-protractor.tex
+))) (AuxiliaryFiles/Referencing.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/imakeidx\imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
+nous mode
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count411
+\mult@box=\box108
+\multicol@leftmargin=\dimen416
+\c@unbalance=\count412
+\c@collectmore=\count413
+\doublecol@number=\count414
+\multicoltolerance=\count415
+\multicolpretolerance=\count416
+\full@width=\dimen417
+\page@free=\dimen418
+\premulticols=\dimen419
+\postmulticols=\dimen420
+\multicolsep=\skip190
+\multicolbaselineskip=\skip191
+\partial@page=\box109
+\last@line=\box110
+\mc@boxedresult=\box111
+\maxbalancingoverflow=\dimen421
+\mult@rightbox=\box112
+\mult@grightbox=\box113
+\mult@firstbox=\box114
+\mult@gfirstbox=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\@tempa=\box136
+\@tempa=\box137
+\@tempa=\box138
+\@tempa=\box139
+\@tempa=\box140
+\@tempa=\box141
+\@tempa=\box142
+\@tempa=\box143
+\@tempa=\box144
+\@tempa=\box145
+\@tempa=\box146
+\@tempa=\box147
+\@tempa=\box148
+\@tempa=\box149
+\@tempa=\box150
+\@tempa=\box151
+\c@minrows=\count417
+\c@columnbadness=\count418
+\c@finalcolumnbadness=\count419
+\last@try=\dimen422
+\multicolovershoot=\dimen423
+\multicolundershoot=\dimen424
+\mult@nat@firstbox=\box152
+\colbreak@box=\box153
+\mc@col@check@num=\count420
+))
+\BookTemplate@idxfile=\write7
+\openout7 = `BookTemplate.idx'.
+
+
+Writing index file BookTemplate.idx
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count421
+)
+\@linkdim=\dimen425
+\Hy@linkcounter=\count422
+\Hy@pagecounter=\count423
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count424
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4064.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4064.
+Package hyperref Info: Option `hypertexnames' set `true' on input line 4064.
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count425
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4786.
+\XeTeXLinkMargin=\dimen426
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count426
+\Field@Width=\dimen427
+\Fld@charsize=\dimen428
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring ON on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count427
+\c@Item=\count428
+\c@Hfootnote=\count429
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2023-11-26 v7.01g Hyperref driver for XeTeX
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box154
+\c@Hy@AnnotLevel=\count430
+\HyField@AnnotCount=\count431
+\Fld@listcount=\count432
+\c@bookmark@seq@number=\count433
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip192
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 12.
+) (AuxiliaryFiles/Commands.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/extpfeil\extpfeil.sty
+Invalid UTF-8 byte or sequence at line 17 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 18 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 27 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 31 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 31 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 32 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 33 replaced by U+FFFD.
+Package: extpfeil 2009/10/31 v0.4 Extensible Pfeile (PE)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+))
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/b/n --> U/stmry/m/n on input line 403.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 404.
+)) (Custom-2.sty)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex
+.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count434
+\l__fontspec_language_int=\count435
+\l__fontspec_strnum_int=\count436
+\l__fontspec_tmp_int=\count437
+\l__fontspec_tmpa_int=\count438
+\l__fontspec_tmpb_int=\count439
+\l__fontspec_tmpc_int=\count440
+\l__fontspec_em_int=\count441
+\l__fontspec_emdef_int=\count442
+\l__fontspec_strong_int=\count443
+\l__fontspec_strongdef_int=\count444
+\l__fontspec_tmpa_dim=\dimen429
+\l__fontspec_tmpb_dim=\dimen430
+\l__fontspec_tmpc_dim=\dimen431
+ (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplotstable.
+sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
+ision.tex)
+Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
+ (1.18.1)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
+plotstable.code.tex
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
+plotstable.coltype.code.tex)))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesome
+.sty
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesome
+symbols-generic.tex)
+
+Package fontspec Info: Could not resolve font "FontAwesome/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FontAwesome/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FontAwesome/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FontAwesome(0)' created for font
+(fontspec)             'FontAwesome' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FontAwesome/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesome
+symbols-xeluatex.tex))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsrefs\amsrefs.sty
+Package: amsrefs 2013/03/07 v2.14
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsrefs\pcatcode.sty
+Package: pcatcode 2002/04/16 v1.04
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsrefs\ifoption.sty
+Package: ifoption 2002/03/04 v1.02
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsrefs\rkeyval.sty
+Package: rkeyval 2004/05/05 v1.08
+\rsk@toks=\toks79
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsrefs\textcmds.sty
+Package: textcmds 2012/08/02 v2.00
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsrefs\mathscinet.sty
+Package: mathscinet 2002/04/17 v1.05
+)
+\c@bib=\count445
+\@maxlabelwidth=\dimen432
+\c@bib@env=\count446
+\bib@dbfile=\read7
+\alpha@suffix=\count447
+\series@index=\count448
+) (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/forloop\forloop.sty
+Package: forloop 2023/05/03 v3.0 For Loops for LaTeX
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tasks\tasks.sty
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xt
+emplate.sty
+Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen433
+\l__xtemplate_tmp_int=\count449
+\l__xtemplate_tmp_muskip=\muskip18
+\l__xtemplate_tmp_skip=\skip193
+)
+Package: tasks 2022/01/08 v1.4a lists with columns filled horizontally
+\g__tasks_total_items_int=\count450
+\l__tasks_columns_int=\count451
+\g__tasks_rows_int=\count452
+\g__tasks_current_col_num_int=\count453
+\g__tasks_current_row_num_int=\count454
+\l__tasks_item_columns_int=\count455
+\g__tasks_env_int=\count456
+\l__tasks_start_int=\count457
+\l__tasks_item_indent_dim=\dimen434
+\l__tasks_item_default_indent_dim=\dimen435
+\l__tasks_item_width_dim=\dimen436
+\l__tasks_label_width_dim=\dimen437
+\l__tasks_label_default_width_dim=\dimen438
+\l__tasks_label_offset_dim=\dimen439
+\l__tasks_label_default_offset_dim=\dimen440
+\l__tasks_column_sep_dim=\dimen441
+\l__tasks_correction_dim=\dimen442
+\l__tasks_full_width_dim=\dimen443
+\l__tasks_after_item_skip=\skip194
+\l__tasks_custom_after_item_skip=\skip195
+\l__tasks_before_list_skip=\skip196
+\l__tasks_after_list_skip=\skip197
+\l__tasks_item_coffin=\box155
+\l__tasks_label_coffin=\box156
+\c@task=\count458
+\l__tasks_tmpa_int=\count459
+\l__tasks_tmpb_int=\count460
+\l__tasks_tmpa_coffin=\box157
+\l__tasks_tmpa_box=\box158
+
+Package xtemplate Info: Declaring object type 'tasks' taking 3 argument(s) on
+(xtemplate)             line 450.
+
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tasks\tasks.cfg))
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbtheorems.c
+ode.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
+)
+\c@tcb@cnt@definition=\count461
+\c@tcb@cnt@theorem=\count462
+\c@tcb@cnt@corollary=\count463
+\c@tcb@cnt@example=\count464
+\c@tcb@cnt@exercise=\count465
+\c@tcb@cnt@property=\count466
+\c@tcb@cnt@algorithm=\count467
+\c@tcb@cnt@remark=\count468
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+\BookTemplate@idxfile=\write8
+\openout8 = `BookTemplate.idx'.
+
+
+Writing index file BookTemplate.idx
+
+Package fontspec Info: Font family 'THSarabun.ttf(0)' created for font
+(fontspec)             'THSarabun.ttf' with options
+(fontspec)             [Ligatures=TeX,Scale=1.2,Path=./,UprightFont=*,BoldFont=
+*
+(fontspec)             Bold,ItalicFont=* Italic,BoldItalicFont=* Bold Italic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun.ttf]/OT:script=latn;language=dfl
+t;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.2]"[./THSarabun
+(fontspec)             Bold.ttf]/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun
+(fontspec)             Italic.ttf]/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun Bold
+(fontspec)             Italic.ttf]/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 61.
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.sty
+\CommentStream=\write9
+
+Excluding comment 'comment')
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip198
+\multirow@cntb=\count469
+\multirow@dima=\skip199
+\bigstrutjot=\dimen444
+)
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen445
+\ESO@tempdimb=\dimen446
+)
+\AM@pagewidth=\dimen447
+\AM@pageheight=\dimen448
+\AM@fboxrule=\dimen449
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\ppxetex.def
+File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
+)
+\pdfpages@includegraphics@status=\count470
+\AM@pagebox=\box159
+\AM@global@opts=\toks80
+\AM@pagecnt=\count471
+\AM@toc@title=\toks81
+\AM@lof@heading=\toks82
+\c@AM@survey=\count472
+\AM@templatesizebox=\box160
+)
+(BookTemplate.aux
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `exer:quiz3' multiply defined.
+
+)
+\openout1 = `BookTemplate.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+43.
+ (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.0pt, 453.50787pt, 72.0pt)
+* v-part:(T,H,B)=(99.58464pt, 674.33032pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=453.50787pt
+* \textheight=674.33032pt
+* \oddsidemargin=-0.26999pt
+* \evensidemargin=-0.26999pt
+* \topmargin=-41.18535pt
+* \headheight=54.0pt
+* \headsep=14.5pt
+* \topskip=12.0pt
+* \footskip=20.0pt
+* \marginparwidth=62.0pt
+* \marginparsep=5.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+Package hyperref Info: Link coloring ON on input line 143.
+(BookTemplate.out) (BookTemplate.out)
+\@outlinefile=\write10
+\openout10 = `BookTemplate.out'.
+
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nom
+etadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+))
+(Structure/Title/Title.tex
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 29.85593pt on input line 9.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
+(Font)              scaled to size 29.85593pt on input line 9.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 20.73593pt on input line 9.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
+(Font)              scaled to size 20.73593pt on input line 9.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 13.13995pt on input line 18.
+
+
+LaTeX Font Warning: Font shape `TU/THSarabun.ttf(0)/m/sc' undefined
+(Font)              using `TU/THSarabun.ttf(0)/m/n' instead on input line 18.
+
+[1
+
+
+
+]) (AuxiliaryFiles/Frontmatter.tex [2
+
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(75.0pt, 472.50787pt, 50.0pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=472.50787pt
+* \textheight=674.33032pt
+* \oddsidemargin=2.73001pt
+* \evensidemargin=-22.26999pt
+* \topmargin=13.08827pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=12.0pt
+* \footskip=14.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=0.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 31.19992pt on input line 58.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
+(Font)              scaled to size 31.19992pt on input line 58.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
+0.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
+0.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+60.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+60.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 60.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 60.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
+
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
+
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 60
+.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 6
+0.
+
+(C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
+(BookTemplate.toc
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 9.
+ [1
+
+] [2] [3])
+\tf@toc=\write11
+\openout11 = `BookTemplate.toc'.
+
+ [4]) (Structure/Introduction.tex)
+(AuxiliaryFiles/Mainmatter.tex [5
+
+
+
+] [6
+
+
+]) (Structure/Chapter2.tex
+Chapter 1.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
+(Font)              scaled to size 20.73593pt on input line 3.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Info: Font family 'THSarabun.ttf(1)' created for font
+(fontspec)             'THSarabun.ttf' with options
+(fontspec)             [Ligatures=TeX,Scale=1.2,Path=./,UprightFont=*,BoldFont=
+*
+(fontspec)             Bold,ItalicFont=* Italic,BoldItalicFont=* Bold
+(fontspec)             Italic,Script=Thai].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun.ttf]/OT:script=latn;language=dfl
+t;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.2]"[./THSarabun
+(fontspec)             Bold.ttf]/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun
+(fontspec)             Italic.ttf]/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun Bold
+(fontspec)             Italic.ttf]/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(1)/b/n' will be
+(Font)              scaled to size 20.73593pt on input line 5.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[1
+
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(1)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 53.
+
+Package fontspec Info: Font family 'THSarabun.ttf(2)' created for font
+(fontspec)             'THSarabun.ttf' with options
+(fontspec)             [Ligatures=TeX,Scale=1.2,Path=./,UprightFont=*,BoldFont=
+*
+(fontspec)             Bold,ItalicFont=* Italic,BoldItalicFont=* Bold
+(fontspec)             Italic,Script=Thai,Script=Thai].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun.ttf]/OT:script=latn;language=dfl
+t;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.2]"[./THSarabun
+(fontspec)             Bold.ttf]/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun
+(fontspec)             Italic.ttf]/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.2]"[./THSarabun Bold
+(fontspec)             Italic.ttf]/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(2)/b/n' will be
+(Font)              scaled to size 20.73593pt on input line 53.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 9.59998pt on input line 67.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 7.19998pt on input line 67.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
+(Font)              scaled to size 13.13995pt on input line 75.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 75.
+[2]
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 17.27994pt on input line 78.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
+(Font)              scaled to size 17.27994pt on input line 78.
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(1)/b/n' will be
+(Font)              scaled to size 17.27994pt on input line 78.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(2)/b/n' will be
+(Font)              scaled to size 17.27994pt on input line 78.
+[3] [4]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[5] [6]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[7]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 237.
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[8]
+File: example2.png Graphic file (type bmp)
+<example2.png>
+File: Example3.png Graphic file (type bmp)
+<Example3.png>
+File: Example4.png Graphic file (type bmp)
+<Example4.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[]\TU/THSarabun.ttf(0)/m/n/12 เมื่อ พิจารณา บน แนว เส้น ที่ ทำให้ ระนาบ มี ค่า 
+คงที่ $\OML/lmm/m/it/12 y \OT1/lmr/m/n/12 = \OMS/lmsy/m/n/12 ^^@\OT1/lmr/m/n/12
+ 4\OML/lmm/m/it/12 x \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 c$ \TU/THSarabun.ttf(0)
+/m/n/12 จง แสดง ว่า
+ []
+
+[9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+
+ []
+
+File: ex113-1.png Graphic file (type bmp)
+<ex113-1.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+File: simplex1.png Graphic file (type bmp)
+<simplex1.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: simplex2.png Graphic file (type bmp)
+<simplex2.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13]
+File: simplex3.png Graphic file (type bmp)
+<simplex3.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+File: basicSimplex1.png Graphic file (type bmp)
+<basicSimplex1.png>
+[14] [15]
+File: basicSimplex2.png Graphic file (type bmp)
+<basicSimplex2.png>
+ [16]
+File: SimplexConvexHull.png Graphic file (type bmp)
+<SimplexConvexHull.png>
+ [17]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
+(Font)              scaled to size 14.39996pt on input line 510.
+Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
+age=dflt;mapping=tex-text;!
+[18]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(2)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 553.
+[19]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[20]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[21] [22]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[23]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[24]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Overfull \hbox (4.65582pt too wide) in paragraph at lines 740--741
+[]\TU/THSarabun.ttf(0)/m/n/12 ตาม ความ หมาย ใน วิชา พีชคณิต เชิง เส้น เรื่อง กา
+ร แก้ ระบบ สมการ เชิง เส้น นั้น pivot หมาย ถึง คอลัมน์ ใน เม ทริกซ์ สัมประสิทธิ
+์
+ []
+
+[25]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[26] [27]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 11.99997pt on input line 797.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 797.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 797.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 8.39998pt on input line 797.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 797.
+[28] [29] [30]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[31] [32]
+File: ex-simplex-mix.png Graphic file (type bmp)
+<ex-simplex-mix.png>
+ [33]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[34]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[35]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+File: assChap1-B-1.png Graphic file (type bmp)
+<assChap1-B-1.png>
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
+
+ []
+
+[37]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/Chapter4.tex [38]
+Chapter 2.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[39
+
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+File: decisiontree.png Graphic file (type bmp)
+<decisiontree.png>
+[40] [41]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[42]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 99--101
+[]\TU/THSarabun.ttf(0)/m/n/12 ภาย ใต้ การ ทดลอง เชิง การ สุ่ม หนึ่ง ถ้า ผล จอบ 
+แทน ทั้งหมด ที่ เป็น ไป ได้ คือ $\OML/lmm/m/it/12 X \OT1/lmr/m/n/12 = \OML/lmm/
+m/it/12 X[]; X[]; X[]; []$
+ []
+
+[43]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[44]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[45]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[46]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[47] [48] [49]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+Missing character: There is no บ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no า in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ท in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no บ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no า in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ท in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no บ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no า in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ท in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no บ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no า in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ท in font [lmsans12-regular]:mapping=tex-text;!
+[50]
+Overfull \hbox (3.86835pt too wide) detected at line 410
+[]
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+Missing character: There is no เ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ล in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ็ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ก in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ก in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ล in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no า in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ง in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ใ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ห in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ญ in font [lmsans12-regular]:mapping=tex-text;!
+Missing character: There is no ่ in font [lmsans12-regular]:mapping=tex-text;!
+[51] [52]
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
+(Font)              scaled to size 18.71999pt on input line 501.
+ [53] [54]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[55]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[56]
+Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
+age=dflt;mapping=tex-text;!
+Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
+age=dflt;mapping=tex-text;!
+Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
+age=dflt;mapping=tex-text;!
+) (Structure/Chapter3.tex [57] [58
+
+
+]
+Chapter 3.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[59]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 46.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 46.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\pi' on input line 46.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 46.
+
+[60]
+
+LaTeX Warning: Command \textasciicircum invalid in math mode on input line 99.
+
+
+LaTeX Warning: Command \textasciicircum invalid in math mode on input line 99.
+
+File: image.png Graphic file (type bmp)
+<image.png>
+File: image2.png Graphic file (type bmp)
+<image2.png>
+File: ratioToPi.png Graphic file (type bmp)
+<ratioToPi.png>
+[61]
+File: SimulatePi.png Graphic file (type bmp)
+<SimulatePi.png>
+File: simulatePiWrong.png Graphic file (type bmp)
+<simulatePiWrong.png>
+ [62] [63]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[64]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[65]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[66] [67] [68] [69]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/ChapterMarkov.tex [70]
+Chapter 4.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[71
+
+
+] [72]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[73]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Overfull \hbox (47.60022pt too wide) detected at line 84
+[]
+ []
+
+[74] [75] [76] [77]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
+(Font)              scaled to size 9.59998pt on input line 178.
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
+(Font)              scaled to size 8.39998pt on input line 178.
+[78] [79]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[80]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Overfull \hbox (7.67982pt too wide) in paragraph at lines 221--222
+[]\TU/THSarabun.ttf(0)/m/n/12 เริ่ม จาก เขียน แผนภาพ การ เปลี่ยน สถานะ กัน ก่อน
+ โดย โจทย์ คือ ให้$[]$ 
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[81]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/Chapter6.tex [82]
+Chapter 5.
+File: forecast_and_regression.png Graphic file (type bmp)
+<forecast_and_regression.png>
+
+Underfull \hbox (badness 1107) in paragraph at lines 13--13
+[][]|\TU/THSarabun.ttf(0)/m/n/12 ความ แตก ต่าง ระหว่าง ตัว แบบ อนุกรม เวลา และ 
+ตัว แบบ
+ []
+
+[83
+
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[84]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[85]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[86]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Overfull \hbox (3.14665pt too wide) in paragraph at lines 142--143
+[]\TU/THSarabun.ttf(0)/m/n/12 ค่า $\OML/lmm/m/it/12 ^^K$ \TU/THSarabun.ttf(0)/m
+/n/12 เป็น ค่าที่ ต้อง กำหนด ขึ้น มา ตั้งแต่ เริ่ม ตัดสิน ใจ (เหมือน กับ ที่ เร
+า ต้อง เลือก ว่า จะ moving average หรือ weighted
+ []
+
+[87]
+File: alpha-expo-smoothing.png Graphic file (type bmp)
+<alpha-expo-smoothing.png>
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[88]
+File: regressionSample.png Graphic file (type bmp)
+<regressionSample.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+[]\TU/THSarabun.ttf(0)/m/n/12 ค่า $\OML/lmm/m/it/12 a[]; a[]$ \TU/THSarabun.ttf
+(0)/m/n/12 ของ ตัว แบบ การ ถดถอย เชิง เส้น $\OML/lmm/m/it/12 Y \OT1/lmr/m/n/12 
+= \OML/lmm/m/it/12 a[] \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 a[]X \OT1/lmr/m/n/12 
++ \OML/lmm/m/it/12 ^^O$ \TU/THSarabun.ttf(0)/m/n/12 ของ ชุด ข้อมูล
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 221--222
+[] \OML/lmm/m/it/12 ; [] ; [] ; []$ \TU/THSarabun.ttf(0)/m/n/12 สามารถ ประมาณ ค
+่า ได้ ด้วย $\OML/lmm/m/it/12 ^^K[]; ^^K[]$ \TU/THSarabun.ttf(0)/m/n/12 (ด้วย ว
+ิธี การ ทาง คณิตศาสตร์
+ []
+
+[89] [90]
+File: regressionSample.png Graphic file (type bmp)
+<regressionSample.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--282
+
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[91]
+File: image/error_in_forecasting.png Graphic file (type bmp)
+<image/error_in_forecasting.png>
+ [92] [93] [94] [95] [96] [97]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[98]) (Structure/Chapter5.tex
+Chapter 6.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[99
+
+
+]
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 1>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 1>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 1>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 1>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 1>
+ [100
+
+]
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 2>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 2>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 2>
+ [101
+
+]
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 3>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 3>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 3>
+ [102
+
+]
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 4>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 4>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 4>
+ [103
+
+]
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 5>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 5>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 5>
+ [104
+
+]
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 6>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 6>
+File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
+<use Quantitative_Analysis_250907.pdf, page 6>
+ [105
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/Chapter7.tex [106]
+Chapter 7.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+File: image/queue.png Graphic file (type bmp)
+<image/queue.png>
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[107
+
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[108]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/Chapter8.tex [109] [110
+
+
+]
+Chapter 8.
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (AuxiliaryFiles/Appendices.tex [111]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(75.0pt, 472.50787pt, 50.0pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=472.50787pt
+* \textheight=674.33032pt
+* \oddsidemargin=2.73001pt
+* \evensidemargin=-22.26999pt
+* \topmargin=13.08827pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=12.0pt
+* \footskip=14.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=0.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ [112
+
+
+
+] [113] [114])
+(Structure/Chapter1.tex
+Appendix A.
+[1
+
+
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[2]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[3] [4]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[5] [6]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+
+ []
+
+[7] [8]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[9] [10]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[11]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/homework.tex [12]
+Appendix B.
+[13
+
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[14]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+File: hw2-1.png Graphic file (type bmp)
+<hw2-1.png>
+[15]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[16]
+Overfull \hbox (50.10707pt too wide) in paragraph at lines 77--87
+[] 
+ []
+
+
+Overfull \hbox (26.13768pt too wide) in paragraph at lines 99--116
+[] 
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[17]
+File: Homework4-template.png Graphic file (type bmp)
+<Homework4-template.png>
+ [18]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[19]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/quiz.tex [20]
+Appendix C.
+[21
+
+
+]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[22]
+Overfull \hbox (37.06947pt too wide) in paragraph at lines 56--57
+ [][] 
+ []
+
+
+Overfull \hbox (53.02751pt too wide) in paragraph at lines 37--74
+[]$ $[]$ 
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[23]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--121
+\TU/THSarabun.ttf(0)/m/n/12 และ ได้ บริเวณ การ ตัดสิน ใจ เป็น ตาม รูป ด้าน ขวา
+ []
+
+[24]
+Overfull \hbox (0.7822pt too wide) in paragraph at lines 168--180
+[] 
+ []
+
+
+Overfull \hbox (2.9072pt too wide) in paragraph at lines 185--195
+[][] 
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
+\TU/THSarabun.ttf(0)/m/n/12 และ ได้ บริเวณ การ ตัดสิน ใจ เป็น ตาม รูป ด้าน ขวา
+ []
+
+
+Overfull \hbox (8.19699pt too wide) in paragraph at lines 325--325
+ [] 
+ []
+
+[26]
+Overfull \hbox (0.7822pt too wide) in paragraph at lines 325--325
+[] 
+ []
+
+
+Overfull \hbox (2.9072pt too wide) in paragraph at lines 325--325
+[][] 
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[27]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Overfull \hbox (7.67982pt too wide) in paragraph at lines 352--353
+[]\TU/THSarabun.ttf(0)/m/n/12 เริ่ม จาก เขียน แผนภาพ การ เปลี่ยน สถานะ กัน ก่อน
+ โดย โจทย์ คือ ให้$[]$ 
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[28]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (AuxiliaryFiles/Backmatter.tex [29] [30
+
+
+] (BookTemplate.bbl
+
+Package rkeyval Warning: Unknown key: \bib'how on input line 8.
+
+LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
+(Font)              scaled to size 11.99997pt on input line 9.
+) [31] [32
+
+
+])
+runsystem(makeindex BookTemplate.idx)...executed safely (allowed).
+
+ (BookTemplate.ind) [33] (BookTemplate.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `BookTemplate.out' has not changed.
+(rerunfilecheck)             Checksum: 6B3D592788B80223BF532F83E1B27278;25515.
+ ) 
+Here is how much of TeX's memory you used:
+ 64522 strings out of 409617
+ 1488924 string characters out of 5774013
+ 2450497 words of memory out of 5000000
+ 85260 multiletter control sequences out of 15000+600000
+ 620474 words of font info for 165 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 138i,17n,161p,947b,2703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on BookTemplate.pdf (155 pages).

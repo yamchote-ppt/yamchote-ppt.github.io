@@ -1,0 +1,27 @@
+% \bib, bibdiv, biblist are defined by the amsrefs package.
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{LabelUrl}{misc}{
+      author={Puddu, Mattia},
+       title={Title},
+         how={\url{https://mattiapuddu25.github.io/index.html}},
+}
+
+\bib{LabelBook}{book}{
+      author={Puddu, Mattia},
+       title={Title},
+   publisher={Publisher},
+        date={2025},
+}
+
+\bib{LabelArticle}{article}{
+      author={Puddu, Mattia},
+       title={Title},
+        date={2025},
+     journal={Journal},
+       pages={1\ndash 100},
+}
+
+\end{biblist}
+\end{bibdiv}
