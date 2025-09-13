@@ -66,20 +66,27 @@
 \contentsline {section}{\numberline {7.1}บทนำ}{107}{section.7.1}%
 \contentsline {section}{\numberline {7.2}โครงสร้างของระบบแถวคอย}{107}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}ลักษณะของลูกค้า}{107}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}ลักษณะของแถวคอย}{109}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}ลักษณะของหน่วยให้บริการ}{109}{subsection.7.2.3}%
-\contentsline {section}{\numberline {7.3}ตัวแบบแถวคอย}{109}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}ตัวแบบ M/M/1}{109}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}ตัวแบบ M/M/s}{109}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}ตัวแบบ M/G/1}{109}{subsection.7.3.3}%
-\contentsline {subsection}{\numberline {7.3.4}ตัวแบบ M/D/1}{109}{subsection.7.3.4}%
-\contentsline {section}{\numberline {7.4}การวิเคราะห์ระบบแถวคอยเพื่อการตัดสินใจทางธุรกิจ}{109}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}การกำหนดจำนวนหน่วยบริการ}{109}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}การตัดสินใจจัดรูปแบบแถวคอย}{109}{subsection.7.4.2}%
-\contentsline {chapter}{\numberline {8}ปัญหาการหาค่าเหมาะสุดต่าง ๆ ในเชิงธุรกิจ (Optimization Problem in Business)}{111}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Transportation Problem}{111}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Scheduling Problem}{111}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Matching Problem}{111}{section.8.3}%
+\contentsline {subsection}{\numberline {7.2.2}ลักษณะของแถวคอย}{110}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}รูปแบบขอองระบบ}{110}{subsubsection.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2.2}ความยาวของแถวคอย}{110}{subsubsection.7.2.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}ลักษณะของหน่วยให้บริการ}{110}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}ตัวแบบแถวคอย (เบื้องต้น)}{111}{section.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.0.1}Kendall Notation}{111}{subsubsection.7.3.0.1}%
+\contentsline {subsubsection}{\numberline {7.3.0.2}สัญลักษณ์ที่ใช้ในการวิเคราะห์แถวคอย}{111}{subsubsection.7.3.0.2}%
+\contentsline {subsection}{\numberline {7.3.1}ตัวแบบ M/M/1}{112}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}ตัวแบบ M/M/s}{115}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}ตัวแบบ M/G/1}{116}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}ตัวแบบ M/D/1}{116}{subsection.7.3.4}%
+\contentsline {section}{\numberline {7.4}ตัวแบบแถวคอย (ทฤษฎี)}{116}{section.7.4}%
+\contentsline {section}{\numberline {7.5}การวิเคราะห์ระบบแถวคอยเพื่อการตัดสินใจทางธุรกิจ}{116}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}การกำหนดจำนวนหน่วยบริการ}{117}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}การตัดสินใจจัดรูปแบบแถวคอย}{118}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}การตัดสินใจในลักษณะอื่น ๆ}{119}{subsection.7.5.3}%
+\contentsline {chapter}{\numberline {8}ปัญหาการหาค่าเหมาะสุดต่าง ๆ ในเชิงธุรกิจ (Optimization Problem in Business)}{121}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Zero-sum game as Linear Programming}{121}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Transportation Problem}{121}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Scheduling Problem}{121}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Matching Problem}{121}{section.8.4}%
  \vspace {25pt} \noindent \hskip 2em\relax \hskip 2em\relax \bfseries Appendices\par \vspace {10pt}
 \ttl@change@i {\@ne }{chapter}{4pc}{\addvspace {16pt}\bfseries \thecontentslabel }{\hspace {.5cm}}{}{\color {black!50}\;\;\dotfill \;\bfseries \color {black}\PageName \, \thecontentspage }\relax 
 \ttl@change@v {chapter}{}{}{}\relax 
