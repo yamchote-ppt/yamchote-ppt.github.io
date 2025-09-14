@@ -468,3 +468,178 @@ P(A\rightarrow_2B) = \left(\blank{1cm}\times\blank{1cm}\right) + \left(\blank{1c
 $$
 \subsection*{โบนัสพิเศษ +1 คะแนน (แบบไม่หาร)}
 จาก 2 ตัวอย่างที่ผ่านมา น่าจะพอสังเกตลักษณะการนำตัวเลขในเมทริกซ์มาคูณไขว้กันได้ จงอธิบายวิธีการคิดการคูณเมทริกซ์กับเมทริกซ์จากข้อสังเกตที่ได้ พร้อมทั้งแสดงวิธีคำนวณการคูณเพื่อหาสมาชิกอีก 7 ตัวที่เหลือ 
+\newpage
+\section*{Quiz 5}
+สมมติว่าในการวิเคราะห์กลยุทธิ์การแข่งขันทางการตลาดแห่งหนึ่งแบบกลยุทธ์ผสม 2 กลยุทธ์ด้วยวิธีการวาดกราฟและได้กราฟดังรูป
+
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-0.1, xmax=1.1,
+		ymin=-4.2, ymax=5.2,
+		samples=200,
+		domain=0:1,
+		xlabel={$อัตราส่วนกลยุทธ์$}, ylabel={},
+		xtick={0,1},
+%		xticklabels={$x_1=0$,$x_1=1$},
+		ytick={-4,-3,...,5},
+		yticklabels={-4,-3,...,5},
+		clip=false
+		]
+		
+		% --- a family of light gray lines (candidates)
+		\addplot[black!60] {-5*x+2};
+		\addplot[black!60] {-2*x};
+		\addplot[black!60] {4*x-1};
+		\addplot[black!60] {9*x-4};
+		
+		
+		% --- point at the "V" (where two branches meet), just for emphasis
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(0.6667,-1.3333)};
+		\node[anchor=north] at (axis cs:0.6667,-1.3333) {D};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(4/11,-8/11)};
+		\node[anchor=north] at (axis cs:4/11,-8/11) {C};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(1/3,1/3)};
+		\node[anchor=south] at (axis cs:1/3,1/3) {A};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(3/5,12/5 - 1)};
+		\node[anchor=south] at (axis cs:3/5,12/5 - 1) {B};
+		
+		
+		
+		% --- thin verticals at x1=0 and x1=1 (as in the picture)
+%		\addplot[black!50] coordinates {(0,-4.2) (0,5.2)};
+		\addplot[black!50] coordinates {(1,-5.2) (1,6.2)};
+		
+		\addplot[black!50] coordinates {(0.975,5) (1.025,5)};
+		\addplot[black!50] coordinates {(0.975,4) (1.025,4)};
+		\addplot[black!50] coordinates {(0.975,3) (1.025,3)};
+		\addplot[black!50] coordinates {(0.975,2) (1.025,2)};
+		\addplot[black!50] coordinates {(0.975,1) (1.025,1)};
+		\addplot[black!50] coordinates {(0.975,-1) (1.025,-1)};
+		\addplot[black!50] coordinates {(0.975,-2) (1.025,-2)};
+		\addplot[black!50] coordinates {(0.975,-3) (1.025,-3)};
+		\addplot[black!50] coordinates {(0.975,-4) (1.025,-4)};
+		
+		% --- labels
+		\node[anchor=west] at (axis cs:1,5) {$y=9p-4$};
+		\node[anchor=west] at (axis cs:1,3) {$y=4p-1$};
+		\node[anchor=west] at (axis cs:1,-2) {$y=-2p$};
+		\node[anchor=west] at (axis cs:1,-3) {$y=-5p+2$};
+		
+		\node[anchor=west] at (axis cs:0,6) {$p=0$};
+		\node[anchor=east] at (axis cs:1,6) {$p=1$};
+		
+	\end{axis}
+\end{tikzpicture}
+
+\begin{multicols}{2}
+\noindent (1) จงแรเงาบริเวณการหา minimax พร้อมบอกจุดที่เป็น minimax ของการแข่งขันนี้ (A, B, C, หรือ D)
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-0.1, xmax=1.1,
+		ymin=-4.2, ymax=5.2,
+		samples=200,
+		domain=0:1,
+		xlabel={$อัตราส่วนกลยุทธ์$}, ylabel={},
+		xtick={0,1},
+		%		xticklabels={$x_1=0$,$x_1=1$},
+		ytick={-4,-3,...,5},
+		yticklabels={-4,-3,...,5},
+		clip=false
+		]
+		
+		% --- a family of light gray lines (candidates)
+		\addplot[black!60] {-5*x+2};
+		\addplot[black!60] {-2*x};
+		\addplot[black!60] {4*x-1};
+		\addplot[black!60] {9*x-4};
+		
+		
+		% --- point at the "V" (where two branches meet), just for emphasis
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(0.6667,-1.3333)};
+		\node[anchor=north] at (axis cs:0.6667,-1.3333) {D};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(4/11,-8/11)};
+		\node[anchor=north] at (axis cs:4/11,-8/11) {C};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(1/3,1/3)};
+		\node[anchor=south] at (axis cs:1/3,1/3) {A};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(3/5,12/5 - 1)};
+		\node[anchor=south] at (axis cs:3/5,12/5 - 1) {B};
+		
+		
+		
+		% --- thin verticals at x1=0 and x1=1 (as in the picture)
+		%		\addplot[black!50] coordinates {(0,-4.2) (0,5.2)};
+		\addplot[black!50] coordinates {(1,-5.2) (1,6.2)};
+		
+		\addplot[black!50] coordinates {(0.975,5) (1.025,5)};
+		\addplot[black!50] coordinates {(0.975,4) (1.025,4)};
+		\addplot[black!50] coordinates {(0.975,3) (1.025,3)};
+		\addplot[black!50] coordinates {(0.975,2) (1.025,2)};
+		\addplot[black!50] coordinates {(0.975,1) (1.025,1)};
+		\addplot[black!50] coordinates {(0.975,-1) (1.025,-1)};
+		\addplot[black!50] coordinates {(0.975,-2) (1.025,-2)};
+		\addplot[black!50] coordinates {(0.975,-3) (1.025,-3)};
+		\addplot[black!50] coordinates {(0.975,-4) (1.025,-4)};
+		
+		
+	\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\noindent (2) จงแรเงาบริเวณการหา maximin พร้อมบอกจุดที่เป็น maximin ของการแข่งขันนี้ (A, B, C, หรือ D)
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-0.1, xmax=1.1,
+		ymin=-4.2, ymax=5.2,
+		samples=200,
+		domain=0:1,
+		xlabel={$อัตราส่วนกลยุทธ์$}, ylabel={},
+		xtick={0,1},
+		%		xticklabels={$x_1=0$,$x_1=1$},
+		ytick={-4,-3,...,5},
+		yticklabels={-4,-3,...,5},
+		clip=false
+		]
+		
+		% --- a family of light gray lines (candidates)
+		\addplot[black!60] {-5*x+2};
+		\addplot[black!60] {-2*x};
+		\addplot[black!60] {4*x-1};
+		\addplot[black!60] {9*x-4};
+		
+		
+		% --- point at the "V" (where two branches meet), just for emphasis
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(0.6667,-1.3333)};
+		\node[anchor=north] at (axis cs:0.6667,-1.3333) {D};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(4/11,-8/11)};
+		\node[anchor=north] at (axis cs:4/11,-8/11) {C};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(1/3,1/3)};
+		\node[anchor=south] at (axis cs:1/3,1/3) {A};
+		\addplot[only marks, mark=*, mark size=0.25pt] coordinates {(3/5,12/5 - 1)};
+		\node[anchor=south] at (axis cs:3/5,12/5 - 1) {B};
+		
+		
+		
+		% --- thin verticals at x1=0 and x1=1 (as in the picture)
+		%		\addplot[black!50] coordinates {(0,-4.2) (0,5.2)};
+		\addplot[black!50] coordinates {(1,-5.2) (1,6.2)};
+		
+		\addplot[black!50] coordinates {(0.975,5) (1.025,5)};
+		\addplot[black!50] coordinates {(0.975,4) (1.025,4)};
+		\addplot[black!50] coordinates {(0.975,3) (1.025,3)};
+		\addplot[black!50] coordinates {(0.975,2) (1.025,2)};
+		\addplot[black!50] coordinates {(0.975,1) (1.025,1)};
+		\addplot[black!50] coordinates {(0.975,-1) (1.025,-1)};
+		\addplot[black!50] coordinates {(0.975,-2) (1.025,-2)};
+		\addplot[black!50] coordinates {(0.975,-3) (1.025,-3)};
+		\addplot[black!50] coordinates {(0.975,-4) (1.025,-4)};
+		
+	\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{multicols}
+
+\subsection*{โบนัสพิเศษ +1 คะแนน (แบบไม่หาร)}
+จงแก้สมการหาค่าพิกัดของจุด maximin ที่ระบุในข้อ (2) (หาค่า p ได้จะได้ 0.5 คะแนน) พร้อมทั้งระบุค่าของเกม (หาค่าของเกมได้จะได้ 0.5 คะแนน)
+\newpage

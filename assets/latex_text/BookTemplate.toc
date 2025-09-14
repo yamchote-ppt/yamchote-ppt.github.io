@@ -115,6 +115,6 @@
 \contentsline {subsection}{\numberline {A.4.2}การเข้าใจจุดประสงค์และเงื่อนไขของปัญหา}{12}{subsection.a.A.4.2}%
 \contentsline {chapter}{\numberline {B}Homework}{13}{appendix.a.B}%
 \contentsline {chapter}{\numberline {C}Quiz}{21}{appendix.a.C}%
-\contentsline {part}{Bibliography}{31}{section*.83}%
-\contentsline {part}{Analytic Index}{33}{appendix*.85}%
+\contentsline {part}{Bibliography}{31}{section*.85}%
+\contentsline {part}{Analytic Index}{33}{appendix*.87}%
 \contentsfinish 
