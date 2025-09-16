@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.28)  13 SEP 2025 16:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.28)  16 SEP 2025 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4110,17 +4110,97 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-) (Structure/quiz.tex [20]
-Appendix C.
-[21
+[20]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+File: instruction-final.png Graphic file (type bmp)
+<instruction-final.png>
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[21]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
 
 
-]
+Overfull \hbox (31.37527pt too wide) in paragraph at lines 304--305
+[]\TU/THSarabun.ttf(0)/m/n/12 Weighted moving average ของ ระยะ เวลา $\OML/lmm/m
+/it/12 n$ \TU/THSarabun.ttf(0)/m/n/12 เดือน แบบ กำหนด น้ำ หนัก ด้วย ตัว เอง เป็
+น $\OML/lmm/m/it/12 w[]; w[]; [] ; w[]; w[]$
+ []
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
 [22]
+Overfull \hbox (1.35237pt too wide) in paragraph at lines 319--320
+[][][][] [] [][] [] [][][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [
+][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] 
+[][] [] [][] [] [][] []
+ []
+
+
+Overfull \hbox (1.34038pt too wide) in paragraph at lines 319--320
+[][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] []
+ [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [
+] [][] [] [][] [] [][] []
+ []
+
+
+Overfull \hbox (1.34038pt too wide) in paragraph at lines 319--320
+[][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] []
+ [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [
+] [][] [] [][] [] [][] []
+ []
+
+
+Overfull \hbox (1.35237pt too wide) in paragraph at lines 319--320
+[][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] []
+ [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [
+] [][] [] [][] [] [][] []
+ []
+
+
+Overfull \hbox (1.34038pt too wide) in paragraph at lines 319--320
+[][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] []
+ [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [
+] [][] [] [][] [] [][] []
+ []
+
+
+Overfull \hbox (1.32838pt too wide) in paragraph at lines 319--320
+[][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] []
+ [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [
+] [][] [] [][] [] [][] []
+ []
+
+
+Overfull \hbox (1.35237pt too wide) in paragraph at lines 319--320
+[][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] []
+ [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [] [][] [
+] [][] [] [][] [] [][] []
+ []
+
+) (Structure/quiz.tex [23] [24
+
+
+]
+Appendix C.
+[25]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[26]
 Overfull \hbox (37.06947pt too wide) in paragraph at lines 56--57
  [][] 
  []
@@ -4134,7 +4214,7 @@ Overfull \hbox (53.02751pt too wide) in paragraph at lines 37--74
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[23]
+[27]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4144,7 +4224,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--121
 \TU/THSarabun.ttf(0)/m/n/12 และ ได้ บริเวณ การ ตัดสิน ใจ เป็น ตาม รูป ด้าน ขวา
  []
 
-[24]
+[28]
 Overfull \hbox (0.7822pt too wide) in paragraph at lines 168--180
 [] 
  []
@@ -4158,7 +4238,7 @@ Overfull \hbox (2.9072pt too wide) in paragraph at lines 185--195
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[25]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 325--325
 \TU/THSarabun.ttf(0)/m/n/12 และ ได้ บริเวณ การ ตัดสิน ใจ เป็น ตาม รูป ด้าน ขวา
  []
@@ -4168,7 +4248,7 @@ Overfull \hbox (8.19699pt too wide) in paragraph at lines 325--325
  [] 
  []
 
-[26]
+[30]
 Overfull \hbox (0.7822pt too wide) in paragraph at lines 325--325
 [] 
  []
@@ -4182,7 +4262,7 @@ Overfull \hbox (2.9072pt too wide) in paragraph at lines 325--325
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[27]
+[31]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4197,7 +4277,7 @@ Overfull \hbox (7.67982pt too wide) in paragraph at lines 352--353
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[28]
+[32]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4206,7 +4286,7 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[29]
+[33]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4263,22 +4343,22 @@ Missing character: There is no ์ in font lmmi12!
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[30]) (AuxiliaryFiles/Backmatter.tex (BookTemplate.bbl
+[34]) (AuxiliaryFiles/Backmatter.tex (BookTemplate.bbl
 
 Package rkeyval Warning: Unknown key: \bib'how on input line 8.
 
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
 (Font)              scaled to size 11.99997pt on input line 9.
-) [31
+) [35
 
 
-] [32
+] [36
 
 
 ])
 runsystem(makeindex BookTemplate.idx)...executed safely (allowed).
 
- (BookTemplate.ind) [33] (BookTemplate.aux)
+ (BookTemplate.ind) [37] (BookTemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -4291,15 +4371,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `BookTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 3C0AD2911C220348DAE0FD54284A489F;26330.
+(rerunfilecheck)             Checksum: 001AC259F467A2F92B86B208372F418F;26330.
  ) 
 Here is how much of TeX's memory you used:
- 64704 strings out of 409617
- 1492625 string characters out of 5774013
- 2633120 words of memory out of 5000000
- 85442 multiletter control sequences out of 15000+600000
+ 64807 strings out of 409617
+ 1494760 string characters out of 5774013
+ 2634147 words of memory out of 5000000
+ 85545 multiletter control sequences out of 15000+600000
  620474 words of font info for 165 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 138i,18n,161p,947b,2703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,18n,161p,1271b,2703s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on BookTemplate.pdf (165 pages).
+Output written on BookTemplate.pdf (169 pages).
