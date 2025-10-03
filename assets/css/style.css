@@ -181,14 +181,21 @@ section {
       font-weight: 500;
       border: none;
       cursor: pointer;
-      transition: background 0.3s ease;
-      display: flex;
+      transition: all 0.3s ease;
+      display: inline-flex;
       align-items: center;
       gap: 5px;
+      outline: none;
   }
 
   .abstract-toggle:hover {
       background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+  }
+
+  .abstract-toggle:focus {
+      outline: 2px solid rgba(255, 255, 255, 0.5);
+      outline-offset: 2px;
   }
 
   .abstract-toggle .toggle-arrow {
@@ -207,10 +214,19 @@ section {
       border-radius: 8px;
       margin-bottom: 15px;
       border-left: 4px solid #d32f2f;
+      transition: all 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
   }
 
   .abstract-content.show {
       display: block;
+      animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
   }
 
   .abstract-content p {

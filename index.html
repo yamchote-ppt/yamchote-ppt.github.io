@@ -43,10 +43,11 @@
         gtag('config', 'G-9VT36QFMKJ');
         </script>
 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/font/flaticon.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Ensure CSS loads properly on GitHub Pages -->
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/plugins/owl.carousel.min.css">
+        <link rel="stylesheet" href="./assets/font/flaticon.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <!-- =================Body Started==================== -->
     <body>
@@ -727,27 +728,88 @@
             <!-- =================================********================================= -->
 
         <!-- =================================********================================= -->
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- Ensure JavaScript loads properly on GitHub Pages -->
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
     
-    <!-- Abstract Toggle Script -->
+    <!-- Abstract Toggle Script - GitHub Pages Compatible -->
     <script>
+        // Ensure DOM is fully loaded before executing
+        // Define toggleAbstract function globally before DOM loads
         function toggleAbstract(button) {
-            const cardBody = button.closest('.project-card').querySelector('.card-body');
-            const abstractContent = cardBody.querySelector('.abstract-content');
+            console.log('Toggle function called');
+            
+            if (!button) {
+                console.error('Button not found');
+                return;
+            }
+            
+            const projectCard = button.closest('.project-card');
+            if (!projectCard) {
+                console.error('Project card not found');
+                return;
+            }
+            
+            const abstractContent = projectCard.querySelector('.abstract-content');
             const arrow = button.querySelector('.toggle-arrow');
+            
+            if (!abstractContent) {
+                console.error('Abstract content not found');
+                return;
+            }
+            
+            if (!arrow) {
+                console.error('Arrow not found');
+                return;
+            }
+            
+            console.log('Before toggle - abstract visible:', abstractContent.classList.contains('show'));
             
             if (abstractContent.classList.contains('show')) {
                 abstractContent.classList.remove('show');
                 button.classList.remove('expanded');
                 arrow.innerHTML = '▶';
+                console.log('Abstract hidden');
             } else {
                 abstractContent.classList.add('show');
                 button.classList.add('expanded');
                 arrow.innerHTML = '▼';
+                console.log('Abstract shown');
             }
         }
+        
+        // Make function globally available
+        window.toggleAbstract = toggleAbstract;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Portfolio site loaded successfully');
+            
+            // Test if toggle buttons exist
+            const toggleButtons = document.querySelectorAll('.abstract-toggle');
+            console.log('Found ' + toggleButtons.length + ' toggle buttons');
+            
+            if (toggleButtons.length === 0) {
+                console.error('No toggle buttons found!');
+            }
+            
+            // Add click event listeners as backup
+            toggleButtons.forEach(function(button, index) {
+                console.log('Setting up button ' + (index + 1));
+                
+                // Remove any existing onclick handlers
+                button.removeAttribute('onclick');
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Button clicked via event listener');
+                    toggleAbstract(this);
+                });
+                
+                console.log('Added event listener to button ' + (index + 1));
+            });
+        });
     </script>    </body>
     <!-- =================Body End==================== -->
 </html>
