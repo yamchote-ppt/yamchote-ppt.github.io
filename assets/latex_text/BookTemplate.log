@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.28)  16 SEP 2025 17:30
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.28)  17 SEP 2025 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3556,7 +3556,19 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-) (Structure/Chapter7.tex [106]
+[106] [107] [108]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/Chapter7.tex [109] [110
+
+
+]
 Chapter 7.
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
@@ -3584,15 +3596,12 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[107
-
-
-]
+[111]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[108]
+[112]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3624,7 +3633,7 @@ ou want other layers.
 Package pgfplots info on input line 97: Setting layers 'axis background,pre mai
 n,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axis 
 foreground'...
-[109]
+[113]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3657,7 +3666,7 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[110]
+[114]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3682,7 +3691,7 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[111]
+[115]
 
 Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before b
 reak' or set page breaks manually on input line 186.
@@ -3695,7 +3704,7 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[112] [113] [114]
+[116] [117] [118]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3704,15 +3713,7 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[115]
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
+[119]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3745,7 +3746,6 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[116] [117]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3754,7 +3754,7 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[118]
+[120] [121]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3763,7 +3763,16 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[119]) (Structure/Chapter8.tex [120
+[122]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+[123]) (Structure/Chapter8.tex [124
 
 
 ]
@@ -3800,7 +3809,7 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-) (AuxiliaryFiles/Appendices.tex [121]
+) (AuxiliaryFiles/Appendices.tex [125]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -3833,11 +3842,11 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [122
+ [126
 
 
 
-] [123] [124])
+] [127] [128])
 (Structure/Chapter1.tex
 Appendix A.
 [1
@@ -4371,15 +4380,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `BookTemplate.out' has not changed.
-(rerunfilecheck)             Checksum: 001AC259F467A2F92B86B208372F418F;26330.
+(rerunfilecheck)             Checksum: 697B9974D665E8C0994BDA355B3F6C8E;26513.
  ) 
 Here is how much of TeX's memory you used:
- 64807 strings out of 409617
- 1494760 string characters out of 5774013
- 2634147 words of memory out of 5000000
- 85545 multiletter control sequences out of 15000+600000
+ 64818 strings out of 409617
+ 1494887 string characters out of 5774013
+ 2634177 words of memory out of 5000000
+ 85556 multiletter control sequences out of 15000+600000
  620474 words of font info for 165 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  138i,18n,161p,1271b,2703s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on BookTemplate.pdf (169 pages).
+Output written on BookTemplate.pdf (173 pages).
