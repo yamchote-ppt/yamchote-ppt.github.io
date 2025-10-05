@@ -1515,7 +1515,6 @@ section {
         position: relative;
         display: inline-block;
         width: 100%;
-        float: left;
       }
         #portfolio .my-wrapper .wrapper-box .content .nav-tabs {
           display: flex;
