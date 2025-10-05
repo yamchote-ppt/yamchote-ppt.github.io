@@ -411,6 +411,12 @@
                                 <div class="content">
                                     <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                                         <li class="nav-item">
+                                            <a class="nav-link active" id="public-template" data-toggle="tab" href="#public" role="tab" aria-controls="public" aria-selected="true">Publication</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="project-template" data-toggle="tab" href="#project" role="tab" aria-controls="project" aria-selected="true">Project</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" id="research-template" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="true">Research</a>
                                         </li>
                                         <li class="nav-item">
@@ -418,12 +424,6 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="teaching-template" data-toggle="tab" href="#teaching" role="tab" aria-controls="teaching" aria-selected="true">Teaching</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="project-template" data-toggle="tab" href="#project" role="tab" aria-controls="project" aria-selected="true">Project</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="public-template" data-toggle="tab" href="#public" role="tab" aria-controls="public" aria-selected="true">Publication</a>
                                         </li>
                                     </ul>
 
@@ -434,6 +434,33 @@
                                                 <div class="project-cards">
                                                     <div class="project-card">
                                                         <div class="card-header">
+                                                            <h4>Click Through Rate Prediction on GNNs</h4>
+                                                            <button class="abstract-toggle" onclick="toggleAbstract(this)">
+                                                                <span class="toggle-arrow">▶</span>
+                                                                Abstract
+                                                            </button>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Preprint (already presented in conference MLMI 2025, it is in process of public in proceeding)</p>
+                                                            <div class="abstract-content">
+                                                                <p>
+                                                                    Click-through rate (CTR) prediction Click-through rate (CTR) predic-tion is essential in online advertising and recommendation systems, affecting user engagement and revenue. Traditional methods like linear models and deep learn-ing often struggle to effectively capture complex, high-order feature interactions. Graph Neural Networks (GNNs) offer improved performance by modeling these intricate relationships but face challenges regarding computational efficiency and interpretability, affecting scalability. We propose a new static graph-based GNN architecture for CTR prediction, incorporating advanced feature selection to en-hance representation and reduce complexity. Our model employs a bilinear inter-action mechanism to efficiently prioritize high-order interactions. Experiments on benchmark datasets show our approach achieves near state-of-the-art results, surpassing traditional deep learning models.
+                                                                </p>
+                                                            </div>
+                                                            <div class="project-bottom">
+                                                                <div class="project-authors">
+                                                                    <span class="author-tag">Saw Nay Htet Win</span>
+                                                                    <span class="author-tag" style="text-decoration: underline;">Phaphontee Yamchote</span>
+                                                                    <span class="author-tag"><a href="https://northanapon.github.io/">Thanapon Noraset</a></span>
+                                                                    <span class="author-tag"><a href="https://github.com/DarkEyes">Chainarong Amornbunchornvej</a></span>
+                                                                </div>
+                                                                <a href="assets/publication/Click Through Rate Prediction on GNNs MLMI 2025.pdf" class="project-link" target="_blank">View Publication</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-card">
+                                                        <div class="card-header">
                                                             <h4>From Features to Graphs: Exploring Graph Structures and Pairwise Interactions via GNNs</h4>
                                                             <button class="abstract-toggle" onclick="toggleAbstract(this)">
                                                                 <span class="toggle-arrow">▶</span>
@@ -441,16 +468,16 @@
                                                             </button>
                                                         </div>
                                                         <div class="card-body">
-                                                            <p>Preprint </p>
+                                                            <p>Preprint (already submitted, now it is posted on arxiv)</p>
                                                             <div class="abstract-content">
                                                                 <p>Feature interaction is crucial in predictive machine learning models, as it captures the relationships between features that influence model performance. In this work, we focus on pairwise interactions and investigate their importance in constructing feature graphs for Graph Neural Networks (GNNs). We leverage existing GNN models and tools to explore the relationship between feature graph structures and their effectiveness in modeling interactions. Through experiments on synthesized datasets, we uncover that edges between interacting features are important for enabling GNNs to model feature interactions effectively. We also observe that including non-interaction edges can act as noise, degrading model performance. Furthermore, we provide theoretical support for sparse feature graph selection using the Minimum Description Length (MDL) principle. We prove that feature graphs retaining only necessary interaction edges yield a more efficient and interpretable representation than complete graphs, aligning with Occam's Razor. Our findings offer both theoretical insights and practical guidelines for designing feature graphs that improve the performance and interpretability of GNN models.</p>
                                                             </div>
                                                             <div class="project-bottom">
                                                                 <div class="project-authors">
-                                                                    <span class="author-tag">Phaphontee Yamchote</span>
+                                                                    <span class="author-tag" style="text-decoration: underline;">Phaphontee Yamchote</span>
                                                                     <span class="author-tag">Saw Nay Htet Win</span>
-                                                                    <span class="author-tag">Chainarong Amornbunchornvej</span>
-                                                                    <span class="author-tag">Thanapon Noraset</span>
+                                                                    <span class="author-tag"><a href="https://github.com/DarkEyes">Chainarong Amornbunchornvej</a></span>
+                                                                    <span class="author-tag"><a href="https://northanapon.github.io/">Thanapon Noraset</a></span>
                                                                 </div>
                                                                 <a href="https://arxiv.org/abs/2502.13471" class="project-link" target="_blank">View Publication</a>
                                                             </div>
@@ -474,11 +501,11 @@
                                                             </div>
                                                             <div class="project-bottom">
                                                                 <div class="project-authors">
-                                                                    <span class="author-tag">Phaphontee Yamchote</span>
+                                                                    <span class="author-tag" style="text-decoration: underline;">Phaphontee Yamchote</span>
                                                                     <span class="author-tag">Pemika Cunaviriyasiri</span>
                                                                     <span class="author-tag">Traivith Chupkum</span>
                                                                 </div>
-                                                                <a href="https://www.researchgate.net/publication/349103793_Generalized_Lojasiewicz_Inequality_in_Expansions_of_the_Real_Field" class="project-link" target="_blank">View Publication</a>
+                                                                <a href="https://ph01.tci-thaijo.org/index.php/saujournalst/article/view/258412" class="project-link" target="_blank">View Publication</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -498,7 +525,7 @@
                                                             </div>
                                                             <div class="project-bottom">
                                                                 <div class="project-authors">
-                                                                    <span class="author-tag">Phaphontee Yamchote</span>
+                                                                    <span class="author-tag" style="text-decoration: underline;">Phaphontee Yamchote</span>
                                                                     <span class="author-tag">Athipat Thamrongthanyalak</span>
                                                                 </div>
                                                                 <a href="https://www.researchgate.net/publication/349103793_Generalized_Lojasiewicz_Inequality_in_Expansions_of_the_Real_Field" class="project-link" target="_blank">View Publication</a>
@@ -576,36 +603,119 @@
                                                 <div class="project-cards">
                                                     <div class="project-card">
                                                         <div class="card-header">
-                                                            <h4>Manufacturing Data Science Pipeline</h4>
+                                                            <h4>Order Recommendation and Full Truck Load Optimization</h4>
                                                             <span class="project-type">Industry Project</span>
                                                         </div>
                                                         <div class="card-body">
-                                                            <p>Developed end-to-end machine learning pipeline for Western Digital manufacturing data analysis. Implemented weak supervision techniques to improve prediction accuracy in uncertainty scenarios.</p>
+                                                            <p>
+                                                                Developed a machine learning model for recommendation of orders including item to suggest and amount for particular agents. As well, optimization model for full truck load delivery to maximize the capability of transportation.
+                                                            </p>
                                                             <div class="project-bottom">
                                                                 <div class="project-tech">
-                                                                    <span class="tech-tag">Machine Learning</span>
                                                                     <span class="tech-tag">Python</span>
-                                                                    <span class="tech-tag">Data Engineering</span>
+                                                                    <span class="tech-tag">Machine Learning</span>
+                                                                    <span class="tech-tag">Azure ML Studio</span>
+                                                                    <span class="tech-tag">Optimization</span>
                                                                 </div>
-                                                                <a href="#" class="project-link">Learn More</a>
+                                                                <a href="#" class="project-link disabled" onclick="return false;" style="color: #999; cursor: not-allowed; text-decoration: none; pointer-events: none;">Learn More</a>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="project-card">
                                                         <div class="card-header">
-                                                            <h4>Audit Process Optimization</h4>
-                                                            <span class="project-type">Business Solution</span>
+                                                            <h4> Web Application for Submitting Machine Learning Jobs</h4>
+                                                            <span class="project-type">Industry Project</span>
                                                         </div>
                                                         <div class="card-body">
-                                                            <p>Implemented Python optimization algorithms to reduce routine audit report processing time from 5-10 minutes per job to 1-2 seconds. Created Power BI dashboards for business insights.</p>
+                                                            <p>
+                                                                Developed a user-friendly Streamlit-based application integrated with Celery for job management.
+                                                            </p>
                                                             <div class="project-bottom">
                                                                 <div class="project-tech">
                                                                     <span class="tech-tag">Python</span>
-                                                                    <span class="tech-tag">Power BI</span>
-                                                                    <span class="tech-tag">Optimization</span>
+                                                                    <span class="tech-tag">Streamlit</span>
+                                                                    <span class="tech-tag">Celery</span>
                                                                 </div>
-                                                                <a href="#" class="project-link">View Details</a>
+                                                                <a href="#" class="project-link disabled" onclick="return false;" style="color: #999; cursor: not-allowed; text-decoration: none; pointer-events: none;">Learn More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-card">
+                                                        <div class="card-header">
+                                                            <h4>Data Platform: PySpark data engineering on Microsoft Fabric</h4>
+                                                            <span class="project-type">Industry Project</span>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>
+                                                                Develop ETL process migrated from on premise database of Retail chain of a petroleum and energy business in Microsoft Fabric
+                                                            </p>
+                                                            <div class="project-bottom">
+                                                                <div class="project-tech">
+                                                                    <span class="tech-tag">Python</span>
+                                                                    <span class="tech-tag">PySpark</span>
+                                                                    <span class="tech-tag">Microsoft Fabric</span>
+                                                                    <span class="tech-tag">SQL</span>
+                                                                    <span class="tech-tag">Power BI</span>
+                                                                </div>
+                                                                <a href="#" class="project-link disabled" onclick="return false;" style="color: #999; cursor: not-allowed; text-decoration: none; pointer-events: none;">Learn More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-card">
+                                                        <div class="card-header">
+                                                            <h4>Stepwise Interest Rate Portfolio Optimization</h4>
+                                                            <span class="project-type">My Project</span>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>
+                                                                This project is motivated by a post from facebook page <a href="https://www.facebook.com/photo/?fbid=122135195792270713&set=pcb.122135196728270713">here</a>. Designed a portfolio optimization model to maximize annual interest profits through stepwise rates.
+                                                            </p>
+                                                            <div class="project-bottom">
+                                                                <div class="project-tech">
+                                                                    <span class="tech-tag">Python</span>
+                                                                    <span class="tech-tag">Pyomo</span>
+                                                                    <span class="tech-tag">Streamlit</span>
+                                                                </div>
+                                                                <a href="https://github.com/yamchote-ppt/maximizeInterestProfit" class="project-link">Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-card">
+                                                        <div class="card-header">
+                                                            <h4>Weak Supervision from Multi-stage HDD Break-down Prediction</h4>
+                                                            <span class="project-type">Industry Project</span>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Investigate the potentiality of applying weak supervision techniques to improve prediction accuracy in uncertainty scenarios for manufacturing data of Western Digital.</p>
+                                                            <div class="project-bottom">
+                                                                <div class="project-tech">
+                                                                    <span class="tech-tag">Machine Learning</span>
+                                                                    <span class="tech-tag">Python</span>
+                                                                    <span class="tech-tag">Data Science</span>
+                                                                </div>
+                                                                <a href="#" class="project-link disabled" onclick="return false;" style="color: #999; cursor: not-allowed; text-decoration: none; pointer-events: none;">Learn More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-card">
+                                                        <div class="card-header">
+                                                            <h4>Automated Rounding for Financial Balance Sheets in Audit Process</h4>
+                                                            <span class="project-type">Business Solution</span>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Implemented Python optimization algorithms to reduce routine audit report processing time from 5-10 minutes per job to 1-2 seconds.</p>
+                                                            <div class="project-bottom">
+                                                                <div class="project-tech">
+                                                                    <span class="tech-tag">Python</span>
+                                                                    <span class="tech-tag">Optimization</span>
+                                                                    <span class="tech-tag">Integer Linear Programming</span>
+                                                                </div>
+                                                                <a href="#" class="project-link disabled" onclick="return false;" style="color: #999; cursor: not-allowed; text-decoration: none; pointer-events: none;">Learn More</a>
                                                             </div>
                                                         </div>
                                                     </div>

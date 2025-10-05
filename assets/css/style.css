@@ -64,183 +64,188 @@ section {
   .project-cards {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      padding: 20px 0;
-  }
+      gap: 8px;
+      padding: 8px 0;
+      }
 
-  .project-card {
+      .project-card {
       background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
-      border-radius: 12px;
+      border-radius: 5px;
       border: 1px solid #333;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+      }
 
-  .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(211, 47, 47, 0.2);
-  }
+      .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+      }
 
-  .card-header {
+      .card-header {
       background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
-      /* padding: 20px; */
+      padding: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-  }
+      }
 
-  .card-header h4 {
+      .card-header h4 {
       color: white;
       margin: 0;
-      font-size: 1.3em;
+      font-size: 1.04em;
       font-weight: 600;
-  }
+      }
 
-  .project-type {
+      .project-type {
       background: rgba(255, 255, 255, 0.2);
       color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 0.85em;
+      padding: 2px 5px;
+      border-radius: 8px;
+      font-size: 0.68em;
       font-weight: 500;
-  }
+      }
 
-  .card-body {
-      padding: 20px;
-  }
+      .card-body {
+      padding: 8px;
+      }
 
-  .card-body p {
+      .card-body p {
       color: #e0e0e0;
       line-height: 1.6;
-      margin-bottom: 5px;
-  }
+      margin-bottom: 2px;
+      }
 
-  .project-tech {
+      .project-tech {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 3px;
       margin-bottom: 0;
-  }
+      }
 
-  .tech-tag {
+      .tech-tag {
       background: #333;
       color: #fff;
-      padding: 4px 10px;
-      border-radius: 15px;
-      font-size: 0.8em;
+      padding: 1.5px 4px;
+      border-radius: 6px;
+      font-size: 0.64em;
       border: 1px solid #444;
-  }
+      }
 
-  .project-authors {
+      .project-authors {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 3px;
       margin-bottom: 0;
-  }
+      }
 
-  .author-tag {
+      .author-tag {
       background: #333;
       color: #fff;
-      padding: 4px 10px;
-      border-radius: 15px;
-      font-size: 0.8em;
+      padding: 1.5px 4px;
+      border-radius: 6px;
+      font-size: 0.64em;
       border: 1px solid #444;
-  }
+      }
 
-  .project-bottom {
+      .author-tag a{
+      color: #fff;
+      }
+
+      .project-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 0px;
-  }
+      }
 
-  .project-link {
+      .project-link {
       display: inline-block;
       background: #d32f2f;
       color: white;
-      padding: 8px 16px;
+      padding: 2px 5px;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 5px;
+      font-size: 0.8em;
       font-weight: 500;
       transition: background 0.3s ease;
-  }
+      }
 
-  .project-link:hover {
+      .project-link:hover {
       background: #b71c1c;
       color: white;
       text-decoration: none;
-  }
+      }
 
-  .abstract-toggle {
+      .abstract-toggle {
       background: rgba(255, 255, 255, 0.2);
       color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 0.85em;
+      padding: 2px 20px;
+      border-radius: 8px;
+      font-size: 0.68em;
       font-weight: 500;
       border: none;
       cursor: pointer;
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 2px;
       outline: none;
-  }
+      }
 
-  .abstract-toggle:hover {
+      .abstract-toggle:hover {
       background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-1px);
-  }
+      transform: translateY(-0.5px);
+      }
 
-  .abstract-toggle:focus {
-      outline: 2px solid rgba(255, 255, 255, 0.5);
-      outline-offset: 2px;
-  }
+      .abstract-toggle:focus {
+      outline: 1px solid rgba(255, 255, 255, 0.5);
+      outline-offset: 1px;
+      }
 
-  .abstract-toggle .toggle-arrow {
+      .abstract-toggle .toggle-arrow {
       transition: transform 0.3s ease;
-      font-size: 0.8em;
-  }
+      font-size: 0.64em;
+      }
 
-  .abstract-toggle.expanded .toggle-arrow {
+      .abstract-toggle.expanded .toggle-arrow {
       transform: rotate(90deg);
-  }
+      }
 
-  .abstract-content {
+      .abstract-content {
       display: none;
       background: #2a2a2a;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      border-left: 4px solid #d32f2f;
+      padding: 6px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+      border-left: 1.5px solid #d32f2f;
       transition: all 0.3s ease;
       width: 100%;
       box-sizing: border-box;
-  }
+      }
 
-  .abstract-content.show {
+      .abstract-content.show {
       display: block;
       animation: fadeIn 0.3s ease-in-out;
-  }
+      }
 
-  @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
+      @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
       to { opacity: 1; transform: translateY(0); }
-  }
+      }
 
-  .abstract-content p {
+      .abstract-content p {
       color: #e0e0e0;
       line-height: 1.6;
       margin: 0;
       text-align: justify;
-  }
+      }
 
-  @media (max-width: 768px) {
+      @media (max-width: 768px) {
       .card-header {
           flex-direction: column;
           align-items: flex-start;
-          gap: 10px;
+          gap: 4px;
       }
       
       .project-type {
@@ -1511,7 +1516,8 @@ section {
         position: relative;
         display: inline-block;
         width: 100%;
-        float: left; }
+        float: left;
+      }
         #portfolio .my-wrapper .wrapper-box .content .nav-tabs {
           display: flex;
           flex: 1 1 100%;
