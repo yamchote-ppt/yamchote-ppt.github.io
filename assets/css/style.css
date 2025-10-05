@@ -1397,12 +1397,12 @@ section {
               padding: .625rem 1.25rem; } }
           #resume .my-wrapper .left-wrapper .content .list-inner ol li, #resume .my-wrapper .right-wrapper .content .list-inner ol li {
             display: block;
-            padding: 1.125rem 0 1.125rem 1.25rem;
+            padding: 0.25rem 0 0.25rem 1.25rem;
             position: relative;
             transition: all ease-in-out .5s; }
-            #resume .my-wrapper .left-wrapper .content .list-inner ol li:nth-child(2), #resume .my-wrapper .right-wrapper .content .list-inner ol li:nth-child(2) {
+            #resume .my-wrapper .left-wrapper .content .list-inner ol li:nth-child(10), #resume .my-wrapper .right-wrapper .content .list-inner ol li:nth-child(10) {
               padding-bottom: .3125rem; }
-              #resume .my-wrapper .left-wrapper .content .list-inner ol li:nth-child(2)::before, #resume .my-wrapper .right-wrapper .content .list-inner ol li:nth-child(2)::before {
+              #resume .my-wrapper .left-wrapper .content .list-inner ol li:nth-child(10)::before, #resume .my-wrapper .right-wrapper .content .list-inner ol li:nth-child(10)::before {
                 top: 0; }
             #resume .my-wrapper .left-wrapper .content .list-inner ol li::after, #resume .my-wrapper .right-wrapper .content .list-inner ol li::after {
               position: absolute;
@@ -1424,7 +1424,6 @@ section {
               background: #ddd; }
             #resume .my-wrapper .left-wrapper .content .list-inner ol li h4, #resume .my-wrapper .right-wrapper .content .list-inner ol li h4 {
               display: block;
-              margin-bottom: .625rem;
               color: #fff;
               font-size: 1.125rem;
               text-transform: capitalize; }
