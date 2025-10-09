@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Phaphontee Yamchote - AI Technician Resume</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #b71c1c;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2a2a2a;
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+            --text-muted: #999999;
+            --accent-blue: #2196F3;
+            --accent-green: #4CAF50;
+        }
+
+        /* Light Theme Variables */
+        [data-theme="light"] {
+            --primary-color: #007FFF;
+            --secondary-color: #d9ecff;
+            --dark-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --accent-blue: #2563eb;
+            --accent-green: #10b981;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body[data-theme="light"] {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        body[data-theme="dark"] {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        [data-theme="light"] .container {
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 40px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .name {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .thai-name {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: 400;
+            opacity: 0.95;
+            border-left: 4px solid rgba(255,255,255,0.8);
+            padding-left: 15px;
+            margin-top: 10px;
+        }
+
+        /* Contact Bar */
+        .contact-bar {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.95em;
+        }
+
+        .contact-item a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #64B5F6;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px 50px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+
+        /* Summary */
+        .summary {
+            background: rgba(211, 47, 47, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            line-height: 1.8;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
+
+        [data-theme="light"] .summary {
+            background: rgba(220, 38, 38, 0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Experience & Education Items */
+        .experience-item, .education-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+            transition: all 0.3s;
+        }
+
+        [data-theme="light"] .experience-item,
+        [data-theme="light"] .education-item {
+            background: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .experience-item:hover, .education-item:hover {
+            background: rgba(255,255,255,0.05);
+            transform: translateX(5px);
+        }
+
+        [data-theme="light"] .experience-item:hover,
+        [data-theme="light"] .education-item:hover {
+            background: rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .item-date {
+            color: var(--accent-blue);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .item-company {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .item-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .item-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .item-description li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .item-description li::marker {
+            color: var(--primary-color);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid var(--primary-color);
+            transition: all 0.3s;
+        }
+
+        [data-theme="light"] .skill-category {
+            background: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .skill-category-title {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, rgba(211, 47, 47, 0.2) 0%, rgba(183, 28, 28, 0.2) 100%);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            border: 1px solid rgba(211, 47, 47, 0.3);
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, rgba(211, 47, 47, 0.4) 0%, rgba(183, 28, 28, 0.4) 100%);
+            transform: translateY(-2px);
+        }
+
+        .skill-level {
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+
+        /* Publications */
+        .publication-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-blue);
+            transition: all 0.3s;
+        }
+
+        [data-theme="light"] .publication-item {
+            background: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .publication-item:hover {
+            background: rgba(255,255,255,0.05);
+            border-left-width: 5px;
+        }
+
+        [data-theme="light"] .publication-item:hover {
+            background: rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .publication-title {
+            font-size: 1.2em;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .publication-venue {
+            color: var(--accent-blue);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .publication-authors {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+        }
+
+        /* Highlights */
+        .highlights {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(211, 47, 47, 0.1) 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        [data-theme="light"] .highlights {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .highlights ul {
+            list-style: none;
+        }
+
+        .highlights li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .highlights li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--primary-color);
+            font-size: 1.2em;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none !important;
+                background: white !important;
+            }
+
+            .header {
+                background: #d32f2f !important;
+                color: white !important;
+            }
+
+            .header::before {
+                display: none;
+            }
+
+            .section-title {
+                color: #d32f2f !important;
+            }
+
+            .item-title, .publication-title {
+                color: #1e293b !important;
+            }
+
+            .item-company, .item-description, .publication-authors {
+                color: #475569 !important;
+            }
+
+            .experience-item, .education-item, .publication-item {
+                page-break-inside: avoid;
+                background: white !important;
+                border-left-color: #d32f2f !important;
+            }
+
+            .skill-category {
+                background: white !important;
+            }
+
+            .summary, .highlights {
+                background: #f8fafc !important;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header, .content {
+                padding: 30px 25px;
+            }
+
+            .contact-bar {
+                padding: 15px 25px;
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .name {
+                font-size: 2.2em;
+            }
+
+            .title {
+                font-size: 1.2em;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 2px solid var(--primary-color);
+            padding: 15px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(20deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Print Button */
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(211, 47, 47, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.6);
+        }
+
+        /* AI Credit Badge */
+        .ai-credit {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--card-bg);
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            max-width: 280px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .ai-credit:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .ai-credit-text {
+            color: var(--text-secondary);
+            font-size: 0.75em;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .ai-credit-highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media print {
+            .print-button,
+            .theme-toggle,
+            .ai-credit {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ai-credit {
+                top: 10px;
+                left: 10px;
+                max-width: 200px;
+                padding: 10px 12px;
+            }
+
+            .ai-credit-text {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <h1 class="name">Phaphontee Yamchote</h1>
+                <div class="thai-name">ปพนธีร์ แย้มโชติ (เต้ย)</div>
+                <div class="title">AI Technician | Machine Learning Researcher | Data Scientist</div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-bar">
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="mailto:yamchote_p@outlook.com">yamchote_p@outlook.com</a>
+            </div>
+            <div class="contact-item">
+                <span>📱</span>
+                <span>+66 87-049-2475</span>
+            </div>
+            <div class="contact-item">
+                <span>🔗</span>
+                <a href="https://linkedin.com/in/phaphontee-yamchote" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <span>💻</span>
+                <a href="https://github.com/yamchote-ppt" target="_blank">GitHub</a>
+            </div>
+            <div class="contact-item">
+                <span>🌐</span>
+                <a href="https://yamchote-ppt.github.io/phaphontee-yamchote/" target="_blank">Portfolio</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary">
+                    A dedicated AI technician and machine learning researcher with extensive experience in deep learning, graph neural networks, and data science. Specializing in designing and implementing advanced machine learning models with strong theoretical foundations. Possesses 4+ years of hands-on experience in data science projects across manufacturing, financial, and retail domains. Expert in PyTorch, with proven ability to optimize algorithms and deliver scalable AI solutions.
+                </div>
+            </div>
+
+            <!-- Key Highlights -->
+            <div class="section">
+                <h2 class="section-title">Key Highlights</h2>
+                <div class="highlights">
+                    <ul>
+                        <li>Multidisciplinary expert with strong background in mathematics, computer science, and data science</li>
+                        <li>4+ years of hands-on experience in machine learning projects across manufacturing and financial domains</li>
+                        <li>Proficient in designing and implementing ML/DL models with theoretical focus on Graph Neural Networks</li>
+                        <li>Expert in PyTorch for deep learning research and development</li>
+                        <li>Skilled in algorithm programming, optimization, and scalable AI system design</li>
+                        <li>Published researcher with multiple papers in machine learning and AI conferences</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Lecturer in Computer Science and Engineering</div>
+                            <div class="item-company">Faculty of Business Administration, Southeast Asia University</div>
+                        </div>
+                        <div class="item-date">June 2025 - Present</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Teach Computer Science courses including Discrete Mathematics, Data Structures and Algorithms, and Programming Language for IT programs</li>
+                            <li>Develop curriculum and course materials for advanced computer science topics</li>
+                            <li>Mentor students in research projects and technical skill development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Machine Learning Consultant</div>
+                            <div class="item-company">Fusion Solution</div>
+                        </div>
+                        <div class="item-date">July 2025 - November 2025</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Provided expert consultation on machine learning project architectures and implementations</li>
+                            <li>Designed ML solutions for business problems across various industries</li>
+                            <li>Conducted technical assessments and feasibility studies for AI initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Data and AI Engineer</div>
+                            <div class="item-company">Fusion Solution Co., Ltd.</div>
+                        </div>
+                        <div class="item-date">September 2024 - May 2025</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Performed data engineering on Microsoft Fabric using PySpark for on-cloud data processing</li>
+                            <li>Designed and developed end-to-end machine learning models for predictive retail data analysis</li>
+                            <li>Conducted training sessions on machine learning development using Azure ML Studio for clients</li>
+                            <li>Built scalable ETL pipelines migrating on-premise databases to cloud infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Data Science and Analytics Mentor</div>
+                            <div class="item-company">We-Stride Institute of Technology</div>
+                        </div>
+                        <div class="item-date">October 2024 - Present</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Provide consultation to students in Bootcamp program and Master's Degree in Computer Science</li>
+                            <li>Teach mathematics and Python programming for data science applications</li>
+                            <li>Guide students through real-world data science projects and case studies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Intern Researcher</div>
+                            <div class="item-company">Japan Advanced Institute of Science and Technology (JAIST)</div>
+                        </div>
+                        <div class="item-date">June 2024 - August 2024</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Researched explainability of artificial intelligence systems</li>
+                            <li>Studied and presented on current data science and AI tools: Streamlit and LangChain</li>
+                            <li>Collaborated with international research team on AI interpretability projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Research Assistant and Assistant Data Scientist</div>
+                            <div class="item-company">I3-Lab, Faculty of ICT, Mahidol University (Western Digital Project)</div>
+                        </div>
+                        <div class="item-date">August 2022 - December 2023</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Worked on data science projects in manufacturing for Western Digital</li>
+                            <li>Researched and implemented weak supervision techniques to improve prediction accuracy in uncertainty scenarios</li>
+                            <li>Developed multi-stage HDD breakdown prediction models using machine learning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Data Analyst</div>
+                            <div class="item-company">KPMG Phoomchai Audit, Ltd.</div>
+                        </div>
+                        <div class="item-date">October 2020 - March 2021</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Prepared dashboards using Power BI from clients' data for business insights</li>
+                            <li>Applied analytics to find business insights and audit insights from big data</li>
+                            <li>Implemented Python optimization algorithms reducing audit report processing time from 5-10 minutes to 1-2 seconds per job</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Ph.D. in Computer Science</div>
+                            <div class="item-company">Faculty of ICT, Mahidol University</div>
+                        </div>
+                        <div class="item-date">August 2021 - Present</div>
+                    </div>
+                    <div class="item-description">
+                        <strong>Research Focus:</strong> Machine learning and deep learning techniques in data science tasks<br>
+                        <strong>Coursework:</strong> Computational Theory, Design and Analysis of Algorithms, Natural Language Processing, Deep Learning, Graph Neural Networks
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">M.Sc. in Mathematics</div>
+                            <div class="item-company">Department of Mathematics and Computer Science, Chulalongkorn University</div>
+                        </div>
+                        <div class="item-date">August 2017 - January 2021</div>
+                    </div>
+                    <div class="item-description">
+                        <strong>Research Focus:</strong> Application of mathematical logic on structures in mathematics: o-minimality and its generalization<br>
+                        <strong>Thesis:</strong> Smooth Approximations of Continuous Functions Definable in D-minimal Structures
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">B.Sc. in Mathematics</div>
+                            <div class="item-company">Department of Mathematics and Computer Science, Chulalongkorn University</div>
+                        </div>
+                        <div class="item-date">May 2012 - June 2016</div>
+                    </div>
+                    <div class="item-description">
+                        <strong>Focus:</strong> Fundamental concepts of mathematics including pure math and applied math, with interest in properties of algebraic structures<br>
+                        <strong>Senior Project:</strong> Some Properties of 2-absorbing R&Gamma;-submodules of R&Gamma;-modules
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Programming Languages</div>
+                        <div class="skill-tags">
+                            <div class="skill-tag">Python <span class="skill-level">(Expert)</span></div>
+                            <div class="skill-tag">Java <span class="skill-level">(Advanced)</span></div>
+                            <div class="skill-tag">SQL <span class="skill-level">(Intermediate)</span></div>
+                            <div class="skill-tag">C/C++ <span class="skill-level">(Intermediate)</span></div>
+                            <div class="skill-tag">JavaScript <span class="skill-level">(Intermediate)</span></div>
+                            <div class="skill-tag">R <span class="skill-level">(Beginner)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">AI/ML Frameworks</div>
+                        <div class="skill-tags">
+                            <div class="skill-tag">PyTorch</div>
+                            <div class="skill-tag">TensorFlow</div>
+                            <div class="skill-tag">Keras</div>
+                            <div class="skill-tag">Scikit-learn</div>
+                            <div class="skill-tag">PyTorch Geometric</div>
+                            <div class="skill-tag">PyTorch Lightning</div>
+                            <div class="skill-tag">Apache MXNet</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Data Engineering & Analytics</div>
+                        <div class="skill-tags">
+                            <div class="skill-tag">PySpark</div>
+                            <div class="skill-tag">Microsoft Fabric</div>
+                            <div class="skill-tag">Pandas</div>
+                            <div class="skill-tag">Apache Hadoop</div>
+                            <div class="skill-tag">Power BI</div>
+                            <div class="skill-tag">ElasticSearch</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">NLP & AI Tools</div>
+                        <div class="skill-tags">
+                            <div class="skill-tag">SpaCy</div>
+                            <div class="skill-tag">LangChain</div>
+                            <div class="skill-tag">Streamlit</div>
+                            <div class="skill-tag">Hugging Face</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Cloud & DevOps</div>
+                        <div class="skill-tags">
+                            <div class="skill-tag">Azure ML Studio</div>
+                            <div class="skill-tag">Microsoft Fabric</div>
+                            <div class="skill-tag">Docker</div>
+                            <div class="skill-tag">Git/GitHub</div>
+                            <div class="skill-tag">Linux</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Specialized Skills</div>
+                        <div class="skill-tags">
+                            <div class="skill-tag">Graph Neural Networks</div>
+                            <div class="skill-tag">Deep Learning</div>
+                            <div class="skill-tag">Natural Language Processing</div>
+                            <div class="skill-tag">Optimization (Pyomo)</div>
+                            <div class="skill-tag">Weak Supervision</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications -->
+            <div class="section">
+                <h2 class="section-title">Selected Publications & Research</h2>
+
+                <div class="publication-item">
+                    <div class="publication-title">Click Through Rate Prediction on GNNs</div>
+                    <div class="publication-venue">Conference: MLMI 2025 (In Proceedings)</div>
+                    <div class="publication-authors">Saw Nay Htet Win, <strong>Phaphontee Yamchote</strong>, Thanapon Noraset, Chainarong Amornbunchornvej</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">From Features to Graphs: Exploring Graph Structures and Pairwise Interactions via GNNs</div>
+                    <div class="publication-venue">Preprint: arXiv (Submitted)</div>
+                    <div class="publication-authors"><strong>Phaphontee Yamchote</strong>, Saw Nay Htet Win, Chainarong Amornbunchornvej, Thanapon Noraset</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">Conscious Bias in Thailand Job Posting</div>
+                    <div class="publication-venue">Journal: SAU Journal of Science & Technology Vol. 10 No. 2 (2024)</div>
+                    <div class="publication-authors"><strong>Phaphontee Yamchote</strong>, Pemika Cunaviriyasiri, Traivith Chupkum</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">Generalized Lojasiewicz Inequality in Expansions of the Real Field</div>
+                    <div class="publication-venue">Conference: Annual Pure and Applied Mathematics Conference 2020</div>
+                    <div class="publication-authors"><strong>Phaphontee Yamchote</strong>, Athipat Thamrongthanyalak</div>
+                </div>
+            </div>
+
+            <!-- Key Projects -->
+            <div class="section">
+                <h2 class="section-title">Notable Projects</h2>
+
+                <div class="experience-item">
+                    <div class="item-title">CTR Prediction using Graph Neural Networks</div>
+                    <div class="item-description">
+                        Developed novel GNN architecture for click-through rate prediction incorporating advanced feature selection and bilinear interaction mechanisms. Achieved near state-of-the-art results surpassing traditional deep learning models.
+                        <br><strong>Technologies:</strong> PyTorch Geometric, Python, Graph Neural Networks
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Order Recommendation and Full Truck Load Optimization</div>
+                    <div class="item-description">
+                        Developed a machine learning model for recommendation of orders including item to suggest and amount for particular agents. As well, optimization model for full truck load delivery to maximize the capability of transportation.
+                        <br><strong>Technologies:</strong> Python, Machine Learning, Azure ML Studio, Optimization
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Web Application for Submitting Machine Learning Jobs</div>
+                    <div class="item-description">
+                        Developed a user-friendly Streamlit-based application integrated with Celery for job management.
+                        <br><strong>Technologies:</strong> Python, Streamlit, Celery
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Data Platform on Microsoft Fabric</div>
+                    <div class="item-description">
+                        Developed ETL processes migrating on-premise databases to Microsoft Fabric for retail chain of petroleum and energy business. Built scalable data pipelines using PySpark for real-time analytics.
+                        <br><strong>Technologies:</strong> PySpark, Microsoft Fabric, SQL, Power BI
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Stepwise Interest Rate Portfolio Optimization</div>
+                    <div class="item-description">
+                        Designed a portfolio optimization model to maximize annual interest profits through stepwise rates.
+                        <br><strong>Technologies:</strong> Python, Pyomo, Streamlit
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Weak Supervision for HDD Breakdown Prediction</div>
+                    <div class="item-description">
+                        Investigated application of weak supervision techniques to improve prediction accuracy in uncertainty scenarios for Western Digital manufacturing data. Developed multi-stage prediction models.
+                        <br><strong>Technologies:</strong> Python, Machine Learning, Data Science
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Automated Financial Balance Sheet Rounding</div>
+                    <div class="item-description">
+                        Implemented Python optimization algorithms reducing audit report processing time from 5-10 minutes to 1-2 seconds per job at KPMG.
+                        <br><strong>Technologies:</strong> Python, Integer Linear Programming, Optimization
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training & Certifications -->
+            <div class="section">
+                <h2 class="section-title">Training & Workshops Conducted</h2>
+                <div class="item-description">
+                    <ul>
+                        <li><strong>AI Automation Training</strong> - การไฟฟ้านครหลวง (September 2025)</li>
+                        <li><strong>Basic AI Prompt Engineering</strong> - Bangkok Glass Co., Ltd. (July 2025)</li>
+                        <li><strong>Surviving and Thriving in the Age of AI</strong> - WeStride Institute (May 2025)</li>
+                        <li><strong>Ready, Set, Data!: เตรียมตัวให้พร้อมสู่สายงาน Data Analyst</strong> - WeStride Institute (February 2025)</li>
+                        <li><strong>Machine Learning in Azure Machine Learning Studio</strong> - DoHome (Corporate Training, 2024-2025)</li>
+                        <li><strong>Machine Learning for Data Analytics of Cement and Mortar Demand Prediction</strong> - Siam City Cement (INSEE) (Corporate Training, 2024-2025)</li>
+                        <li><strong>Basic Low-Code and No-Code Machine Learning in Azure ML Studio</strong> - DoHome (Corporate Training, 2024-2025)</li>
+                        <li><strong>AI: Invited Speaker</strong> - Faculty of ICT, Mahidol University (September 2024)</li>
+                        <li><strong>International Mathematics Competition Training</strong> - For M.1-M.3 students, Multiple sessions (2024)</li>
+                        <li><strong>AI: Data Analytics</strong> - สำนักงานทรัพยากรน้ำแห่งชาติ (National Water Resources Office) (April 2023)</li>
+                        <li><strong>Mathematics and Python for Data Science</strong> - We-Stride Institute (2024-Present, Ongoing)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-tags">
+                            <div class="skill-tag">Thai (Native)</div>
+                            <div class="skill-tag">English (Professional Working Proficiency)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- AI Credit Badge -->
+    <div class="ai-credit">
+        <p class="ai-credit-text">
+            🤖 Generated by <span class="ai-credit-highlight">AI Claude Sonnet 4.5</span> from portfolio data
+        </p>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Theme">
+        <span id="themeIcon">☀️</span>
+    </button>
+
+    <!-- Print Button -->
+    <button class="print-button" onclick="window.print()">📄 Print / Save as PDF</button>
+
+    <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'light') {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            const themeIcon = document.getElementById('themeIcon');
+            
+            document.body.setAttribute('data-theme', savedTheme);
+            themeIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+
+            // Smooth scroll animation
+            const sections = document.querySelectorAll('.section');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
