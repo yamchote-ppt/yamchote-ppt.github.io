@@ -1,0 +1,53 @@
+{
+  "course": {
+    "title": "725103 Data Structure and Algorithm",
+    "term": "ภาคปลาย ปีการศึกษา 2568 (1 พ.ย. 2568 – 1 มี.ค. 2569)",
+    "schedule": "พุธ 13:00-17:00",
+    "room": "LAB-COM-1"
+  },
+  "clos": [
+    { "id": "CLO1", "description": "อธิบายหลักการและแนวคิดของโครงสร้างข้อมูลและอัลกอริทึมพื้นฐานได้", "bloom": "Understand", "type": "K" },
+    { "id": "CLO2", "description": "วิเคราะห์ความซับซ้อนของอัลกอริทึม (Algorithm Complexity) และเลือกใช้อัลกอริทึมที่เหมาะสมได้", "bloom": "Analyze", "type": "K/S" },
+    { "id": "CLO3", "description": "ประยุกต์ใช้โครงสร้างข้อมูลและอัลกอริทึมในการแก้ปัญหาโจทย์พื้นฐานได้", "bloom": "Apply", "type": "S" },
+    { "id": "CLO4", "description": "ออกแบบและเขียนโปรแกรมคอมพิวเตอร์เพื่อจัดการโครงสร้างข้อมูลและอัลกอริทึมได้", "bloom": "Create", "type": "S" },
+    { "id": "CLO5", "description": "ทำงานร่วมกับผู้อื่นและสื่อสารเพื่อแก้ปัญหาตามที่ได้รับมอบหมายได้", "bloom": "Apply", "type": "A" }
+  ],
+  "plos": ["PLO1", "PLO2", "PLO3", "PLO4", "PLO5", "PLO6"],
+  "mapping": [
+    { "clo": "CLO1", "weights": [3, 2, "", "", "", ""] },
+    { "clo": "CLO2", "weights": [3, 3, 2, "", "", ""] },
+    { "clo": "CLO3", "weights": ["", 3, 3, 2, "", ""] },
+    { "clo": "CLO4", "weights": ["", 3, 3, 2, "", ""] },
+    { "clo": "CLO5", "weights": ["", "", "", "", 3, 2] }
+  ],
+  "assessments": [
+    { "tool": "การบ้าน / แบบฝึกหัดในชั้นเรียน", "weight": "20%", "clos": ["CLO1", "CLO2", "CLO3"], "threshold": "≥ 60%", "analysis": "Rubric" },
+    { "tool": "สอบกลางภาค", "weight": "30%", "clos": ["CLO1", "CLO2"], "threshold": "≥ 50%", "analysis": "Item Analysis" },
+    { "tool": "สอบปลายภาค", "weight": "40%", "clos": ["CLO3", "CLO4"], "threshold": "≥ 50%", "analysis": "Item Analysis" },
+    { "tool": "งานกลุ่ม (Project)", "weight": "10%", "clos": ["CLO5"], "threshold": "≥ 60%", "analysis": "Rubric" }
+  ],
+  "policies": {
+    "submission": "ส่งงานผ่านระบบ LMS ภายในเวลาที่กำหนด หากส่งช้าจะถูกหักคะแนนวันละ 10%",
+    "attendance": "ต้องมีเวลาเรียนไม่ต่ำกว่า 80% ของเวลาเรียนทั้งหมด",
+    "integrity": "ไม่อนุญาตให้มีการคัดลอกงานหรือทุจริตในการสอบ หากตรวจพบจะให้เกรด F ในรายวิชานี้ทันที",
+    "resources": "เอกสารประกอบการสอน, หนังสืออ้างอิง: Data Structures and Algorithms in Python by Goodrich, Tamassia, Goldwasser"
+  },
+  "schedule": [
+    { "week": "ครั้งที่ 1", "topic": "Introduction to Data Structures & Algorithms, Algorithm Analysis (Big O)", "notes": "ปฐมนิเทศ, แนะนำรายวิชาและเกณฑ์การประเมิน" },
+    { "week": "ครั้งที่ 2", "topic": "Arrays and Linked Lists (Singly, Doubly, Circular)" },
+    { "week": "ครั้งที่ 3", "topic": "Stacks: Array & Linked List Implementation, Applications" },
+    { "week": "ครั้งที่ 4", "topic": "Queues: Array & Linked List Implementation, Deques, Applications" },
+    { "week": "ครั้งที่ 5", "topic": "Recursion and Algorithm Design Strategies" },
+    { "week": "ครั้งที่ 6", "topic": "Trees: Terminology, Binary Trees, Tree Traversal" },
+    { "week": "ครั้งที่ 7", "topic": "Binary Search Trees (BST)" },
+    { "week": "ครั้งที่ 8", "topic": "สอบกลางภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 1-7" },
+    { "week": "ครั้งที่ 9", "topic": "Advanced Trees: AVL Trees, Heaps and Priority Queues" },
+    { "week": "ครั้งที่ 10", "topic": "Sorting Algorithms I: Bubble, Selection, Insertion Sort" },
+    { "week": "ครั้งที่ 11", "topic": "Sorting Algorithms II: Merge Sort, Quick Sort" },
+    { "week": "ครั้งที่ 12", "topic": "Searching Algorithms: Linear Search, Binary Search, Hashing" },
+    { "week": "ครั้งที่ 13", "topic": "Graphs: Terminology, Representations (Adjacency Matrix/List)" },
+    { "week": "ครั้งที่ 14", "topic": "Graph Traversal: Breadth-First Search (BFS), Depth-First Search (DFS)" },
+    { "week": "ครั้งที่ 15", "topic": "Final Project Presentation & Review", "notes": "นำเสนอโครงงานกลุ่มและทบทวนก่อนสอบปลายภาค" },
+    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 9-15" }
+  ]
+}

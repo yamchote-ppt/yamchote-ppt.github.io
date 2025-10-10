@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OBE content for 725103",
+  "type": "object",
+  "properties": {
+    "course": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"},
+        "term": {"type": "string"},
+        "schedule": {"type": "string"},
+        "room": {"type": "string"}
+      },
+      "required": ["title"]
+    },
+    "clos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "description": {"type": "string"},
+          "bloom": {"type": "string"},
+          "type": {"type": "string", "enum": ["K", "S", "A", "KS", "KA", "SA"]}
+        },
+        "required": ["id", "description"]
+      }
+    },
+    "plos": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "mapping": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "clo": {"type": "string"},
+          "weights": {
+            "type": "array",
+            "items": {"type": ["number", "string"]}
+          }
+        },
+        "required": ["clo", "weights"]
+      }
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tool": {"type": "string"},
+          "weight": {"type": ["number", "string"]},
+          "clos": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "threshold": {"type": "string"},
+          "analysis": {"type": "string"}
+        },
+        "required": ["tool", "weight"]
+      }
+    },
+    "policies": {
+      "type": "object",
+      "properties": {
+        "submission": {"type": "string"},
+        "attendance": {"type": "string"},
+        "integrity": {"type": "string"},
+        "resources": {"type": "string"}
+      }
+    },
+    "schedule": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "week": {"type": "string"},
+          "date": {"type": "string"},
+          "topic": {"type": "string"},
+          "notes": {"type": "string"},
+          "materials": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {"type": "string"},
+                "href": {"type": "string"}
+              },
+              "required": ["label", "href"]
+            }
+          }
+        },
+        "required": ["week", "topic"]
+      }
+    }
+  }
+}
