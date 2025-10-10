@@ -181,7 +181,7 @@
 
         /* Main Container */
         .main-container {
-            max-width: 1200px;
+            width: 95%;
             margin: 3rem auto;
             padding: 0 2rem;
         }
@@ -303,18 +303,7 @@
             color: var(--gray-700);
             margin-bottom: 1.5rem;
             line-height: 1.7;
-            font-size: 0.95rem;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: max-height 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.4s ease, margin 0.4s ease;
-            margin-bottom: 0;
-        }
-
-        .course-card:hover .course-description {
-            max-height: 500px;
-            opacity: 1;
-            margin-bottom: 1.5rem;
+            font-size: 0.75rem;
         }
 
         .course-sections {
@@ -324,7 +313,7 @@
 
         .section-item {
             background: var(--gray-100);
-            padding: 1rem;
+            padding: 0.6rem 1rem;
             border-radius: 8px;
             margin-bottom: 0.8rem;
             border-left: 4px solid var(--gold);
@@ -335,6 +324,7 @@
             background: var(--gray-200);
             border-left-width: 6px;
             transform: translateX(5px);
+            padding: 1rem;
         }
 
         .section-link {
@@ -342,8 +332,13 @@
             color: var(--darkblue);
             font-weight: 600;
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0;
             font-size: 1rem;
+            transition: margin 0.3s ease;
+        }
+
+        .section-item:hover .section-link {
+            margin-bottom: 0.3rem;
         }
 
         .section-link:hover {
@@ -363,6 +358,34 @@
             display: flex;
             flex-direction: column;
             gap: 0.2rem;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s ease, margin 0.3s ease;
+            margin-top: 0;
+        }
+
+        .section-item:hover .section-details {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 0.5rem;
+        }
+
+        .section-item:hover .badge {
+            opacity: 1;
+            max-height: 50px;
+            margin-top: 0.5rem;
+        }
+
+        .badge {
+            transition: opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+        }
+
+        .section-item .badge {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin-top: 0;
         }
 
         .section-detail-item {
