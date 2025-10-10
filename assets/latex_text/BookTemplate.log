@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.28)  11 OCT 2025 01:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.28)  11 OCT 2025 02:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2330,7 +2330,7 @@ t;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 70.
+(Font)              scaled to size 14.39996pt on input line 60.
 \c@tcb@cnt@definition=\count465
 \c@tcb@cnt@theorem=\count466
 \c@tcb@cnt@corollary=\count467
@@ -2360,31 +2360,31 @@ LaTeX Warning: Label `exer:quiz3' multiply defined.
 )
 \openout1 = `BookTemplate.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 186.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-96.
+86.
  (C:\Users\yamch\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -2396,22 +2396,22 @@ LaTeX Font Info:    ... okay on input line 196.
 * bindingoffset: 17.07164pt
 * modes: includehead includefoot twoside heightrounded 
 * h-part:(L,W,R)=(68.2866pt, 404.02916pt, 51.21495pt)
-* v-part:(T,H,B)=(56.9055pt, 603.19844pt, 79.66771pt)
+* v-part:(T,H,B)=(56.9055pt, 625.96065pt, 56.9055pt)
 * \paperwidth=540.60236pt
 * \paperheight=739.77165pt
 * \textwidth=404.02916pt
-* \textheight=519.5pt
+* \textheight=563.0pt
 * \oddsidemargin=13.08826pt
 * \evensidemargin=-21.05504pt
 * \topmargin=-15.36449pt
-* \headheight=54.0pt
-* \headsep=14.5pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
 * \topskip=12.0pt
-* \footskip=20.0pt
-* \marginparwidth=62.0pt
-* \marginparsep=5.0pt
+* \footskip=30.0pt
+* \marginparwidth=98.0pt
+* \marginparsep=7.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -2429,7 +2429,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
-Package hyperref Info: Link coloring ON on input line 196.
+Package hyperref Info: Link coloring ON on input line 186.
 (BookTemplate.out) (BookTemplate.out)
 \@outlinefile=\write10
 \openout10 = `BookTemplate.out'.
@@ -2674,15 +2674,21 @@ t;"
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(2)/b/n' will be
 (Font)              scaled to size 20.73593pt on input line 53.
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
-(Font)              scaled to size 13.13995pt on input line 57.
+(Font)              scaled to size 13.13995pt on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 57.
+(Font)              <10.95> on input line 58.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [2]
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
 (Font)              scaled to size 9.59998pt on input line 67.
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
 (Font)              scaled to size 7.19998pt on input line 67.
- [3]
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
 (Font)              scaled to size 17.27994pt on input line 78.
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/b/n' will be
@@ -2700,7 +2706,34 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(2)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 78.
-[4] [5]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[4]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[5]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2708,12 +2741,30 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [6]
 Overfull \hbox (10.22905pt too wide) in paragraph at lines 174--174
 \TU/THSarabun.ttf(0)/m/n/12 แต่ เนื่องจาก จำนวน ชิ้น ที่ จะ ผลิต ได้ ขึ้น กับ ก
 าร ตัดสิน ใจ ว่า เรา จะ ผลิต กระบวนการ ใด กี่ กระบวนการ
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [7]
 
@@ -2724,14 +2775,32 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [8]
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.72527pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.72527pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.72527pt}.
 
 [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2750,6 +2819,17 @@ Overfull \hbox (20.00667pt too wide) in paragraph at lines 264--274
 []\TU/THSarabun.ttf(0)/m/n/12 คำ เตือน: สำหรับ หัวข้อ นี้ อาจ จะ ต้อง ใช้ ความ 
 รู้ เรขาคณิตวิเคราะห์ 3 มิติ และ แคลคูลัส สำหรับ เรขาคณิตวิเคราะห์
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [10]
 File: example2.png Graphic file (type bmp)
@@ -2773,7 +2853,45 @@ Underfull \hbox (badness 1430) in paragraph at lines 311--312
 /m/n/12 จง แสดง ว่า
  []
 
-[11] [12] [13] [14]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.72527pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.72527pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.72527pt}.
+
+[11]
+Underfull \vbox (badness 1648) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.72527pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.72527pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.72527pt}.
+
+[13]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 382--382
 
  []
@@ -2788,10 +2906,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--382
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.72527pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.72527pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.72527pt}.
+
 [15]
 Underfull \hbox (badness 10000) in paragraph at lines 382--382
 
  []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [16]
 
@@ -2804,18 +2940,13 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 
 File: simplex1.png Graphic file (type bmp)
 <simplex1.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: simplex2.png Graphic file (type bmp)
 <simplex2.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17]
 File: simplex3.png Graphic file (type bmp)
 <simplex3.png>
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2823,22 +2954,65 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
+
+Underfull \vbox (badness 2689) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[17]
 File: basicSimplex1.png Graphic file (type bmp)
 <basicSimplex1.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[18] [19]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[18]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[19]
 File: basicSimplex2.png Graphic file (type bmp)
 <basicSimplex2.png>
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
-[20] [21]
+[20]
 File: SimplexConvexHull.png Graphic file (type bmp)
 <SimplexConvexHull.png>
- [22]
+
+Underfull \vbox (badness 1755) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[21]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2847,17 +3021,29 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[23]
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
 (Font)              scaled to size 14.39996pt on input line 510.
-
 Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
 age=dflt;mapping=tex-text;!
-[24]
-Overfull \vbox (48.93358pt too high) has occurred while \output is active []
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[22]
+Overfull \vbox (5.43358pt too high) has occurred while \output is active []
 
 
-[25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[23]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2872,32 +3058,102 @@ LaTeX Font Info:    Font shape `TU/THSarabun.ttf(2)/b/n' will be
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[24]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [26]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[27]
+
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[27] [28] [29]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[28]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[29]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [30]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [31]
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [32]
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-[33] [34]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2930,7 +3186,53 @@ Overfull \hbox (9.82642pt too wide) in paragraph at lines 815--816
  จะ กำหนด ฟังก์ชัน วัตถุประสงค์
  []
 
-[35] [36] [37] [38] [39]
+
+Underfull \vbox (badness 3396) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[33]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[34]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[37]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2939,10 +3241,41 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[40] [41]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[38]
+
+Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before b
+reak' or set page breaks manually on input line 976.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[39]
 File: ex-simplex-mix.png Graphic file (type bmp)
 <ex-simplex-mix.png>
- [42]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[40]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2963,7 +3296,22 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[43] [44]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[42]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2972,7 +3320,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[45]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[43]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -2984,22 +3339,59 @@ Overfull \hbox (26.88025pt too wide) in paragraph at lines 1155--1155
 
 File: assChap1-B-1.png Graphic file (type bmp)
 <assChap1-B-1.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[45]
+Underfull \vbox (badness 6220) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
-
- []
-
-[47] [48]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-) (Structure/Chapter4.tex [49] [50
+) (Structure/Chapter4.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[47] [48
 
 
 ]
@@ -3007,6 +3399,36 @@ Chapter 2.
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+[49]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+File: decisiontree.png Graphic file (type bmp)
+<decisiontree.png>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[50]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [51]
 
@@ -3018,22 +3440,13 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [52]
-File: decisiontree.png Graphic file (type bmp)
-<decisiontree.png>
- [53]
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-[54]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3056,6 +3469,45 @@ Underfull \hbox (badness 1377) in paragraph at lines 99--101
 ยที่ มี ความ น่า จะ เป็นการ ได้ ผล ตอบแทน เป็น
  []
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[53]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[54]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [55]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
@@ -3065,14 +3517,23 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [56]
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [57]
 
@@ -3083,16 +3544,37 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[58] [59]
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
 
-[60] [61] [62]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[59]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[60]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3121,12 +3603,30 @@ Missing character: There is no ท in font [lmsans12-regular]:mapping=tex-text;!
 Missing character: There is no บ in font [lmsans12-regular]:mapping=tex-text;!
 Missing character: There is no า in font [lmsans12-regular]:mapping=tex-text;!
 Missing character: There is no ท in font [lmsans12-regular]:mapping=tex-text;!
-[63]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[61]
 Overfull \hbox (53.34706pt too wide) detected at line 410
 []
  []
 
-[64]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[62]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3147,10 +3647,52 @@ Missing character: There is no ใ in font [lmsans12-regular]:mapping=tex-text;!
 Missing character: There is no ห in font [lmsans12-regular]:mapping=tex-text;!
 Missing character: There is no ญ in font [lmsans12-regular]:mapping=tex-text;!
 Missing character: There is no ่ in font [lmsans12-regular]:mapping=tex-text;!
-[65] [66]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[63]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[64]
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/n' will be
 (Font)              scaled to size 18.71999pt on input line 501.
- [67] [68] [69]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[65]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[66]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[67]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3159,7 +3701,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[70]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[68]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3168,19 +3717,40 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[71]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[69]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[72]
 Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
 age=dflt;mapping=tex-text;!
 Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
 age=dflt;mapping=tex-text;!
 Missing character: There is no → in font [./THSarabun.ttf]/OT:script=latn;langu
 age=dflt;mapping=tex-text;!
-) (Structure/Chapter3.tex [73] [74
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[70]) (Structure/Chapter3.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[71] [72
 
 
 ]
@@ -3196,7 +3766,15 @@ n.ttf(0)/m/n/12 โดย เฉพาะ ใน ช่วง โปร โม �
 ้ กระบวนการ
  []
 
-[75] [76]
+[73]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[74]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3227,7 +3805,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 46.
 
-[77]
+
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[75]
 
 LaTeX Warning: Command \textasciicircum invalid in math mode on input line 99.
 
@@ -3238,15 +3827,57 @@ File: image.png Graphic file (type bmp)
 <image.png>
 File: image2.png Graphic file (type bmp)
 <image2.png>
-[78]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[76]
 File: ratioToPi.png Graphic file (type bmp)
 <ratioToPi.png>
 File: SimulatePi.png Graphic file (type bmp)
 <SimulatePi.png>
- [79]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[77]
 File: simulatePiWrong.png Graphic file (type bmp)
 <simulatePiWrong.png>
- [80] [81] [82]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[78]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[79]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[80]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3261,7 +3892,25 @@ Overfull \hbox (8.2081pt too wide) in paragraph at lines 172--172
 lation Process) 
  []
 
-[83] [84]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[81]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[82]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3269,27 +3918,84 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[83]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[84]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [85]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[86]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[87]
+
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[86] [87] [88] [89] [90]
+) (Structure/ChapterMarkov.tex
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
-) (Structure/ChapterMarkov.tex [91] [92
-
-
-]
+[88]
 Chapter 4.
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[93] [94]
+
+Underfull \vbox (badness 5592) has occurred while \output is active []
+
+ [89
+
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[90]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3298,7 +4004,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[95]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[91]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3312,7 +4025,45 @@ Overfull \hbox (97.07893pt too wide) detected at line 84
 []
  []
 
-[96] [97] [98] [99] [100]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[92]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[93]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[94]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[95]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3325,7 +4076,22 @@ LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
 (Font)              scaled to size 9.59998pt on input line 178.
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
 (Font)              scaled to size 8.39998pt on input line 178.
-[101] [102]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[96]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[97]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3334,7 +4100,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[103]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[98]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3353,7 +4126,18 @@ Overfull \hbox (57.15854pt too wide) in paragraph at lines 221--222
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[104]
+
+Underfull \vbox (badness 1354) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[99]
 Overfull \hbox (31.14236pt too wide) detected at line 298
 \OML/lmm/m/it/12 P [] \OT1/lmr/m/n/12 = [] + [] + [] = 0\OML/lmm/m/it/12 :\OT1/
 lmr/m/n/12 56
@@ -3368,20 +4152,19 @@ Overfull \hbox (46.2299pt too wide) detected at line 337
 \OML/lmm/m/it/12 P [] \OT1/lmr/m/n/12 = [] + [] + [] = []
  []
 
-[105]) (Structure/Chapter6.tex [106]
+) (Structure/Chapter6.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[100]
 Chapter 5.
 File: forecast_and_regression.png Graphic file (type bmp)
 <forecast_and_regression.png>
-
-Underfull \hbox (badness 1107) in paragraph at lines 13--13
-[][]|\TU/THSarabun.ttf(0)/m/n/12 ความ แตก ต่าง ระหว่าง ตัว แบบ อนุกรม เวลา และ 
-ตัว แบบ
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[107
+[101
 
 
 ]
@@ -3401,7 +4184,26 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[108] [109]
+
+Underfull \vbox (badness 6477) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[102]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[103]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3410,7 +4212,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[110] [111]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[104]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3419,7 +4228,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[112] [113]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[105]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3428,7 +4244,26 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[114] [115]
+
+Underfull \vbox (badness 5985) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[106]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[107]
 Overfull \hbox (46.90321pt too wide) detected at line 183
 []
  []
@@ -3436,10 +4271,17 @@ Overfull \hbox (46.90321pt too wide) detected at line 183
 File: alpha-expo-smoothing.png Graphic file (type bmp)
 <alpha-expo-smoothing.png>
 
-Overfull \vbox (138.31494pt too high) has occurred while \output is active []
+Overfull \vbox (94.81494pt too high) has occurred while \output is active []
 
 
-[116]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[108]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3471,18 +4313,127 @@ Underfull \hbox (badness 1648) in paragraph at lines 221--222
 ิธี การ ทาง
  []
 
-[117]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[109]
 Overfull \hbox (26.12872pt too wide) in paragraph at lines 242--258
  [] 
  []
 
-[118]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[110]
 File: regressionSample.png Graphic file (type bmp)
 <regressionSample.png>
 
 Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[111]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[112]
+File: image/error_in_forecasting.png Graphic file (type bmp)
+<image/error_in_forecasting.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[113]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[114]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[115]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[116]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[117]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[118]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [119]
 
@@ -3493,22 +4444,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[120]
-File: image/error_in_forecasting.png Graphic file (type bmp)
-<image/error_in_forecasting.png>
- [121] [122] [123] [124] [125] [126] [127] [128]
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-[129]) (Structure/Chapter5.tex [130
-
-
-]
+[120]) (Structure/Chapter5.tex
 Chapter 6.
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
@@ -3566,7 +4509,10 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[131]
+[121
+
+
+]
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf>
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
@@ -3579,7 +4525,7 @@ File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 1>
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 1>
- [132
+ [122
 
 ]
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
@@ -3588,7 +4534,7 @@ File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 2>
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 2>
- [133
+ [123
 
 ]
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
@@ -3597,7 +4543,7 @@ File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 3>
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 3>
- [134
+ [124
 
 ]
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
@@ -3606,7 +4552,7 @@ File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 4>
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 4>
- [135
+ [125
 
 ]
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
@@ -3615,7 +4561,7 @@ File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 5>
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 5>
- [136
+ [126
 
 ]
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
@@ -3624,7 +4570,7 @@ File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 6>
 File: Quantitative_Analysis_250907.pdf Graphic file (type pdf)
 <use Quantitative_Analysis_250907.pdf, page 6>
- [137
+ [127
 
 ]
 
@@ -3635,7 +4581,30 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[138] [139] [140]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[128]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[129]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[130]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3650,7 +4619,15 @@ Overfull \hbox (1.8145pt too wide) in paragraph at lines 87--87
 ู่ ใน รูป กำหนดการ เชิง เส้น 
  []
 
-) (Structure/Chapter7.tex [141] [142
+) (Structure/Chapter7.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[131] [132
 
 
 ]
@@ -3684,12 +4661,27 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[143]
+[133]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[144] [145]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[134]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[135]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3721,7 +4713,26 @@ ou want other layers.
 Package pgfplots info on input line 97: Setting layers 'axis background,pre mai
 n,main,axis grid,axis ticks,axis lines,axis tick labels,axis descriptions,axis 
 foreground'...
-[146] [147]
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[136]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[137]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3754,7 +4765,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[148] [149]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[138]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3784,29 +4802,18 @@ Overfull \hbox (24.6092pt too wide) detected at line 185
 []
  []
 
-[150]
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Underfull \vbox (badness 1917) has occurred while \output is active []
 
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
 
-[151] [152] [153] [154]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-[155]
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
+[139]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3816,6 +4823,58 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[140]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[141]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[142]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[143]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[144]
+
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
@@ -3835,7 +4894,6 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[156]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3844,7 +4902,22 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[157]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[145]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3853,7 +4926,14 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[158]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[146]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3862,10 +4942,30 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[159]) (Structure/Chapter8.tex [160
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[147]
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
 
 
-]
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[148]) (Structure/Chapter8.tex
 Chapter 8.
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
@@ -3899,7 +4999,10 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-) (AuxiliaryFiles/Appendices.tex [161]
+) (AuxiliaryFiles/Appendices.tex [149
+
+
+]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: custom
@@ -3932,11 +5035,11 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [162
+ [150
 
 
 
-] [163] [164])
+] [151] [152])
 (Structure/Chapter1.tex
 Appendix A.
 
@@ -3949,7 +5052,15 @@ Overfull \hbox (5.5203pt too wide) in paragraph at lines 8--10
 
 
 
-] [2]
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[2]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3966,7 +5077,26 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[3] [4]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[4]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3983,7 +5113,22 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[5] [6]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[5]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[6]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -3997,7 +5142,22 @@ Overfull \hbox (6.5962pt too wide) in paragraph at lines 145--169
  []  [] 
  []
 
-[7] [8] [9]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[8]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4011,12 +5171,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
-[10]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[9]
 Overfull \hbox (48.55011pt too wide) in paragraph at lines 331--332
 [][] 
  []
 
-[11] [12]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[11]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4043,32 +5233,22 @@ Overfull \hbox (13.98628pt too wide) in paragraph at lines 380--381
  [][] 
  []
 
-[13] [14]
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
 
+[12]
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
 
-[15]
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
+[13]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4078,13 +5258,13 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
 
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
 
-
-Package fontspec Warning: Font "THSarabun" does not contain requested Script
-(fontspec)                "Thai".
-
+[14]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4157,15 +5337,62 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-) (Structure/homework.tex [16]
-Appendix B.
-[17
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+
+Package fontspec Warning: Font "THSarabun" does not contain requested Script
+(fontspec)                "Thai".
+
+) (Structure/homework.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 24.31894pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.31894pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.31894pt}.
+
+[15] [16
 
 
 ]
+Appendix B.
+[17]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [18]
 
@@ -4182,6 +5409,13 @@ File: hw2-1.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [19]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
@@ -4190,6 +5424,13 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [20]
 Overfull \hbox (25.22379pt too wide) in paragraph at lines 71--72
@@ -4207,18 +5448,40 @@ Overfull \hbox (99.58578pt too wide) in paragraph at lines 77--87
 [] 
  []
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [21]
 Overfull \hbox (75.6164pt too wide) in paragraph at lines 99--116
 [] 
  []
 
-[22]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[22]
 File: Homework4-template.png Graphic file (type bmp)
 <Homework4-template.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [23]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
@@ -4232,7 +5495,26 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[24] [25]
+
+Underfull \vbox (badness 4673) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[25]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4244,6 +5526,13 @@ Package fontspec Warning: Font "THSarabun" does not contain requested Script
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [26]
 
@@ -4256,10 +5545,24 @@ File: instruction-final.png Graphic file (type bmp)
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
 [27]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [28]
 
@@ -4326,7 +5629,22 @@ Overfull \hbox (13.72714pt too wide) in paragraph at lines 319--320
 ] [][] []
  []
 
-[29]) (Structure/quiz.tex [30]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[29]) (Structure/quiz.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[30]
 Appendix C.
 [31
 
@@ -4335,6 +5653,17 @@ Appendix C.
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
 
 [32]
 Overfull \hbox (54.38733pt too wide) in paragraph at lines 56--57
@@ -4350,7 +5679,14 @@ Overfull \hbox (54.01653pt too wide) in paragraph at lines 37--74
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[33] [34]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[33]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4361,32 +5697,54 @@ Overfull \hbox (22.00244pt too wide) detected at line 132
  []
 
 
-Overfull \vbox (71.33467pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (71.33467pt too high) has occurred while \output is active []
-
-
-[35]
 Overfull \hbox (4.4836pt too wide) in paragraph at lines 135--145
  [] 
  []
 
 
+Overfull \vbox (27.83467pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (27.83467pt too high) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[34]
 Overfull \hbox (25.52156pt too wide) in paragraph at lines 168--180
 [] 
  []
 
-[36]
+
 Overfull \hbox (27.64656pt too wide) in paragraph at lines 185--195
 [][] 
  []
 
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[35]
+
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[36]
 Overfull \hbox (22.00244pt too wide) detected at line 325
 []
  []
@@ -4396,7 +5754,18 @@ Overfull \hbox (32.93636pt too wide) in paragraph at lines 325--325
  [] 
  []
 
-[38]
+
+Underfull \vbox (badness 7308) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[37]
 Overfull \hbox (25.52156pt too wide) in paragraph at lines 325--325
 [] 
  []
@@ -4410,7 +5779,26 @@ Overfull \hbox (27.64656pt too wide) in paragraph at lines 325--325
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[39] [40]
+
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[38]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[39]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4425,7 +5813,14 @@ Overfull \hbox (57.15854pt too wide) in paragraph at lines 352--353
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[40]
 Overfull \hbox (31.14236pt too wide) detected at line 429
 \OML/lmm/m/it/12 P [] \OT1/lmr/m/n/12 = [] + [] + [] = 0\OML/lmm/m/it/12 :\OT1/
 lmr/m/n/12 56
@@ -4440,12 +5835,26 @@ Overfull \hbox (46.2299pt too wide) detected at line 468
 \OML/lmm/m/it/12 P [] \OT1/lmr/m/n/12 = [] + [] + [] = []
  []
 
-[42]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[43]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[42]
 
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
@@ -4512,7 +5921,14 @@ Overfull \hbox (8.38841pt too wide) in paragraph at lines 639--640
 Package fontspec Warning: Font "THSarabun" does not contain requested Script
 (fontspec)                "Thai".
 
-[44] [45]) (AuxiliaryFiles/Backmatter.tex [46
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.44948pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.44948pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.44948pt}.
+
+[43]) (AuxiliaryFiles/Backmatter.tex [44
 
 
 ] (BookTemplate.bbl
@@ -4521,13 +5937,13 @@ Package rkeyval Warning: Unknown key: \bib'how on input line 8.
 
 LaTeX Font Info:    Font shape `TU/THSarabun.ttf(0)/m/it' will be
 (Font)              scaled to size 11.99997pt on input line 9.
-) [47] [48
+) [45] [46
 
 
 ])
 runsystem(makeindex BookTemplate.idx)...executed safely (allowed).
 
- (BookTemplate.ind) [49] (BookTemplate.aux)
+ (BookTemplate.ind) [47] (BookTemplate.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -4543,12 +5959,12 @@ Package rerunfilecheck Info: File `BookTemplate.out' has not changed.
 (rerunfilecheck)             Checksum: 697B9974D665E8C0994BDA355B3F6C8E;26513.
  ) 
 Here is how much of TeX's memory you used:
- 64404 strings out of 409617
- 1483122 string characters out of 5774013
- 2613332 words of memory out of 5000000
- 85148 multiletter control sequences out of 15000+600000
+ 64120 strings out of 409617
+ 1481195 string characters out of 5774013
+ 2613420 words of memory out of 5000000
+ 84864 multiletter control sequences out of 15000+600000
  620474 words of font info for 165 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  138i,18n,161p,1261b,2719s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on BookTemplate.pdf (223 pages).
+Output written on BookTemplate.pdf (209 pages).

@@ -34,27 +34,22 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%       MAINMATTER PAGE FORMAT
 \fancypagestyle{fancymain}{
-\renewcommand{\headrulewidth}{0.1pt}
-\fancyhead[LE, RO]{\small\parbox{.45\textwidth}{
-    \checkoddpage
-    \ifoddpage
-        \raggedleft
-    \else
-        \raggedright
-    \fi
+% No bottom rule in footer
+\renewcommand{\footrulewidth}{0pt}
+% Show chapter on left header of even pages (LE) only
+\fancyhead[LE]{\small\parbox{\textwidth}{%
+    \raggedright
     \bfseries\nouppercase{\leftmark}}\vspace{.065cm}}
-\fancyhead[LO, RE]{\small\parbox{.45\textwidth}{
-    \checkoddpage
-    \ifoddpage
-        \raggedright
-    \else
-        \raggedleft
-    \fi
+% Show section on right header of odd pages (RO) only
+\fancyhead[RO]{\small\parbox{\textwidth}{%
+    \raggedleft
     \nouppercase{\rightmark}}\vspace{.065cm}}
-\fancyfoot[LE,RO]{\small\thepage}
-\fancyfoot[C]{}
-\fancyfoot[LO,RE]{\small \EMail}}
+% Clear the other header fields so only one side has content per page
+\fancyhead[LO]{}
+\fancyhead[RE]{}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%       SPACING
 \strictpagecheck
-\raggedbottom
+%\raggedbottom
+
