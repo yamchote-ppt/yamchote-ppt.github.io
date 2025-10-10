@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>720201 การวิเคราะห์เชิงปริมาณสำหรับธุรกิจ | Southeast Asia University | ปพนธีร์ แย้มโชติ</title>
+    <title>720201 การวิเคราะห์เชิงปริมาณทางธุรกิจ | Southeast Asia University | ปพนธีร์ แย้มโชติ</title>
     <meta name="description" content="รายละเอียดรายวิชาที่สอนโดย ปพนธีร์ แย้มโชติ อาจารย์ประจำสาขาระบบสารสนเทศเพื่อธุรกิจดิจิทัล มหาวิทยาลัยเอเชียอาคเนย์ พร้อมตารางสอนและเอกสารประกอบการเรียน"/>
-    <meta name="keywords" content="การวิเคราะห์เชิงปริมาณสำหรับธุรกิจ, quantitative analysis ,Southeast Asia University, ปพนธีร์ แย้มโชติ, สอนมหาวิทยาลัย, อาจารย์" />
+    <meta name="keywords" content="Data Structure and Algorithm, โครงสร้างข้อมูลและอัลกอริทึม, Southeast Asia University, ปพนธีร์ แย้มโชติ, สอนมหาวิทยาลัย, อาจารย์" />
     <link rel="canonical" href="https://yamchote-ppt.github.io/phaphontee-yamchote/Teaching.html" />
 
     <meta property="og:type" content="article" />
@@ -48,6 +48,7 @@
             --info: #1976d2;
             --warning: #f57c00;
             --danger: #c62828;
+            --sidebar-width: 270px;
         }
 
         body {
@@ -58,14 +59,14 @@
             min-height: 100vh;
         }
 
-        /* Header Navigation */
+        /* Top Header Navigation */
         .top-nav {
             background: var(--darkblue);
             padding: 1rem 0;
             box-shadow: var(--shadow-lg);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 1001;
             animation: slideDown 0.5s ease-out;
         }
 
@@ -81,7 +82,7 @@
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -94,7 +95,7 @@
             font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -102,12 +103,29 @@
 
         .nav-brand:hover {
             color: var(--white);
-            transform: translateX(-5px);
+            transform: translateX(-4px);
         }
 
         .nav-brand::before {
             content: '←';
             font-size: 1.5rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: var(--gold);
+            color: var(--darkblue);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .menu-toggle:hover {
+            background: var(--white);
+            transform: scale(1.05);
         }
 
         /* Hero Section */
@@ -132,7 +150,7 @@
         }
 
         .hero-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -169,42 +187,130 @@
             font-weight: 300;
         }
 
-        /* Main Container */
-        .main-container {
-            max-width: 1200px;
+        /* Main Layout Container */
+        .main-layout {
+            display: flex;
+            max-width: 1400px;
             margin: 2rem auto;
             padding: 0 2rem;
+            gap: 2rem;
+            position: relative;
         }
 
-        /* Content Card */
+        /* Left Sidebar Navigation */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sidebar-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--darkblue);
+            margin-bottom: 0.9rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.1rem 0.9rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 500;
+            border-left: 3px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .sidebar-menu a:hover {
+            background: var(--gray-100);
+            border-left-color: var(--gold);
+            transform: translateX(4px);
+        }
+
+        .sidebar-menu a.active {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+            border-left-color: var(--gold);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-menu a .icon {
+            font-size: 1.1rem;
+            min-width: 22px;
+            text-align: center;
+        }
+
+        /* Main Content Area */
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+
         .content-card {
             background: var(--white);
             border-radius: 12px;
             padding: 2rem;
             box-shadow: var(--shadow);
-            margin-bottom: 2rem;
         }
 
-        /* Section Styles */
-        .section-block {
-            margin-bottom: 2.5rem;
+        /* Section Styles with Fade-in */
+        .content-section {
+            display: none;
+            animation: fadeInSlide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .section-header {
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
             padding-bottom: 0.8rem;
             border-bottom: 3px solid var(--gold);
         }
 
         .section-icon {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--darkblue);
             font-weight: 700;
             margin: 0;
@@ -216,13 +322,13 @@
             border-radius: 8px;
             margin-bottom: 1.5rem;
             border-left: 5px solid;
-            animation: slideInRight 0.5s ease-out;
+            animation: slideInRight 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         @keyframes slideInRight {
             from {
                 opacity: 0;
-                transform: translateX(-20px);
+                transform: translateX(-15px);
             }
             to {
                 opacity: 1;
@@ -242,6 +348,12 @@
             color: var(--info);
         }
 
+        .alert-warning {
+            background: #fff3e0;
+            border-color: var(--warning);
+            color: var(--warning);
+        }
+
         .alert-box h5 {
             font-weight: 700;
             margin-bottom: 0.5rem;
@@ -255,7 +367,7 @@
         }
 
         .styled-list li {
-            padding: 0.5rem 0;
+            padding: 0.8rem 0;
             border-bottom: 1px solid var(--gray-200);
             display: flex;
             align-items: flex-start;
@@ -276,12 +388,56 @@
             color: var(--darkblue);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         .styled-list a:hover {
             color: var(--gold);
             transform: translateX(3px);
+        }
+
+        /* Table Styles */
+        .table-wrap {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+        }
+
+        table.modern {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        table.modern thead th {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+            text-align: left;
+            padding: 0.85rem 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        table.modern tbody td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            vertical-align: top;
+        }
+
+        table.modern tbody tr:nth-child(even) {
+            background: var(--gray-100);
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            border-radius: 999px;
+            background: #e3f2fd;
+            color: var(--info);
+            font-weight: 600;
+            font-size: 0.8rem;
         }
 
         /* Schedule List */
@@ -291,11 +447,11 @@
             border-radius: 8px;
             margin-bottom: 1rem;
             border-left: 4px solid var(--gold);
-            transition: all 0.3s ease;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .schedule-item:hover {
-            transform: translateX(5px);
+            transform: translateX(4px);
             box-shadow: var(--shadow);
             background: var(--white);
         }
@@ -327,6 +483,26 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-layout {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: static;
+                max-height: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .sidebar.collapsed {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 1.8rem;
@@ -336,7 +512,7 @@
                 font-size: 1rem;
             }
 
-            .main-container {
+            .main-layout {
                 padding: 0 1rem;
             }
 
@@ -345,8 +521,31 @@
             }
 
             .section-title {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Scrollbar Styling */
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: var(--gray-100);
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: var(--darkblue);
         }
     </style>
 </head>
@@ -356,6 +555,7 @@
     <nav class="top-nav">
         <div class="nav-container">
             <a href="../teaching.html" class="nav-brand">Teaching Page</a>
+            <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
         </div>
     </nav>
 
@@ -363,256 +563,596 @@
     <section class="hero">
         <div class="hero-content">
             <h1>📚 720201 - Quantitative Analysis for Business</h1>
-            <p class="hero-subtitle">Block 1 ภาคต้น ปีการศึกษา 2568 (2 ส.ค. 2568 - 21 ก.ย. 2568)</p>
-            <p class="hero-info">อาทิตย์ 08:00 - 13:35 • Room: 507 อาคารสนง.อธิการบดี</p>
+            <p class="hero-subtitle">บล็อค 1 ภาคต้น ปีการศึกษา 2568 (1 พ.ย. 2568 – 1 มี.ค. 2569)</p>
+            <p class="hero-info">อา 08:00-13:35 • Room: 507</p>
             <p class="hero-info">Faculty of Business Administration, Southeast Asia University</p>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="main-container">
-        <div class="content-card">
-            <!-- Announcements -->
-            <div class="alert-box alert-info">
-                <h5>📢 ประกาศงานกลุ่ม</h5>
-                <p>
-                    แบ่งกลุ่ม กลุ่มละ 5-6 คน (แบ่งกันเองนะครับ โตๆ กันแล้วอาจารย์เชื่อว่าจัดการเรื่องกลุ่มกันเองได้ครับ ไม่มีการ log รายชื่อคนในกลุ่มใด ๆ ทั้งนั้น)<br>
-                    <strong>กำหนดส่งงานกลุ่มภายในวันที่ 30 กันยายน 2568</strong>
-                </p>
-                <p><strong>รายละเอียด:</strong></p>
-                <ul>
-                    <li>หัวข้อ: การทำนายราคาหน่วยลงทุนกองทุนรวมด้วยตัวแบบการทำนายแบบต่าง ๆ</li>
-                    <li>รูปแบบ: รายงาน (Paper)</li>
-                    <li>ความยาว: ไม่เกิน 4 หน้ากระดาษ A4 ประกอบไปด้วย
-                        <ul style="margin-left: 1.5rem;">
-                            <li>บทนำ: อธิบายว่าทำไมถึงสนใจกองทุนรวมตัวนี้</li>
-                            <li>วิธีการเตรียมข้อมูล: อธิบายขั้นตอนการเตรียมข้อมูลสำหรับการวิเคราะห์</li>
-                            <li>ผลลัพธ์: นำเสนอผลลัพธ์ที่ได้จากการวิเคราะห์ด้วยวิธีการที่เรียนไปในห้อง (หรือนอกเหนือจากที่เรียนไปก็ได้)</li>
-                            <li>สรุป: สรุปผลการวิเคราะห์เชิงเปรียบเทียบ</li>
-                        </ul>
-                    </li>
-                    <li>รายละเอียดวิธีการทั้งหมด: <a href="https://docs.google.com/document/d/1n02BkPn6lpx6DqF0AwTQbjtBhdcwgYPxMt6Ls9Y4l5M/edit?usp=sharing" target="_blank"><strong>เอกสารแนบ</strong></a></li>
-                </ul>
-            </div>
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <h3 class="sidebar-title">📑 เนื้อหารายวิชา</h3>
+            <ul class="sidebar-menu">
+                <li><a href="#overview" class="menu-link active" onclick="showSection('overview', event)">
+                    <span class="icon">🏠</span>
+                    <span>ภาพรวมรายวิชา</span>
+                </a></li>
+                <li><a href="#description" class="menu-link" onclick="showSection('description', event)">
+                    <span class="icon">📖</span>
+                    <span>คำอธิบายรายวิชา</span>
+                </a></li>
+                <li><a href="#materials" class="menu-link" onclick="showSection('materials', event)">
+                    <span class="icon">📄</span>
+                    <span>เอกสารประกอบการสอน</span>
+                </a></li>
+                <li><a href="#clos" class="menu-link" onclick="showSection('clos', event)">
+                    <span class="icon">🎯</span>
+                    <span>ผลลัพธ์การเรียนรู้ (CLOs)</span>
+                </a></li>
+                <li><a href="#mapping" class="menu-link" onclick="showSection('mapping', event)">
+                    <span class="icon">🧩</span>
+                    <span>การแมป CLO-PLO</span>
+                </a></li>
+                <li><a href="#assessment" class="menu-link" onclick="showSection('assessment', event)">
+                    <span class="icon">🧪</span>
+                    <span>แผนการประเมินผล</span>
+                </a></li>
+                <li><a href="#policies" class="menu-link" onclick="showSection('policies', event)">
+                    <span class="icon">📜</span>
+                    <span>นโยบายรายวิชา</span>
+                </a></li>
+                <li><a href="#schedule" class="menu-link" onclick="showSection('schedule', event)">
+                    <span class="icon">📅</span>
+                    <span>ตารางสอน</span>
+                </a></li>
+                <li><a href="#grading" class="menu-link" onclick="showSection('grading', event)">
+                    <span class="icon">📊</span>
+                    <span>การประเมินผล</span>
+                </a></li>
+                <li><a href="#homework" class="menu-link" onclick="showSection('homework', event)">
+                    <span class="icon">✏️</span>
+                    <span>การบ้าน</span>
+                </a></li>
+                <li><a href="#exams" class="menu-link" onclick="showSection('exams', event)">
+                    <span class="icon">📝</span>
+                    <span>ข้อสอบ</span>
+                </a></li>
+                <li><a href="#videos" class="menu-link" onclick="showSection('videos', event)">
+                    <span class="icon">🎥</span>
+                    <span>วิดีโอเรียนเพิ่มเติม</span>
+                </a></li>
+            </ul>
+        </aside>
 
-            <!-- Course Description -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📖</span>
-                    <h2 class="section-title">คำอธิบายรายวิชา</h2>
-                </div>
-                <p>
-                    แนวคิดและกระบวนการตัดสินใจภายใต้เทคนิคการวิเคราะห์เชิงปริมาณทางธุรกิจ ความน่าจะเป็น ทฤษฎีการตัดสินใจ การโปรแกรมเชิงเส้น การวิเคราะห์มาร์คอฟ ทฤษฎีการแข่งขัน การวิเคราะห์แถวคอย การจำลองสถานการณ์ และการพยากรณ์ รวมถึงการนำโปรแกรมสำเร็จรูปมาใช้ประมวลผลลัพธ์
-                </p>
-            </div>
-            <!-- Course Materials -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📄</span>
-                    <h2 class="section-title">เอกสารประกอบการสอน</h2>
-                </div>
-                <ul class="styled-list">
-                    <li><a href="../assets/handout/Quantitative_Analysis Chap 1-3.pdf" target="_blank">หนังสือกลางภาค</a> <small style="color: var(--gray-700);">(update at 28 July 2025)</small></li>
-                    <li><a href="../assets/handout/Quantitative_Analysis - markov.pdf" target="_blank">หนังสือ (บทมาร์คอฟ)</a> <small style="color: var(--gray-700);">(update at 24 August 2025)</small></li>
-                    <li><a href="../assets/handout/Quantitative_Analysis - forecasting.pdf" target="_blank">หนังสือ (บทการทำนาย)</a> <small style="color: var(--gray-700);">(update at 30 August 2025)</small></li>
-                    <li><a href="../assets/handout/Quantitative_Analysis - queue.pdf" target="_blank">หนังสือ (บททฤษฎีแถวคอย)</a> <small style="color: var(--gray-700);">(update at 13 September 2025)</small></li>
-                </ul>
-            </div>
-            <!-- Schedule -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📅</span>
-                    <h2 class="section-title">ตารางสอน</h2>
-                </div>
-                
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 1 (3 สิงหาคม)</strong>
-                    <p><span style="text-decoration: line-through;">แนวคิดพื้นฐานการวิเคราะห์เชิงปริมาณเพื่อการตัดสินใจเชิงธุรกิจ,</span> กำหนดการเชิงเส้น (Linear Programming) Part 1 (การเขียนโมเดล และการแก้ปัญหาด้วยรูปภาพ)</p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/Quantitative_Analysis_250803.pdf">download</a></li>
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div class="content-card">
+                <!-- Overview Section (Default Active) -->
+                <section id="overview" class="content-section active">
+                    <div class="section-header">
+                        <span class="section-icon">🏠</span>
+                        <h2 class="section-title">ภาพรวมรายวิชา</h2>
+                    </div>
+                    <!-- <div class="alert-box alert-warning">
+                        <h5>📎 เอกสารอ้างอิง OBE</h5>
+                        <p>
+                            ใช้อ้างอิงในการกรอก CLO, Mapping และแผนการประเมิน: 
+                            <a href="../obe3 dsa.pdf" target="_blank"><strong>obe3 dsa.pdf</strong></a>
+                        </p>
+                    </div> -->
+                    <div class="alert-box alert-info">
+                        <h5>ℹ️ ยินดีต้อนรับ</h5>
+                        <p>
+                            หน้านี้รวบรวมข้อมูลทั้งหมดของรายวิชา 720201 Quantitative Analysis for Business 
+                            กรุณาใช้เมนูด้านซ้ายเพื่อเลือกดูเนื้อหาในแต่ละหัวข้อ
+                        </p>
+                    </div>
+                    <p><strong>รหัสวิชา:</strong> 720201</p>
+                    <p><strong>ชื่อวิชา:</strong> Quantitative Analysis for Business (การวิเคราะห์เชิงปริมาณทางธุรกิจ)</p>
+                    <p><strong>หน่วยกิต:</strong> 3(3-0-9)</p>
+                    <p><strong>เทอม:</strong> บล็อค 1 ภาคต้น ปีการศึกษา 2568</p>
+                    <p><strong>เวลาเรียน:</strong> อาทิตย์ 08:00-13:35</p>
+                    <p><strong>ห้องเรียน:</strong> 507</p>
+                </section>
+
+                <!-- Description Section -->
+                <section id="description" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">📖</span>
+                        <h2 class="section-title">คำอธิบายรายวิชา</h2>
+                    </div>
+                    <p>
+                        แนวคิดและกระบวนการตัดสินใจภายใต้เทคนิคการวิเคราะห์เชิงปริมาณทางธุรกิจ ความน่าจะเป็น ทฤษฎีการตัดสินใจ การโปรแกรมเชิงเส้น การวิเคราะห์มาร์คอฟ ทฤษฎีการแข่งขัน การวิเคราะห์แถวคอย การจำลองสถานการณ์ และการพยากรณ์ รวมถึงการนำโปรแกรมสำเร็จรูปมาใช้ประมวลผลลัพธ์
+                    </p>
+                </section>
+
+                <!-- Materials Section -->
+                <section id="materials" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">📄</span>
+                        <h2 class="section-title">เอกสารประกอบการสอน</h2>
+                    </div>
+                    <ul class="styled-list">
+                        <li><a href="../assets/handout/Quantitative_Analysis Chap 1-3.pdf" target="_blank">หนังสือกลางภาค</a> <small style="color: var(--gray-700);">(update at 28 July 2025)</small></li>
+                        <li><a href="../assets/handout/Quantitative_Analysis - markov.pdf" target="_blank">หนังสือ (บทมาร์คอฟ)</a> <small style="color: var(--gray-700);">(update at 24 August 2025)</small></li>
+                        <li><a href="../assets/handout/Quantitative_Analysis - forecasting.pdf" target="_blank">หนังสือ (บทการทำนาย)</a> <small style="color: var(--gray-700);">(update at 30 August 2025)</small></li>
+                        <li><a href="../assets/handout/Quantitative_Analysis - queue.pdf" target="_blank">หนังสือ (บททฤษฎีแถวคอย)</a> <small style="color: var(--gray-700);">(update at 13 September 2025)</small></li>
                     </ul>
-                </div>
+                </section>
 
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 2 (10 สิงหาคม) [Online]</strong>
-                    <p>LP Part 2 (Simplex method), <span style="text-decoration: line-through;">ทฤษฎีการตัดสินใจ (Decision Theory)</span></p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/Quantitative_Analysis_250810.pdf">download</a></li>
-                        <li>Recording: <a href="https://youtu.be/1xKfYBX1HgE">link</a></li>
-                        <li>เรียนเพิ่มเติม: <a href="https://youtu.be/5zaD5F6JSD0">ซิมเพลกซ์สำหรับโจทย์หาค่าต่ำสุด</a> | <a href="https://youtu.be/Rv5KO410a1E">ซิมเพลกซ์แบบมีเงื่อนไขส่วนเกิน</a></li>
+                <!-- CLOs Section -->
+                <!-- <section id="clos" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">🎯</span>
+                        <h2 class="section-title">ผลลัพธ์การเรียนรู้รายวิชา (CLOs)</h2>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="modern" id="clos-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 12%">รหัส CLO</th>
+                                    <th>คำอธิบายผลลัพธ์การเรียนรู้</th>
+                                    <th style="width: 22%">ระดับพฤติกรรม (Bloom)</th>
+                                    <th style="width: 14%">ประเภท</th>
+                                </tr>
+                            </thead>
+                            <tbody id="clos-tbody">
+                                <tr>
+                                    <td><span class="chip">CLO1</span></td>
+                                    <td>อธิบายหลักการและแนวคิดของโครงสร้างข้อมูลพื้นฐาน</td>
+                                    <td>Understand</td>
+                                    <td>K</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO2</span></td>
+                                    <td>วิเคราะห์ความซับซ้อนของอัลกอริทึม</td>
+                                    <td>Analyze</td>
+                                    <td>K-S</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO3</span></td>
+                                    <td>ประยุกต์ใช้โครงสร้างข้อมูลในการแก้ปัญหา</td>
+                                    <td>Apply</td>
+                                    <td>S</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO4</span></td>
+                                    <td>ออกแบบและเขียนโปรแกรมโดยใช้โครงสร้างข้อมูลที่เหมาะสม</td>
+                                    <td>Create</td>
+                                    <td>S</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO5</span></td>
+                                    <td>ทำงานร่วมกันในการพัฒนาโครงงาน</td>
+                                    <td>Apply</td>
+                                    <td>A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section> -->
+
+                <!-- Mapping Section -->
+                <!-- <section id="mapping" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">🧩</span>
+                        <h2 class="section-title">การแมปผลลัพธ์การเรียนรู้ (CLO) กับผลลัพธ์การเรียนรู้ของหลักสูตร (PLO)</h2>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="modern" id="mapping-table">
+                            <thead>
+                                <tr id="mapping-thead-row">
+                                    <th style="width: 12%">CLO \\ PLO</th>
+                                    <th>PLO1</th>
+                                    <th>PLO2</th>
+                                    <th>PLO3</th>
+                                    <th>PLO4</th>
+                                    <th>PLO5</th>
+                                    <th>PLO6</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mapping-tbody">
+                                <tr>
+                                    <td><span class="chip">CLO1</span></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO2</span></td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO3</span></td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO4</span></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="chip">CLO5</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="color: var(--gray-700); margin-top: 0.5rem;"><small>หมายเหตุ: ใช้ระดับการแมป 1=สนับสนุนน้อย, 2=ปานกลาง, 3=มาก</small></p>
+                </section> -->
+
+                <!-- Assessment Section -->
+                <!-- <section id="assessment" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">🧪</span>
+                        <h2 class="section-title">แผนการประเมินผลเพื่อวัด CLO</h2>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="modern" id="assessment-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 22%">กิจกรรม/เครื่องมือประเมิน</th>
+                                    <th style="width: 15%">สัดส่วน (%)</th>
+                                    <th>CLO ที่วัด</th>
+                                    <th style="width: 18%">เกณฑ์ผ่าน (Threshold)</th>
+                                    <th style="width: 18%">วิธีตรวจสอบ/วิเคราะห์ผล</th>
+                                </tr>
+                            </thead>
+                            <tbody id="assessment-tbody">
+                                <tr>
+                                    <td>การบ้าน / แบบฝึกหัด</td>
+                                    <td>20%</td>
+                                    <td>CLO1, CLO2, CLO3</td>
+                                    <td>≥ 60%</td>
+                                    <td>Rubric scoring, Item analysis</td>
+                                </tr>
+                                <tr>
+                                    <td>สอบกลางภาค</td>
+                                    <td>30%</td>
+                                    <td>CLO1, CLO2</td>
+                                    <td>≥ 50%</td>
+                                    <td>Item analysis, ความสัมพันธ์กับ CLO</td>
+                                </tr>
+                                <tr>
+                                    <td>สอบปลายภาค</td>
+                                    <td>40%</td>
+                                    <td>CLO3, CLO4</td>
+                                    <td>≥ 50%</td>
+                                    <td>Item analysis, ความสัมพันธ์กับ CLO</td>
+                                </tr>
+                                <tr>
+                                    <td>งานกลุ่ม / Project</td>
+                                    <td>10%</td>
+                                    <td>CLO4, CLO5</td>
+                                    <td>≥ 60%</td>
+                                    <td>Rubric, Peer evaluation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section> -->
+
+                <!-- Policies Section -->
+                <!-- <section id="policies" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">📜</span>
+                        <h2 class="section-title">นโยบายรายวิชาและทรัพยากร</h2>
+                    </div>
+                    <ul class="styled-list" id="policies-list">
+                        <li><strong>นโยบายการส่งงาน:</strong> <span id="policy-submission">ส่งงานผ่านระบบ LMS ภายในเวลาที่กำหนด หากส่งช้าจะถูกหักคะแนนวันละ 10%</span></li>
+                        <li><strong>นโยบายการเข้าชั้นเรียน:</strong> <span id="policy-attendance">ต้องมีเวลาเรียนไม่ต่ำกว่า 80% ของเวลาเรียนทั้งหมด</span></li>
+                        <li><strong>ความซื่อสัตย์ทางวิชาการ:</strong> <span id="policy-integrity">ไม่อนุญาตให้มีการคัดลอกงานหรือทุจริตในการสอบ หากตรวจพบจะให้เกรด F ในรายวิชานี้ทันที</span></li>
+                        <li><strong>ทรัพยากรเสริม:</strong> <span id="policy-resources">เอกสารประกอบการสอน, หนังสืออ้างอิง: Data Structures and Algorithms in Python by Goodrich, Tamassia, Goldwasser</span></li>
                     </ul>
-                </div>
+                </section> -->
 
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 3 (17 สิงหาคม)</strong>
-                    <p>ทฤษฎีการตัดสินใจ (Decision Theory), การจำลองสถานการณ์ (Simulation Modeling)</p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/Quantitative_Analysis_250817.pdf">download</a></li>
-                    </ul>
-                </div>
-
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 4 (24 สิงหาคม) [Online]</strong>
-                    <p><span style="color: var(--danger); font-weight: 700;">📝 สอบกลางภาค (ตอนเช้า)</span> + การวิเคราะห์มาร์คอฟ (Markov Analysis)</p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/Quantitative_Analysis_250824.pdf">download</a></li>
-                        <li>Recording: <a href="https://youtu.be/hN_VQhKP2zk">link</a></li>
-                    </ul>
-                </div>
-
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 5 (31 สิงหาคม)</strong>
-                    <p>การทำนาย (Forecasting)</p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/Quantitative_Analysis_250831.pdf">download</a></li>
-                        <li>Excel: <a href="../assets/handout/Forecasting-excel.xlsx">link</a></li>
-                    </ul>
-                </div>
-
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 6 (7 กันยายน)</strong>
-                    <p>ทฤษฎีการแข่งขัน (Game Theory)</p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/Quantitative_Analysis_250907.pdf">download</a></li>
-                    </ul>
-                </div>
-
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 7 (14 กันยายน)</strong>
-                    <p>ทฤษฎีแถวคอย (Queue Theory)</p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/Quantitative_Analysis_250914.pdf">download</a></li>
-                    </ul>
-                </div>
-
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 8 (21 กันยายน)</strong>
-                    <p>ทบทวนก่อนสอบ (08:00 - 11:00) + <span style="color: var(--danger); font-weight: 700;">📝 สอบปลายภาค</span></p>
-                </div>
-            </div>
-            <!-- Grading -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📊</span>
-                    <h2 class="section-title">การประเมินผล</h2>
-                </div>
-                <ul class="styled-list">
-                    <li>
-                        <div>
-                            <strong>สอบกลางภาค (20%)</strong><br>
-                            <small style="color: var(--gray-700);">LP + DT + SM</small>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>สอบปลายภาค (40%)</strong><br>
-                            <small style="color: var(--gray-700);">MK + GT + FCT + Q</small>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>คะแนนเก็บ (40%)</strong>
-                            <ul style="margin-top: 0.5rem; list-style-type: circle; margin-left: 1.5rem;">
-                                <li><strong>การบ้าน (14%):</strong> 7 ครั้ง ส่งออนไลน์ <span style="color: var(--danger);">(เช็คแค่ทำส่งหรือไม่ ใครอยากได้ feedback กลับให้แจ้งตอนส่ง)</span></li>
-                                <li><strong>สอบย่อย (5% + 10%):</strong> 5 ครั้งครั้งละ 20 นาที (การเรียนครั้งที่ 2, 3, 5, 6, 7 ออกคล้ายการบ้าน <span style="color: var(--danger);">ให้ 1 คะแนนเข้าสอบ + 2 คะแนนจากความถูกต้อง</span>)</li>
-                                <li><strong>งานกลุ่ม (11%):</strong> ประกาศโจทย์หลังจบครั้งที่ 7 → ให้ปรึกษาในครั้งที่ 8 → ส่ง 21 ตุลาคม</li>
+                <!-- Schedule Section -->
+                <section id="schedule" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">📅</span>
+                        <h2 class="section-title">ตารางสอน</h2>
+                    </div>
+                    
+                    <div id="schedule-list">
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 1 (3 สิงหาคม)</strong>
+                            <p><span style="text-decoration: line-through;">แนวคิดพื้นฐานการวิเคราะห์เชิงปริมาณเพื่อการตัดสินใจเชิงธุรกิจ,</span> กำหนดการเชิงเส้น (Linear Programming) Part 1 (การเขียนโมเดล และการแก้ปัญหาด้วยรูปภาพ)</p>
+                            <ul>
+                                <li>Note: <a href="../assets/handout/Quantitative_Analysis_250803.pdf">download</a></li>
                             </ul>
                         </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- Homework -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">✏️</span>
-                    <h2 class="section-title">การบ้าน</h2>
-                </div>
-                <ul class="styled-list">
-                    <li><strong>การบ้าน 1:</strong> การเขียนแบบจำลอง และแก้ปัญหาโจทย์ 1.1.3 และโจทย์ Assignment <small style="color: var(--gray-700);">(due date 9 สิงหาคม 23:59 น.)</small> <a href="../assets/handout/homework/hw1_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>การบ้าน 2:</strong> Simplex method <small style="color: var(--gray-700);">(due date 16 สิงหาคม 15:00 น.)</small> <a href="../assets/handout/homework/hw2.pdf">(โจทย์)</a> <a href="../assets/handout/homework/hw2_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>การบ้าน 3:</strong> Decision Theory and Simulation <small style="color: var(--gray-700);">(due date 23 สิงหาคม 15:00 น.)</small> <a href="../assets/handout/homework/hw3.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw3_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>การบ้าน 4:</strong> Markov Analysis <small style="color: var(--gray-700);">(due date 30 สิงหาคม 15:00 น.)</small> <a href="../assets/handout/homework/hw4.pdf">(โจทย์)</a> <a href="../assets/handout/homework/hw4_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>การบ้าน 5:</strong> การทำนายและการประเมิณผลตัวแบบการทำนาย <small style="color: var(--gray-700);">(due date 6 กันยายน 15:00 น.)</small> <a href="../assets/handout/homework/hw5.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw5_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>การบ้าน 6:</strong> ทฤษฎีเกม <small style="color: var(--gray-700);">(due date 14 กันยายน 21:00 น.)</small> <a href="../assets/handout/homework/hw6.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw6_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>การบ้าน 7:</strong> ยำรวมทวนก่อนสอบ <small style="color: var(--gray-700);">(due date 20 กันยายน 23:55 น. และเฉลยตอน 08:00 - 11:00 ก่อนเข้าห้องสอบ)</small> <a href="../assets/handout/homework/hw7.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw7_sol.pdf">(เฉลย)</a></li>
-                </ul>
-            </div>
 
-            <!-- Exams -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📝</span>
-                    <h2 class="section-title">ข้อสอบ</h2>
-                </div>
-                <ul class="styled-list">
-                    <li><strong>สอบย่อยครั้งที่ 1:</strong> การเขียนกำหนดการเชิงเส้น <a href="../assets/handout/exam/quiz1.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/exam/quiz1_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>สอบย่อยครั้งที่ 2:</strong> การทำซิมเพล็กซ์ <a href="../assets/handout/exam/quiz2.pdf">(โจทย์)</a> <a href="../assets/handout/exam/quiz2_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>สอบกลางภาค:</strong> <a href="../assets/handout/exam/midterm.pdf">(โจทย์)</a> <a href="../assets/handout/exam/midterm_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>สอบย่อยครั้งที่ 3:</strong> Markov Analysis <a href="../assets/handout/homework/quiz3.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/quiz3_sol.pdf">(เฉลย)</a></li>
-                    <li><strong>สอบย่อยครั้งที่ 4:</strong> Forecasting <a href="../assets/handout/homework/quiz4.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/quiz4_sol.pdf">(เฉลย)</a></li>
-                </ul>
-            </div>
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 2 (10 สิงหาคม) [Online]</strong>
+                            <p>LP Part 2 (Simplex method), <span style="text-decoration: line-through;">ทฤษฎีการตัดสินใจ (Decision Theory)</span></p>
+                            <ul>
+                                <li>Note: <a href="../assets/handout/Quantitative_Analysis_250810.pdf">download</a></li>
+                                <li>Recording: <a href="https://youtu.be/1xKfYBX1HgE">link</a></li>
+                                <li>เรียนเพิ่มเติม: <a href="https://youtu.be/5zaD5F6JSD0">ซิมเพลกซ์สำหรับโจทย์หาค่าต่ำสุด</a> | <a href="https://youtu.be/Rv5KO410a1E">ซิมเพลกซ์แบบมีเงื่อนไขส่วนเกิน</a></li>
+                            </ul>
+                        </div>
 
-            <!-- Video Resources -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">🎥</span>
-                    <h2 class="section-title">วิดีโอเรียนเพิ่มเติม</h2>
-                </div>
-                <ul class="styled-list">
-                    <li><a href="https://www.youtube.com/watch?v=5eGSsYbCywo" target="_blank">คณิตศาสตร์ (1) การวาดเส้นตรงจากสมการเส้นตรง</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ftTM9zZ8yr8" target="_blank">คณิตศาสตร์ (2) การแก้ระบบสมการเชิงเส้นหาจุดตัดระหว่างเส้นตรง</a></li>
-                    <li><a href="https://youtu.be/ZD0aPqArK5g" target="_blank">การดำเนินการตามแถวเพื่อเปลี่ยน pivot ใน Simplex</a></li>
-                    <li><a href="https://youtu.be/5zaD5F6JSD0" target="_blank">ซิมเพลกซ์สำหรับโจทย์หาค่าต่ำสุด</a></li>
-                    <li><a href="https://youtu.be/Rv5KO410a1E" target="_blank">ซิมเพลกซ์แบบมีเงื่อนไขส่วนเกิน</a> | <a href="../assets/handout/simplex-surplus-artificial.pdf">เอกสารประกอบการสอน</a></li>
-                    <li><a href="https://youtu.be/7GYZ78cf6M8" target="_blank">simplex เงื่อนไขเท่ากับ</a></li>
-                    <li><a href="https://youtu.be/sZaQwmwPR_g" target="_blank">Simplex โจทย์ผสม</a></li>
-                </ul>
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 3 (17 สิงหาคม)</strong>
+                            <p>ทฤษฎีการตัดสินใจ (Decision Theory), การจำลองสถานการณ์ (Simulation Modeling)</p>
+                            <ul>
+                                <li>Note: <a href="../assets/handout/Quantitative_Analysis_250817.pdf">download</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 4 (24 สิงหาคม) [Online]</strong>
+                            <p><span style="color: var(--danger); font-weight: 700;">📝 สอบกลางภาค (ตอนเช้า)</span> + การวิเคราะห์มาร์คอฟ (Markov Analysis)</p>
+                            <ul>
+                                <li>Note: <a href="../assets/handout/Quantitative_Analysis_250824.pdf">download</a></li>
+                                <li>Recording: <a href="https://youtu.be/hN_VQhKP2zk">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 5 (31 สิงหาคม)</strong>
+                            <p>การทำนาย (Forecasting)</p>
+                            <ul>
+                                <li>Note: <a href="../assets/handout/Quantitative_Analysis_250831.pdf">download</a></li>
+                                <li>Excel: <a href="../assets/handout/Forecasting-excel.xlsx">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 6 (7 กันยายน)</strong>
+                            <p>ทฤษฎีการแข่งขัน (Game Theory)</p>
+                            <ul>
+                                <li>Note: <a href="../assets/handout/Quantitative_Analysis_250907.pdf">download</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 7 (14 กันยายน)</strong>
+                            <p>ทฤษฎีแถวคอย (Queue Theory)</p>
+                            <ul>
+                                <li>Note: <a href="../assets/handout/Quantitative_Analysis_250914.pdf">download</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="schedule-item">
+                            <strong>ครั้งที่ 8 (21 กันยายน)</strong>
+                            <p>ทบทวนก่อนสอบ (08:00 - 11:00) + <span style="color: var(--danger); font-weight: 700;">📝 สอบปลายภาค</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Grading Section -->
+                <section id="grading" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">📊</span>
+                        <h2 class="section-title">การประเมินผล</h2>
+                    </div>
+                    <ul class="styled-list">
+                        <li>
+                            <div>
+                                <strong>สอบกลางภาค (20%)</strong><br>
+                                <small style="color: var(--gray-700);">LP + DT + SM</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>สอบปลายภาค (40%)</strong><br>
+                                <small style="color: var(--gray-700);">MK + GT + FCT + Q</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>คะแนนเก็บ (40%)</strong>
+                                <ul style="margin-top: 0.5rem; list-style-type: circle; margin-left: 1.5rem;">
+                                    <li><strong>การบ้าน (14%):</strong> 7 ครั้ง ส่งออนไลน์ <span style="color: var(--danger);">(เช็คแค่ทำส่งหรือไม่ ใครอยากได้ feedback กลับให้แจ้งตอนส่ง)</span></li>
+                                    <li><strong>สอบย่อย (5% + 10%):</strong> 5 ครั้งครั้งละ 20 นาที (การเรียนครั้งที่ 2, 3, 5, 6, 7 ออกคล้ายการบ้าน <span style="color: var(--danger);">ให้ 1 คะแนนเข้าสอบ + 2 คะแนนจากความถูกต้อง</span>)</li>
+                                    <li><strong>งานกลุ่ม (11%):</strong> ประกาศโจทย์หลังจบครั้งที่ 7 → ให้ปรึกษาในครั้งที่ 8 → ส่ง 21 ตุลาคม</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Homework Section -->
+                <section id="homework" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">✏️</span>
+                        <h2 class="section-title">การบ้าน</h2>
+                    </div>
+                    <ul class="styled-list">
+                        <li><strong>การบ้าน 1:</strong> การเขียนแบบจำลอง และแก้ปัญหาโจทย์ 1.1.3 และโจทย์ Assignment <small style="color: var(--gray-700);">(due date 9 สิงหาคม 23:59 น.)</small> <a href="../assets/handout/homework/hw1_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>การบ้าน 2:</strong> Simplex method <small style="color: var(--gray-700);">(due date 16 สิงหาคม 15:00 น.)</small> <a href="../assets/handout/homework/hw2.pdf">(โจทย์)</a> <a href="../assets/handout/homework/hw2_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>การบ้าน 3:</strong> Decision Theory and Simulation <small style="color: var(--gray-700);">(due date 23 สิงหาคม 15:00 น.)</small> <a href="../assets/handout/homework/hw3.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw3_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>การบ้าน 4:</strong> Markov Analysis <small style="color: var(--gray-700);">(due date 30 สิงหาคม 15:00 น.)</small> <a href="../assets/handout/homework/hw4.pdf">(โจทย์)</a> <a href="../assets/handout/homework/hw4_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>การบ้าน 5:</strong> การทำนายและการประเมิณผลตัวแบบการทำนาย <small style="color: var(--gray-700);">(due date 6 กันยายน 15:00 น.)</small> <a href="../assets/handout/homework/hw5.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw5_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>การบ้าน 6:</strong> ทฤษฎีเกม <small style="color: var(--gray-700);">(due date 14 กันยายน 21:00 น.)</small> <a href="../assets/handout/homework/hw6.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw6_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>การบ้าน 7:</strong> ยำรวมทวนก่อนสอบ <small style="color: var(--gray-700);">(due date 20 กันยายน 23:55 น. และเฉลยตอน 08:00 - 11:00 ก่อนเข้าห้องสอบ)</small> <a href="../assets/handout/homework/hw7.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/hw7_sol.pdf">(เฉลย)</a></li>
+                    </ul>
+                </section>
+
+                <!-- Exams Section -->
+                <section id="exams" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">📝</span>
+                        <h2 class="section-title">ข้อสอบ</h2>
+                    </div>
+                    <ul class="styled-list">
+                        <li><strong>สอบย่อยครั้งที่ 1:</strong> การเขียนกำหนดการเชิงเส้น <a href="../assets/handout/exam/quiz1.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/exam/quiz1_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>สอบย่อยครั้งที่ 2:</strong> การทำซิมเพล็กซ์ <a href="../assets/handout/exam/quiz2.pdf">(โจทย์)</a> <a href="../assets/handout/exam/quiz2_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>สอบกลางภาค:</strong> <a href="../assets/handout/exam/midterm.pdf">(โจทย์)</a> <a href="../assets/handout/exam/midterm_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>สอบย่อยครั้งที่ 3:</strong> Markov Analysis <a href="../assets/handout/homework/quiz3.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/quiz3_sol.pdf">(เฉลย)</a></li>
+                        <li><strong>สอบย่อยครั้งที่ 4:</strong> Forecasting <a href="../assets/handout/homework/quiz4.pdf">(โจทย์)</a> <a style="color: rgb(179, 179, 179)" href="../assets/handout/homework/quiz4_sol.pdf">(เฉลย)</a></li>
+                    </ul>
+                </section>
+
+                <!-- Videos Section -->
+                <section id="videos" class="content-section">
+                    <div class="section-header">
+                        <span class="section-icon">🎥</span>
+                        <h2 class="section-title">วิดีโอเรียนเพิ่มเติม</h2>
+                    </div>
+                    <ul class="styled-list">
+                        <li><a href="https://www.youtube.com/watch?v=5eGSsYbCywo" target="_blank">คณิตศาสตร์ (1) การวาดเส้นตรงจากสมการเส้นตรง</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=ftTM9zZ8yr8" target="_blank">คณิตศาสตร์ (2) การแก้ระบบสมการเชิงเส้นหาจุดตัดระหว่างเส้นตรง</a></li>
+                        <li><a href="https://youtu.be/ZD0aPqArK5g" target="_blank">การดำเนินการตามแถวเพื่อเปลี่ยน pivot ใน Simplex</a></li>
+                        <li><a href="https://youtu.be/5zaD5F6JSD0" target="_blank">ซิมเพลกซ์สำหรับโจทย์หาค่าต่ำสุด</a></li>
+                        <li><a href="https://youtu.be/Rv5KO410a1E" target="_blank">ซิมเพลกซ์แบบมีเงื่อนไขส่วนเกิน</a> | <a href="../assets/handout/simplex-surplus-artificial.pdf">เอกสารประกอบการสอน</a></li>
+                        <li><a href="https://youtu.be/7GYZ78cf6M8" target="_blank">simplex เงื่อนไขเท่ากับ</a></li>
+                        <li><a href="https://youtu.be/sZaQwmwPR_g" target="_blank">Simplex โจทย์ผสม</a></li>
+                    </ul>
+                </section>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <p>© 2025 Southeast Asia University. All rights reserved.</p>
     </footer>
 
-    <!-- Simple Analytics Script -->
+    <!-- JavaScript -->
     <script>
+        // Section Navigation with Fade-in Effect
+        function showSection(sectionId, event) {
+            if (event) {
+                event.preventDefault();
+            }
+
+            // Hide all sections with slight delay for smooth transition
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected section with optimized timing
+            requestAnimationFrame(() => {
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+
+            // Update active menu item
+            const menuLinks = document.querySelectorAll('.menu-link');
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            event?.target?.closest('.menu-link')?.classList.add('active');
+
+            // Scroll to top of content on mobile with faster animation
+            if (window.innerWidth <= 1024) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Update URL hash without scrolling
+            history.pushState(null, null, `#${sectionId}`);
+        }
+
+        // Toggle Sidebar on Mobile
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+
+        // Load section from URL hash on page load
+        function loadSectionFromHash() {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const targetLink = document.querySelector(`.menu-link[href="#${hash}"]`);
+                if (targetLink) {
+                    showSection(hash, { target: targetLink, preventDefault: () => {} });
+                }
+            }
+        }
+
+        // JSON-driven OBE loader (loads from data/725103-obe.json)
+        async function tryLoadOBE() {
+            try {
+                console.log('Attempting to load JSON from: data/725103-obe.json');
+                const res = await fetch('data/725103-obe.json', { cache: 'no-store' });
+                console.log('Fetch response status:', res.status, res.ok);
+                if (!res.ok) {
+                    console.error('Failed to load JSON, status:', res.status);
+                    return;
+                }
+                const data = await res.json();
+                console.log('JSON data loaded successfully:', data);
+
+                // Populate Schedule (if available)
+                if (Array.isArray(data.schedule)) {
+                    const list = document.getElementById('schedule-list');
+                    const ph = document.getElementById('schedule-placeholder');
+                    if (list) {
+                        list.innerHTML = '';
+                        for (const s of data.schedule) {
+                            const div = document.createElement('div');
+                            div.className = 'schedule-item';
+                            const materials = Array.isArray(s.materials) ? `
+                                <ul>
+                                    ${s.materials.map(m => `<li><a href="${m.href}" target="_blank">${m.label}</a></li>`).join('')}
+                                </ul>` : '';
+                            div.innerHTML = `
+                                <strong>${s.week || ''}${s.date ? ' ('+s.date+')' : ''}</strong>
+                                <p>${s.topic || ''}${s.notes ? ' — <small style="color: var(--gray-700);">'+s.notes+'</small>' : ''}</p>
+                                ${materials}
+                            `;
+                            list.appendChild(div);
+                        }
+                        if (ph) ph.style.display = 'none';
+                    }
+                }
+                console.log('All data populated successfully!');
+            } catch (err) {
+                console.error('Error loading OBE data:', err);
+            }
+        }
+
         // Page visit counter
         function trackPageVisit() {
-            const pageKey = 'page_visits_720201';
+            const pageKey = 'page_visits_725103_demo';
             let visits = parseInt(localStorage.getItem(pageKey) || '0');
             visits++;
             localStorage.setItem(pageKey, visits.toString());
             console.log(`Page visits: ${visits}`);
         }
 
-        // Link click tracking
-        function trackLinkClick(linkText, href) {
-            const clickKey = `link_clicks_${btoa(href).slice(0, 10)}`;
-            let clicks = parseInt(localStorage.getItem(clickKey) || '0');
-            clicks++;
-            localStorage.setItem(clickKey, clicks.toString());
-            console.log(`Link "${linkText}" clicked ${clicks} times`);
-        }
-
-        // Initialize tracking when page loads
+        // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             trackPageVisit();
-            
-            // Add click tracking to all links
-            document.querySelectorAll('a[href]').forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    const linkText = this.textContent.trim();
-                    const href = this.getAttribute('href');
-                    trackLinkClick(linkText, href);
-                });
-            });
+            loadSectionFromHash();
+            tryLoadOBE();
 
-            // Smooth scroll for anchor links
+            // Handle back/forward navigation
+            window.addEventListener('hashchange', loadSectionFromHash);
+
+            // Smooth scroll for internal links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
+                    if (this.classList.contains('menu-link')) return; // Already handled
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
@@ -624,19 +1164,6 @@
                 });
             });
         });
-
-        // Function to view analytics (call in browser console)
-        function viewAnalytics() {
-            const analytics = {};
-            for (let i = 0; i < localStorage.length; i++) {
-                const key = localStorage.key(i);
-                if (key.startsWith('page_visits_') || key.startsWith('link_clicks_')) {
-                    analytics[key] = localStorage.getItem(key);
-                }
-            }
-            console.table(analytics);
-            return analytics;
-        }
     </script>
 </body>
 </html>
