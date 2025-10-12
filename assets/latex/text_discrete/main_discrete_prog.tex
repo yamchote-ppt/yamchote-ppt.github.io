@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside,openright]{book}
+\documentclass[11pt,twoside,openright]{book}
 
 % Add styles directory to search path
 \makeatletter
@@ -53,16 +53,14 @@
 \makeindex
 
 % ===============================
-% Font configuration: TH Sarabun as main (for Thai text), Libertinus for English
-% Since document is primarily Thai, use Thai font as main
+% Font configuration: TH Sarabun only
 % ===============================
 
-% Set main font to TH Sarabun (Thai)
+% Set main font to TH Sarabun for all text
 \setmainfont{THSarabun.ttf}[
 Scale=1.2,
 Path=./styles/,
 Script=Thai,
-Language=Thai,
 UprightFont = *,
 BoldFont    = * Bold,
 ItalicFont  = * Italic,
@@ -74,27 +72,11 @@ BoldItalicFont = * Bold Italic
 Scale=1.2,
 Path=./styles/,
 Script=Thai,
-Language=Thai,
 UprightFont = *,
 BoldFont    = * Bold,
 ItalicFont  = * Italic,
 BoldItalicFont = * Bold Italic
 ]
-
-% Define English font family (use when needed for English sections)
-\newfontfamily\englishfont{LibertinusSerif}[
-Extension=.otf,
-Path=./styles/,
-UprightFont=*-Regular,
-BoldFont=*-Bold,
-ItalicFont=*-Italic,
-BoldItalicFont=*-BoldItalic,
-Ligatures=TeX,
-Scale=1.0
-]
-
-% Command for English text: \texten{English text here}
-\newcommand{\texten}[1]{{\englishfont #1}}
 
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip = 0pt plus 1pt
