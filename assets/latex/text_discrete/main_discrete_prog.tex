@@ -53,29 +53,31 @@
 \makeindex
 
 % ===============================
-% Font configuration: TH Sarabun only
+% Font configuration: Sarabun (modern TH Sarabun PSL/IPST version)
 % ===============================
 
-% Set main font to TH Sarabun for all text
-\setmainfont{THSarabun.ttf}[
-Scale=1.2,
+% Set main font to Sarabun for all text
+\setmainfont{Sarabun}[
+Extension=.ttf,
 Path=./styles/,
+Scale=1.2,
 Script=Thai,
-UprightFont = *,
-BoldFont    = * Bold,
-ItalicFont  = * Italic,
-BoldItalicFont = * Bold Italic
+UprightFont = *-Regular,
+BoldFont    = *-Bold,
+ItalicFont  = *-Italic,
+BoldItalicFont = *-BoldItalic
 ]
 
 % Set Thai font for polyglossia
-\newfontfamily\thaifont{THSarabun.ttf}[
-Scale=1.2,
+\newfontfamily\thaifont{Sarabun}[
+Extension=.ttf,
 Path=./styles/,
+Scale=1.2,
 Script=Thai,
-UprightFont = *,
-BoldFont    = * Bold,
-ItalicFont  = * Italic,
-BoldItalicFont = * Bold Italic
+UprightFont = *-Regular,
+BoldFont    = *-Bold,
+ItalicFont  = *-Italic,
+BoldItalicFont = *-BoldItalic
 ]
 
 \XeTeXlinebreaklocale "th"
