@@ -32,7 +32,7 @@
     "weights": {}
   },
   "schedule": [
-    { "week": "ครั้งที่ 1", "topic": "Mathematical language & sets: notation, subsets, power set, Cartesian product, partitions, recursion", "notes": "ปฐมนิเทศรายวิชา; เน้นนิยามเชิงเวียนกลับ (recursive) และเกริ่น structural induction; งดความน่าจะเป็นและพีชคณิตบูลีน" },
+    { "week": "ครั้งที่ 1", "topic": "Mathematical language & sets: notation, subsets, power set, Cartesian product, partitions, recursion" },
     { "week": "ครั้งที่ 2", "topic": "Propositional logic: connectives, equivalences, normal forms (CNF/DNF—not Boolean algebra), inference rules" },
     { "week": "ครั้งที่ 3", "topic": "Predicate logic: quantifiers, scope, nested quantifiers, common pitfalls" },
     { "week": "ครั้งที่ 4", "topic": "Induction I (weak): sums/products, inequalities, divisibility lemmas" },
@@ -40,12 +40,12 @@
     { "week": "ครั้งที่ 6", "topic": "Functions: injective/surjective/bijective, composition, inverses; size notions; Relations: definitions & properties" },
     { "week": "ครั้งที่ 7", "topic": "Equivalence relations & partitions; partial orders & Hasse diagrams; topological sort idea" },
     { "week": "ครั้งที่ 8", "topic": "สอบกลางภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 1-7 (Logic and Set Theory)" },
-    { "week": "ครั้งที่ 9", "topic": "Counting I: Sum/Product Rules; Permutations & Combinations; Binomial Theorem; Multisets; Stars & Bars" },
-    { "week": "ครั้งที่ 10", "topic": "Counting II: Inclusion–Exclusion; Derangements; Generalized Pigeonhole Principle" },
+    { "week": "ครั้งที่ 9", "topic": "Counting I: Sum/Product Rules; Permutations & Combinations; Combinatorial Proof" },
+    { "week": "ครั้งที่ 10", "topic": "Counting II: Binomial Theorem; Multisets; Stars & Bars; Inclusion–Exclusion; Generalized Pigeonhole Principle" },
     { "week": "ครั้งที่ 11", "topic": "Recursive problem solving; Recursion and Induction" },
     { "week": "ครั้งที่ 12", "topic": "Recurrences I: linear homogeneous recurrences w/ constant coefficients; combinatorial interpretations (Fibonacci, tilings)" },
     { "week": "ครั้งที่ 13", "topic": "Recurrences II: non-homogeneous cases; simple divide-and-conquer; intro to ordinary generating functions (OGFs) for counting" },
-    { "week": "ครั้งที่ 14", "topic": "Graphs I: definitions, degree sequence, handshaking lemma, isomorphism basics, connectivity, bipartite graphs" },
+    { "week": "ครั้งที่ 14", "topic": "Graphs: definitions, degree sequence, handshaking lemma, isomorphism basics, connectivity, bipartite graphs" },
     { "week": "ครั้งที่ 15", "topic": "Trees: properties (n−1 edges, unique paths), tree traversals; spanning trees; MST ideas (Kruskal/Prim concepts)" },
     { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 8–15" }
   ],
