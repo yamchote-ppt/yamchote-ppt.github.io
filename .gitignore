@@ -1,0 +1,70 @@
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# LaTeX intermediate files
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Build directories
+**/latex.out/
+
+# Editor backup files
+*~
+*.backup
+*.bak
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# LaTeX source files (uncomment the lines below if you want to exclude .tex files)
+# *.tex
+# *.sty
+# *.cls
+# *.bib
+
+# Keep PDF files (this line ensures PDFs are tracked)
+!*.pdf
+
+# Other common excludes
+node_modules/
+.vscode/
+.idea/
+*.tmp
