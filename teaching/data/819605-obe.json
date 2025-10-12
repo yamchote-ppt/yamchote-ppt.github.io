@@ -1,0 +1,69 @@
+{
+  "courseInfo": {
+    "code": "819605",
+    "title": "วิยุตคณิต",
+    "titleEn": "Discrete Mathematics",
+    "credits": "3(3-0-6)",
+    "semester": "ภาคปลาย ปีการศึกษา 2568",
+    "period": "1 พฤศจิกายน 2568 – 1 มีนาคม 2569",
+    "schedule": "TBD",
+    "room": "TBD"
+  },
+  "description": "หลักการและแนวคิดพื้นฐานของคณิตศาสตร์ไม่ต่อเนื่อง ทฤษฎีเซต ตรรกศาสตร์ และการพิสูจน์ ฟังก์ชันและความสัมพันธ์ การนับและความน่าจะเป็น กราฟและต้นไม้ พีชคณิตบูลีน",
+  "clos": [
+    {
+      "id": "CLO1",
+      "description": "TBD"
+    },
+    {
+      "id": "CLO2", 
+      "description": "TBD"
+    },
+    {
+      "id": "CLO3",
+      "description": "TBD"
+    }
+  ],
+  "mapping": {
+    "clo-plo": []
+  },
+  "assessment": {
+    "methods": [],
+    "weights": {}
+  },
+  "schedule": [
+    { "week": "ครั้งที่ 1", "topic": "Introduction to Data Structures & Algorithms, Algorithm Analysis (Big O)", "notes": "ปฐมนิเทศ, แนะนำรายวิชาและเกณฑ์การประเมิน" },
+    { "week": "ครั้งที่ 2", "topic": "Arrays and Linked Lists (Singly, Doubly, Circular)" },
+    { "week": "ครั้งที่ 3", "topic": "Stacks: Array & Linked List Implementation, Applications" },
+    { "week": "ครั้งที่ 4", "topic": "Queues: Array & Linked List Implementation, Deques, Applications" },
+    { "week": "ครั้งที่ 5", "topic": "Recursion and Algorithm Design Strategies" },
+    { "week": "ครั้งที่ 6", "topic": "Trees: Terminology, Binary Trees, Tree Traversal" },
+    { "week": "ครั้งที่ 7", "topic": "Binary Search Trees (BST)" },
+    { "week": "ครั้งที่ 8", "topic": "สอบกลางภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 1-7" },
+    { "week": "ครั้งที่ 9", "topic": "Advanced Trees: AVL Trees, Heaps and Priority Queues" },
+    { "week": "ครั้งที่ 10", "topic": "Sorting Algorithms I: Bubble, Selection, Insertion Sort" },
+    { "week": "ครั้งที่ 11", "topic": "Sorting Algorithms II: Merge Sort, Quick Sort" },
+    { "week": "ครั้งที่ 12", "topic": "Searching Algorithms: Linear Search, Binary Search, Hashing" },
+    { "week": "ครั้งที่ 13", "topic": "Graphs: Terminology, Representations (Adjacency Matrix/List)" },
+    { "week": "ครั้งที่ 14", "topic": "Graph Traversal: Breadth-First Search (BFS), Depth-First Search (DFS)" },
+    { "week": "ครั้งที่ 15", "topic": "Final Project Presentation & Review", "notes": "นำเสนอโครงงานกลุ่มและทบทวนก่อนสอบปลายภาค" },
+    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 9-15" }
+  ],
+  "materials": {
+    "textbooks": [],
+    "references": [],
+    "handouts": []
+  },
+  "policies": {
+    "attendance": "TBD",
+    "lateSubmission": "TBD",
+    "academicIntegrity": "TBD"
+  },
+  "grading": {
+    "scale": {},
+    "components": {}
+  },
+  "homework": [],
+  "exams": [],
+  "videos": []
+}
