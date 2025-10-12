@@ -29,8 +29,9 @@
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)
+*.synctex*
 *.synctex.gz
-*.synctex.gz(busy)
+*.synctex.gz(busy).*
 *.pdfsync
 
 # Build directories
