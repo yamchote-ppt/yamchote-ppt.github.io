@@ -1,4 +1,4 @@
-\documentclass[11pt,twoside,openright]{book}
+\documentclass[12pt,twoside,openright]{book}
 
 % Add styles directory to search path
 \makeatletter
@@ -57,7 +57,7 @@
 % ===============================
 
 % Set main font to Sarabun for all text
-\setmainfont{Sarabun}[
+\setmainfont{SarabunLibertinus}[
 Extension=.ttf,
 Path=./styles/,
 Scale=1.2,
@@ -68,17 +68,19 @@ ItalicFont  = *-Italic,
 BoldItalicFont = *-BoldItalic
 ]
 
-% Set Thai font for polyglossia
-\newfontfamily\thaifont{Sarabun}[
-Extension=.ttf,
-Path=./styles/,
-Scale=1.2,
-Script=Thai,
-UprightFont = *-Regular,
-BoldFont    = *-Bold,
-ItalicFont  = *-Italic,
-BoldItalicFont = *-BoldItalic
-]
+% % Set Thai font for polyglossia
+% \newfontfamily\thaifont{Sarabun}[
+% Extension=.ttf,
+% Path=./styles/,
+% Scale=1.2,
+% Script=Thai,
+% UprightFont = *-Regular,
+% BoldFont    = *-Bold,
+% ItalicFont  = *-Italic,
+% BoldItalicFont = *-BoldItalic
+% ]
+
+\linespread{1.5} 
 
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip = 0pt plus 1pt
@@ -262,19 +264,38 @@ BoldItalicFont = *-BoldItalic
 \renewenvironment{proof}{~\newline~\textbf{บทพิสูจน์}.}{$\square$}
 
 \begin{document}
-	\maketitle
+\begin{titlepage}
+	\raggedleft	
+	\hspace{.025\textwidth}
+	\parbox[b]{\textwidth}{
+		\vspace{1.5cm}
+		{\Huge\bfseries คณิตศาสตร์ดีสครีตสำหรับการเขียนโปรแกรม}                \\[20pt] 
+		{\Large\textit (Discrete Mathematics for Programming)}
+		}
+%		\\[10pt]  
+	\vspace{1cm}  
+	\vfill
+	\rule{1pt}{.15\textheight}
+	\hspace{.025\textwidth}
+	\raisebox{11pt}{\parbox[b]{.95\textwidth}{ 
+			{\small\textsc{Phaphontee Yamchote} \\
+				Information System for Digital Business, Faculty of Business Administration\\ Southeast Asia University
+			}                   \\
+			Update at {\small \today}}}
+\end{titlepage}
+%	\maketitle
 	\frontmatter
 	\tableofcontents
 
 	\mainmatter
 
-    \part{Basic Programming by Python}
+%    \part{Basic Programming by Python}
     \include{chapters/chapter1-basic-prob-solv}
-    \include{chapters/chapter2-syntax}
+%    \include{chapters/chapter2-syntax}
 %    
    	\part{Basic Mathematical Reasoning and Proving}
    	\include{chapters/chapter3-mathLang}
-   	\include{chapters/chapter4-basicObject}
+%   	\include{chapters/chapter4-basicObject}
    	\include{chapters/chapter5-logic-and-Reason}
    	\include{chapters/Recursion-prologue}
 %%%%%% คิดว่าควรเอา method of proof ไปไว้ในบท logic and reasoning
