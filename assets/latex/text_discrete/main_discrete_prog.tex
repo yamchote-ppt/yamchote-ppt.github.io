@@ -54,20 +54,76 @@
 
 % ===============================
 % Font configuration: Libertinus Serif for English, TH Sarabun for Thai
-% Using polyglossia for proper multilingual support
+% Using manual font switching for reliable Thai text display
 % ===============================
 
-% Main font for English: Libertinus Serif (serif font)
-\setmainfont{Libertinus Serif}[
+% Main font for English: Libertinus Serif
+\setmainfont{LibertinusSerif}[
+Extension=.otf,
+Path=./styles/,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic,
 Ligatures=TeX,
 Scale=1.0
 ]
 
 % Thai font: TH Sarabun (scaled to match Libertinus Serif x-height)
-\newfontfamily\thaifont[Script=Thai, Scale=1.2, Path=./styles/]{THSarabun.ttf}
+\newfontfamily\thaifont{THSarabun.ttf}[
+Scale=1.2,
+Path=./styles/,
+Script=Thai,
+UprightFont = *,
+BoldFont    = * Bold,
+ItalicFont  = * Italic,
+BoldItalicFont = * Bold Italic
+]
+
+% Set up Thai language support
+\newfontfamily\thaifonttt{THSarabun.ttf}[Scale=1.2, Path=./styles/]
+\newfontfamily\thaifontsf{THSarabun.ttf}[Scale=1.2, Path=./styles/]
 
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip = 0pt plus 1pt
+
+% Auto-switch to Thai font for Thai characters using XeTeX interchar classes
+\XeTeXinterchartokenstate=1
+\newXeTeXintercharclass\thaichars
+
+% Register Thai consonants
+\XeTeXcharclass`ก=\thaichars \XeTeXcharclass`ข=\thaichars \XeTeXcharclass`ฃ=\thaichars \XeTeXcharclass`ค=\thaichars
+\XeTeXcharclass`ฅ=\thaichars \XeTeXcharclass`ฆ=\thaichars \XeTeXcharclass`ง=\thaichars \XeTeXcharclass`จ=\thaichars
+\XeTeXcharclass`ฉ=\thaichars \XeTeXcharclass`ช=\thaichars \XeTeXcharclass`ซ=\thaichars \XeTeXcharclass`ฌ=\thaichars
+\XeTeXcharclass`ญ=\thaichars \XeTeXcharclass`ฎ=\thaichars \XeTeXcharclass`ฏ=\thaichars \XeTeXcharclass`ฐ=\thaichars
+\XeTeXcharclass`ฑ=\thaichars \XeTeXcharclass`ฒ=\thaichars \XeTeXcharclass`ณ=\thaichars \XeTeXcharclass`ด=\thaichars
+\XeTeXcharclass`ต=\thaichars \XeTeXcharclass`ถ=\thaichars \XeTeXcharclass`ท=\thaichars \XeTeXcharclass`ธ=\thaichars
+\XeTeXcharclass`น=\thaichars \XeTeXcharclass`บ=\thaichars \XeTeXcharclass`ป=\thaichars \XeTeXcharclass`ผ=\thaichars
+\XeTeXcharclass`ฝ=\thaichars \XeTeXcharclass`พ=\thaichars \XeTeXcharclass`ฟ=\thaichars \XeTeXcharclass`ภ=\thaichars
+\XeTeXcharclass`ม=\thaichars \XeTeXcharclass`ย=\thaichars \XeTeXcharclass`ร=\thaichars \XeTeXcharclass`ฤ=\thaichars
+\XeTeXcharclass`ล=\thaichars \XeTeXcharclass`ฦ=\thaichars \XeTeXcharclass`ว=\thaichars \XeTeXcharclass`ศ=\thaichars
+\XeTeXcharclass`ษ=\thaichars \XeTeXcharclass`ส=\thaichars \XeTeXcharclass`ห=\thaichars \XeTeXcharclass`ฬ=\thaichars
+\XeTeXcharclass`อ=\thaichars \XeTeXcharclass`ฮ=\thaichars
+
+% Register Thai vowels and tone marks
+\XeTeXcharclass`ะ=\thaichars \XeTeXcharclass`ั=\thaichars \XeTeXcharclass`า=\thaichars \XeTeXcharclass`ำ=\thaichars
+\XeTeXcharclass`ิ=\thaichars \XeTeXcharclass`ี=\thaichars \XeTeXcharclass`ึ=\thaichars \XeTeXcharclass`ื=\thaichars
+\XeTeXcharclass`ุ=\thaichars \XeTeXcharclass`ู=\thaichars \XeTeXcharclass`ฺ=\thaichars
+\XeTeXcharclass`เ=\thaichars \XeTeXcharclass`แ=\thaichars \XeTeXcharclass`โ=\thaichars \XeTeXcharclass`ใ=\thaichars
+\XeTeXcharclass`ไ=\thaichars \XeTeXcharclass`ๅ=\thaichars \XeTeXcharclass`ๆ=\thaichars
+\XeTeXcharclass`็=\thaichars \XeTeXcharclass`่=\thaichars \XeTeXcharclass`้=\thaichars \XeTeXcharclass`๊=\thaichars
+\XeTeXcharclass`๋=\thaichars \XeTeXcharclass`์=\thaichars \XeTeXcharclass`ํ=\thaichars \XeTeXcharclass`ฯ=\thaichars
+
+% Register Thai numbers
+\XeTeXcharclass`๐=\thaichars \XeTeXcharclass`๑=\thaichars \XeTeXcharclass`๒=\thaichars \XeTeXcharclass`๓=\thaichars
+\XeTeXcharclass`๔=\thaichars \XeTeXcharclass`๕=\thaichars \XeTeXcharclass`๖=\thaichars \XeTeXcharclass`๗=\thaichars
+\XeTeXcharclass`๘=\thaichars \XeTeXcharclass`๙=\thaichars
+
+% Switch to Thai font when Thai characters are encountered
+\XeTeXinterchartoks 0 \thaichars = {\begingroup\thaifont}
+\XeTeXinterchartoks 255 \thaichars = {\begingroup\thaifont}
+\XeTeXinterchartoks \thaichars 0 = {\endgroup}
+\XeTeXinterchartoks \thaichars 255 = {\endgroup}
 
 \title{คณิตศาสตร์ดีสครีตสำหรับการเขียนโปรแกรม\\(Discrete Mathematics for Programming)}
 \author{Phaphontee Yamchote}

@@ -38,6 +38,7 @@ __pycache__/
 !styles/*.sty
 !styles/*.cls
 !styles/*.ttf
+!styles/*.otf
 !scripts/*.py
 
 # Keep main document
