@@ -32,22 +32,22 @@
     "weights": {}
   },
   "schedule": [
-    { "week": "ครั้งที่ 1", "topic": "Introduction to Data Structures & Algorithms, Algorithm Analysis (Big O)", "notes": "ปฐมนิเทศ, แนะนำรายวิชาและเกณฑ์การประเมิน" },
-    { "week": "ครั้งที่ 2", "topic": "Arrays and Linked Lists (Singly, Doubly, Circular)" },
-    { "week": "ครั้งที่ 3", "topic": "Stacks: Array & Linked List Implementation, Applications" },
-    { "week": "ครั้งที่ 4", "topic": "Queues: Array & Linked List Implementation, Deques, Applications" },
-    { "week": "ครั้งที่ 5", "topic": "Recursion and Algorithm Design Strategies" },
-    { "week": "ครั้งที่ 6", "topic": "Trees: Terminology, Binary Trees, Tree Traversal" },
-    { "week": "ครั้งที่ 7", "topic": "Binary Search Trees (BST)" },
-    { "week": "ครั้งที่ 8", "topic": "สอบกลางภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 1-7" },
-    { "week": "ครั้งที่ 9", "topic": "Advanced Trees: AVL Trees, Heaps and Priority Queues" },
-    { "week": "ครั้งที่ 10", "topic": "Sorting Algorithms I: Bubble, Selection, Insertion Sort" },
-    { "week": "ครั้งที่ 11", "topic": "Sorting Algorithms II: Merge Sort, Quick Sort" },
-    { "week": "ครั้งที่ 12", "topic": "Searching Algorithms: Linear Search, Binary Search, Hashing" },
-    { "week": "ครั้งที่ 13", "topic": "Graphs: Terminology, Representations (Adjacency Matrix/List)" },
-    { "week": "ครั้งที่ 14", "topic": "Graph Traversal: Breadth-First Search (BFS), Depth-First Search (DFS)" },
-    { "week": "ครั้งที่ 15", "topic": "Final Project Presentation & Review", "notes": "นำเสนอโครงงานกลุ่มและทบทวนก่อนสอบปลายภาค" },
-    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 9-15" }
+    { "week": "ครั้งที่ 1", "topic": "Sets & Mathematical Language; Recursive Definitions (strings/lists/trees)", "notes": "ปฐมนิเทศรายวิชา; เน้นนิยามเชิงเวียนกลับ (recursive) และเกริ่น structural induction; งดความน่าจะเป็นและพีชคณิตบูลีน" },
+    { "week": "ครั้งที่ 2", "topic": "Propositional Logic: Connectives, Equivalences, Inference Rules; Recursion vs Iteration" },
+    { "week": "ครั้งที่ 3", "topic": "Predicate Logic: Quantifiers, Scope, Countermodels; Structural Induction I" },
+    { "week": "ครั้งที่ 4", "topic": "Induction I (Weak): Sums/Inequalities/Divisibility; Recursive Functions on ℕ (fact, pow, gcd) and Correctness by Induction" },
+    { "week": "ครั้งที่ 5", "topic": "Induction II (Strong & Well-Ordering); Divide-and-Conquer Recurrences; Structural Induction on Trees" },
+    { "week": "ครั้งที่ 6", "topic": "Functions & Relations: Injective/Surjective/Bijective, Composition/Inverse; Relation Properties" },
+    { "week": "ครั้งที่ 7", "topic": "Equivalence Relations & Partitions; Partial Orders & Hasse Diagrams; Topological Sort (idea)" },
+    { "week": "ครั้งที่ 8", "topic": "สอบกลางภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 1-7 (Logic and Set Theory)" },
+    { "week": "ครั้งที่ 9", "topic": "Counting I: Sum/Product Rules; Permutations & Combinations; Binomial Theorem; Multisets; Stars & Bars" },
+    { "week": "ครั้งที่ 10", "topic": "Counting II: Inclusion–Exclusion; Derangements; Generalized Pigeonhole; Inductive Proofs of Identities" },
+    { "week": "ครั้งที่ 11", "topic": "Recurrences I: Linear Homogeneous (Constant Coefficients); Combinatorial Interpretations (e.g., Fibonacci, tilings)" },
+    { "week": "ครั้งที่ 12", "topic": "Recurrences II: Non-homogeneous; Simple Divide-and-Conquer; Intro to Ordinary Generating Functions (OGFs)" },
+    { "week": "ครั้งที่ 13", "topic": "Graphs I: Definitions; Degree Sequence; Handshaking Lemma; Connectivity; Bipartite Graphs" },
+    { "week": "ครั้งที่ 14", "topic": "Trees: Properties (n−1 edges, unique paths); Traversals; Spanning Trees; MST ideas (Kruskal/Prim sketch)" },
+    { "week": "ครั้งที่ 15", "topic": "Graphs II: Eulerian trails/circuits, Hamiltonian notions (Dirac/Ore statements as awareness), planar graphs, Euler’s formula; course synthesis", "notes": "ครอบคลุมเนื้อหาครั้งที่ 8–13" }
+    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 8–13" }
   ],
   "materials": {
     "textbooks": [],
