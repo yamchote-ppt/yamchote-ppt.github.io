@@ -1,0 +1,63 @@
+\documentclass[a4paper, 12pt]{book}
+
+\usepackage[english]{babel}                 %%%%%%%%%%%%%%%%%% (EDIT LANGUAGE)
+\usepackage{Custom}                         %%%%%%%%%%%%%%%%%%    (EDIT NAMES)
+\usepackage{AuxiliaryFiles/AuxiliaryFiles}  %%%%%%%%%%%%%%%%%%   (DO NOT EDIT)
+\usepackage{Custom-2}                       %%%%%%%%%%%%%%%%%%          (EDIT)
+\usepackage{amssymb,amsmath,amsthm,graphicx,mathrsfs}
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\usepackage{tikz} 
+\usepackage{xcolor}
+\usepackage{amsrefs}
+\usepackage[bookmarks]{hyperref}
+\usepackage{lipsum}  
+\usepackage{forloop}
+\usepackage{ifthen}
+\usepackage[most]{tcolorbox}
+\usepackage{pygmentex}
+\tcbuselibrary{minted}
+\usepackage{minted}
+\usepackage{setspace}
+\onehalfspacing
+\tcbuselibrary{theorems}
+\usetikzlibrary{shapes.geometric}
+
+\usepackage{imakeidx}
+\makeindex
+
+\linespread{1.5} 
+
+
+\setmainfont{THSarabun.ttf}[Scale=1.5, Path=./, UprightFont=*, BoldFont=* Bold, ItalicFont=* Italic, BoldItalicFont=* Bold Italic]
+%\fontspec{Browallia New}[Scale=3]
+\XeTeXlinebreaklocale "th"
+
+
+
+
+\begin{document}
+\input{Structure/Title/Title.tex}   %%%%%%%%%%%%%%%%%%        (EDIT TITLEPAGE)
+\input{Structure/Title/Title-2.tex} %%%%%%%%%%%%%%%%%%        (SECOND VERSION)
+
+\newcommand\IndexYes{1}
+    %%%%%%%%%%%%%%%%%%   (IF A TABLE OF CONTENTS IS NOT NEEDED, CHANGE 1 TO 0)
+\input{AuxiliaryFiles/Frontmatter}  %%%%%%%%%%%%%%%%%%           (DO NOT EDIT)
+\input{Structure/Introduction}      %%%%%%%%%%%%%%%%%%     (EDIT INTRODUCTION)
+\input{Structure/Errata}            %%%%%%%%%%%%%%%%%%           (EDIT ERRATA)
+
+\input{AuxiliaryFiles/Mainmatter}   %%%%%%%%%%%%%%%%%%           (DO NOT EDIT)
+
+\input{Structure/Chapter1}          %%%%%%%%%%%%%%%%%%         (EDIT CHAPTERS)
+\input{Structure/Chapter2}
+\input{Structure/Chapter3}
+
+\begin{appendices}               %%%%%%%%%%%%%%%%%%    (COMMENT IF NOT NEEDED)
+\input{AuxiliaryFiles/Appendices}    %%%%%%%%%%%%%%%%%%          (DO NOT EDIT)
+
+\input{Structure/Appendices/Appendix-A}
+\end{appendices}
+
+\input{AuxiliaryFiles/Backmatter}    %%%%%%%%%%%%%%%%%%          (DO NOT EDIT)
+\end{document}

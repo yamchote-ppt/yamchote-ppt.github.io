@@ -1,0 +1,118 @@
+% !TEX root = ../BookTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%	DESCRIPTION / ITEMIZE / ENUMERATE
+\newsavebox{\labelbox}
+\newlength{\mylabelwidth}
+
+\newcommand{\boxlabel}[2]{
+    \sbox{\labelbox}{
+        \tcbox[
+            colframe=white,
+            boxrule=0pt,
+            colback=gray!20,
+            sharp corners,
+            boxsep=0pt,
+            left=5pt,
+            right=5pt
+        ]{\parbox{#2}{\textbf{#1}}}
+    }
+    \setlength{\mylabelwidth}{\wd\labelbox}
+    \usebox{\labelbox}}
+
+\setlist[description]{
+    leftmargin=!,
+    labelwidth=!,
+    labelindent=0\parindent,
+    labelsep=1em,
+    topsep=\baselineskip,
+    itemsep=1.5\baselineskip,
+    parsep=-.75\baselineskip,
+    style=sameline}
+
+\renewcommand{\labelitemi}{\scalebox{.85}{$\diamond$}}
+\setlist[itemize]{style=multiline,
+	% topsep=-.2cm,
+	itemsep=-.1cm,
+	% parsep=.5cm,
+ %        partopsep=.2cm,
+	labelwidth=.4cm,
+	labelindent=\parindent,
+	leftmargin=1cm}
+
+\setlist[enumerate]{style=multiline,
+	topsep=-.2cm,
+    itemsep=-.4cm,
+	parsep=.5cm,
+	labelwidth=0.4cm,
+	labelindent=\parindent,
+    leftmargin=1cm}
+
+%%%%%%%%%%	MATH ENVIRONMENTS
+\usepackage{thmtools}
+\declaretheoremstyle[spaceabove=8pt,
+					spacebelow=8pt,
+					headpunct={},
+					postheadspace=.5cm,
+					within=section,]{SettingTheorem}
+		%%%%%%%%%% THEOREM
+            \declaretheorem[name=\TheoremName, style=SettingTheorem, numbered=no]{The*}
+			\declaretheorem[name=\TheoremName, style=SettingTheorem]{The}
+		%%%%%%%%%% PROPOSITION
+            \declaretheorem[name=\PropositionName, style=SettingTheorem, numbered=no]{Pro*}
+			\declaretheorem[name=\PropositionName, style=SettingTheorem, numberlike=The]{Pro}
+		%%%%%%%%%% LEMMA
+			\declaretheorem[name=\LemmaName, style=SettingTheorem, numbered=no]{Le*}
+            \declaretheorem[name=\LemmaName, style=SettingTheorem, numberlike=The]{Le}
+		%%%%%%%%%% COROLLARY
+			\declaretheorem[name=\CorollaryName, style=SettingTheorem, numbered=no]{Co*}
+            \declaretheorem[name=\CorollaryName, style=SettingTheorem, numberlike=The]{Co}
+		%%%%%%%%%% DEFINITION
+            \declaretheorem[name=\DefinitionName, style=SettingTheorem, numbered=no]{De*}
+			\declaretheorem[name=\DefinitionName, style=SettingTheorem, numberlike=The]{De}
+        %%%%%%%%%%  PROOF 
+            \declaretheoremstyle[spaceabove=8pt,
+					spacebelow=8pt,
+					headfont=\normalfont\bfseries,
+					bodyfont=\normalfont,
+					postheadspace=.5cm,
+					qed=$\square$,
+					headpunct={\;}]{SettingProof}
+			\declaretheorem[name=\ProofName, style=SettingProof, unnumbered]{Proof}
+		%%%%%%%%%% EXAMPLE, REMARK
+            \declaretheoremstyle[within=section, headpunct={\;},
+                    mdframed={innertopmargin=1pt,
+					innerbottommargin=1pt,
+					innerleftmargin=.4cm,
+					innerrightmargin=.4cm,
+					roundcorner=25pt,
+					backgroundcolor=black!6,
+					linecolor=white,
+					fontcolor=black,
+                    skipabove=5pt,
+                    skipbelow=0pt}]{SettingExa}
+            \declaretheorem[name=\ExampleName, style=SettingExa, numbered=no]{Exa*}
+			\declaretheorem[name=\ExampleName, style=SettingExa, numberlike=The]{Exa}
+            \declaretheorem[name=\RemarkName, style=SettingExa, numbered=no]{Rmk*}
+			\declaretheorem[name=\RemarkName, style=SettingExa, numberlike=The]{Rmk}
+			
+        %%%%%%%%%% BOX
+\declaretheoremstyle[headpunct={}, mdframed={innertopmargin=15pt, innerbottommargin=5pt, innerleftmargin=.2cm, innerrightmargin=.2cm, roundcorner=50pt, backgroundcolor=black!5, linecolor=white, fontcolor=black, skipabove = -5pt, skipbelow=-5pt}]{SettingBox}
+\declaretheorem[name={}, numbered=no, style=SettingBox]{Boxed}
+
+        %%%%%%%%%%  TITLE FORMAT
+\usepackage[sf,sl,outermarks]{titlesec}		% Typesetting
+\setcounter{secnumdepth}{4}
+
+	% SECTION
+\titleformat{\section}{\normalfont\sffamily\Large\bfseries}{\thesection}{.5em}{}
+\titlespacing*{\section}{0pt}{1.75\baselineskip}{.75\baselineskip}
+	% SUBSECTION
+\titleformat{\subsection}{\large\sffamily\FontSubsec\bfseries}{\thesubsection}{.5em}{}
+\titlespacing*{\subsection}{0pt}{1\baselineskip}{0.5\baselineskip}
+	% SUBSUBSECTION
+\titleformat{\subsubsection}{\normalfont\sffamily\bfseries}{\thesubsubsection}{.5em}{}
+\titlespacing*{\subsubsection}{0pt}{1\baselineskip}{0.5\baselineskip}
+    % SUBPARAGRAPH
+\renewcommand{\thesubparagraph}{\Alph{subparagraph}}
+\titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph} {\parindent}{.025ex plus 0ex minus .25ex}{1em}

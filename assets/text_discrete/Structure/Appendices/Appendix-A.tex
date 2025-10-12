@@ -1,0 +1,44 @@
+% !TEX root = ../../BookTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Title}\label{AppendixA}
+	\blindduck[maths]
+    \begin{tikzpicture}
+\begin{axis}[
+  xlabel={X},
+  ylabel={Y},
+  title={Simulated Data Plot},
+  grid=major,
+  width=12cm,
+  height=8cm,
+  ymin=-1.5,
+  ymax=21,
+  xtick={0,2,4,6,8,10},
+  ytick={-1.5,-1,-0.5,0,0.5,1,1.5,20},
+  xticklabel=\tick,
+  yticklabel=\tick
+]
+\addplot[
+  color=blue,
+  thick,
+] table [col sep=comma, x=X, y=Y] {data/simulated_data.csv};
+
+\addplot+[
+    hist={
+        bins=10,           % number of histogram bins
+        data min=0,        % lower bound (optional)
+        data max=2.5       % upper bound (optional)
+    },
+    fill=blue!50
+] table[y=Y, col sep=comma] {data/simulated_data.csv};
+
+\end{axis}
+\end{tikzpicture}
+
+\pgfplotstabletypeset[
+    col sep=comma,
+    string type,
+    columns/X/.style={column name=X},
+    columns/Y/.style={column name=Y},
+    every head row/.style={before row=\toprule, after row=\midrule},
+    every last row/.style={after row=\bottomrule}
+]{data/simulated_data.csv}
