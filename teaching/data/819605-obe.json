@@ -46,8 +46,8 @@
     { "week": "ครั้งที่ 12", "topic": "Recurrences II: Non-homogeneous; Simple Divide-and-Conquer; Intro to Ordinary Generating Functions (OGFs)" },
     { "week": "ครั้งที่ 13", "topic": "Graphs I: Definitions; Degree Sequence; Handshaking Lemma; Connectivity; Bipartite Graphs" },
     { "week": "ครั้งที่ 14", "topic": "Trees: Properties (n−1 edges, unique paths); Traversals; Spanning Trees; MST ideas (Kruskal/Prim sketch)" },
-    { "week": "ครั้งที่ 15", "topic": "Graphs II: Eulerian trails/circuits, Hamiltonian notions (Dirac/Ore statements as awareness), planar graphs, Euler’s formula; course synthesis", "notes": "ครอบคลุมเนื้อหาครั้งที่ 8–13" }
-    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 8–13" }
+    { "week": "ครั้งที่ 15", "topic": "Graphs II: Eulerian trails/circuits, Hamiltonian notions (Dirac/Ore statements as awareness), planar graphs, Euler’s formula; course synthesis", "notes": "ครอบคลุมเนื้อหาครั้งที่ 8–13" },
+    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 8–15" }
   ],
   "materials": {
     "textbooks": [],
