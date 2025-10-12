@@ -10,7 +10,9 @@
 
 \usepackage{amssymb,amsmath,amsthm,graphicx,mathrsfs}
 \usepackage{fontspec}
-\usepackage[utf8]{inputenc} 
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{thai} 
 
 % ===============================
 % PRESS TRIM SIZE AND MARGINS (190 x 260 mm)
@@ -50,11 +52,22 @@
 \usepackage{imakeidx}
 \makeindex
 
-\linespread{1.5} 
+% ===============================
+% Font configuration: Libertinus Serif for English, TH Sarabun for Thai
+% Using polyglossia for proper multilingual support
+% ===============================
 
-\setmainfont{Browallia New}[Scale=1.5]
-%\fontspec{Browallia New}[Scale=3]
+% Main font for English: Libertinus Serif (serif font)
+\setmainfont{Libertinus Serif}[
+Ligatures=TeX,
+Scale=1.0
+]
+
+% Thai font: TH Sarabun (scaled to match Libertinus Serif x-height)
+\newfontfamily\thaifont[Script=Thai, Scale=1.2, Path=./styles/]{THSarabun.ttf}
+
 \XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
 
 \title{คณิตศาสตร์ดีสครีตสำหรับการเขียนโปรแกรม\\(Discrete Mathematics for Programming)}
 \author{Phaphontee Yamchote}
