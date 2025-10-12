@@ -830,19 +830,25 @@
 
                 // Populate Schedule (if available)
                 if (Array.isArray(data.schedule)) {
-                    const scheduleContent = document.getElementById('schedule-content');
-                    if (scheduleContent) {
-                        let scheduleHTML = '';
-                        data.schedule.forEach((week, index) => {
-                            scheduleHTML += `
-                                <div class="schedule-item">
-                                    <strong>สัปดาห์ที่ ${index + 1}: ${week.topic || 'หัวข้อจะได้รับการอัปเดต'}</strong>
-                                    <p>${week.description || 'รายละเอียดจะได้รับการอัปเดต'}</p>
-                                    ${week.activities ? `<ul>${week.activities.map(activity => `<li>${activity}</li>`).join('')}</ul>` : ''}
-                                </div>
+                    const list = document.getElementById('schedule-list');
+                    const ph = document.getElementById('schedule-placeholder');
+                    if (list) {
+                        list.innerHTML = '';
+                        for (const s of data.schedule) {
+                            const div = document.createElement('div');
+                            div.className = 'schedule-item';
+                            const materials = Array.isArray(s.materials) ? `
+                                <ul>
+                                    ${s.materials.map(m => `<li><a href="${m.href}" target="_blank">${m.label}</a></li>`).join('')}
+                                </ul>` : '';
+                            div.innerHTML = `
+                                <strong>${s.week || ''}${s.date ? ' ('+s.date+')' : ''}</strong>
+                                <p>${s.topic || ''}${s.notes ? ' — <small style="color: var(--gray-700);">'+s.notes+'</small>' : ''}</p>
+                                ${materials}
                             `;
-                        });
-                        scheduleContent.innerHTML = scheduleHTML;
+                            list.appendChild(div);
+                        }
+                        if (ph) ph.style.display = 'none';
                     }
                 }
                 console.log('All data populated successfully!');
