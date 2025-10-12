@@ -57,8 +57,8 @@
 % Using polyglossia's font switching mechanism
 % ===============================
 
-% Set fonts using polyglossia (cleaner approach)
-\newfontfamily\englishfont{LibertinusSerif}[
+% Set main Roman font to Libertinus Serif for English
+\setmainfont{LibertinusSerif}[
 Extension=.otf,
 Path=./styles/,
 UprightFont=*-Regular,
@@ -69,6 +69,7 @@ Ligatures=TeX,
 Scale=1.0
 ]
 
+% Set Thai font for polyglossia (will be used automatically when in Thai mode)
 \newfontfamily\thaifont{THSarabun.ttf}[
 Scale=1.2,
 Path=./styles/,
@@ -78,20 +79,6 @@ BoldFont    = * Bold,
 ItalicFont  = * Italic,
 BoldItalicFont = * Bold Italic
 ]
-
-% Set main font to TH Sarabun (since document is primarily Thai)
-\setmainfont{THSarabun.ttf}[
-Scale=1.2,
-Path=./styles/,
-Script=Thai,
-UprightFont = *,
-BoldFont    = * Bold,
-ItalicFont  = * Italic,
-BoldItalicFont = * Bold Italic
-]
-
-% Command to switch to English font manually when needed
-\newcommand{\texten}[1]{{\englishfont #1}}
 
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip = 0pt plus 1pt
@@ -139,9 +126,9 @@ BoldItalicFont = * Bold Italic
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%										   %%%
-%%             Python code				   %%%
-%%										   %%%
+%%										  %%%
+%%             Python code				  %%%
+%%									   %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
