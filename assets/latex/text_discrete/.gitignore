@@ -1,0 +1,47 @@
+﻿﻿# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.idx
+*.ilg
+*.ind
+*.synctex.gz
+*.synctex(busy)
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.mw
+
+# LaTeX build artifacts
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Minted directories (code highlighting cache)
+_minted*/
+_minted-*/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Listings and snippets
+*.listing
+*.snippets
+*.pygmented
+
+# Keep source files in their organized directories
+!chapters/*.tex
+!styles/*.sty
+!styles/*.cls
+!styles/*.ttf
+!scripts/*.py
+
+# Keep main document
+!main_discrete_prog.tex
+
+# Keep only PDF outputs
+!*.pdf
