@@ -54,11 +54,33 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# LaTeX source files (uncomment the lines below if you want to exclude .tex files)
-# *.tex
-# *.sty
-# *.cls
-# *.bib
+# LaTeX source files - EXCLUDE ALL (keep only PDFs for webpage)
+*.tex
+*.sty
+*.cls
+*.bib
+
+# LaTeX support files
+*.tikz
+*.ist
+*.glo
+*.glsdefs
+*.acn
+*.acr
+*.alg
+*.idx
+*.ilg
+*.ind
+
+# Images and fonts used only in LaTeX
+*.png
+*.jpg
+*.jpeg
+*.ttf
+*.otf
+
+# Data files used in LaTeX
+*.csv
 
 # Keep PDF files (this line ensures PDFs are tracked)
 !*.pdf
