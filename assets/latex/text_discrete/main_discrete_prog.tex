@@ -1,4 +1,4 @@
-\documentclass[a4paper]{book}
+\documentclass[12pt,twoside,openright]{book}
 
 % Add styles directory to search path
 \makeatletter
@@ -11,7 +11,23 @@
 \usepackage{amssymb,amsmath,amsthm,graphicx,mathrsfs}
 \usepackage{fontspec}
 \usepackage[utf8]{inputenc} 
-\usepackage{geometry} 
+
+% ===============================
+% PRESS TRIM SIZE AND MARGINS (190 x 260 mm)
+% Same as latex_text for consistent book series
+% ===============================
+\usepackage{geometry}
+\geometry{
+	paperwidth=190mm,
+	paperheight=260mm,
+	inner=24mm,
+	outer=18mm,
+	top=20mm,
+	bottom=20mm,
+	bindingoffset=6mm,
+	includeheadfoot,
+	heightrounded
+} 
 \usepackage{tikz} 
 \usepackage{xcolor}
 \usepackage{amsrefs}
