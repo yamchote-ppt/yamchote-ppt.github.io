@@ -842,7 +842,7 @@
                                 </ul>` : '';
                             div.innerHTML = `
                                 <strong>${s.week || ''}${s.date ? ' ('+s.date+')' : ''}</strong>
-                                <p>${s.topic || ''}${s.notes ? ' — <small style="color: var(--gray-700);">'+s.notes+'</small>' : ''}</p>
+                                <p>${s.topic || ''}${s.notes ? '<br><small style="color: var(--gray-700);">'+s.notes+'</small>' : ''}</p>
                                 ${materials}
                             `;
                             list.appendChild(div);
