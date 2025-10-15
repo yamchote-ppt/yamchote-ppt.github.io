@@ -1,0 +1,28 @@
+{
+  "courses": {
+    "819605": {
+      "courseName": "Discrete Mathematics",
+      "courseNameThai": "วิยุตคณิต",
+      "quizzes": [
+        {
+          "id": "demo",
+          "file": "819605-demo.json",
+          "displayName": "Demo Quiz (ทดสอบระบบ)",
+          "enabled": true
+        },
+        {
+          "id": "quiz1",
+          "file": "819605-quiz1.json",
+          "displayName": "Quiz 1: Set Theory & Logic",
+          "enabled": true
+        },
+        {
+          "id": "quiz2",
+          "file": "819605-quiz2.json",
+          "displayName": "Quiz 2: Functions & Relations",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

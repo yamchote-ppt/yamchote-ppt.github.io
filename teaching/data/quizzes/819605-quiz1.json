@@ -1,0 +1,15 @@
+{
+  "id": "quiz1",
+  "courseCode": "819605",
+  "title": "Quiz 1: Set Theory & Logic",
+  "duration": 45,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Define a set and provide an example.",
+      "type": "text",
+      "points": 10,
+      "correctAnswer": "A set is a well-defined collection of distinct objects. Example: A = {1, 2, 3, 4, 5}"
+    }
+  ]
+}

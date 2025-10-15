@@ -1,0 +1,132 @@
+{
+  "id": "demo",
+  "courseCode": "819605",
+  "title": "Demo Quiz (ทดสอบระบบ)",
+  "duration": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a set?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "A collection of distinct objects",
+        "A sequence of numbers",
+        "A type of function",
+        "A mathematical operation"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is a valid set notation?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "{1, 2, 3}",
+        "[1, 2, 3]",
+        "(1, 2, 3)",
+        "<1, 2, 3>"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 3,
+      "question": "What does A ∪ B represent?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "Intersection of A and B",
+        "Union of A and B",
+        "Difference of A and B",
+        "Complement of A"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 4,
+      "question": "In propositional logic, what is the negation of TRUE?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "TRUE",
+        "FALSE",
+        "UNKNOWN",
+        "NULL"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 5,
+      "question": "What is the cardinality of the set {a, b, c, d}?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "3",
+        "4",
+        "5",
+        "Infinite"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is the power set of {1, 2}?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "{∅, {1}, {2}}",
+        "{∅, {1}, {2}, {1,2}}",
+        "{{1}, {2}, {1,2}}",
+        "{1, 2}"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 7,
+      "question": "What is a function?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "A relation where each input has exactly one output",
+        "A set of ordered pairs",
+        "A mathematical equation",
+        "A type of set"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 8,
+      "question": "In graph theory, what is a vertex?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "A connection between nodes",
+        "A node or point in a graph",
+        "A path in a graph",
+        "A cycle in a graph"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 9,
+      "question": "What is the principle of mathematical induction used for?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "Solving equations",
+        "Proving statements for all natural numbers",
+        "Finding derivatives",
+        "Calculating integrals"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 10,
+      "question": "Explain the difference between a relation and a function.",
+      "type": "text",
+      "points": 10,
+      "correctAnswer": "A relation is any set of ordered pairs, while a function is a special type of relation where each input has exactly one output."
+    }
+  ]
+}

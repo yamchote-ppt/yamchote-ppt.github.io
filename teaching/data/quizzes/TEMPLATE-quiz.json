@@ -1,0 +1,41 @@
+{
+  "_comment": "Quiz Template - Copy this file and rename it to [courseCode]-[quizName].json",
+  "id": "CHANGE_ME",
+  "courseCode": "CHANGE_ME",
+  "title": "CHANGE_ME - Quiz Title",
+  "duration": 60,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Your multiple choice question here?",
+      "type": "multiple-choice",
+      "points": 10,
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correctAnswer": 0,
+      "_note": "correctAnswer is the index of correct option (0-based)"
+    },
+    {
+      "id": 2,
+      "question": "Your text/essay question here?",
+      "type": "text",
+      "points": 20,
+      "correctAnswer": "Sample correct answer for instructor reference (manual grading needed)",
+      "_note": "For text questions, correctAnswer is for reference only"
+    }
+  ],
+  "_instructions": [
+    "1. Replace all CHANGE_ME placeholders",
+    "2. Add or remove questions as needed",
+    "3. Keep question IDs sequential (1, 2, 3, ...)",
+    "4. For multiple-choice: correctAnswer = option index (0, 1, 2, or 3)",
+    "5. For text questions: correctAnswer = reference answer for grading",
+    "6. Total points = sum of all question points",
+    "7. Duration is in minutes",
+    "8. Remove all _comment, _note, and _instructions fields before using"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "quiz2",
+  "courseCode": "819605",
+  "title": "Quiz 2: Functions & Relations",
+  "duration": 45,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Explain what makes a relation a function.",
+      "type": "text",
+      "points": 10,
+      "correctAnswer": "A relation is a function if each element in the domain is mapped to exactly one element in the codomain."
+    }
+  ]
+}
