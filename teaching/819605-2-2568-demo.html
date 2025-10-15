@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>819605 Quiz System | Discrete Mathematics | Southeast Asia University</title>
+    <meta name="description" content="ระบบทำข้อสอบออนไลน์สำหรับวิชาวิยุตคณิต 819605"/>
+    <meta name="keywords" content="Discrete Mathematics Quiz, วิยุตคณิต, ข้อสอบออนไลน์, Southeast Asia University" />
+
+    <!-- Google Sheets API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --darkblue: #002147;
+            --gold: #FFD700;
+            --light-bg: #f8f9fa;
+            --text-dark: #232323;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-700: #495057;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 33, 71, 0.15);
+            --success: #2e7d32;
+            --info: #1976d2;
+            --warning: #f57c00;
+            --danger: #c62828;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e2e8f0 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        .top-nav {
+            background: var(--darkblue);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .nav-brand:hover {
+            color: var(--white);
+            transform: translateX(-4px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Quiz Start Screen */
+        .quiz-start {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .quiz-start h2 {
+            color: var(--darkblue);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-info {
+            background: var(--gray-100);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .quiz-info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .quiz-info-item:last-child {
+            border-bottom: none;
+        }
+
+        .quiz-info-item .icon {
+            font-size: 1.5rem;
+            min-width: 30px;
+        }
+
+        .quiz-info-item strong {
+            color: var(--darkblue);
+            min-width: 150px;
+        }
+
+        .student-info-form {
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--darkblue);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--darkblue);
+            box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.1);
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: var(--white);
+        }
+
+        .btn-success:hover {
+            background: #1b5e20;
+            transform: translateY(-2px);
+        }
+
+        .btn-warning {
+            background: var(--warning);
+            color: var(--white);
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: var(--white);
+        }
+
+        /* Quiz Interface */
+        .quiz-container {
+            display: none;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .quiz-container.active {
+            display: block;
+        }
+
+        /* Quiz Header with Timer */
+        .quiz-header {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .quiz-progress {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .timer {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+        }
+
+        .timer.warning {
+            background: rgba(255, 87, 34, 0.3);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .timer .icon {
+            font-size: 1.5rem;
+        }
+
+        /* Question Container */
+        .question-container {
+            padding: 2.5rem;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .question-number {
+            background: var(--darkblue);
+            color: var(--gold);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .question-type {
+            background: var(--info);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .question-points {
+            background: var(--success);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin: 1.5rem 0;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .question-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        /* Answer Options */
+        .answer-options {
+            margin: 2rem 0;
+        }
+
+        .answer-option {
+            background: var(--gray-100);
+            border: 2px solid var(--gray-300);
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .answer-option:hover {
+            background: var(--white);
+            border-color: var(--darkblue);
+            transform: translateX(5px);
+        }
+
+        .answer-option.selected {
+            background: var(--darkblue);
+            color: var(--white);
+            border-color: var(--darkblue);
+            box-shadow: var(--shadow);
+        }
+
+        .answer-option input[type="radio"],
+        .answer-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .answer-option label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 1.05rem;
+        }
+
+        /* Text Answer */
+        .text-answer {
+            width: 100%;
+            min-height: 120px;
+            padding: 1rem;
+            border: 2px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            transition: all 0.3s ease;
+        }
+
+        .text-answer:focus {
+            outline: none;
+            border-color: var(--darkblue);
+            box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.1);
+        }
+
+        /* Navigation Buttons */
+        .quiz-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 2.5rem;
+            border-top: 2px solid var(--gray-200);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Question Navigator */
+        .question-navigator {
+            background: var(--gray-100);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .question-navigator h3 {
+            color: var(--darkblue);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .question-nav-btn {
+            aspect-ratio: 1;
+            border: 2px solid var(--gray-300);
+            background: var(--white);
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .question-nav-btn:hover {
+            border-color: var(--darkblue);
+            transform: scale(1.05);
+        }
+
+        .question-nav-btn.answered {
+            background: var(--success);
+            color: var(--white);
+            border-color: var(--success);
+        }
+
+        .question-nav-btn.current {
+            background: var(--darkblue);
+            color: var(--gold);
+            border-color: var(--darkblue);
+            box-shadow: var(--shadow);
+        }
+
+        /* Results Screen */
+        .quiz-results {
+            display: none;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .quiz-results.active {
+            display: block;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .results-header h2 {
+            color: var(--darkblue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .score-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .score-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .score-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .score-label {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .results-summary {
+            background: var(--gray-100);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .summary-value {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--darkblue);
+        }
+
+        .grade-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .grade-a { background: #4caf50; color: white; }
+        .grade-b { background: #8bc34a; color: white; }
+        .grade-c { background: #ffc107; color: white; }
+        .grade-d { background: #ff9800; color: white; }
+        .grade-f { background: #f44336; color: white; }
+
+        /* Answer Review */
+        .answer-review {
+            margin-top: 2rem;
+        }
+
+        .review-question {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-question.correct {
+            border-left: 5px solid var(--success);
+            background: #e8f5e9;
+        }
+
+        .review-question.incorrect {
+            border-left: 5px solid var(--danger);
+            background: #ffebee;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .review-status {
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .status-correct {
+            background: var(--success);
+            color: white;
+        }
+
+        .status-incorrect {
+            background: var(--danger);
+            color: white;
+        }
+
+        /* Confirmation Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
+            margin: 1rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-header h3 {
+            color: var(--darkblue);
+            font-size: 1.5rem;
+        }
+
+        .modal-body {
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        /* Alert Messages */
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .alert-warning {
+            background: #fff3e0;
+            border-left: 5px solid var(--warning);
+            color: var(--warning);
+        }
+
+        .alert-info {
+            background: #e3f2fd;
+            border-left: 5px solid var(--info);
+            color: var(--info);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--darkblue);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer p {
+            margin: 0;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-container {
+                padding: 0 1rem;
+            }
+
+            .quiz-start,
+            .question-container,
+            .quiz-results {
+                padding: 1.5rem;
+            }
+
+            .quiz-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .score-circle {
+                width: 150px;
+                height: 150px;
+            }
+
+            .score-number {
+                font-size: 2.5rem;
+            }
+
+            .question-grid {
+                grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid var(--gray-200);
+            border-top: 4px solid var(--darkblue);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="819605-2-2568.html" class="nav-brand">← กลับสู่หน้ารายวิชา</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>📐 ระบบทำข้อสอบออนไลน์</h1>
+        <p class="hero-subtitle">819605 - Discrete Mathematics</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Quiz Start Screen -->
+        <div id="quizStart" class="quiz-start">
+            <h2>เริ่มทำข้อสอบ</h2>
+            
+            <div class="alert alert-info">
+                <span style="font-size: 1.5rem;">ℹ️</span>
+                <div>
+                    <strong>คำแนะนำ:</strong> กรุณาอ่านคำถามอย่างละเอียดและตรวจสอบคำตอบก่อนส่ง ข้อสอบนี้จะมีเวลาจำกัดและไม่สามารถทำซ้ำได้
+                </div>
+            </div>
+
+            <div class="quiz-info">
+                <div class="quiz-info-item">
+                    <span class="icon">📝</span>
+                    <strong>จำนวนข้อ:</strong>
+                    <span id="totalQuestions">-</span> ข้อ
+                </div>
+                <div class="quiz-info-item">
+                    <span class="icon">⏱️</span>
+                    <strong>เวลาทำข้อสอบ:</strong>
+                    <span id="quizDuration">-</span> นาที
+                </div>
+                <div class="quiz-info-item">
+                    <span class="icon">🎯</span>
+                    <strong>คะแนนเต็ม:</strong>
+                    <span id="totalPoints">-</span> คะแนน
+                </div>
+                <div class="quiz-info-item">
+                    <span class="icon">📊</span>
+                    <strong>เกณฑ์ผ่าน:</strong>
+                    60%
+                </div>
+            </div>
+
+            <form class="student-info-form" id="studentForm">
+                <div class="form-group">
+                    <label for="studentId">รหัสนักศึกษา *</label>
+                    <input type="text" id="studentId" required placeholder="เช่น 6501234567">
+                </div>
+                <div class="form-group">
+                    <label for="studentName">ชื่อ-นามสกุล *</label>
+                    <input type="text" id="studentName" required placeholder="เช่น สมชาย ใจดี">
+                </div>
+                <div class="form-group">
+                    <label for="quizSelect">เลือกข้อสอบ *</label>
+                    <select id="quizSelect" required>
+                        <option value="">-- เลือกข้อสอบ --</option>
+                        <option value="quiz1">Quiz 1: Set Theory & Logic</option>
+                        <option value="quiz2">Quiz 2: Functions & Relations</option>
+                        <option value="midterm">Midterm Exam</option>
+                        <option value="final">Final Exam</option>
+                        <option value="demo">Demo Quiz (ทดสอบระบบ)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">เริ่มทำข้อสอบ</button>
+            </form>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 1rem; color: var(--gray-700);">กำลังโหลดข้อสอบ...</p>
+        </div>
+
+        <!-- Quiz Interface -->
+        <div id="quizContainer" class="quiz-container">
+            <!-- Quiz Header -->
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    ข้อที่ <span id="currentQuestion">1</span> จาก <span id="totalQuestionsDisplay">10</span>
+                </div>
+                <div class="timer" id="timer">
+                    <span class="icon">⏱️</span>
+                    <span id="timeRemaining">30:00</span>
+                </div>
+            </div>
+
+            <!-- Question Container -->
+            <div class="question-container">
+                <div class="question-header">
+                    <span class="question-number" id="questionNumber">Question 1</span>
+                    <span class="question-type" id="questionType">Multiple Choice</span>
+                    <span class="question-points" id="questionPoints">10 คะแนน</span>
+                </div>
+
+                <div class="question-text" id="questionText">
+                    <!-- Question will be inserted here -->
+                </div>
+
+                <div class="answer-options" id="answerOptions">
+                    <!-- Answer options will be inserted here -->
+                </div>
+
+                <!-- Question Navigator -->
+                <div class="question-navigator">
+                    <h3>🗺️ แผนที่คำถาม (คลิกเพื่อข้ามไปข้อที่ต้องการ)</h3>
+                    <div class="question-grid" id="questionGrid">
+                        <!-- Question navigation buttons will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="quiz-navigation">
+                <div class="nav-buttons">
+                    <button class="btn btn-warning" id="prevBtn" onclick="previousQuestion()">← ข้อก่อนหน้า</button>
+                    <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">ข้อถัดไป →</button>
+                </div>
+                <button class="btn btn-success" id="submitBtn" onclick="confirmSubmit()">✓ ส่งข้อสอบ</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="quizResults" class="quiz-results">
+            <div class="results-header">
+                <h2>🎉 ผลการทำข้อสอบ</h2>
+                <p style="color: var(--gray-700);">ข้อสอบ: <span id="resultQuizName"></span></p>
+            </div>
+
+            <div class="score-display">
+                <div class="score-circle">
+                    <div class="score-number" id="scorePercentage">85%</div>
+                    <div class="score-label">คะแนนที่ได้</div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="grade-badge" id="gradeBadge">A</div>
+            </div>
+
+            <div class="results-summary">
+                <div class="summary-item">
+                    <span class="summary-label">👤 ชื่อ-นามสกุล</span>
+                    <span class="summary-value" id="resultStudentName">-</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">🆔 รหัสนักศึกษา</span>
+                    <span class="summary-value" id="resultStudentId">-</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">✅ ตอบถูก</span>
+                    <span class="summary-value" id="correctAnswers">8</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">❌ ตอบผิด</span>
+                    <span class="summary-value" id="incorrectAnswers">2</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">📊 คะแนนที่ได้</span>
+                    <span class="summary-value"><span id="scoreObtained">85</span>/<span id="scorePossible">100</span></span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">⏱️ เวลาที่ใช้</span>
+                    <span class="summary-value" id="timeUsed">25 นาที 30 วินาที</span>
+                </div>
+            </div>
+
+            <div class="answer-review" id="answerReview">
+                <h3 style="color: var(--darkblue); margin-bottom: 1rem;">📋 รายละเอียดคำตอบ</h3>
+                <!-- Answer review will be inserted here -->
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-primary" onclick="location.reload()">🔄 ทำข้อสอบใหม่</button>
+                <button class="btn btn-warning" onclick="window.location.href='819605-2-2568.html'">← กลับสู่หน้ารายวิชา</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span style="font-size: 2rem;">⚠️</span>
+                <h3>ยืนยันการส่งข้อสอบ</h3>
+            </div>
+            <div class="modal-body">
+                <p>คุณแน่ใจหรือไม่ว่าต้องการส่งข้อสอบ?</p>
+                <p style="margin-top: 1rem;">
+                    คุณได้ทำข้อสอบไปแล้ว <strong><span id="answeredCount">0</span></strong> ข้อ 
+                    จากทั้งหมด <strong><span id="totalQuestionsModal">0</span></strong> ข้อ
+                </p>
+                <p style="margin-top: 1rem; color: var(--danger); font-weight: 600;">
+                    หากส่งแล้วจะไม่สามารถแก้ไขคำตอบได้อีก!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" onclick="closeSubmitModal()">ยกเลิก</button>
+                <button class="btn btn-success" onclick="submitQuiz()">ยืนยันการส่ง</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Southeast Asia University. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Quiz Data Structure
+        const quizData = {
+            demo: {
+                title: "Demo Quiz (ทดสอบระบบ)",
+                duration: 30, // minutes
+                questions: [
+                    {
+                        id: 1,
+                        type: "multiple-choice",
+                        question: "Which of the following is a valid set?",
+                        points: 10,
+                        options: [
+                            "A = {1, 2, 3, 3}",
+                            "B = {1, 2, 3}",
+                            "C = {x | x > 0 and x < 0}",
+                            "D = {1, {2}, 3}"
+                        ],
+                        correctAnswer: 1, // index of correct option
+                        explanation: "Set B is valid because sets contain unique elements. Set A has duplicate 3s."
+                    },
+                    {
+                        id: 2,
+                        type: "multiple-choice",
+                        question: "What is the cardinality of the set A = {∅, {∅}, {{∅}}}?",
+                        points: 10,
+                        options: [
+                            "0",
+                            "1",
+                            "2",
+                            "3"
+                        ],
+                        correctAnswer: 3,
+                        explanation: "The set has three distinct elements: empty set, set containing empty set, and set containing set containing empty set."
+                    },
+                    {
+                        id: 3,
+                        type: "multiple-choice",
+                        question: "Which logical statement is a tautology?",
+                        points: 10,
+                        options: [
+                            "p ∧ ¬p",
+                            "p ∨ ¬p",
+                            "p → ¬p",
+                            "p ↔ ¬p"
+                        ],
+                        correctAnswer: 1,
+                        explanation: "p ∨ ¬p is always true (Law of Excluded Middle), making it a tautology."
+                    },
+                    {
+                        id: 4,
+                        type: "multiple-choice",
+                        question: "If A = {1, 2} and B = {3, 4}, what is A × B?",
+                        points: 10,
+                        options: [
+                            "{1, 2, 3, 4}",
+                            "{(1,3), (1,4), (2,3), (2,4)}",
+                            "{(1,2), (3,4)}",
+                            "{(3,1), (4,1), (3,2), (4,2)}"
+                        ],
+                        correctAnswer: 1,
+                        explanation: "The Cartesian product A × B contains all ordered pairs (a,b) where a ∈ A and b ∈ B."
+                    },
+                    {
+                        id: 5,
+                        type: "multiple-choice",
+                        question: "How many subsets does a set with 4 elements have?",
+                        points: 10,
+                        options: [
+                            "4",
+                            "8",
+                            "12",
+                            "16"
+                        ],
+                        correctAnswer: 3,
+                        explanation: "A set with n elements has 2^n subsets. For n=4: 2^4 = 16 subsets."
+                    },
+                    {
+                        id: 6,
+                        type: "multiple-choice",
+                        question: "Which of the following is an equivalence relation?",
+                        points: 10,
+                        options: [
+                            "Less than (<) on integers",
+                            "Divisibility (|) on positive integers",
+                            "Modulo equivalence (≡) on integers",
+                            "Greater than (>) on real numbers"
+                        ],
+                        correctAnswer: 2,
+                        explanation: "Modulo equivalence is reflexive, symmetric, and transitive, making it an equivalence relation."
+                    },
+                    {
+                        id: 7,
+                        type: "multiple-choice",
+                        question: "What is the value of ⌈3.2⌉ + ⌊3.2⌋?",
+                        points: 10,
+                        options: [
+                            "6",
+                            "6.4",
+                            "7",
+                            "8"
+                        ],
+                        correctAnswer: 2,
+                        explanation: "⌈3.2⌉ = 4 (ceiling) and ⌊3.2⌋ = 3 (floor), so 4 + 3 = 7."
+                    },
+                    {
+                        id: 8,
+                        type: "multiple-choice",
+                        question: "In a graph with 5 vertices, what is the maximum number of edges?",
+                        points: 10,
+                        options: [
+                            "5",
+                            "10",
+                            "15",
+                            "20"
+                        ],
+                        correctAnswer: 1,
+                        explanation: "For a simple graph with n vertices: max edges = n(n-1)/2 = 5×4/2 = 10."
+                    },
+                    {
+                        id: 9,
+                        type: "multiple-choice",
+                        question: "Which of the following is true about a binary tree with height h?",
+                        points: 10,
+                        options: [
+                            "Maximum nodes = 2^h",
+                            "Maximum nodes = 2^(h+1) - 1",
+                            "Maximum nodes = h^2",
+                            "Maximum nodes = h!"
+                        ],
+                        correctAnswer: 1,
+                        explanation: "A binary tree of height h can have at most 2^(h+1) - 1 nodes."
+                    },
+                    {
+                        id: 10,
+                        type: "multiple-choice",
+                        question: "What is the Boolean expression for NAND gate?",
+                        points: 10,
+                        options: [
+                            "A ∧ B",
+                            "¬(A ∧ B)",
+                            "A ∨ B",
+                            "¬(A ∨ B)"
+                        ],
+                        correctAnswer: 1,
+                        explanation: "NAND is the negation of AND, expressed as ¬(A ∧ B)."
+                    }
+                ]
+            },
+            quiz1: {
+                title: "Quiz 1: Set Theory & Logic",
+                duration: 45,
+                questions: [
+                    // Add more questions for Quiz 1
+                ]
+            },
+            quiz2: {
+                title: "Quiz 2: Functions & Relations",
+                duration: 45,
+                questions: [
+                    // Add more questions for Quiz 2
+                ]
+            }
+        };
+
+        // ============================================================
+        // GOOGLE SHEETS API CONFIGURATION
+        // ============================================================
+        // ⚠️ IMPORTANT: Replace these values with your own credentials
+        // ============================================================
+        
+        const GOOGLE_SHEETS_CONFIG = {
+            // 1. Get API Key from: https://console.cloud.google.com/apis/credentials
+            API_KEY: 'AIzaSyDGRW8FiG4Fhzi_YGpKLPyWK5FzWW4butg',
+            
+            // 2. Get Spreadsheet ID from your Google Sheets URL
+            // URL format: https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
+            SPREADSHEET_ID: '1H1IHh12adeTzUiA5Ea_WDW_lqVa-MM2DY88R_V-HMWU',
+            
+            // 3. Name of the sheet/tab where results will be saved (e.g., "QuizResults")
+            SHEET_NAME: 'QuizResults',
+            
+            // 4. Enable Google Sheets API integration (set to true after configuration)
+            ENABLED: true  // Set to true after you configure API_KEY and SPREADSHEET_ID
+        };
+
+        // ============================================================
+        // GOOGLE SHEETS API FUNCTIONS
+        // ============================================================
+        
+        let sheetsAPILoaded = false;
+
+        // Load Google Sheets API
+        function loadSheetsAPI() {
+            return new Promise((resolve, reject) => {
+                if (sheetsAPILoaded) {
+                    resolve();
+                    return;
+                }
+                
+                gapi.load('client', () => {
+                    gapi.client.init({
+                        apiKey: GOOGLE_SHEETS_CONFIG.API_KEY,
+                        discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4']
+                    }).then(() => {
+                        sheetsAPILoaded = true;
+                        console.log('Google Sheets API loaded successfully');
+                        resolve();
+                    }).catch(error => {
+                        console.error('Error loading Google Sheets API:', error);
+                        reject(error);
+                    });
+                });
+            });
+        }
+
+        // Submit results to Google Sheets
+        async function submitToGoogleSheets(results) {
+            // Check if Google Sheets integration is enabled
+            if (!GOOGLE_SHEETS_CONFIG.ENABLED) {
+                console.warn('Google Sheets integration is disabled. Results saved to localStorage only.');
+                return { success: false, message: 'Google Sheets integration disabled' };
+            }
+
+            try {
+                // Load API if not already loaded
+                if (!sheetsAPILoaded) {
+                    await loadSheetsAPI();
+                }
+
+                // Prepare data row
+                const timestamp = new Date().toLocaleString('th-TH', { 
+                    timeZone: 'Asia/Bangkok',
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+
+                const row = [
+                    timestamp,                      // A: Timestamp
+                    results.studentId,              // B: Student ID
+                    results.studentName,            // C: Student Name
+                    results.quizId,                 // D: Quiz ID
+                    results.quizTitle,              // E: Quiz Title
+                    results.score,                  // F: Score Obtained
+                    results.totalPoints,            // G: Total Points
+                    results.percentage,             // H: Percentage
+                    results.grade,                  // I: Grade
+                    results.timeUsed,               // J: Time Used
+                    JSON.stringify(results.answers) // K: All Answers (JSON)
+                ];
+
+                // Append data to Google Sheets
+                const response = await gapi.client.sheets.spreadsheets.values.append({
+                    spreadsheetId: GOOGLE_SHEETS_CONFIG.SPREADSHEET_ID,
+                    range: `${GOOGLE_SHEETS_CONFIG.SHEET_NAME}!A:K`,
+                    valueInputOption: 'RAW',
+                    resource: {
+                        values: [row]
+                    }
+                });
+
+                console.log('Results submitted to Google Sheets successfully:', response);
+                return { success: true, response: response };
+
+            } catch (error) {
+                console.error('Error submitting to Google Sheets:', error);
+                
+                // Show user-friendly error message
+                let errorMessage = 'ไม่สามารถส่งข้อมูลไปยัง Google Sheets ได้';
+                if (error.status === 403) {
+                    errorMessage += ' (ไม่มีสิทธิ์เข้าถึง)';
+                } else if (error.status === 404) {
+                    errorMessage += ' (ไม่พบ Spreadsheet)';
+                } else {
+                    errorMessage += ` (${error.message})`;
+                }
+                
+                return { success: false, error: error, message: errorMessage };
+            }
+        }
+
+        // ============================================================
+        // END OF GOOGLE SHEETS API CONFIGURATION
+        // ============================================================
+
+        // Global variables
+        let currentQuiz = null;
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let timerInterval = null;
+        let timeRemaining = 0;
+        let studentInfo = {};
+        let quizStartTime = null;
+
+        // Initialize quiz start screen
+        document.addEventListener('DOMContentLoaded', function() {
+            updateQuizInfo();
+        });
+
+        // Update quiz selection info
+        document.getElementById('quizSelect').addEventListener('change', function() {
+            updateQuizInfo();
+        });
+
+        function updateQuizInfo() {
+            const quizId = document.getElementById('quizSelect').value;
+            if (quizId && quizData[quizId]) {
+                const quiz = quizData[quizId];
+                document.getElementById('totalQuestions').textContent = quiz.questions.length;
+                document.getElementById('quizDuration').textContent = quiz.duration;
+                document.getElementById('totalPoints').textContent = quiz.questions.reduce((sum, q) => sum + q.points, 0);
+            }
+        }
+
+        // Start quiz
+        document.getElementById('studentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const studentId = document.getElementById('studentId').value;
+            const studentName = document.getElementById('studentName').value;
+            const quizId = document.getElementById('quizSelect').value;
+
+            if (!quizId || !quizData[quizId]) {
+                alert('กรุณาเลือกข้อสอบ');
+                return;
+            }
+
+            studentInfo = { studentId, studentName, quizId };
+            currentQuiz = quizData[quizId];
+            
+            // Initialize user answers array
+            userAnswers = new Array(currentQuiz.questions.length).fill(null);
+            
+            // Show loading
+            document.getElementById('quizStart').style.display = 'none';
+            document.getElementById('loading').classList.add('active');
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                startQuiz();
+            }, 1500);
+        });
+
+        function startQuiz() {
+            // Hide loading, show quiz
+            document.getElementById('loading').classList.remove('active');
+            document.getElementById('quizContainer').classList.add('active');
+            
+            // Set quiz start time
+            quizStartTime = new Date();
+            
+            // Initialize timer
+            timeRemaining = currentQuiz.duration * 60; // convert to seconds
+            startTimer();
+            
+            // Display first question
+            currentQuestionIndex = 0;
+            displayQuestion();
+            
+            // Create question navigator
+            createQuestionNavigator();
+        }
+
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                
+                if (timeRemaining <= 300) { // 5 minutes remaining
+                    document.getElementById('timer').classList.add('warning');
+                }
+                
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    alert('หมดเวลาทำข้อสอบ! ระบบจะส่งข้อสอบอัตโนมัติ');
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('timeRemaining').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function displayQuestion() {
+            const question = currentQuiz.questions[currentQuestionIndex];
+            
+            // Update progress
+            document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
+            document.getElementById('totalQuestionsDisplay').textContent = currentQuiz.questions.length;
+            
+            // Update question details
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
+            document.getElementById('questionType').textContent = 
+                question.type === 'multiple-choice' ? 'Multiple Choice' : 'Text Answer';
+            document.getElementById('questionPoints').textContent = `${question.points} คะแนน`;
+            document.getElementById('questionText').innerHTML = question.question;
+            
+            // Display answer options
+            const optionsContainer = document.getElementById('answerOptions');
+            optionsContainer.innerHTML = '';
+            
+            if (question.type === 'multiple-choice') {
+                question.options.forEach((option, index) => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'answer-option';
+                    if (userAnswers[currentQuestionIndex] === index) {
+                        optionDiv.classList.add('selected');
+                    }
+                    
+                    optionDiv.innerHTML = `
+                        <input type="radio" 
+                               name="answer" 
+                               id="option${index}" 
+                               value="${index}"
+                               ${userAnswers[currentQuestionIndex] === index ? 'checked' : ''}>
+                        <label for="option${index}">${String.fromCharCode(65 + index)}. ${option}</label>
+                    `;
+                    
+                    optionDiv.addEventListener('click', function() {
+                        selectAnswer(index);
+                    });
+                    
+                    optionsContainer.appendChild(optionDiv);
+                });
+            } else if (question.type === 'text') {
+                const textarea = document.createElement('textarea');
+                textarea.className = 'text-answer';
+                textarea.placeholder = 'พิมพ์คำตอบของคุณที่นี่...';
+                textarea.value = userAnswers[currentQuestionIndex] || '';
+                textarea.addEventListener('input', function() {
+                    userAnswers[currentQuestionIndex] = this.value;
+                    updateQuestionNavigator();
+                });
+                optionsContainer.appendChild(textarea);
+            }
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+            document.getElementById('nextBtn').style.display = 
+                currentQuestionIndex === currentQuiz.questions.length - 1 ? 'none' : 'inline-block';
+            
+            // Update question navigator
+            updateQuestionNavigator();
+        }
+
+        function selectAnswer(index) {
+            userAnswers[currentQuestionIndex] = index;
+            
+            // Update UI
+            document.querySelectorAll('.answer-option').forEach((opt, i) => {
+                if (i === index) {
+                    opt.classList.add('selected');
+                    opt.querySelector('input').checked = true;
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+            
+            updateQuestionNavigator();
+        }
+
+        function createQuestionNavigator() {
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+            
+            currentQuiz.questions.forEach((q, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'question-nav-btn';
+                btn.textContent = index + 1;
+                btn.type = 'button';
+                btn.onclick = () => goToQuestion(index);
+                grid.appendChild(btn);
+            });
+            
+            updateQuestionNavigator();
+        }
+
+        function updateQuestionNavigator() {
+            const buttons = document.querySelectorAll('.question-nav-btn');
+            buttons.forEach((btn, index) => {
+                btn.classList.remove('current', 'answered');
+                if (index === currentQuestionIndex) {
+                    btn.classList.add('current');
+                } else if (userAnswers[index] !== null && userAnswers[index] !== '') {
+                    btn.classList.add('answered');
+                }
+            });
+        }
+
+        function goToQuestion(index) {
+            currentQuestionIndex = index;
+            displayQuestion();
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < currentQuiz.questions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion();
+            }
+        }
+
+        function confirmSubmit() {
+            const answeredCount = userAnswers.filter(a => a !== null && a !== '').length;
+            document.getElementById('answeredCount').textContent = answeredCount;
+            document.getElementById('totalQuestionsModal').textContent = currentQuiz.questions.length;
+            document.getElementById('submitModal').classList.add('active');
+        }
+
+        function closeSubmitModal() {
+            document.getElementById('submitModal').classList.remove('active');
+        }
+
+        function submitQuiz() {
+            closeSubmitModal();
+            clearInterval(timerInterval);
+            
+            // Calculate time used
+            const quizEndTime = new Date();
+            const timeUsedMs = quizEndTime - quizStartTime;
+            const timeUsedMinutes = Math.floor(timeUsedMs / 60000);
+            const timeUsedSeconds = Math.floor((timeUsedMs % 60000) / 1000);
+            
+            // Calculate score
+            let correctCount = 0;
+            let totalPoints = 0;
+            let earnedPoints = 0;
+            
+            currentQuiz.questions.forEach((q, index) => {
+                totalPoints += q.points;
+                if (q.type === 'multiple-choice' && userAnswers[index] === q.correctAnswer) {
+                    correctCount++;
+                    earnedPoints += q.points;
+                }
+            });
+            
+            const percentage = Math.round((earnedPoints / totalPoints) * 100);
+            const grade = getGrade(percentage);
+            
+            // Display results
+            document.getElementById('quizContainer').classList.remove('active');
+            document.getElementById('quizResults').classList.add('active');
+            
+            document.getElementById('resultQuizName').textContent = currentQuiz.title;
+            document.getElementById('resultStudentName').textContent = studentInfo.studentName;
+            document.getElementById('resultStudentId').textContent = studentInfo.studentId;
+            document.getElementById('correctAnswers').textContent = correctCount;
+            document.getElementById('incorrectAnswers').textContent = currentQuiz.questions.length - correctCount;
+            document.getElementById('scoreObtained').textContent = earnedPoints;
+            document.getElementById('scorePossible').textContent = totalPoints;
+            document.getElementById('scorePercentage').textContent = percentage + '%';
+            document.getElementById('timeUsed').textContent = `${timeUsedMinutes} นาที ${timeUsedSeconds} วินาที`;
+            
+            const gradeBadge = document.getElementById('gradeBadge');
+            gradeBadge.textContent = grade;
+            gradeBadge.className = 'grade-badge ' + getGradeClass(grade);
+            
+            // Display answer review
+            displayAnswerReview();
+            
+            // Save results to localStorage
+            saveResults({
+                studentId: studentInfo.studentId,
+                studentName: studentInfo.studentName,
+                quizId: studentInfo.quizId,
+                quizTitle: currentQuiz.title,
+                score: earnedPoints,
+                totalPoints: totalPoints,
+                percentage: percentage,
+                grade: grade,
+                timeUsed: `${timeUsedMinutes}:${timeUsedSeconds}`,
+                timestamp: new Date().toISOString()
+            });
+        }
+
+        function displayAnswerReview() {
+            const reviewContainer = document.getElementById('answerReview');
+            reviewContainer.innerHTML = '<h3 style="color: var(--darkblue); margin-bottom: 1rem;">📋 รายละเอียดคำตอบ</h3>';
+            
+            currentQuiz.questions.forEach((q, index) => {
+                const userAnswer = userAnswers[index];
+                const isCorrect = q.type === 'multiple-choice' && userAnswer === q.correctAnswer;
+                
+                const reviewDiv = document.createElement('div');
+                reviewDiv.className = `review-question ${isCorrect ? 'correct' : 'incorrect'}`;
+                
+                let answerText = '';
+                if (q.type === 'multiple-choice') {
+                    answerText = userAnswer !== null ? q.options[userAnswer] : 'ไม่ได้ตอบ';
+                } else {
+                    answerText = userAnswer || 'ไม่ได้ตอบ';
+                }
+                
+                reviewDiv.innerHTML = `
+                    <div class="review-header">
+                        <strong>ข้อที่ ${index + 1}</strong>
+                        <span class="review-status ${isCorrect ? 'status-correct' : 'status-incorrect'}">
+                            ${isCorrect ? '✓ ถูกต้อง' : '✗ ผิด'}
+                        </span>
+                    </div>
+                    <p style="margin: 0.5rem 0;"><strong>คำถาม:</strong> ${q.question}</p>
+                    <p style="margin: 0.5rem 0;"><strong>คำตอบของคุณ:</strong> ${answerText}</p>
+                    ${q.type === 'multiple-choice' ? `<p style="margin: 0.5rem 0;"><strong>เฉลย:</strong> ${q.options[q.correctAnswer]}</p>` : ''}
+                    ${q.explanation ? `<p style="margin: 0.5rem 0; color: var(--gray-700);"><strong>คำอธิบาย:</strong> ${q.explanation}</p>` : ''}
+                `;
+                
+                reviewContainer.appendChild(reviewDiv);
+            });
+        }
+
+        function getGrade(percentage) {
+            if (percentage >= 80) return 'A';
+            if (percentage >= 70) return 'B';
+            if (percentage >= 60) return 'C';
+            if (percentage >= 50) return 'D';
+            return 'F';
+        }
+
+        function getGradeClass(grade) {
+            return 'grade-' + grade.toLowerCase();
+        }
+
+        async function saveResults(results) {
+            // Add answers array to results
+            results.answers = userAnswers.map((answer, index) => ({
+                questionId: currentQuiz.questions[index].id,
+                question: currentQuiz.questions[index].question,
+                userAnswer: answer,
+                correctAnswer: currentQuiz.questions[index].correctAnswer,
+                isCorrect: answer === currentQuiz.questions[index].correctAnswer
+            }));
+
+            // Save to localStorage (fallback and offline support)
+            try {
+                const allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
+                allResults.push(results);
+                localStorage.setItem('quizResults', JSON.stringify(allResults));
+                console.log('Results saved to localStorage successfully');
+            } catch (error) {
+                console.error('Error saving to localStorage:', error);
+            }
+
+            // Submit to Google Sheets if enabled
+            if (GOOGLE_SHEETS_CONFIG.ENABLED) {
+                try {
+                    const sheetsResult = await submitToGoogleSheets(results);
+                    
+                    if (sheetsResult.success) {
+                        // Show success message
+                        const successMsg = document.createElement('div');
+                        successMsg.className = 'alert alert-info';
+                        successMsg.innerHTML = `
+                            <span style="font-size: 1.5rem;">✅</span>
+                            <div>
+                                <strong>บันทึกสำเร็จ!</strong> ผลการสอบของคุณถูกส่งไปยังระบบแล้ว
+                            </div>
+                        `;
+                        document.getElementById('quizResults').prepend(successMsg);
+                    } else {
+                        // Show error message but don't block user
+                        console.warn('Google Sheets submission failed, but results saved locally');
+                        const warningMsg = document.createElement('div');
+                        warningMsg.className = 'alert alert-info';
+                        warningMsg.style.backgroundColor = '#fff3cd';
+                        warningMsg.style.borderColor = '#ffc107';
+                        warningMsg.innerHTML = `
+                            <span style="font-size: 1.5rem;">⚠️</span>
+                            <div>
+                                <strong>คำเตือน:</strong> ไม่สามารถส่งข้อมูลไปยังเซิร์ฟเวอร์ได้ แต่ผลการสอบถูกบันทึกในเครื่องของคุณแล้ว
+                                <br><small>${sheetsResult.message || 'กรุณาติดต่ออาจารย์ผู้สอน'}</small>
+                            </div>
+                        `;
+                        document.getElementById('quizResults').prepend(warningMsg);
+                    }
+                } catch (error) {
+                    console.error('Error in Google Sheets submission:', error);
+                }
+            }
+        }
+
+        // Prevent accidental page refresh during quiz
+        window.addEventListener('beforeunload', function(e) {
+            if (document.getElementById('quizContainer').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = '';
+                return '';
+            }
+        });
+
+        // Prevent right-click during quiz (optional security measure)
+        document.addEventListener('contextmenu', function(e) {
+            if (document.getElementById('quizContainer').classList.contains('active')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

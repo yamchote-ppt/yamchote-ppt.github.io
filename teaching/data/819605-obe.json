@@ -31,23 +31,71 @@
     "methods": [],
     "weights": {}
   },
-  "schedule": [
-    { "week": "ครั้งที่ 1", "topic": "Mathematical Language & Sets; Set Identities; Recursive Definitions", "notes": "Proof overview; direct proof and counterexample; prove basic set identities from definitions." },
-    { "week": "ครั้งที่ 2", "topic": "Propositional Logic: Connectives, Equivalences, CNF/DNF (semantic), Inference Rules", "notes": "Method of Proof I: direct, contrapositive, contradiction; use logical equivalences as proof steps." },
-    { "week": "ครั้งที่ 3", "topic": "Predicate Logic: Quantifiers, Scope, Nested Quantifiers, Translation", "notes": "Method of Proof II: quantified statements; build countermodels; rigor with domains and bound/free variables." },
-    { "week": "ครั้งที่ 4", "topic": "Induction I (weak): sums/products, inequalities, divisibility; recursion correctness on ℕ", "notes": "Induction template (base, step, measure); choosing the inductive parameter; prove termination for simple recursion." },
-    { "week": "ครั้งที่ 5", "topic": "Induction II: strong induction; well-ordering; structural induction (strings/trees)", "notes": "Structural induction on recursively defined sets; minimal counterexample idea and when to use it." },
-    { "week": "ครั้งที่ 6", "topic": "Functions & Relations: injective/surjective/bijective, composition, inverse; relation properties", "notes": "Prove injective/surjective from definitions; construct counterexamples for relation properties (reflexive/symmetric/transitive)." },
-    { "week": "ครั้งที่ 7", "topic": "Equivalence Relations & Partitions; Partial Orders & Hasse Diagrams; Review", "notes": "Prove equivalence/poset properties; diagram literacy; targeted midterm review problems." },
-    { "week": "ครั้งที่ 8", "topic": "สอบกลางภาค", "notes": "Midterm covers Weeks 1–7: logic, proof methods (direct/contra/contradiction), induction (weak/strong/structural), functions & relations." },
-    { "week": "ครั้งที่ 9", "topic": "Counting I: Sum/Product Rules; Permutations & Combinations; Binomial Theorem; Bijective Proofs", "notes": "Model-before-count; two-way counting; build bijections to justify identities." },
-    { "week": "ครั้งที่ 10", "topic": "Counting II: Multisets; Stars & Bars; Inclusion–Exclusion; Generalized Pigeonhole", "notes": "Set up cases cleanly; compare bijective vs inductive proofs of identities; sharpen bounds." },
-    { "week": "ครั้งที่ 11", "topic": "Recursive Problem Solving; Recursion and Induction (integration workshop)", "notes": "From recursive specs to recurrences; prove correctness with induction; small code-adjacent proof exercises." },
-    { "week": "ครั้งที่ 12", "topic": "Recurrences I: linear homogeneous (constant coefficients); combinatorial interpretations (Fibonacci, tilings)", "notes": "Solve via characteristic equations; verify closed forms by induction; sanity checks against counting stories." },
-    { "week": "ครั้งที่ 13", "topic": "Recurrences II: non-homogeneous; simple divide-and-conquer; intro to ordinary generating functions (OGFs)", "notes": "Derive recurrences from specs; sketch OGF derivations; confirm results with induction where feasible." },
-    { "week": "ครั้งที่ 14", "topic": "Graphs I: definitions, degree sequence, handshaking lemma, isomorphism basics, connectivity, bipartite graphs", "notes": "Parity/invariant arguments; minimal-counterexample basics; prove classic degree and connectivity facts." },
-    { "week": "ครั้งที่ 15", "topic": "Trees: properties (n−1 edges, unique paths), traversals; spanning trees; MST ideas (Kruskal/Prim concepts)", "notes": "Induction on |V| or |E|; leaf-peeling arguments; cut/cycle properties as proof sketches." },
-    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "Final covers Weeks 9–15: counting, recursive problem solving, recurrences/OGFs, graphs and trees; short structured proof tasks." }
+  "schedule":
+   [
+    { "week": "ครั้งที่ 1",
+      "topic": "Mathematical Language (invitation to discrete structures)",
+      "notes": "Basic set and logic symbols for describing natural language sentence to mathematical expressions.<br>Proof overview; direct proof and counterexample; prove basic set identities from definitions." 
+    },
+    { "week": "ครั้งที่ 2", 
+      "topic": "Propositional Logic: Logical Equivalences and Inference Rules",
+      "notes": "Method of Proof I: direct, contrapositive, contradiction; use logical equivalences as proof steps." 
+    },
+    { "week": "ครั้งที่ 3", 
+      "topic": "Predicate Logic: Quantifiers, Scope, Nested Quantifiers, Translation", 
+      "notes": "Method of Proof II: quantified statements; build countermodels; rigor with domains and bound/free variables." 
+    },
+    { "week": "ครั้งที่ 4", 
+      "topic": "Induction I (weak): sums/products, inequalities, divisibility; recursion correctness on ℕ", 
+      "notes": "Induction template (base, step, measure); choosing the inductive parameter; prove termination for simple recursion." 
+    },
+    { "week": "ครั้งที่ 5", 
+      "topic": "Induction II: strong induction; well-ordering; structural induction (strings/trees)", 
+      "notes": "Structural induction on recursively defined sets; minimal counterexample idea and when to use it." 
+    },
+    { "week": "ครั้งที่ 6", 
+      "topic": "Functions & Relations: injective/surjective/bijective, composition, inverse; relation properties", 
+      "notes": "Prove injective/surjective from definitions; construct counterexamples for relation properties (reflexive/symmetric/transitive)." 
+    },
+    { "week": "ครั้งที่ 7", 
+      "topic": "Equivalence Relations & Partitions; Partial Orders & Hasse Diagrams; Review", 
+      "notes": "Prove equivalence/poset properties; diagram literacy; targeted midterm review problems." 
+    },
+    { "week": "ครั้งที่ 8", 
+      "topic": "สอบกลางภาค", 
+      "notes": "Midterm covers Weeks 1–7: logic, proof methods (direct/contra/contradiction), induction (weak/strong/structural), functions & relations." 
+    },
+    { "week": "ครั้งที่ 9", 
+      "topic": "Counting I: Sum/Product Rules; Permutations & Combinations; Binomial Theorem; Bijective Proofs", 
+      "notes": "Model-before-count; two-way counting; build bijections to justify identities." 
+    },
+    { "week": "ครั้งที่ 10", 
+      "topic": "Counting II: Multisets; Stars & Bars; Inclusion–Exclusion; Generalized Pigeonhole", 
+      "notes": "Set up cases cleanly; compare bijective vs inductive proofs of identities; sharpen bounds." 
+    },
+    { "week": "ครั้งที่ 11", 
+      "topic": "Recursive Problem Solving; Recursion and Induction (integration workshop)", 
+      "notes": "From recursive specs to recurrences; prove correctness with induction; small code-adjacent proof exercises." 
+    },
+    { "week": "ครั้งที่ 12", 
+      "topic": "Recurrences I: linear homogeneous (constant coefficients); combinatorial interpretations (Fibonacci, tilings)", 
+      "notes": "Solve via characteristic equations; verify closed forms by induction; sanity checks against counting stories." 
+    },
+    { "week": "ครั้งที่ 13", 
+      "topic": "Recurrences II: non-homogeneous; simple divide-and-conquer; intro to ordinary generating functions (OGFs)", 
+      "notes": "Derive recurrences from specs; sketch OGF derivations; confirm results with induction where feasible." 
+    },
+    { "week": "ครั้งที่ 14", 
+      "topic": "Graphs I: definitions, degree sequence, handshaking lemma, isomorphism basics, connectivity, bipartite graphs", 
+      "notes": "Parity/invariant arguments; minimal-counterexample basics; prove classic degree and connectivity facts." 
+    },
+    { "week": "ครั้งที่ 15", 
+      "topic": "Trees: properties (n−1 edges, unique paths), traversals; spanning trees; MST ideas (Kruskal/Prim concepts)", 
+      "notes": "Induction on |V| or |E|; leaf-peeling arguments; cut/cycle properties as proof sketches." 
+    },
+    { "week": "ครั้งที่ 16", 
+      "topic": "สอบปลายภาค", 
+      "notes": "Final covers Weeks 9–15: counting, recursive problem solving, recurrences/OGFs, graphs and trees; short structured proof tasks." }
   ],
   "materials": {
     "textbooks": [],
