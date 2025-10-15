@@ -108,7 +108,7 @@
             border-radius: 12px;
             padding: 3rem;
             box-shadow: var(--shadow-lg);
-            text-align: center;
+            /* text-align: center; */
         }
 
         .quiz-start h2 {
@@ -674,7 +674,7 @@
             border-radius: 8px;
             margin: 1rem 0;
             display: flex;
-            align-items: center;
+            align-items: left;
             gap: 1rem;
         }
 
@@ -788,6 +788,21 @@
         <div id="quizStart" class="quiz-start">
             <h2>เริ่มทำข้อสอบ</h2>
             
+            <div class="alert alert-warning">
+                <span style="font-size: 1.5rem;">⚠️</span>
+                <div>
+                    <strong>คำเตือนสำคัญ - กฎการทำข้อสอบ:</strong>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
+                        <li><strong>ห้ามเปลี่ยนแท็บหรือหน้าต่างเบราว์เซอร์</strong> ขณะทำข้อสอบ</li>
+                        <li><strong>ห้ามคลิกไปโปรแกรมอื่น</strong> หรือหน้าจออื่นในระบบหลายจอภาพ</li>
+                        <li><strong>ห้ามใช้ Alt+Tab หรือ Windows+Tab</strong> เพื่อสลับโปรแกรม</li>
+                        <li><strong>ห้ามเปิด Developer Tools</strong> (F12) หรือดูซอร์สโค้ด</li>
+                        <li><strong>ห้าม Copy/Paste</strong> ข้อความจากแหล่งอื่น</li>
+                        <li><strong style="color: var(--danger);">การละเมิดกฎ 2 ครั้ง จะส่งข้อสอบอัตโนมัติทันที!</strong></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="alert alert-info">
                 <span style="font-size: 1.5rem;">ℹ️</span>
                 <div>
@@ -984,169 +999,18 @@
 
     <!-- JavaScript -->
     <script>
-        // Quiz Data Structure
-        const quizData = {
-            demo: {
-                title: "Demo Quiz (ทดสอบระบบ)",
-                duration: 30, // minutes
-                questions: [
-                    {
-                        id: 1,
-                        type: "multiple-choice",
-                        question: "Which of the following is a valid set?",
-                        points: 10,
-                        options: [
-                            "A = {1, 2, 3, 3}",
-                            "B = {1, 2, 3}",
-                            "C = {x | x > 0 and x < 0}",
-                            "D = {1, {2}, 3}"
-                        ],
-                        correctAnswer: 1, // index of correct option
-                        explanation: "Set B is valid because sets contain unique elements. Set A has duplicate 3s."
-                    },
-                    {
-                        id: 2,
-                        type: "multiple-choice",
-                        question: "What is the cardinality of the set A = {∅, {∅}, {{∅}}}?",
-                        points: 10,
-                        options: [
-                            "0",
-                            "1",
-                            "2",
-                            "3"
-                        ],
-                        correctAnswer: 3,
-                        explanation: "The set has three distinct elements: empty set, set containing empty set, and set containing set containing empty set."
-                    },
-                    {
-                        id: 3,
-                        type: "multiple-choice",
-                        question: "Which logical statement is a tautology?",
-                        points: 10,
-                        options: [
-                            "p ∧ ¬p",
-                            "p ∨ ¬p",
-                            "p → ¬p",
-                            "p ↔ ¬p"
-                        ],
-                        correctAnswer: 1,
-                        explanation: "p ∨ ¬p is always true (Law of Excluded Middle), making it a tautology."
-                    },
-                    {
-                        id: 4,
-                        type: "multiple-choice",
-                        question: "If A = {1, 2} and B = {3, 4}, what is A × B?",
-                        points: 10,
-                        options: [
-                            "{1, 2, 3, 4}",
-                            "{(1,3), (1,4), (2,3), (2,4)}",
-                            "{(1,2), (3,4)}",
-                            "{(3,1), (4,1), (3,2), (4,2)}"
-                        ],
-                        correctAnswer: 1,
-                        explanation: "The Cartesian product A × B contains all ordered pairs (a,b) where a ∈ A and b ∈ B."
-                    },
-                    {
-                        id: 5,
-                        type: "multiple-choice",
-                        question: "How many subsets does a set with 4 elements have?",
-                        points: 10,
-                        options: [
-                            "4",
-                            "8",
-                            "12",
-                            "16"
-                        ],
-                        correctAnswer: 3,
-                        explanation: "A set with n elements has 2^n subsets. For n=4: 2^4 = 16 subsets."
-                    },
-                    {
-                        id: 6,
-                        type: "multiple-choice",
-                        question: "Which of the following is an equivalence relation?",
-                        points: 10,
-                        options: [
-                            "Less than (<) on integers",
-                            "Divisibility (|) on positive integers",
-                            "Modulo equivalence (≡) on integers",
-                            "Greater than (>) on real numbers"
-                        ],
-                        correctAnswer: 2,
-                        explanation: "Modulo equivalence is reflexive, symmetric, and transitive, making it an equivalence relation."
-                    },
-                    {
-                        id: 7,
-                        type: "multiple-choice",
-                        question: "What is the value of ⌈3.2⌉ + ⌊3.2⌋?",
-                        points: 10,
-                        options: [
-                            "6",
-                            "6.4",
-                            "7",
-                            "8"
-                        ],
-                        correctAnswer: 2,
-                        explanation: "⌈3.2⌉ = 4 (ceiling) and ⌊3.2⌋ = 3 (floor), so 4 + 3 = 7."
-                    },
-                    {
-                        id: 8,
-                        type: "multiple-choice",
-                        question: "In a graph with 5 vertices, what is the maximum number of edges?",
-                        points: 10,
-                        options: [
-                            "5",
-                            "10",
-                            "15",
-                            "20"
-                        ],
-                        correctAnswer: 1,
-                        explanation: "For a simple graph with n vertices: max edges = n(n-1)/2 = 5×4/2 = 10."
-                    },
-                    {
-                        id: 9,
-                        type: "multiple-choice",
-                        question: "Which of the following is true about a binary tree with height h?",
-                        points: 10,
-                        options: [
-                            "Maximum nodes = 2^h",
-                            "Maximum nodes = 2^(h+1) - 1",
-                            "Maximum nodes = h^2",
-                            "Maximum nodes = h!"
-                        ],
-                        correctAnswer: 1,
-                        explanation: "A binary tree of height h can have at most 2^(h+1) - 1 nodes."
-                    },
-                    {
-                        id: 10,
-                        type: "multiple-choice",
-                        question: "What is the Boolean expression for NAND gate?",
-                        points: 10,
-                        options: [
-                            "A ∧ B",
-                            "¬(A ∧ B)",
-                            "A ∨ B",
-                            "¬(A ∨ B)"
-                        ],
-                        correctAnswer: 1,
-                        explanation: "NAND is the negation of AND, expressed as ¬(A ∧ B)."
-                    }
-                ]
-            },
-            quiz1: {
-                title: "Quiz 1: Set Theory & Logic",
-                duration: 45,
-                questions: [
-                    // Add more questions for Quiz 1
-                ]
-            },
-            quiz2: {
-                title: "Quiz 2: Functions & Relations",
-                duration: 45,
-                questions: [
-                    // Add more questions for Quiz 2
-                ]
-            }
+        // ============================================================
+        // CONFIGURATION
+        // ============================================================
+        const QUIZ_CONFIG = {
+            courseCode: '819605', // Change this for different courses
+            quizDataPath: 'data/quizzes/',
+            configFile: 'quiz-config.json'
         };
+
+        // Quiz Data Structure (will be loaded from external files)
+        let quizData = {};
+        let quizConfig = null;
 
         // ============================================================
         // GOOGLE SHEETS API CONFIGURATION
@@ -1272,6 +1136,88 @@
         // END OF GOOGLE SHEETS API CONFIGURATION
         // ============================================================
 
+        // ============================================================
+        // QUIZ DATA LOADER
+        // ============================================================
+        
+        // Load quiz configuration
+        async function loadQuizConfig() {
+            try {
+                const response = await fetch(QUIZ_CONFIG.quizDataPath + QUIZ_CONFIG.configFile);
+                if (!response.ok) {
+                    throw new Error(`Failed to load quiz config: ${response.status}`);
+                }
+                const config = await response.json();
+                return config.courses[QUIZ_CONFIG.courseCode];
+            } catch (error) {
+                console.error('Error loading quiz config:', error);
+                alert('ไม่สามารถโหลดข้อมูลการตั้งค่าข้อสอบได้ กรุณาลองใหม่อีกครั้ง');
+                return null;
+            }
+        }
+
+        // Load individual quiz data
+        async function loadQuizData(quizFile) {
+            try {
+                const response = await fetch(QUIZ_CONFIG.quizDataPath + quizFile);
+                if (!response.ok) {
+                    throw new Error(`Failed to load quiz: ${response.status}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error('Error loading quiz data:', error);
+                throw error;
+            }
+        }
+
+        // Initialize quiz selection dropdown
+        async function initializeQuizSelection() {
+            const quizSelect = document.getElementById('quizSelect');
+            quizSelect.innerHTML = '<option value="">-- กรุณาเลือกข้อสอบ --</option>';
+            
+            try {
+                quizConfig = await loadQuizConfig();
+                if (!quizConfig) return;
+
+                // Populate dropdown with available quizzes
+                for (const quiz of quizConfig.quizzes) {
+                    if (quiz.enabled) {
+                        const option = document.createElement('option');
+                        option.value = quiz.id;
+                        option.textContent = quiz.displayName;
+                        quizSelect.appendChild(option);
+                    }
+                }
+            } catch (error) {
+                console.error('Error initializing quiz selection:', error);
+                alert('เกิดข้อผิดพลาดในการโหลดรายการข้อสอบ');
+            }
+        }
+
+        // Load quiz data when selected
+        async function loadSelectedQuiz(quizId) {
+            try {
+                // Find quiz config
+                const quizInfo = quizConfig.quizzes.find(q => q.id === quizId);
+                if (!quizInfo) {
+                    throw new Error('Quiz not found in config');
+                }
+
+                // Load quiz data from file
+                const quiz = await loadQuizData(quizInfo.file);
+                quizData[quizId] = quiz;
+                return quiz;
+            } catch (error) {
+                console.error('Error loading selected quiz:', error);
+                alert('ไม่สามารถโหลดข้อมูลข้อสอบได้ กรุณาลองใหม่อีกครั้ง');
+                return null;
+            }
+        }
+
+        // ============================================================
+        // END OF QUIZ DATA LOADER
+        // ============================================================
+
         // Global variables
         let currentQuiz = null;
         let currentQuestionIndex = 0;
@@ -1282,18 +1228,37 @@
         let quizStartTime = null;
 
         // Initialize quiz start screen
-        document.addEventListener('DOMContentLoaded', function() {
-            updateQuizInfo();
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Initialize quiz selection
+            await initializeQuizSelection();
         });
 
         // Update quiz selection info
-        document.getElementById('quizSelect').addEventListener('change', function() {
-            updateQuizInfo();
+        document.getElementById('quizSelect').addEventListener('change', async function() {
+            await updateQuizInfo();
         });
 
-        function updateQuizInfo() {
+        async function updateQuizInfo() {
             const quizId = document.getElementById('quizSelect').value;
-            if (quizId && quizData[quizId]) {
+            if (!quizId) {
+                document.getElementById('totalQuestions').textContent = '-';
+                document.getElementById('quizDuration').textContent = '-';
+                return;
+            }
+
+            // Load quiz data if not already loaded
+            if (!quizData[quizId]) {
+                const loadingMsg = document.getElementById('totalQuestions');
+                loadingMsg.textContent = 'กำลังโหลด...';
+                
+                const quiz = await loadSelectedQuiz(quizId);
+                if (!quiz) {
+                    loadingMsg.textContent = '-';
+                    return;
+                }
+            }
+
+            if (quizData[quizId]) {
                 const quiz = quizData[quizId];
                 document.getElementById('totalQuestions').textContent = quiz.questions.length;
                 document.getElementById('quizDuration').textContent = quiz.duration;
@@ -1678,6 +1643,225 @@
             }
         }
 
+        // ============================================================
+        // ANTI-CHEATING MEASURES
+        // ============================================================
+
+        // Track tab visibility and window focus
+        let tabSwitchCount = 0;
+        let hasLeftPage = false;
+        const MAX_TAB_SWITCHES = 2; // Allow 2 warnings before auto-submit
+
+        // Detect when user leaves the tab/window
+        document.addEventListener('visibilitychange', function() {
+            // Only track if quiz is active
+            if (!document.getElementById('quizContainer').classList.contains('active')) {
+                return;
+            }
+
+            if (document.hidden) {
+                // User switched away from the tab
+                tabSwitchCount++;
+                hasLeftPage = true;
+                
+                console.warn(`⚠️ Tab switch detected! Count: ${tabSwitchCount}/${MAX_TAB_SWITCHES}`);
+                
+                if (tabSwitchCount >= MAX_TAB_SWITCHES) {
+                    // Auto-submit the quiz
+                    alert('⚠️ คุณได้เปลี่ยนหน้าต่างหรือแท็บมากเกินไป\nระบบจะส่งข้อสอบของคุณอัตโนมัติ');
+                    autoSubmitQuiz('Tab switching detected');
+                } else {
+                    // Show warning
+                    alert(`⚠️ คำเตือน! (${tabSwitchCount}/${MAX_TAB_SWITCHES})\n\nคุณได้เปลี่ยนหน้าต่างหรือแท็บ\nหากทำอีก ${MAX_TAB_SWITCHES - tabSwitchCount} ครั้ง ระบบจะส่งข้อสอบอัตโนมัติ\n\nกรุณาอยู่ในหน้านี้ตลอดเวลาทำข้อสอบ`);
+                }
+            }
+        });
+
+        // Detect when user leaves the window (blur event)
+        window.addEventListener('blur', function() {
+            // Only track if quiz is active
+            if (!document.getElementById('quizContainer').classList.contains('active')) {
+                return;
+            }
+
+            // User switched to another program/monitor/window
+            tabSwitchCount++;
+            hasLeftPage = true;
+            
+            console.warn(`⚠️ Window lost focus! Count: ${tabSwitchCount}/${MAX_TAB_SWITCHES}`);
+            
+            if (tabSwitchCount >= MAX_TAB_SWITCHES) {
+                // Auto-submit the quiz
+                alert('⚠️ คุณได้เปลี่ยนไปใช้โปรแกรมอื่นหรือหน้าต่างอื่นมากเกินไป\nระบบจะส่งข้อสอบของคุณอัตโนมัติ');
+                autoSubmitQuiz('Window focus lost - switched to another application');
+            } else {
+                // Show warning
+                alert(`⚠️ คำเตือน! (${tabSwitchCount}/${MAX_TAB_SWITCHES})\n\nคุณได้เปลี่ยนไปใช้โปรแกรมหรือหน้าต่างอื่น\nหากทำอีก ${MAX_TAB_SWITCHES - tabSwitchCount} ครั้ง ระบบจะส่งข้อสอบอัตโนมัติ\n\nกรุณาอยู่ในหน้านี้ตลอดเวลาทำข้อสอบ`);
+            }
+        });
+
+        // Detect when user returns to the window
+        window.addEventListener('focus', function() {
+            if (document.getElementById('quizContainer').classList.contains('active') && hasLeftPage) {
+                console.log('✅ User returned to quiz window');
+            }
+        });
+
+        // Detect when mouse leaves the document (additional security)
+        let mouseLeftWindow = false;
+        document.addEventListener('mouseleave', function() {
+            if (!document.getElementById('quizContainer').classList.contains('active')) {
+                return;
+            }
+            mouseLeftWindow = true;
+            console.warn('⚠️ Mouse left the window area');
+        });
+
+        document.addEventListener('mouseenter', function() {
+            if (!document.getElementById('quizContainer').classList.contains('active')) {
+                return;
+            }
+            if (mouseLeftWindow) {
+                mouseLeftWindow = false;
+                console.log('✅ Mouse returned to window');
+            }
+        });
+
+        // Prevent opening developer tools (F12, Ctrl+Shift+I, etc.)
+        document.addEventListener('keydown', function(e) {
+            // Only prevent if quiz is active
+            if (!document.getElementById('quizContainer').classList.contains('active')) {
+                return;
+            }
+
+            // F12 (Developer Tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                alert('⚠️ การเปิด Developer Tools ไม่ได้รับอนุญาตระหว่างทำข้อสอบ');
+                return false;
+            }
+
+            // Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                alert('⚠️ การเปิด Developer Tools ไม่ได้รับอนุญาตระหว่างทำข้อสอบ');
+                return false;
+            }
+
+            // Ctrl+Shift+C (Inspect Element)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                alert('⚠️ การเปิด Developer Tools ไม่ได้รับอนุญาตระหว่างทำข้อสอบ');
+                return false;
+            }
+
+            // Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                alert('⚠️ การเปิด Developer Tools ไม่ได้รับอนุญาตระหว่างทำข้อสอบ');
+                return false;
+            }
+
+            // Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('⚠️ การดูซอร์สโค้ดไม่ได้รับอนุญาตระหว่างทำข้อสอบ');
+                return false;
+            }
+        });
+
+        // Detect if developer tools are open
+        let devtoolsOpen = false;
+        const detectDevTools = () => {
+            const threshold = 160;
+            if (window.outerWidth - window.innerWidth > threshold || 
+                window.outerHeight - window.innerHeight > threshold) {
+                if (!devtoolsOpen && document.getElementById('quizContainer').classList.contains('active')) {
+                    devtoolsOpen = true;
+                    alert('⚠️ ตรวจพบการเปิด Developer Tools\nระบบจะส่งข้อสอบของคุณอัตโนมัติ');
+                    autoSubmitQuiz('Developer tools detected');
+                }
+            } else {
+                devtoolsOpen = false;
+            }
+        };
+
+        // Check for developer tools every 1 second during quiz
+        let devToolsInterval = null;
+
+        // Auto-submit function
+        function autoSubmitQuiz(reason) {
+            console.error(`🚨 Auto-submitting quiz. Reason: ${reason}`);
+            
+            // Clear intervals
+            if (timerInterval) {
+                clearInterval(timerInterval);
+            }
+            if (devToolsInterval) {
+                clearInterval(devToolsInterval);
+            }
+            
+            // Close any open modals
+            closeSubmitModal();
+            
+            // Submit the quiz
+            submitQuiz();
+            
+            // Add warning to results
+            setTimeout(() => {
+                const resultsContainer = document.getElementById('quizResults');
+                const warningDiv = document.createElement('div');
+                warningDiv.className = 'alert alert-warning';
+                warningDiv.innerHTML = `
+                    <span style="font-size: 1.5rem;">⚠️</span>
+                    <div>
+                        <strong>ข้อสอบถูกส่งอัตโนมัติ</strong>
+                        <br>เหตุผล: ${reason === 'Tab switching detected' ? 'เปลี่ยนแท็บหรือหน้าต่างมากเกินไป' : 'ตรวจพบการใช้เครื่องมือที่ไม่อนุญาต'}
+                        <br><small>อาจารย์ผู้สอนจะได้รับการแจ้งเตือน</small>
+                    </div>
+                `;
+                resultsContainer.insertBefore(warningDiv, resultsContainer.firstChild);
+            }, 100);
+        }
+
+        // Start monitoring when quiz starts
+        const originalStartQuiz = startQuiz;
+        startQuiz = function() {
+            originalStartQuiz();
+            
+            // Reset counters
+            tabSwitchCount = 0;
+            hasLeftPage = false;
+            
+            // Start developer tools detection
+            devToolsInterval = setInterval(detectDevTools, 1000);
+        };
+
+        // Prevent copy/paste during quiz
+        document.addEventListener('copy', function(e) {
+            if (document.getElementById('quizContainer').classList.contains('active')) {
+                e.preventDefault();
+                alert('⚠️ ห้ามคัดลอกข้อความระหว่างทำข้อสอบ');
+                return false;
+            }
+        });
+
+        document.addEventListener('paste', function(e) {
+            if (document.getElementById('quizContainer').classList.contains('active')) {
+                e.preventDefault();
+                alert('⚠️ ห้ามวางข้อความระหว่างทำข้อสอบ');
+                return false;
+            }
+        });
+
+        document.addEventListener('cut', function(e) {
+            if (document.getElementById('quizContainer').classList.contains('active')) {
+                e.preventDefault();
+                alert('⚠️ ห้ามตัดข้อความระหว่างทำข้อสอบ');
+                return false;
+            }
+        });
+
         // Prevent accidental page refresh during quiz
         window.addEventListener('beforeunload', function(e) {
             if (document.getElementById('quizContainer').classList.contains('active')) {
@@ -1693,6 +1877,29 @@
                 e.preventDefault();
             }
         });
+
+        // Log quiz activity
+        function logQuizActivity(action, details = {}) {
+            const logEntry = {
+                timestamp: new Date().toISOString(),
+                studentId: studentInfo.studentId,
+                quizId: studentInfo.quizId,
+                action: action,
+                details: details,
+                tabSwitchCount: tabSwitchCount
+            };
+            
+            console.log('📊 Quiz Activity:', logEntry);
+            
+            // Save to localStorage for instructor review
+            try {
+                const activityLog = JSON.parse(localStorage.getItem('quizActivityLog') || '[]');
+                activityLog.push(logEntry);
+                localStorage.setItem('quizActivityLog', JSON.stringify(activityLog));
+            } catch (error) {
+                console.error('Error logging activity:', error);
+            }
+        }
     </script>
 </body>
 </html>
