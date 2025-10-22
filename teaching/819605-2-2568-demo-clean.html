@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>819605 Quiz System | Discrete Mathematics | Southeast Asia University</title>
+    <meta name="description" content="ระบบทำข้อสอบออนไลน์สำหรับวิชาวิยุตคณิต 819605"/>
+    <meta name="keywords" content="Discrete Mathematics Quiz, วิยุตคณิต, ข้อสอบออนไลน์, Southeast Asia University" />
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="assets/css/quiz-system.css">
+
+    <!-- Configuration -->
+    <script src="assets/js/quiz-config.js"></script>
+
+    <!-- Page-specific styles (if needed) -->
+    <style>
+        /* Add any page-specific style overrides here */
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="819605-2-2568.html" class="nav-brand">← กลับสู่หน้ารายวิชา</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>📐 ระบบทำข้อสอบออนไลน์</h1>
+        <p class="hero-subtitle">819605 - Discrete Mathematics</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Quiz Start Screen -->
+        <div id="quizStart" class="quiz-start">
+            <h2>เริ่มทำข้อสอบ</h2>
+            
+            <div class="alert alert-warning">
+                <span style="font-size: 1.5rem;">⚠️</span>
+                <div>
+                    <strong>คำเตือนสำคัญ - กฎการทำข้อสอบ:</strong>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
+                        <li><strong>ห้ามเปลี่ยนแท็บหรือหน้าต่างเบราว์เซอร์</strong> ขณะทำข้อสอบ</li>
+                        <li><strong>ห้ามคลิกไปโปรแกรมอื่น</strong> หรือหน้าจออื่นในระบบหลายจอภาพ</li>
+                        <li><strong>ห้ามใช้ Alt+Tab หรือ Windows+Tab</strong> เพื่อสลับโปรแกรม</li>
+                        <li><strong>ห้ามเปิด Developer Tools</strong> (F12) หรือดูซอร์สโค้ด</li>
+                        <li><strong>ห้าม Copy/Paste</strong> ข้อความจากแหล่งอื่น</li>
+                        <li><strong style="color: var(--danger);">การละเมิดกฎ 2 ครั้ง จะส่งข้อสอบอัตโนมัติทันที!</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span style="font-size: 1.5rem;">ℹ️</span>
+                <div>
+                    <strong>คำแนะนำ:</strong> กรุณาอ่านคำถามอย่างละเอียดและตรวจสอบคำตอบก่อนส่ง ข้อสอบนี้จะมีเวลาจำกัดและไม่สามารถทำซ้ำได้
+                </div>
+            </div>
+
+            <div class="quiz-info">
+                <div class="quiz-info-item">
+                    <span class="icon">📝</span>
+                    <strong>จำนวนข้อ:</strong>
+                    <span id="totalQuestions">-</span> ข้อ
+                </div>
+                <div class="quiz-info-item">
+                    <span class="icon">⏱️</span>
+                    <strong>เวลาทำข้อสอบ:</strong>
+                    <span id="quizDuration">-</span> นาที
+                </div>
+                <div class="quiz-info-item">
+                    <span class="icon">🎯</span>
+                    <strong>คะแนนเต็ม:</strong>
+                    <span id="totalPoints">-</span> คะแนน
+                </div>
+                <div class="quiz-info-item">
+                    <span class="icon">📊</span>
+                    <strong>เกณฑ์ผ่าน:</strong>
+                    60%
+                </div>
+            </div>
+
+            <form class="student-info-form" id="studentForm">
+                <div class="form-group">
+                    <label for="studentId">รหัสนักศึกษา *</label>
+                    <input type="text" id="studentId" required placeholder="เช่น 6501234567">
+                </div>
+                <div class="form-group">
+                    <label for="studentName">ชื่อ-นามสกุล *</label>
+                    <input type="text" id="studentName" required placeholder="เช่น สมชาย ใจดี">
+                </div>
+                <div class="form-group">
+                    <label for="quizSelect">เลือกข้อสอบ *</label>
+                    <select id="quizSelect" required>
+                        <option value="">-- เลือกข้อสอบ --</option>
+                        <option value="quiz1">Quiz 1: Set Theory & Logic</option>
+                        <option value="quiz2">Quiz 2: Functions & Relations</option>
+                        <option value="midterm">Midterm Exam</option>
+                        <option value="final">Final Exam</option>
+                        <option value="demo">Demo Quiz (ทดสอบระบบ)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">เริ่มทำข้อสอบ</button>
+            </form>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 1rem; color: var(--gray-700);">กำลังโหลดข้อสอบ...</p>
+        </div>
+
+        <!-- Quiz Interface -->
+        <div id="quizContainer" class="quiz-container">
+            <!-- Quiz Header -->
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    ข้อที่ <span id="currentQuestion">1</span> จาก <span id="totalQuestionsDisplay">10</span>
+                </div>
+                <div class="timer" id="timer">
+                    <span class="icon">⏱️</span>
+                    <span id="timeRemaining">30:00</span>
+                </div>
+            </div>
+
+            <!-- Question Container -->
+            <div class="question-container">
+                <div class="question-header">
+                    <span class="question-number" id="questionNumber">Question 1</span>
+                    <span class="question-type" id="questionType">Multiple Choice</span>
+                    <span class="question-points" id="questionPoints">10 คะแนน</span>
+                </div>
+
+                <div class="question-text" id="questionText">
+                    <!-- Question will be inserted here -->
+                </div>
+
+                <div class="answer-options" id="answerOptions">
+                    <!-- Answer options will be inserted here -->
+                </div>
+
+                <!-- Question Navigator -->
+                <div class="question-navigator">
+                    <h3>🗺️ แผนที่คำถาม (คลิกเพื่อข้ามไปข้อที่ต้องการ)</h3>
+                    <div class="question-grid" id="questionGrid">
+                        <!-- Question navigation buttons will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="quiz-navigation">
+                <div class="nav-buttons">
+                    <button class="btn btn-warning" id="prevBtn" onclick="previousQuestion()">← ข้อก่อนหน้า</button>
+                    <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">ข้อถัดไป →</button>
+                </div>
+                <button class="btn btn-success" id="submitBtn" onclick="confirmSubmit()">✓ ส่งข้อสอบ</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="quizResults" class="quiz-results">
+            <div class="results-header">
+                <h2>🎉 ผลการทำข้อสอบ</h2>
+                <p style="color: var(--gray-700);">ข้อสอบ: <span id="resultQuizName"></span></p>
+            </div>
+
+            <div class="score-display">
+                <div class="score-circle">
+                    <div class="score-number" id="scorePercentage">85%</div>
+                    <div class="score-label">คะแนนที่ได้</div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="grade-badge" id="gradeBadge">A</div>
+            </div>
+
+            <div class="results-summary">
+                <div class="summary-item">
+                    <span class="summary-label">👤 ชื่อ-นามสกุล</span>
+                    <span class="summary-value" id="resultStudentName">-</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">🆔 รหัสนักศึกษา</span>
+                    <span class="summary-value" id="resultStudentId">-</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">✅ ตอบถูก</span>
+                    <span class="summary-value" id="correctAnswers">8</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">❌ ตอบผิด</span>
+                    <span class="summary-value" id="incorrectAnswers">2</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">📊 คะแนนที่ได้</span>
+                    <span class="summary-value"><span id="scoreObtained">85</span>/<span id="scorePossible">100</span></span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">⏱️ เวลาที่ใช้</span>
+                    <span class="summary-value" id="timeUsed">25 นาที 30 วินาที</span>
+                </div>
+            </div>
+
+            <div class="answer-review" id="answerReview">
+                <h3 style="color: var(--darkblue); margin-bottom: 1rem;">📋 รายละเอียดคำตอบ</h3>
+                <!-- Answer review will be inserted here -->
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-primary" onclick="location.reload()">🔄 ทำข้อสอบใหม่</button>
+                <button class="btn btn-warning" onclick="window.location.href='819605-2-2568.html'">← กลับสู่หน้ารายวิชา</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span style="font-size: 2rem;">⚠️</span>
+                <h3>ยืนยันการส่งข้อสอบ</h3>
+            </div>
+            <div class="modal-body">
+                <p>คุณแน่ใจหรือไม่ว่าต้องการส่งข้อสอบ?</p>
+                <p style="margin-top: 1rem;">
+                    คุณได้ทำข้อสอบไปแล้ว <strong><span id="answeredCount">0</span></strong> ข้อ 
+                    จากทั้งหมด <strong><span id="totalQuestionsModal">0</span></strong> ข้อ
+                </p>
+                <p style="margin-top: 1rem; color: var(--danger); font-weight: 600;">
+                    หากส่งแล้วจะไม่สามารถแก้ไขคำตอบได้อีก!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" onclick="closeSubmitModal()">ยกเลิก</button>
+                <button class="btn btn-success" onclick="submitQuiz()">ยืนยันการส่ง</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Southeast Asia University. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="assets/js/quiz-system.js"></script>
+</body>
+</html>
+    let userAnswers = [];
+    let timerInterval = null;
+    let timeRemaining = 0;
+    let quizStartTime = null;
+    let studentInfo = {};
+    let tabSwitchCount = 0, hasLeftPage = false;
+    let devToolsInterval = null;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await initializeQuizSelection();
+    });
+
+    async function loadQuizConfig() {
+      const res = await fetch(QUIZ_CONFIG.quizDataPath + QUIZ_CONFIG.configFile);
+      if (!res.ok) throw new Error('Failed to load quiz config: ' + res.status);
+      const conf = await res.json();
+      return conf.courses[QUIZ_CONFIG.courseCode];
+    }
+
+    async function initializeQuizSelection() {
+      const quizSelect = document.getElementById('quizSelect');
+      quizSelect.innerHTML = '<option value="">-- กรุณาเลือกข้อสอบ --</option>';
+      quizConfig = await loadQuizConfig();
+
+      for (const q of quizConfig.quizzes) {
+        if (!q.enabled) continue;
+        const opt = document.createElement('option');
+        opt.value = q.id;
+        opt.textContent = q.displayName;
+        quizSelect.appendChild(opt);
+      }
+    }
+
+    document.getElementById('quizSelect').addEventListener('change', updateQuizInfo);
+
+    async function updateQuizInfo() {
+      const quizId = document.getElementById('quizSelect').value;
+      const elQ = document.getElementById('totalQuestions');
+      const elD = document.getElementById('quizDuration');
+      const elT = document.getElementById('totalPoints');
+
+      if (!quizId) { elQ.textContent = '-'; elD.textContent = '-'; elT.textContent='-'; return; }
+
+      if (!quizData[quizId]) {
+        elQ.textContent = 'กำลังโหลด...';
+        const qinfo = quizConfig.quizzes.find(q => q.id === quizId);
+        const res = await fetch(QUIZ_CONFIG.quizDataPath + qinfo.file);
+        if (!res.ok) { elQ.textContent = '-'; alert('โหลดข้อสอบไม่สำเร็จ'); return; }
+        quizData[quizId] = await res.json();
+      }
+
+      const quiz = quizData[quizId];
+      elQ.textContent = quiz.questions.length;
+      elD.textContent = quiz.duration;
+      elT.textContent = quiz.questions.reduce((s,q)=>s+q.points,0);
+    }
+
+    document.getElementById('studentForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const studentId = document.getElementById('studentId').value;
+      const studentName = document.getElementById('studentName').value;
+      const quizId = document.getElementById('quizSelect').value;
+
+      if (!quizId || !quizData[quizId]) { alert('กรุณาเลือกข้อสอบ'); return; }
+
+      studentInfo = { studentId, studentName, quizId };
+      currentQuiz = quizData[quizId];
+      userAnswers = new Array(currentQuiz.questions.length).fill(null);
+
+      // show loading -> start
+      document.getElementById('quizStart').style.display = 'none';
+      document.getElementById('loading').classList.add('active');
+      setTimeout(() => startQuiz(), 1000);
+    });
+
+    function startQuiz() {
+      document.getElementById('loading').classList.remove('active');
+      document.getElementById('quizContainer').classList.add('active');
+
+      quizStartTime = new Date();
+      timeRemaining = currentQuiz.duration * 60;
+      startTimer();
+
+      currentQuestionIndex = 0;
+      displayQuestion();
+      createQuestionNavigator();
+
+      // anti-cheat counters
+      tabSwitchCount = 0; hasLeftPage = false;
+      devToolsInterval = setInterval(detectDevTools, 1000);
+    }
+
+    function startTimer() {
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        timeRemaining--;
+        updateTimerDisplay();
+        if (timeRemaining <= 300) document.getElementById('timer').classList.add('warning');
+        if (timeRemaining <= 0) { clearInterval(timerInterval); alert('หมดเวลา! ระบบจะส่งข้อสอบอัตโนมัติ'); submitQuiz(); }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const m = Math.floor(timeRemaining/60), s = timeRemaining%60;
+      document.getElementById('timeRemaining').textContent =
+        `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+    }
+
+    function displayQuestion() {
+      const q = currentQuiz.questions[currentQuestionIndex];
+      document.getElementById('currentQuestion').textContent = currentQuestionIndex+1;
+      document.getElementById('totalQuestionsDisplay').textContent = currentQuiz.questions.length;
+      document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex+1}`;
+      document.getElementById('questionType').textContent = q.type === 'multiple-choice' ? 'Multiple Choice' : 'Text Answer';
+      document.getElementById('questionPoints').textContent = `${q.points} คะแนน`;
+      document.getElementById('questionText').innerHTML = q.question;
+
+      const options = document.getElementById('answerOptions');
+      options.innerHTML = '';
+      if (q.type === 'multiple-choice') {
+        q.options.forEach((opt, idx) => {
+          const div = document.createElement('div');
+          div.className = 'answer-option' + (userAnswers[currentQuestionIndex]===idx?' selected':'');
+          div.innerHTML = `
+            <input type="radio" name="answer" id="option${idx}" value="${idx}" ${userAnswers[currentQuestionIndex]===idx?'checked':''}>
+            <label for="option${idx}">${String.fromCharCode(65+idx)}. ${opt}</label>`;
+          div.addEventListener('click', ()=>selectAnswer(idx));
+          options.appendChild(div);
+        });
+      } else {
+        const ta = document.createElement('textarea');
+        ta.className = 'text-answer';
+        ta.placeholder = 'พิมพ์คำตอบของคุณที่นี่...';
+        ta.value = userAnswers[currentQuestionIndex] || '';
+        ta.addEventListener('input', function(){ userAnswers[currentQuestionIndex]=this.value; updateQuestionNavigator(); });
+        options.appendChild(ta);
+      }
+
+      document.getElementById('prevBtn').disabled = currentQuestionIndex===0;
+      document.getElementById('nextBtn').style.display = currentQuestionIndex===currentQuiz.questions.length-1 ? 'none' : 'inline-block';
+      updateQuestionNavigator();
+    }
+
+    function selectAnswer(idx){
+      userAnswers[currentQuestionIndex]=idx;
+      document.querySelectorAll('.answer-option').forEach((el,i)=>{
+        if(i===idx){ el.classList.add('selected'); el.querySelector('input').checked=true; }
+        else{ el.classList.remove('selected'); }
+      });
+      updateQuestionNavigator();
+    }
+
+    function createQuestionNavigator() {
+      const grid = document.getElementById('questionGrid');
+      grid.innerHTML = '';
+      currentQuiz.questions.forEach((_,i)=>{
+        const b=document.createElement('button');
+        b.type='button'; b.className='question-nav-btn'; b.textContent=i+1;
+        b.onclick=()=>{ currentQuestionIndex=i; displayQuestion(); };
+        grid.appendChild(b);
+      });
+      updateQuestionNavigator();
+    }
+
+    function updateQuestionNavigator(){
+      document.querySelectorAll('.question-nav-btn').forEach((btn,i)=>{
+        btn.classList.remove('current','answered');
+        if(i===currentQuestionIndex) btn.classList.add('current');
+        else if(userAnswers[i]!==null && userAnswers[i]!=='') btn.classList.add('answered');
+      });
+    }
+
+    function previousQuestion(){ if(currentQuestionIndex>0){ currentQuestionIndex--; displayQuestion(); } }
+    function nextQuestion(){ if(currentQuestionIndex<currentQuiz.questions.length-1){ currentQuestionIndex++; displayQuestion(); } }
+
+    function confirmSubmit(){
+      const answeredCount = userAnswers.filter(a=>a!==null && a!=='').length;
+      document.getElementById('answeredCount').textContent = answeredCount;
+      document.getElementById('totalQuestionsModal').textContent = currentQuiz.questions.length;
+      document.getElementById('submitModal').classList.add('active');
+    }
+    function closeSubmitModal(){ document.getElementById('submitModal').classList.remove('active'); }
+
+    function submitQuiz(){
+      closeSubmitModal(); clearInterval(timerInterval);
+      const end = new Date(); const usedMs = end - quizStartTime;
+      const usedMin = Math.floor(usedMs/60000), usedSec = Math.floor((usedMs%60000)/1000);
+
+      // client-side (เพื่อแสดงทันที) — แต่ "จริง" จะให้เซิร์ฟเวอร์ตรวจใหม่
+      let correctCount=0, totalPoints=0, earned=0;
+      currentQuiz.questions.forEach((q,i)=>{
+        totalPoints += q.points;
+        if(q.type==='multiple-choice' && userAnswers[i]===q.correctAnswer){ correctCount++; earned += q.points; }
+      });
+      const pct = Math.round((earned/totalPoints)*100);
+      const grade = getGrade(pct);
+
+      // แสดงผลหน้าจอ
+      document.getElementById('quizContainer').classList.remove('active');
+      document.getElementById('quizResults').classList.add('active');
+      document.getElementById('resultQuizName').textContent = currentQuiz.title;
+      document.getElementById('resultStudentName').textContent = studentInfo.studentName;
+      document.getElementById('resultStudentId').textContent = studentInfo.studentId;
+      document.getElementById('correctAnswers').textContent = correctCount;
+      document.getElementById('incorrectAnswers').textContent = currentQuiz.questions.length - correctCount;
+      document.getElementById('scoreObtained').textContent = earned;
+      document.getElementById('scorePossible').textContent = totalPoints;
+      document.getElementById('scorePercentage').textContent = pct + '%';
+      document.getElementById('timeUsed').textContent = `${usedMin} นาที ${usedSec.toString().padStart(2,'0')} วินาที`;
+
+      const gb = document.getElementById('gradeBadge');
+      gb.textContent = grade; gb.className = 'grade-badge ' + getGradeClass(grade);
+
+      displayAnswerReview();
+
+      // ---------- สร้าง answers แล้วค่อย save ----------
+      const answers = currentQuiz.questions.map((q, idx) => ({
+        questionId: (q.id != null ? String(q.id) : `q${idx+1}`),
+        question: q.question,
+        userAnswer: userAnswers[idx],
+        correctAnswer: (q.correctAnswer ?? null),
+        isCorrect: (q.type === 'multiple-choice') && (userAnswers[idx] === q.correctAnswer),
+        type: q.type
+      }));
+
+      saveResults({
+        studentId: studentInfo.studentId,
+        studentName: studentInfo.studentName,
+        quizId: studentInfo.quizId,
+        quizTitle: currentQuiz.title,
+        score: earned,
+        totalPoints: totalPoints,
+        percentage: pct,
+        grade: grade,
+        timeUsed: `${usedMin}:${usedSec.toString().padStart(2,'0')}`,
+        timestamp: new Date().toISOString(),
+        answers // << สำคัญ: แนบไปด้วย
+      });
+    }
+
+    function displayAnswerReview(){
+      const review = document.getElementById('answerReview');
+      review.innerHTML = '<h3 style="color:#002147; margin-bottom:1rem;">📋 รายละเอียดคำตอบ</h3>';
+      currentQuiz.questions.forEach((q,i)=>{
+        const ua = userAnswers[i];
+        const ok = (q.type==='multiple-choice') && (ua===q.correctAnswer);
+        const div = document.createElement('div');
+        div.className = `review-question ${ok?'correct':'incorrect'}`;
+        const ansText = q.type==='multiple-choice' ? (ua!=null ? q.options[ua] : 'ไม่ได้ตอบ') : (ua || 'ไม่ได้ตอบ');
+        div.innerHTML = `
+          <div class="review-header">
+            <strong>ข้อที่ ${i+1}</strong>
+            <span class="review-status ${ok?'status-correct':'status-incorrect'}">${ok?'✓ ถูกต้อง':'✗ ผิด'}</span>
+          </div>
+          <p><strong>คำถาม:</strong> ${q.question}</p>
+          <p><strong>คำตอบของคุณ:</strong> ${ansText}</p>
+          ${q.type==='multiple-choice' ? `<p><strong>เฉลย:</strong> ${q.options[q.correctAnswer]}</p>`:''}
+          ${q.explanation ? `<p style="color:#495057"><strong>คำอธิบาย:</strong> ${q.explanation}</p>`:''}
+        `;
+        review.appendChild(div);
+      });
+    }
+
+    function getGrade(p){ 
+        if(p>=80) return 'A'; 
+        if(p>=70) return 'B'; 
+        if(p>=60) return 'C'; 
+        if(p>=50) return 'D'; 
+        return 'F'; 
+    }
+    function getGradeClass(g){ 
+        return 'grade-'+g.toLowerCase(); 
+    }
+
+    async function saveResults(results){
+      // local backup
+      try{
+        const all = JSON.parse(localStorage.getItem('quizResults') || '[]');
+        all.push(results);
+        localStorage.setItem('quizResults', JSON.stringify(all));
+      }catch(e){ console.warn('LocalStorage backup failed', e); }
+
+      try{
+        // fallback ถ้าไม่มี results.answers ก็สร้างจาก currentQuiz + userAnswers
+        const safeAnswers = Array.isArray(results.answers) && results.answers.length === currentQuiz.questions.length
+          ? results.answers
+          : currentQuiz.questions.map((q, idx) => ({
+              questionId: (q.id != null ? String(q.id) : `q${idx+1}`),
+              userAnswer: userAnswers[idx] ?? null
+            }));
+
+        const payload = {
+          studentId: studentInfo.studentId,
+          studentName: studentInfo.studentName,
+          quizId: studentInfo.quizId,
+          quizTitle: currentQuiz.title,
+          timeUsedSec: (new Date() - quizStartTime)/1000,
+          answers: safeAnswers.map((a, idx)=>{
+            const q = currentQuiz.questions[idx];
+            return {
+              questionId: a.questionId,
+              userAnswer: (q.type==='multiple-choice')
+                ? (a.userAnswer===null || a.userAnswer==='' ? null : Number(a.userAnswer))
+                : null
+            };
+          }),
+          clientMeta: {
+            clientReported: {
+              score: results.score,
+              totalPoints: results.totalPoints,
+              percentage: results.percentage,
+              grade: results.grade
+            },
+            tabSwitchCount,
+            userAgent: navigator.userAgent
+          }
+        };
+
+        const resp = await fetch(APP_SCRIPT_URL, {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify(payload)
+        });
+
+        const data = await resp.json();
+        if(!data.ok){
+          console.warn('Server rejected submission:', data);
+          showSoftWarning('ไม่สามารถส่งข้อมูลไปยังเซิร์ฟเวอร์ กรุณาแจ้งอาจารย์ผู้สอน');
+          return;
+        }
+
+        // ใช้คะแนนจากฝั่งเซิร์ฟเวอร์ (truth)
+        document.getElementById('correctAnswers').textContent = data.computed.correct;
+        document.getElementById('incorrectAnswers').textContent = data.computed.incorrect;
+        document.getElementById('scoreObtained').textContent = data.computed.score;
+        document.getElementById('scorePossible').textContent = data.computed.totalPoints;
+        document.getElementById('scorePercentage').textContent = data.computed.percentage + '%';
+        const gb = document.getElementById('gradeBadge');
+        gb.textContent = data.computed.grade;
+        gb.className = 'grade-badge ' + getGradeClass(data.computed.grade);
+
+        const okDiv = document.createElement('div');
+        okDiv.className='alert alert-info';
+        okDiv.innerHTML = `<span style="font-size:1.5rem;">✅</span><div><strong>บันทึกสำเร็จ!</strong> ผลของคุณถูกส่งและตรวจคะแนนแล้ว</div>`;
+        document.getElementById('quizResults').prepend(okDiv);
+
+      }catch(err){
+        console.error('Submit error:', err);
+        showSoftWarning('ไม่สามารถติดต่อเซิร์ฟเวอร์ได้ แต่ข้อมูลถูกบันทึกในเครื่องของคุณแล้ว');
+      }
+    }
+
+    function showSoftWarning(msg){
+      const d=document.createElement('div');
+      d.className='alert alert-info';
+      d.style.backgroundColor='#fff3cd'; d.style.borderColor='#ffc107';
+      d.innerHTML = `<span style="font-size:1.5rem;">⚠️</span><div>${msg}</div>`;
+      document.getElementById('quizResults').prepend(d);
+    }
+
+    // ===================== Anti-cheat (ตัดมาจากของเดิม) =====================
+    document.addEventListener('visibilitychange', function(){
+      if (!document.getElementById('quizContainer').classList.contains('active')) return;
+      if (document.hidden) {
+        tabSwitchCount++; hasLeftPage = true;
+        if (tabSwitchCount >= 2) { alert('⚠️ เปลี่ยนแท็บบ่อย ระบบจะส่งข้อสอบอัตโนมัติ'); autoSubmitQuiz('Tab switching detected'); }
+        else { alert(`⚠️ คำเตือน! (${tabSwitchCount}/2) กรุณาอยู่ในหน้านี้ขณะทำข้อสอบ`); }
+      }
+    });
+
+    window.addEventListener('blur', function(){
+      if (!document.getElementById('quizContainer').classList.contains('active')) return;
+      tabSwitchCount++; hasLeftPage = true;
+      if (tabSwitchCount >= 2) { alert('⚠️ คุณสลับโปรแกรม/หน้าต่างบ่อย ระบบจะส่งข้อสอบอัตโนมัติ'); autoSubmitQuiz('Window focus lost'); }
+      else { alert(`⚠️ คำเตือน! (${tabSwitchCount}/2)`); }
+    });
+
+    function detectDevTools(){
+      const th=160;
+      if (window.outerWidth - window.innerWidth > th || window.outerHeight - window.innerHeight > th) {
+        if (document.getElementById('quizContainer').classList.contains('active')) {
+          alert('⚠️ ตรวจพบ Developer Tools ระบบจะส่งข้อสอบอัตโนมัติ');
+          autoSubmitQuiz('Developer tools detected');
+        }
+      }
+    }
+
+    function autoSubmitQuiz(reason){
+      if (timerInterval) clearInterval(timerInterval);
+      if (devToolsInterval) clearInterval(devToolsInterval);
+      try{ closeSubmitModal(); }catch(_){}
+      submitQuiz();
+      setTimeout(()=>{
+        const results = document.getElementById('quizResults');
+        const w = document.createElement('div');
+        w.className='alert alert-warning';
+        w.innerHTML = `<span style="font-size:1.5rem;">⚠️</span>
+          <div><strong>ข้อสอบถูกส่งอัตโนมัติ</strong><br>เหตุผล: ${reason}</div>`;
+        results.prepend(w);
+      },100);
+    }
+
+    document.addEventListener('copy', e=>{ if(document.getElementById('quizContainer').classList.contains('active')){ e.preventDefault(); alert('⚠️ ห้ามคัดลอกระหว่างทำข้อสอบ'); }});
+    document.addEventListener('paste', e=>{ if(document.getElementById('quizContainer').classList.contains('active')){ e.preventDefault(); alert('⚠️ ห้ามวางข้อความระหว่างทำข้อสอบ'); }});
+    document.addEventListener('cut',   e=>{ if(document.getElementById('quizContainer').classList.contains('active')){ e.preventDefault(); alert('⚠️ ห้ามตัดข้อความระหว่างทำข้อสอบ'); }});
+    window.addEventListener('beforeunload', e=>{ if(document.getElementById('quizContainer').classList.contains('active')){ e.preventDefault(); e.returnValue=''; }});
+    document.addEventListener('contextmenu', e=>{ if(document.getElementById('quizContainer').classList.contains('active')) e.preventDefault(); });
+
+    function getGradeClass(g){ return 'grade-'+g.toLowerCase(); }
+  </script>
+</body>
+</html>

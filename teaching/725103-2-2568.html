@@ -48,7 +48,6 @@
             --info: #1976d2;
             --warning: #f57c00;
             --danger: #c62828;
-            --sidebar-width: 270px;
         }
 
         body {
@@ -59,14 +58,14 @@
             min-height: 100vh;
         }
 
-        /* Top Header Navigation */
+        /* Header Navigation */
         .top-nav {
             background: var(--darkblue);
             padding: 1rem 0;
             box-shadow: var(--shadow-lg);
             position: sticky;
             top: 0;
-            z-index: 1001;
+            z-index: 1000;
             animation: slideDown 0.5s ease-out;
         }
 
@@ -82,7 +81,7 @@
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -95,7 +94,7 @@
             font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -103,29 +102,12 @@
 
         .nav-brand:hover {
             color: var(--white);
-            transform: translateX(-4px);
+            transform: translateX(-5px);
         }
 
         .nav-brand::before {
             content: '←';
             font-size: 1.5rem;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: var(--gold);
-            color: var(--darkblue);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .menu-toggle:hover {
-            background: var(--white);
-            transform: scale(1.05);
         }
 
         /* Hero Section */
@@ -150,7 +132,7 @@
         }
 
         .hero-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -187,130 +169,42 @@
             font-weight: 300;
         }
 
-        /* Main Layout Container */
-        .main-layout {
-            display: flex;
-            max-width: 1400px;
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
             margin: 2rem auto;
             padding: 0 2rem;
-            gap: 2rem;
-            position: relative;
         }
 
-        /* Left Sidebar Navigation */
-        .sidebar {
-            width: var(--sidebar-width);
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.25rem;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-            max-height: calc(100vh - 120px);
-            overflow-y: auto;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .sidebar-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--darkblue);
-            margin-bottom: 0.9rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--gold);
-        }
-
-        .sidebar-menu {
-            list-style: none;
-        }
-
-        .sidebar-menu li {
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar-menu a {
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            padding: 0.1rem 0.9rem;
-            color: var(--text-dark);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            font-weight: 500;
-            border-left: 3px solid transparent;
-            font-size: 0.95rem;
-        }
-
-        .sidebar-menu a:hover {
-            background: var(--gray-100);
-            border-left-color: var(--gold);
-            transform: translateX(4px);
-        }
-
-        .sidebar-menu a.active {
-            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
-            color: var(--white);
-            border-left-color: var(--gold);
-            box-shadow: var(--shadow);
-        }
-
-        .sidebar-menu a .icon {
-            font-size: 1.1rem;
-            min-width: 22px;
-            text-align: center;
-        }
-
-        /* Main Content Area */
-        .content-area {
-            flex: 1;
-            min-width: 0;
-        }
-
+        /* Content Card */
         .content-card {
             background: var(--white);
             border-radius: 12px;
             padding: 2rem;
             box-shadow: var(--shadow);
+            margin-bottom: 2rem;
         }
 
-        /* Section Styles with Fade-in */
-        .content-section {
-            display: none;
-            animation: fadeInSlide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        @keyframes fadeInSlide {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Section Styles */
+        .section-block {
+            margin-bottom: 2.5rem;
         }
 
         .section-header {
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             padding-bottom: 0.8rem;
             border-bottom: 3px solid var(--gold);
         }
 
         .section-icon {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
 
         .section-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--darkblue);
             font-weight: 700;
             margin: 0;
@@ -322,13 +216,13 @@
             border-radius: 8px;
             margin-bottom: 1.5rem;
             border-left: 5px solid;
-            animation: slideInRight 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: slideInRight 0.5s ease-out;
         }
 
         @keyframes slideInRight {
             from {
                 opacity: 0;
-                transform: translateX(-15px);
+                transform: translateX(-20px);
             }
             to {
                 opacity: 1;
@@ -388,7 +282,7 @@
             color: var(--darkblue);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .styled-list a:hover {
@@ -396,21 +290,18 @@
             transform: translateX(3px);
         }
 
-        /* Table Styles */
+        /* Table Styles (for OBE sections) */
         .table-wrap {
             overflow-x: auto;
             background: var(--white);
             border-radius: 10px;
             box-shadow: var(--shadow);
-            margin-bottom: 1rem;
         }
-
         table.modern {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.95rem;
         }
-
         table.modern thead th {
             background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
             color: var(--white);
@@ -419,17 +310,14 @@
             position: sticky;
             top: 0;
         }
-
         table.modern tbody td {
             padding: 0.75rem 1rem;
             border-bottom: 1px solid var(--gray-200);
             vertical-align: top;
         }
-
         table.modern tbody tr:nth-child(even) {
             background: var(--gray-100);
         }
-
         .chip {
             display: inline-block;
             padding: 0.15rem 0.55rem;
@@ -447,11 +335,11 @@
             border-radius: 8px;
             margin-bottom: 1rem;
             border-left: 4px solid var(--gold);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
         }
 
         .schedule-item:hover {
-            transform: translateX(4px);
+            transform: translateX(5px);
             box-shadow: var(--shadow);
             background: var(--white);
         }
@@ -483,26 +371,6 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .main-layout {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100%;
-                position: static;
-                max-height: none;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .sidebar.collapsed {
-                display: none;
-            }
-        }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 1.8rem;
@@ -512,7 +380,7 @@
                 font-size: 1rem;
             }
 
-            .main-layout {
+            .main-container {
                 padding: 0 1rem;
             }
 
@@ -521,31 +389,8 @@
             }
 
             .section-title {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
-
-            .nav-container {
-                padding: 0 1rem;
-            }
-        }
-
-        /* Scrollbar Styling */
-        .sidebar::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .sidebar::-webkit-scrollbar-track {
-            background: var(--gray-100);
-            border-radius: 10px;
-        }
-
-        .sidebar::-webkit-scrollbar-thumb {
-            background: var(--gold);
-            border-radius: 10px;
-        }
-
-        .sidebar::-webkit-scrollbar-thumb:hover {
-            background: var(--darkblue);
         }
     </style>
 </head>
@@ -555,7 +400,6 @@
     <nav class="top-nav">
         <div class="nav-container">
             <a href="../teaching.html" class="nav-brand">Teaching Page</a>
-            <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
         </div>
     </nav>
 
@@ -563,452 +407,313 @@
     <section class="hero">
         <div class="hero-content">
             <h1>📚 725103 - Data Structure and Algorithm</h1>
-            <p class="hero-subtitle">ภาคปลาย ปีการศึกษา 2568 (1 พ.ย. 2568 – 1 มี.ค. 2569)</p>
-            <p class="hero-info">พุธ 13:00-17:00 • Room: LAB-COM-1</p>
+            <p class="hero-subtitle">ภาคปลาย ปีการศึกษา 2568 (<!-- ADD DATE HERE -->)</p>
+            <p class="hero-info"><!-- ADD SCHEDULE HERE --> • Room: <!-- ADD ROOM HERE --></p>
             <p class="hero-info">Faculty of Business Administration, Southeast Asia University</p>
         </div>
     </section>
 
-    <!-- Main Layout -->
-    <div class="main-layout">
-        <!-- Left Sidebar Navigation -->
-        <aside class="sidebar" id="sidebar">
-            <h3 class="sidebar-title">📑 เนื้อหารายวิชา</h3>
-            <ul class="sidebar-menu">
-                <li><a href="#overview" class="menu-link active" onclick="showSection('overview', event)">
-                    <span class="icon">🏠</span>
-                    <span>ภาพรวมรายวิชา</span>
-                </a></li>
-                <li><a href="#description" class="menu-link" onclick="showSection('description', event)">
-                    <span class="icon">📖</span>
-                    <span>คำอธิบายรายวิชา</span>
-                </a></li>
-                <li><a href="#materials" class="menu-link" onclick="showSection('materials', event)">
-                    <span class="icon">📄</span>
-                    <span>เอกสารประกอบการสอน</span>
-                </a></li>
-                <li><a href="#clos" class="menu-link" onclick="showSection('clos', event)">
-                    <span class="icon">🎯</span>
-                    <span>ผลลัพธ์การเรียนรู้ (CLOs)</span>
-                </a></li>
-                <li><a href="#mapping" class="menu-link" onclick="showSection('mapping', event)">
-                    <span class="icon">🧩</span>
-                    <span>การแมป CLO-PLO</span>
-                </a></li>
-                <li><a href="#assessment" class="menu-link" onclick="showSection('assessment', event)">
-                    <span class="icon">🧪</span>
-                    <span>แผนการประเมินผล</span>
-                </a></li>
-                <li><a href="#policies" class="menu-link" onclick="showSection('policies', event)">
-                    <span class="icon">📜</span>
-                    <span>นโยบายรายวิชา</span>
-                </a></li>
-                <li><a href="#schedule" class="menu-link" onclick="showSection('schedule', event)">
-                    <span class="icon">📅</span>
-                    <span>ตารางสอน</span>
-                </a></li>
-                <li><a href="#grading" class="menu-link" onclick="showSection('grading', event)">
-                    <span class="icon">📊</span>
-                    <span>การประเมินผล</span>
-                </a></li>
-                <li><a href="#homework" class="menu-link" onclick="showSection('homework', event)">
-                    <span class="icon">✏️</span>
-                    <span>การบ้าน</span>
-                </a></li>
-                <li><a href="#exams" class="menu-link" onclick="showSection('exams', event)">
-                    <span class="icon">📝</span>
-                    <span>ข้อสอบ</span>
-                </a></li>
-                <li><a href="#videos" class="menu-link" onclick="showSection('videos', event)">
-                    <span class="icon">🎥</span>
-                    <span>วิดีโอเรียนเพิ่มเติม</span>
-                </a></li>
-            </ul>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="content-area">
-            <div class="content-card">
-                <!-- Overview Section (Default Active) -->
-                <section id="overview" class="content-section active">
-                    <div class="section-header">
-                        <span class="section-icon">🏠</span>
-                        <h2 class="section-title">ภาพรวมรายวิชา</h2>
-                    </div>
-                    <div class="alert-box alert-warning">
-                        <h5>📎 เอกสารอ้างอิง OBE</h5>
-                        <p>
-                            ใช้อ้างอิงในการกรอก CLO, Mapping และแผนการประเมิน: 
-                            <a href="../obe3 dsa.pdf" target="_blank"><strong>obe3 dsa.pdf</strong></a>
-                        </p>
-                    </div>
-                    <div class="alert-box alert-info">
-                        <h5>ℹ️ ยินดีต้อนรับ</h5>
-                        <p>
-                            หน้านี้รวบรวมข้อมูลทั้งหมดของรายวิชา 725103 Data Structure and Algorithm 
-                            กรุณาใช้เมนูด้านซ้ายเพื่อเลือกดูเนื้อหาในแต่ละหัวข้อ
-                        </p>
-                    </div>
-                    <p><strong>รหัสวิชา:</strong> 725103</p>
-                    <p><strong>ชื่อวิชา:</strong> Data Structure and Algorithm (โครงสร้างข้อมูลและอัลกอริทึม)</p>
-                    <p><strong>หน่วยกิต:</strong> 3(2-2-5)</p>
-                    <p><strong>เทอม:</strong> ภาคปลาย ปีการศึกษา 2568</p>
-                    <p><strong>เวลาเรียน:</strong> พุธ 13:00-17:00</p>
-                    <p><strong>ห้องเรียน:</strong> LAB-COM-1</p>
-                </section>
-
-                <!-- Description Section -->
-                <section id="description" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">📖</span>
-                        <h2 class="section-title">คำอธิบายรายวิชา</h2>
-                    </div>
-                    <p>
-                        โครงสร้างข้อมูลแบบต่างๆ ทั้งแบบเชิงเส้น อะเรย์ ลิงค์ลิสต์ แสตกคิวและแบบไม่ใช่เชิงเส้น ทรี กราฟ อัลกอริทึมพื้นฐานที่ใช้กับโครงสร้างข้อมูล เทคนิคการเรียงลำดับข้อมูลในหน่วยความจำหลักแบบต่างๆ ค้นหาข้อมูล การพัฒนาอัลกอริทึมและการวิเคราะห์อัลกอริทึมอย่างง่าย และการเขียนโปรแกรมเพื่อจัดการกับโครงสร้างแบบต่างๆ
-                    </p>
-                </section>
-
-                <!-- Materials Section -->
-                <section id="materials" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">📄</span>
-                        <h2 class="section-title">เอกสารประกอบการสอน</h2>
-                    </div>
-                    <ul class="styled-list">
-                        <li><em style="color: var(--gray-700);">เอกสารจะประกาศเร็วๆ นี้</em></li>
-                    </ul>
-                </section>
-
-                <!-- CLOs Section -->
-                <section id="clos" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">🎯</span>
-                        <h2 class="section-title">ผลลัพธ์การเรียนรู้รายวิชา (CLOs)</h2>
-                    </div>
-                    <div class="table-wrap">
-                        <table class="modern" id="clos-table">
-                            <thead>
-                                <tr>
-                                    <th style="width: 12%">รหัส CLO</th>
-                                    <th>คำอธิบายผลลัพธ์การเรียนรู้</th>
-                                    <th style="width: 22%">ระดับพฤติกรรม (Bloom)</th>
-                                    <th style="width: 14%">ประเภท</th>
-                                </tr>
-                            </thead>
-                            <tbody id="clos-tbody">
-                                <tr>
-                                    <td><span class="chip">CLO1</span></td>
-                                    <td>อธิบายหลักการและแนวคิดของโครงสร้างข้อมูลพื้นฐาน</td>
-                                    <td>Understand</td>
-                                    <td>K</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO2</span></td>
-                                    <td>วิเคราะห์ความซับซ้อนของอัลกอริทึม</td>
-                                    <td>Analyze</td>
-                                    <td>K-S</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO3</span></td>
-                                    <td>ประยุกต์ใช้โครงสร้างข้อมูลในการแก้ปัญหา</td>
-                                    <td>Apply</td>
-                                    <td>S</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO4</span></td>
-                                    <td>ออกแบบและเขียนโปรแกรมโดยใช้โครงสร้างข้อมูลที่เหมาะสม</td>
-                                    <td>Create</td>
-                                    <td>S</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO5</span></td>
-                                    <td>ทำงานร่วมกันในการพัฒนาโครงงาน</td>
-                                    <td>Apply</td>
-                                    <td>A</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <!-- Mapping Section -->
-                <section id="mapping" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">🧩</span>
-                        <h2 class="section-title">การแมปผลลัพธ์การเรียนรู้ (CLO) กับผลลัพธ์การเรียนรู้ของหลักสูตร (PLO)</h2>
-                    </div>
-                    <div class="table-wrap">
-                        <table class="modern" id="mapping-table">
-                            <thead>
-                                <tr id="mapping-thead-row">
-                                    <th style="width: 12%">CLO \\ PLO</th>
-                                    <th>PLO1</th>
-                                    <th>PLO2</th>
-                                    <th>PLO3</th>
-                                    <th>PLO4</th>
-                                    <th>PLO5</th>
-                                    <th>PLO6</th>
-                                </tr>
-                            </thead>
-                            <tbody id="mapping-tbody">
-                                <tr>
-                                    <td><span class="chip">CLO1</span></td>
-                                    <td>3</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO2</span></td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO3</span></td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>2</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO4</span></td>
-                                    <td></td>
-                                    <td>3</td>
-                                    <td>3</td>
-                                    <td>2</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="chip">CLO5</span></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>1</td>
-                                    <td></td>
-                                    <td>3</td>
-                                    <td>2</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p style="color: var(--gray-700); margin-top: 0.5rem;"><small>หมายเหตุ: ใช้ระดับการแมป 1=สนับสนุนน้อย, 2=ปานกลาง, 3=มาก</small></p>
-                </section>
-
-                <!-- Assessment Section -->
-                <section id="assessment" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">🧪</span>
-                        <h2 class="section-title">แผนการประเมินผลเพื่อวัด CLO</h2>
-                    </div>
-                    <div class="table-wrap">
-                        <table class="modern" id="assessment-table">
-                            <thead>
-                                <tr>
-                                    <th style="width: 22%">กิจกรรม/เครื่องมือประเมิน</th>
-                                    <th style="width: 15%">สัดส่วน (%)</th>
-                                    <th>CLO ที่วัด</th>
-                                    <th style="width: 18%">เกณฑ์ผ่าน (Threshold)</th>
-                                    <th style="width: 18%">วิธีตรวจสอบ/วิเคราะห์ผล</th>
-                                </tr>
-                            </thead>
-                            <tbody id="assessment-tbody">
-                                <tr>
-                                    <td>การบ้าน / แบบฝึกหัด</td>
-                                    <td>20%</td>
-                                    <td>CLO1, CLO2, CLO3</td>
-                                    <td>≥ 60%</td>
-                                    <td>Rubric scoring, Item analysis</td>
-                                </tr>
-                                <tr>
-                                    <td>สอบกลางภาค</td>
-                                    <td>30%</td>
-                                    <td>CLO1, CLO2</td>
-                                    <td>≥ 50%</td>
-                                    <td>Item analysis, ความสัมพันธ์กับ CLO</td>
-                                </tr>
-                                <tr>
-                                    <td>สอบปลายภาค</td>
-                                    <td>40%</td>
-                                    <td>CLO3, CLO4</td>
-                                    <td>≥ 50%</td>
-                                    <td>Item analysis, ความสัมพันธ์กับ CLO</td>
-                                </tr>
-                                <tr>
-                                    <td>งานกลุ่ม / Project</td>
-                                    <td>10%</td>
-                                    <td>CLO4, CLO5</td>
-                                    <td>≥ 60%</td>
-                                    <td>Rubric, Peer evaluation</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <!-- Policies Section -->
-                <section id="policies" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">📜</span>
-                        <h2 class="section-title">นโยบายรายวิชาและทรัพยากร</h2>
-                    </div>
-                    <ul class="styled-list" id="policies-list">
-                        <li><strong>นโยบายการส่งงาน:</strong> <span id="policy-submission">ส่งงานผ่านระบบ LMS ภายในเวลาที่กำหนด หากส่งช้าจะถูกหักคะแนนวันละ 10%</span></li>
-                        <li><strong>นโยบายการเข้าชั้นเรียน:</strong> <span id="policy-attendance">ต้องมีเวลาเรียนไม่ต่ำกว่า 80% ของเวลาเรียนทั้งหมด</span></li>
-                        <li><strong>ความซื่อสัตย์ทางวิชาการ:</strong> <span id="policy-integrity">ไม่อนุญาตให้มีการคัดลอกงานหรือทุจริตในการสอบ หากตรวจพบจะให้เกรด F ในรายวิชานี้ทันที</span></li>
-                        <li><strong>ทรัพยากรเสริม:</strong> <span id="policy-resources">เอกสารประกอบการสอน, หนังสืออ้างอิง: Data Structures and Algorithms in Python by Goodrich, Tamassia, Goldwasser</span></li>
-                    </ul>
-                </section>
-
-                <!-- Schedule Section -->
-                <section id="schedule" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">📅</span>
-                        <h2 class="section-title">ตารางสอน</h2>
-                    </div>
-                    
-                    <div id="schedule-list"></div>
-                    <p id="schedule-placeholder" style="color: var(--gray-700); font-style: italic;">ตารางสอนจะประกาศเร็วๆ นี้</p>
-                </section>
-
-                <!-- Grading Section -->
-                <section id="grading" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">📊</span>
-                        <h2 class="section-title">การประเมินผล</h2>
-                    </div>
-                    <ul class="styled-list">
-                        <li>
-                            <div>
-                                <strong>การบ้าน / แบบฝึกหัดในชั้นเรียน (20%)</strong><br>
-                                <small style="color: var(--gray-700);">วัด CLO1, CLO2, CLO3 — เกณฑ์ผ่าน ≥ 60%</small>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <strong>สอบกลางภาค (30%)</strong><br>
-                                <small style="color: var(--gray-700);">วัด CLO1, CLO2 — เกณฑ์ผ่าน ≥ 50%</small>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <strong>สอบปลายภาค (40%)</strong><br>
-                                <small style="color: var(--gray-700);">วัด CLO3, CLO4 — เกณฑ์ผ่าน ≥ 50%</small>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <strong>งานกลุ่ม / Project (10%)</strong><br>
-                                <small style="color: var(--gray-700);">วัด CLO5 — เกณฑ์ผ่าน ≥ 60%</small>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- Homework Section -->
-                <section id="homework" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">✏️</span>
-                        <h2 class="section-title">การบ้าน</h2>
-                    </div>
-                    <ul class="styled-list">
-                        <li><em style="color: var(--gray-700);">การบ้านจะประกาศเร็วๆ นี้</em></li>
-                    </ul>
-                </section>
-
-                <!-- Exams Section -->
-                <section id="exams" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">📝</span>
-                        <h2 class="section-title">ข้อสอบ</h2>
-                    </div>
-                    <ul class="styled-list">
-                        <li><em style="color: var(--gray-700);">ข้อสอบจะประกาศหลังการสอบ</em></li>
-                    </ul>
-                </section>
-
-                <!-- Videos Section -->
-                <section id="videos" class="content-section">
-                    <div class="section-header">
-                        <span class="section-icon">🎥</span>
-                        <h2 class="section-title">วิดีโอเรียนเพิ่มเติม</h2>
-                    </div>
-                    <ul class="styled-list">
-                        <li><em style="color: var(--gray-700);">วิดีโอเรียนเพิ่มเติมจะประกาศเร็วๆ นี้</em></li>
-                    </ul>
-                </section>
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="content-card">
+            <!-- Reference: OBE PDF -->
+            <div class="alert-box alert-warning" style="margin-top: -0.5rem;">
+                <h5>📎 เอกสารอ้างอิง OBE</h5>
+                <p>
+                    ใช้อ้างอิงในการกรอก CLO, Mapping และแผนการประเมิน: 
+                    <a href="../obe3 dsa.pdf" target="_blank"><strong>obe3 dsa.pdf</strong></a>
+                </p>
             </div>
-        </main>
-    </div>
+            <!-- Announcements (Optional - Remove if not needed) -->
+            <!-- <div class="alert-box alert-info">
+                <h5>📢 ประกาศ</h5>
+                <p>
+                    [ADD ANNOUNCEMENT CONTENT HERE]
+                </p>
+            </div> -->
+
+            <!-- Course Description -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📖</span>
+                    <h2 class="section-title">คำอธิบายรายวิชา</h2>
+                </div>
+                <p>
+                    โครงสร้างข้อมูลแบบต่างๆ ทั้งแบบเชิงเส้น อะเรย์ ลิงค์ลิสต์ แสตกคิวและแบบไม่ใช่เชิงเส้น ทรี กราฟ อัลกอริทึมพื้นฐานที่ใช้กับโครงสร้างข้อมูล เทคนิคการเรียงลำดับข้อมูลในหน่วยความจำหลักแบบต่างๆ ค้นหาข้อมูล การพัฒนาอัลกอริทึมและการวิเคราะห์อัลกอริทึมอย่างง่าย และการเขียนโปรแกรมเพื่อจัดการกับโครงสร้างแบบต่างๆ
+                </p>
+            </div>
+
+            <!-- Course Materials -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📄</span>
+                    <h2 class="section-title">เอกสารประกอบการสอน</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD MATERIALS HERE -->
+                    <!-- Example:
+                    <li><a href="../assets/handout/DSA_Chapter1.pdf" target="_blank">Chapter 1: Introduction</a> <small style="color: var(--gray-700);">(update at DD Month YYYY)</small></li>
+                    -->
+                    <li><em style="color: var(--gray-700);">เอกสารจะประกาศเร็วๆ นี้</em></li>
+                </ul>
+            </div>
+
+            <!-- OBE: Course Learning Outcomes (CLOs) -->
+            <div class="section-block" id="clos">
+                <div class="section-header">
+                    <span class="section-icon">🎯</span>
+                    <h2 class="section-title">ผลลัพธ์การเรียนรู้รายวิชา (CLOs)</h2>
+                </div>
+                <div class="table-wrap">
+                    <table class="modern" id="clos-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 12%">รหัส CLO</th>
+                                <th>คำอธิบายผลลัพธ์การเรียนรู้</th>
+                                <th style="width: 22%">ระดับพฤติกรรม (Bloom)</th>
+                                <th style="width: 14%">ประเภท</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clos-tbody">
+                            <tr>
+                                <td><span class="chip">CLO1</span></td>
+                                <td><!-- ใส่คำอธิบายจาก obe3 dsa.pdf --></td>
+                                <td><!-- เช่น Understand/Apply/Analyze --></td>
+                                <td><!-- K/S/A --></td>
+                            </tr>
+                            <tr>
+                                <td><span class="chip">CLO2</span></td>
+                                <td><!-- รายละเอียด --></td>
+                                <td><!-- ระดับ Bloom --></td>
+                                <td><!-- K/S/A --></td>
+                            </tr>
+                            <tr>
+                                <td><span class="chip">CLO3</span></td>
+                                <td><!-- รายละเอียด --></td>
+                                <td><!-- ระดับ Bloom --></td>
+                                <td><!-- K/S/A --></td>
+                            </tr>
+                            <!-- เพิ่มแถวตามเอกสารอ้างอิง -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- OBE: CLO-PLO Mapping -->
+            <div class="section-block" id="mapping">
+                <div class="section-header">
+                    <span class="section-icon">🧩</span>
+                    <h2 class="section-title">การแมปผลลัพธ์การเรียนรู้ (CLO) กับผลลัพธ์การเรียนรู้ของหลักสูตร (PLO)</h2>
+                </div>
+                <div class="table-wrap">
+                    <table class="modern" id="mapping-table">
+                        <thead>
+                            <tr id="mapping-thead-row">
+                                <th style="width: 12%">CLO \\ PLO</th>
+                                <th>PLO1</th>
+                                <th>PLO2</th>
+                                <th>PLO3</th>
+                                <th>PLO4</th>
+                                <th>PLO5</th>
+                                <th>PLO6</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mapping-tbody">
+                            <tr>
+                                <td><span class="chip">CLO1</span></td>
+                                <td><!-- 1/2/3 หรือ ✔ ระดับการสนับสนุน --></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="chip">CLO2</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="chip">CLO3</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="color: var(--gray-700); margin-top: 0.5rem;"><small>หมายเหตุ: ใช้ระดับการแมป 1=สนับสนุนน้อย, 2=ปานกลาง, 3=มาก หรือใช้สัญลักษณ์ ✔ ตามรูปแบบในเอกสารอ้างอิง</small></p>
+            </div>
+
+            <!-- OBE: Assessment Plan -->
+            <div class="section-block" id="assessment">
+                <div class="section-header">
+                    <span class="section-icon">🧪</span>
+                    <h2 class="section-title">แผนการประเมินผลเพื่อวัด CLO</h2>
+                </div>
+                <div class="table-wrap">
+                    <table class="modern" id="assessment-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 22%">กิจกรรม/เครื่องมือประเมิน</th>
+                                <th style="width: 15%">สัดส่วน (%)</th>
+                                <th>CLO ที่วัด</th>
+                                <th style="width: 18%">เกณฑ์ผ่าน (Threshold)</th>
+                                <th style="width: 18%">วิธีตรวจสอบ/วิเคราะห์ผล</th>
+                            </tr>
+                        </thead>
+                        <tbody id="assessment-tbody">
+                            <tr>
+                                <td><!-- Quiz / Assignment / Project / Lab / Midterm / Final --></td>
+                                <td><!-- % --></td>
+                                <td><!-- CLO1, CLO2, ... --></td>
+                                <td><!-- >= 60% เป็นต้น --></td>
+                                <td><!-- Rubric, Item analysis, ฯลฯ --></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Policies and Resources -->
+            <div class="section-block" id="policies">
+                <div class="section-header">
+                    <span class="section-icon">📜</span>
+                    <h2 class="section-title">นโยบายรายวิชาและทรัพยากร</h2>
+                </div>
+                <ul class="styled-list" id="policies-list">
+                    <li><strong>นโยบายการส่งงาน:</strong> <span id="policy-submission">ส่งงานผ่านระบบ LMS ภายในเวลาที่กำหนด หากส่งช้าจะถูกหักคะแนนวันละ 10%</span></li>
+                    <li><strong>นโยบายการเข้าชั้นเรียน:</strong> <span id="policy-attendance">ต้องมีเวลาเรียนไม่ต่ำกว่า 80% ของเวลาเรียนทั้งหมด</span></li>
+                    <li><strong>ความซื่อสัตย์ทางวิชาการ:</strong> <span id="policy-integrity">ไม่อนุญาตให้มีการคัดลอกงานหรือทุจริตในการสอบ หากตรวจพบจะให้เกรด F ในรายวิชานี้ทันที</span></li>
+                    <li><strong>ทรัพยากรเสริม:</strong> <span id="policy-resources">เอกสารประกอบการสอน, หนังสืออ้างอิง: Data Structures and Algorithms in Python by Goodrich, Tamassia, Goldwasser</span></li>
+                </ul>
+            </div>
+
+            <!-- Schedule -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📅</span>
+                    <h2 class="section-title">ตารางสอน</h2>
+                </div>
+                
+                <div id="schedule-list">
+                <!-- ADD SCHEDULE ITEMS HERE -->
+                <!-- Example:
+                <div class="schedule-item">
+                    <strong>ครั้งที่ 1 (DD Month)</strong>
+                    <p>Topic description here</p>
+                    <ul>
+                        <li>Note: <a href="../assets/handout/DSA_Week1.pdf">download</a></li>
+                    </ul>
+                </div>
+                -->
+                </div>
+                <p id="schedule-placeholder" style="color: var(--gray-700); font-style: italic;">ตารางสอนจะประกาศเร็วๆ นี้</p>
+            </div>
+
+            <!-- Grading -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📊</span>
+                    <h2 class="section-title">การประเมินผล</h2>
+                </div>
+                <ul class="styled-list">
+                    <li>
+                        <div>
+                            <strong>การบ้าน / แบบฝึกหัดในชั้นเรียน (20%)</strong><br>
+                            <small style="color: var(--gray-700);">วัด CLO1, CLO2, CLO3 — เกณฑ์ผ่าน ≥ 60%</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>สอบกลางภาค (30%)</strong><br>
+                            <small style="color: var(--gray-700);">วัด CLO1, CLO2 — เกณฑ์ผ่าน ≥ 50%</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>สอบปลายภาค (40%)</strong><br>
+                            <small style="color: var(--gray-700);">วัด CLO3, CLO4 — เกณฑ์ผ่าน ≥ 50%</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>งานกลุ่ม / Project (10%)</strong><br>
+                            <small style="color: var(--gray-700);">วัด CLO5 — เกณฑ์ผ่าน ≥ 60%</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Homework -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">✏️</span>
+                    <h2 class="section-title">การบ้าน</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD HOMEWORK HERE -->
+                    <!-- Example:
+                    <li><strong>การบ้าน 1:</strong> Topic <small style="color: var(--gray-700);">(due date DD Month YYYY)</small> <a href="../assets/handout/homework/hw1.pdf">(โจทย์)</a> <a href="../assets/handout/homework/hw1_sol.pdf">(เฉลย)</a></li>
+                    -->
+                    <li><em style="color: var(--gray-700);">การบ้านจะประกาศเร็วๆ นี้</em></li>
+                </ul>
+            </div>
+
+            <!-- Exams -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📝</span>
+                    <h2 class="section-title">ข้อสอบ</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD EXAMS HERE -->
+                    <!-- Example:
+                    <li><strong>สอบย่อยครั้งที่ 1:</strong> Topic <a href="../assets/handout/exam/quiz1.pdf">(โจทย์)</a> <a href="../assets/handout/exam/quiz1_sol.pdf">(เฉลย)</a></li>
+                    -->
+                    <li><em style="color: var(--gray-700);">ข้อสอบจะประกาศหลังการสอบ</em></li>
+                </ul>
+            </div>
+
+            <!-- Video Resources (Optional) -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">🎥</span>
+                    <h2 class="section-title">วิดีโอเรียนเพิ่มเติม</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD VIDEOS HERE -->
+                    <!-- Example:
+                    <li><a href="https://www.youtube.com/watch?v=..." target="_blank">Video Title</a></li>
+                    -->
+                    <li><em style="color: var(--gray-700);">วิดีโอเรียนเพิ่มเติมจะประกาศเร็วๆ นี้</em></li>
+                </ul>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <p>© 2025 Southeast Asia University. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Simple Analytics Script -->
     <script>
-        // Section Navigation with Fade-in Effect
-        function showSection(sectionId, event) {
-            if (event) {
-                event.preventDefault();
-            }
-
-            // Hide all sections with slight delay for smooth transition
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Show selected section with optimized timing
-            requestAnimationFrame(() => {
-                const targetSection = document.getElementById(sectionId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                }
-            });
-
-            // Update active menu item
-            const menuLinks = document.querySelectorAll('.menu-link');
-            menuLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            event?.target?.closest('.menu-link')?.classList.add('active');
-
-            // Scroll to top of content on mobile with faster animation
-            if (window.innerWidth <= 1024) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-
-            // Update URL hash without scrolling
-            history.pushState(null, null, `#${sectionId}`);
-        }
-
-        // Toggle Sidebar on Mobile
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('collapsed');
-        }
-
-        // Load section from URL hash on page load
-        function loadSectionFromHash() {
-            const hash = window.location.hash.slice(1);
-            if (hash) {
-                const targetLink = document.querySelector(`.menu-link[href="#${hash}"]`);
-                if (targetLink) {
-                    showSection(hash, { target: targetLink, preventDefault: () => {} });
-                }
-            }
-        }
-
-        // JSON-driven OBE loader (loads from data/725103-obe.json)
+        // Optional: JSON-driven OBE loader (put file at teaching/data/725103-obe.json)
         async function tryLoadOBE() {
             try {
                 console.log('Attempting to load JSON from: data/725103-obe.json');
@@ -1020,8 +725,71 @@
                 }
                 const data = await res.json();
                 console.log('JSON data loaded successfully:', data);
-
-                // Populate Schedule (if available)
+                // Hero fields
+                if (data?.course) {
+                    const subtitle = document.querySelector('.hero-subtitle');
+                    const info = document.querySelector('.hero-info');
+                    if (subtitle && data.course.term) subtitle.innerHTML = `${data.course.term}`;
+                    if (info && (data.course.schedule || data.course.room)) {
+                        info.innerHTML = `${data.course.schedule || ''}${data.course.schedule && data.course.room ? ' • ' : ''}Room: ${data.course.room || ''}`;
+                    }
+                }
+                // Populate CLOs
+                if (Array.isArray(data.clos)) {
+                    const tb = document.getElementById('clos-tbody');
+                    if (tb) {
+                        tb.innerHTML = '';
+                        for (const clo of data.clos) {
+                            const tr = document.createElement('tr');
+                            tr.innerHTML = `
+                                <td><span class="chip">${clo.id || ''}</span></td>
+                                <td>${clo.description || ''}</td>
+                                <td>${clo.bloom || ''}</td>
+                                <td>${clo.type || ''}</td>
+                            `;
+                            tb.appendChild(tr);
+                        }
+                    }
+                }
+                // Populate Mapping
+                if (Array.isArray(data.plos) && Array.isArray(data.mapping)) {
+                    const headRow = document.getElementById('mapping-thead-row');
+                    const body = document.getElementById('mapping-tbody');
+                    if (headRow && body) {
+                        // Rebuild head
+                        headRow.innerHTML = '<th style="width:12%">CLO \\ PLO</th>' + data.plos.map((p, i) => `<th>${p || 'PLO'+(i+1)}</th>`).join('');
+                        // Rebuild body
+                        body.innerHTML = '';
+                        for (const row of data.mapping) {
+                            const tr = document.createElement('tr');
+                            const weights = Array.isArray(row.weights) ? row.weights : [];
+                            tr.innerHTML = `
+                                <td><span class=\"chip\">${row.clo || ''}</span></td>
+                                ${data.plos.map((_, idx) => `<td>${weights[idx] ?? ''}</td>`).join('')}
+                            `;
+                            body.appendChild(tr);
+                        }
+                    }
+                }
+                // Populate Assessments
+                if (Array.isArray(data.assessments)) {
+                    const tb = document.getElementById('assessment-tbody');
+                    if (tb) {
+                        tb.innerHTML = '';
+                        for (const a of data.assessments) {
+                            const tr = document.createElement('tr');
+                            tr.innerHTML = `
+                                <td>${a.tool || ''}</td>
+                                <td>${a.weight ?? ''}</td>
+                                <td>${Array.isArray(a.clos) ? a.clos.join(', ') : ''}</td>
+                                <td>${a.threshold || ''}</td>
+                                <td>${a.analysis || ''}</td>
+                            `;
+                            tb.appendChild(tr);
+                        }
+                    }
+                }
+                // Populate Schedule
                 if (Array.isArray(data.schedule)) {
                     const list = document.getElementById('schedule-list');
                     const ph = document.getElementById('schedule-placeholder');
@@ -1036,7 +804,7 @@
                                 </ul>` : '';
                             div.innerHTML = `
                                 <strong>${s.week || ''}${s.date ? ' ('+s.date+')' : ''}</strong>
-                                <p>${s.topic || ''}${s.notes ? ' — <small style="color: var(--gray-700);">'+s.notes+'</small>' : ''}</p>
+                                <p>${s.topic || ''}${s.notes ? ' — <small style=\"color: var(--gray-700);\">'+s.notes+'</small>' : ''}</p>
                                 ${materials}
                             `;
                             list.appendChild(div);
@@ -1044,34 +812,65 @@
                         if (ph) ph.style.display = 'none';
                     }
                 }
+                // Populate Policies
+                if (data.policies) {
+                    const pols = data.policies;
+                    if (pols.submission) {
+                        const el = document.getElementById('policy-submission');
+                        if (el) el.textContent = pols.submission;
+                    }
+                    if (pols.attendance) {
+                        const el = document.getElementById('policy-attendance');
+                        if (el) el.textContent = pols.attendance;
+                    }
+                    if (pols.integrity) {
+                        const el = document.getElementById('policy-integrity');
+                        if (el) el.textContent = pols.integrity;
+                    }
+                    if (pols.resources) {
+                        const el = document.getElementById('policy-resources');
+                        if (el) el.textContent = pols.resources;
+                    }
+                }
                 console.log('All data populated successfully!');
             } catch (err) {
                 console.error('Error loading OBE data:', err);
             }
         }
-
         // Page visit counter
         function trackPageVisit() {
-            const pageKey = 'page_visits_725103_demo';
+            const pageKey = 'page_visits_725103';
             let visits = parseInt(localStorage.getItem(pageKey) || '0');
             visits++;
             localStorage.setItem(pageKey, visits.toString());
             console.log(`Page visits: ${visits}`);
         }
 
-        // Initialize on page load
+        // Link click tracking
+        function trackLinkClick(linkText, href) {
+            const clickKey = `link_clicks_${btoa(href).slice(0, 10)}`;
+            let clicks = parseInt(localStorage.getItem(clickKey) || '0');
+            clicks++;
+            localStorage.setItem(clickKey, clicks.toString());
+            console.log(`Link "${linkText}" clicked ${clicks} times`);
+        }
+
+        // Initialize tracking when page loads
         document.addEventListener('DOMContentLoaded', function() {
             trackPageVisit();
-            loadSectionFromHash();
-            tryLoadOBE();
+            
+            // Add click tracking to all links
+            document.querySelectorAll('a[href]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const linkText = this.textContent.trim();
+                    const href = this.getAttribute('href');
+                    trackLinkClick(linkText, href);
+                });
+            });
 
-            // Handle back/forward navigation
-            window.addEventListener('hashchange', loadSectionFromHash);
-
-            // Smooth scroll for internal links
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    if (this.classList.contains('menu-link')) return; // Already handled
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
@@ -1082,7 +881,23 @@
                     }
                 });
             });
+
+            // Attempt to load JSON data if available
+            tryLoadOBE();
         });
+
+        // Function to view analytics (call in browser console)
+        function viewAnalytics() {
+            const analytics = {};
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('page_visits_') || key.startsWith('link_clicks_')) {
+                    analytics[key] = localStorage.getItem(key);
+                }
+            }
+            console.table(analytics);
+            return analytics;
+        }
     </script>
 </body>
 </html>
