@@ -520,6 +520,82 @@
             background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
             background-size: 1000px 100%;
         }
+
+        /* Calendar Section Styles */
+        .calendar-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .calendar-wrapper {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid var(--gold);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .calendar-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 33, 71, 0.2);
+        }
+
+        .calendar-wrapper iframe {
+            border-radius: 8px;
+            display: block;
+        }
+
+        .calendar-action-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--darkblue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .calendar-action-link:hover {
+            background: var(--gold);
+            color: var(--darkblue);
+            border-color: var(--darkblue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Responsive Calendar */
+        @media (max-width: 768px) {
+            .calendar-container {
+                padding: 0 1rem;
+            }
+
+            .calendar-wrapper {
+                padding: 1rem;
+                border-width: 2px;
+            }
+
+            .calendar-wrapper iframe {
+                height: 500px !important;
+            }
+
+            .calendar-action-link {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .calendar-wrapper iframe {
+                height: 400px !important;
+            }
+        }
     </style>
 </head>
 
@@ -750,6 +826,59 @@
 
             <!-- Add more past courses as needed -->
         </div>
+
+        <!-- Teaching Calendar Section -->
+        <div class="section-header" style="margin-top: 5rem;">
+            <h2 class="section-title">📅 Teaching Calendar</h2>
+            <p class="section-description">View my complete teaching schedule, office hours, and important dates</p>
+        </div>
+
+        <div class="calendar-container">
+            <div class="calendar-wrapper">
+                <!-- 
+                    TO UPDATE YOUR CALENDAR:
+                    1. Go to Google Calendar (https://calendar.google.com/)
+                    2. Click on your calendar → Settings and sharing
+                    3. Make it public: Check "Make available to public"
+                    4. Scroll to "Integrate calendar" section
+                    5. Copy your Calendar ID (e.g., your-email@gmail.com)
+                    6. Replace with your actual Calendar ID (e.g., your-email@sau.ac.th)
+                    
+                    URL Parameters you can customize:
+                    - mode=WEEK (or MONTH, AGENDA)
+                    - showTitle=1 (show calendar title)
+                    - showNav=1 (show navigation buttons)
+                    - showDate=1 (show date)
+                    - showPrint=1 (show print icon)
+                    - height=600 (calendar height in pixels)
+                -->
+                <iframe 
+                    src="https://calendar.google.com/calendar/embed?src=phaphonteey%40sau.ac.th&ctz=Asia%2FBangkok&showTitle=1&showNav=1&showDate=1&showPrint=1&showTabs=1&showCalendars=0&showTz=1&mode=WEEK&height=600&wkst=2&bgcolor=%23ffffff"
+                    style="border: 0" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0" 
+                    scrolling="no"
+                    title="Teaching Calendar - Southeast Asia University">
+                </iframe>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div style="text-align: center; margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://calendar.google.com/calendar/u/0?cid=phaphonteey%40sau.ac.th" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="calendar-action-link">
+                    📱 Add to Your Calendar
+                </a>
+                <a href="https://calendar.google.com/calendar/ical/phaphonteey%40sau.ac.th/public/basic.ics" 
+                   download 
+                   class="calendar-action-link">
+                    📥 Download iCal
+                </a>
+            </div>
+        </div>
+        
     </main>
 
     <!-- Footer -->
