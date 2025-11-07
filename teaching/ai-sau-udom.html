@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>725103 โครงสร้างข้อมูลและอัลกอริทึม | Southeast Asia University | ปพนธีร์ แย้มโชติ</title>
+    <meta name="description" content="รายละเอียดรายวิชาที่สอนโดย ปพนธีร์ แย้มโชติ อาจารย์ประจำสาขาระบบสารสนเทศเพื่อธุรกิจดิจิทัล มหาวิทยาลัยเอเชียอาคเนย์ พร้อมตารางสอนและเอกสารประกอบการเรียน"/>
+    <meta name="keywords" content="Data Structure and Algorithm, โครงสร้างข้อมูลและอัลกอริทึม, Southeast Asia University, ปพนธีร์ แย้มโชติ, สอนมหาวิทยาลัย, อาจารย์" />
+    <link rel="canonical" href="https://yamchote-ppt.github.io/Teaching.html" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:url" content="https://yamchote-ppt.github.io/Teaching.html" />
+    <meta property="og:title" content="Teaching Subjects | Southeast Asia University" />
+    <meta property="og:description" content="รายละเอียดรายวิชาที่สอนโดย ปพนธีร์ แย้มโชติ พร้อมตารางสอนและเอกสารประกอบการเรียน">
+    <meta property="og:image" content="https://yamchote-ppt.github.io/assets/images/profile.jpg" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VT36QFMKJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9VT36QFMKJ');
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --darkblue: #002147;
+            --gold: #FFD700;
+            --light-bg: #f8f9fa;
+            --text-dark: #232323;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-700: #495057;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 33, 71, 0.15);
+            --success: #2e7d32;
+            --info: #1976d2;
+            --warning: #f57c00;
+            --danger: #c62828;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e2e8f0 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header Navigation */
+        .top-nav {
+            background: var(--darkblue);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-brand:hover {
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        .nav-brand::before {
+            content: '←';
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".1" fill="%23FFD700"/></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            opacity: 0.95;
+        }
+
+        .hero-info {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Content Card */
+        .content-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        /* Section Styles */
+        .section-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--darkblue);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* Alert Boxes */
+        .alert-box {
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid;
+            animation: slideInRight 0.5s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .alert-danger {
+            background: #ffebee;
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        .alert-info {
+            background: #e3f2fd;
+            border-color: var(--info);
+            color: var(--info);
+        }
+
+        .alert-warning {
+            background: #fff3e0;
+            border-color: var(--warning);
+            color: var(--warning);
+        }
+
+        .alert-box h5 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* List Styles */
+        .styled-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .styled-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .styled-list li:last-child {
+            border-bottom: none;
+        }
+
+        .styled-list li::before {
+            content: '📚';
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .styled-list a {
+            color: var(--darkblue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .styled-list a:hover {
+            color: var(--gold);
+            transform: translateX(3px);
+        }
+
+        /* Table Styles (for OBE sections) */
+        .table-wrap {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        table.modern {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        table.modern thead th {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+            text-align: left;
+            padding: 0.85rem 1rem;
+            position: sticky;
+            top: 0;
+        }
+        table.modern tbody td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            vertical-align: top;
+        }
+        table.modern tbody tr:nth-child(even) {
+            background: var(--gray-100);
+        }
+        .chip {
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            border-radius: 999px;
+            background: #e3f2fd;
+            color: var(--info);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        /* Schedule List */
+        .schedule-item {
+            background: var(--gray-100);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .schedule-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow);
+            background: var(--white);
+        }
+
+        .schedule-item strong {
+            color: var(--darkblue);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-item ul {
+            margin: 0.5rem 0 0 1.5rem;
+            color: var(--gray-700);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--darkblue);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer p {
+            margin: 0;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .main-container {
+                padding: 0 1rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="../teaching.html" class="nav-brand">Teaching Page</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>📚 การประยุกต์ใช้ AI ในการทำสื่ออย่างสร้างสรรค์</h1>
+            <p class="hero-info">ณ โรงเรียนวัดอุดมรังสี สำนักงานเขตหนองแขม</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="content-card">
+            <!-- Reference: OBE PDF -->
+            <!-- Announcements (Optional - Remove if not needed) -->
+            <!-- <div class="alert-box alert-info">
+                <h5>📢 ประกาศ</h5>
+                <p>
+                    [ADD ANNOUNCEMENT CONTENT HERE]
+                </p>
+            </div> -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📄</span>
+                    <h2 class="section-title">สไลด์การสอน</h2>
+                </div>
+
+                <!-- Canva Slide Embed -->
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                    padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                    border-radius: 8px; will-change: transform;">
+                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https://www.canva.com/design/DAG37qSC1lo/-logZsYMoUOwIGulb2pkNg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                    </iframe>
+                </div>
+                
+                <!-- Download or View Links (Optional) -->
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="https://www.canva.com/design/DAG37qSC1lo/JPHUOh2Fz2qzAboG4qAB9w/view?utm_content=DAG37qSC1lo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h60235d8a80" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--darkblue); color: var(--white); text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent;">
+                        🔗 เปิดในหน้าใหม่
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Course Materials -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📄</span>
+                    <h2 class="section-title">เอกสารประกอบการสอน</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD MATERIALS HERE -->
+
+                    <li><a href="../assets/prompten/Prompt Engineering Guide.pdf" target="_blank">คู่มือการสร้าง PROMPT FOR CRAFTING EFFECTIVE PROMPTS ให้มีประสิทธิภาพ</a> <small style="color: var(--gray-700);">(update at 07 Nov 2025)</small></li>
+                    <li><a href="../assets/prompten/ai-sau-udom-workshop.pdf" target="_blank">เอกสารประกอบการทำ workshop</a> <small style="color: var(--gray-700);">(update at 07 Nov 2025)</small></li>
+
+                </ul>
+            </div>
+
+            <!-- Course Materials -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📄</span>
+                    <h2 class="section-title">Additional</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD MATERIALS HERE -->
+
+                    <li><a href="https://qr.sli.do/rT6QdyYoFkQy83J1pD1osy" target="_blank">Slido</a> <small style="color: var(--gray-700);">(update at 07 Nov 2025)</small></li>
+
+                </ul>
+            </div>
+            
+            
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Southeast Asia University. All rights reserved.</p>
+    </footer>
+
+    <!-- Simple Analytics Script -->
+    <script>
+        // Optional: JSON-driven OBE loader (put file at teaching/data/725103-obe.json)
+        async function tryLoadOBE() {
+            try {
+                console.log('Attempting to load JSON from: data/725103-obe.json');
+                const res = await fetch('data/725103-obe.json', { cache: 'no-store' });
+                console.log('Fetch response status:', res.status, res.ok);
+                if (!res.ok) {
+                    console.error('Failed to load JSON, status:', res.status);
+                    return;
+                }
+                const data = await res.json();
+                console.log('JSON data loaded successfully:', data);
+                // Hero fields
+                if (data?.course) {
+                    const subtitle = document.querySelector('.hero-subtitle');
+                    const info = document.querySelector('.hero-info');
+                    if (subtitle && data.course.term) subtitle.innerHTML = `${data.course.term}`;
+                    if (info && (data.course.schedule || data.course.room)) {
+                        info.innerHTML = `${data.course.schedule || ''}${data.course.schedule && data.course.room ? ' • ' : ''}Room: ${data.course.room || ''}`;
+                    }
+                }
+                // Populate CLOs
+                if (Array.isArray(data.clos)) {
+                    const tb = document.getElementById('clos-tbody');
+                    if (tb) {
+                        tb.innerHTML = '';
+                        for (const clo of data.clos) {
+                            const tr = document.createElement('tr');
+                            tr.innerHTML = `
+                                <td><span class="chip">${clo.id || ''}</span></td>
+                                <td>${clo.description || ''}</td>
+                                <td>${clo.bloom || ''}</td>
+                                <td>${clo.type || ''}</td>
+                            `;
+                            tb.appendChild(tr);
+                        }
+                    }
+                }
+                // Populate Mapping
+                if (Array.isArray(data.plos) && Array.isArray(data.mapping)) {
+                    const headRow = document.getElementById('mapping-thead-row');
+                    const body = document.getElementById('mapping-tbody');
+                    if (headRow && body) {
+                        // Rebuild head
+                        headRow.innerHTML = '<th style="width:12%">CLO \\ PLO</th>' + data.plos.map((p, i) => `<th>${p || 'PLO'+(i+1)}</th>`).join('');
+                        // Rebuild body
+                        body.innerHTML = '';
+                        for (const row of data.mapping) {
+                            const tr = document.createElement('tr');
+                            const weights = Array.isArray(row.weights) ? row.weights : [];
+                            tr.innerHTML = `
+                                <td><span class=\"chip\">${row.clo || ''}</span></td>
+                                ${data.plos.map((_, idx) => `<td>${weights[idx] ?? ''}</td>`).join('')}
+                            `;
+                            body.appendChild(tr);
+                        }
+                    }
+                }
+                // Populate Assessments
+                if (Array.isArray(data.assessments)) {
+                    const tb = document.getElementById('assessment-tbody');
+                    if (tb) {
+                        tb.innerHTML = '';
+                        for (const a of data.assessments) {
+                            const tr = document.createElement('tr');
+                            tr.innerHTML = `
+                                <td>${a.tool || ''}</td>
+                                <td>${a.weight ?? ''}</td>
+                                <td>${Array.isArray(a.clos) ? a.clos.join(', ') : ''}</td>
+                                <td>${a.threshold || ''}</td>
+                                <td>${a.analysis || ''}</td>
+                            `;
+                            tb.appendChild(tr);
+                        }
+                    }
+                }
+                // Populate Schedule
+                if (Array.isArray(data.schedule)) {
+                    const list = document.getElementById('schedule-list');
+                    const ph = document.getElementById('schedule-placeholder');
+                    if (list) {
+                        list.innerHTML = '';
+                        for (const s of data.schedule) {
+                            const div = document.createElement('div');
+                            div.className = 'schedule-item';
+                            const materials = Array.isArray(s.materials) ? `
+                                <ul>
+                                    ${s.materials.map(m => `<li><a href="${m.href}" target="_blank">${m.label}</a></li>`).join('')}
+                                </ul>` : '';
+                            div.innerHTML = `
+                                <strong>${s.week || ''}${s.date ? ' ('+s.date+')' : ''}</strong>
+                                <p>${s.topic || ''}${s.notes ? ' — <small style=\"color: var(--gray-700);\">'+s.notes+'</small>' : ''}</p>
+                                ${materials}
+                            `;
+                            list.appendChild(div);
+                        }
+                        if (ph) ph.style.display = 'none';
+                    }
+                }
+                // Populate Policies
+                if (data.policies) {
+                    const pols = data.policies;
+                    if (pols.submission) {
+                        const el = document.getElementById('policy-submission');
+                        if (el) el.textContent = pols.submission;
+                    }
+                    if (pols.attendance) {
+                        const el = document.getElementById('policy-attendance');
+                        if (el) el.textContent = pols.attendance;
+                    }
+                    if (pols.integrity) {
+                        const el = document.getElementById('policy-integrity');
+                        if (el) el.textContent = pols.integrity;
+                    }
+                    if (pols.resources) {
+                        const el = document.getElementById('policy-resources');
+                        if (el) el.textContent = pols.resources;
+                    }
+                }
+                console.log('All data populated successfully!');
+            } catch (err) {
+                console.error('Error loading OBE data:', err);
+            }
+        }
+        // Page visit counter
+        function trackPageVisit() {
+            const pageKey = 'page_visits_725103';
+            let visits = parseInt(localStorage.getItem(pageKey) || '0');
+            visits++;
+            localStorage.setItem(pageKey, visits.toString());
+            console.log(`Page visits: ${visits}`);
+        }
+
+        // Link click tracking
+        function trackLinkClick(linkText, href) {
+            const clickKey = `link_clicks_${btoa(href).slice(0, 10)}`;
+            let clicks = parseInt(localStorage.getItem(clickKey) || '0');
+            clicks++;
+            localStorage.setItem(clickKey, clicks.toString());
+            console.log(`Link "${linkText}" clicked ${clicks} times`);
+        }
+
+        // Initialize tracking when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            trackPageVisit();
+            
+            // Add click tracking to all links
+            document.querySelectorAll('a[href]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const linkText = this.textContent.trim();
+                    const href = this.getAttribute('href');
+                    trackLinkClick(linkText, href);
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Attempt to load JSON data if available
+            tryLoadOBE();
+        });
+
+        // Function to view analytics (call in browser console)
+        function viewAnalytics() {
+            const analytics = {};
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('page_visits_') || key.startsWith('link_clicks_')) {
+                    analytics[key] = localStorage.getItem(key);
+                }
+            }
+            console.table(analytics);
+            return analytics;
+        }
+    </script>
+</body>
+</html>
