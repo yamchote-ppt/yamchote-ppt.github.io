@@ -322,7 +322,7 @@
             background: var(--darkblue);
             color: var(--white);
             text-align: center;
-            padding: 2rem;
+            padding: 0.5rem;
             margin-top: 4rem;
         }
 
@@ -615,7 +615,10 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <!-- Spacer to prevent content being hidden behind fixed footer -->
+    <!-- <div style="height:120px;"></div> -->
+
+    <footer class="footer" role="contentinfo" style="position:fixed; bottom:0; left:0; width:100%; z-index:999; box-shadow:0 -4px 10px rgba(0,0,0,0.08); margin-top:0;">
         <p>© 2025 Southeast Asia University. All rights reserved.</p>
     </footer>
 
