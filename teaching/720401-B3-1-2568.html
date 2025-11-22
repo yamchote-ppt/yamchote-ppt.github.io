@@ -29,7 +29,337 @@
     <link rel="stylesheet" href="common-styles.css">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        :root {
+            --darkblue: #002147;
+            --gold: #FFD700;
+            --light-bg: #f8f9fa;
+            --text-dark: #232323;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-700: #495057;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 33, 71, 0.15);
+            --success: #2e7d32;
+            --info: #1976d2;
+            --warning: #f57c00;
+            --danger: #c62828;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e2e8f0 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header Navigation */
+        .top-nav {
+            background: var(--darkblue);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-brand:hover {
+            color: var(--white);
+            transform: translateX(-5px);
+        }
+
+        .nav-brand::before {
+            content: '←';
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--darkblue) 0%, #003d82 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".1" fill="%23FFD700"/></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            opacity: 0.95;
+        }
+
+        .hero-info {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Content Card */
+        .content-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        /* Section Styles */
+        .section-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--darkblue);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* Alert Boxes */
+        .alert-box {
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid;
+            animation: slideInRight 0.5s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .alert-danger {
+            background: #ffebee;
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        .alert-info {
+            background: #e3f2fd;
+            border-color: var(--info);
+            color: var(--info);
+        }
+
+        .alert-box h5 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* List Styles */
+        .styled-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .styled-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .styled-list li a {
+            padding: 0.5rem 0;
+            padding-left: 2.5rem;
+            /* border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem; */
+        }
+
+        .styled-list li:last-child {
+            border-bottom: none;
+        }
+
+        .styled-list li::before {
+            content: '📚';
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .styled-list a {
+            color: var(--darkblue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .styled-list a:hover {
+            color: var(--gold);
+            transform: translateX(3px);
+        }
+
+        /* Schedule List */
+        .schedule-item {
+            background: var(--gray-100);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .schedule-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow);
+            background: var(--white);
+        }
+
+        .schedule-item strong {
+            color: var(--darkblue);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-item ul {
+            margin: 0.5rem 0 0 1.5rem;
+            color: var(--gray-700);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--darkblue);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer p {
+            margin: 0;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .main-container {
+                padding: 0 1rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 
@@ -62,10 +392,10 @@
                     <span class="icon">🏠</span>
                     <span>ภาพรวมรายวิชา</span>
                 </a></li>
-                <li><a href="#description" class="menu-link" onclick="showSection('description', event)">
+                <!-- <li><a href="#description" class="menu-link" onclick="showSection('description', event)">
                     <span class="icon">📖</span>
                     <span>คำอธิบายรายวิชา</span>
-                </a></li>
+                </a></li> -->
                 <li><a href="#materials" class="menu-link" onclick="showSection('materials', event)">
                     <span class="icon">📄</span>
                     <span>เอกสารประกอบการสอน</span>
@@ -119,29 +449,28 @@
                         <h2 class="section-title">ภาพรวมรายวิชา</h2>
                     </div>
                     <div class="alert-box alert-warning">
-                        <h5>⚠️ หมายเหตุสำคัญ</h5>
-                        <p>ข้อมูลในหน้านี้อยู่ระหว่างการจัดเตรียม เนื้อหาและรายละเอียดอาจมีการปรับปรุงเพิ่มเติม</p>
-                        <p><strong>หากมีข้อสงสัย</strong> กรุณาติดต่ออาจารย์ผู้สอนโดยตรง</p>
+                        <h5>⚠️ ประกาศ</h5>
+                        <p>-</p>
                     </div>
                     <div class="alert-box alert-info">
-                        <h5>ℹ️ ข้อมูลรายวิชา</h5>
-                        <p>รายวิชานี้เน้นการศึกษาหลักการและแนวคิดพื้นฐานของคณิตศาสตร์ไม่ต่อเนื่อง ซึ่งเป็นพื้นฐานสำคัญสำหรับการศึกษาวิทยาการคอมพิวเตอร์และระบบสารสนเทศ</p>
+                        <h5>ℹ️ คำอธิบายรายวิชา</h5>
+                        <p>ความรู้เบื้องต้นเกี่ยวกับระบบสารสนเทศ บทบาท รูปแบบ และองค์ประกอบของระบบสารสนเทศในองค์การธุรกิจ ประเภทและวิธีการประมวลผลข้อมูล การประยุกต์ใช้เทคโนโลยีสารสนเทศในการจัดเก็บ การเข้าถึงการประมวลผลและการควบคุมเทคโนโลยีสารสนเทศที่ใช้ในการบริหารจัดการ ระบบงานทางธุรกิจ และทักษะการใช้เทคโนโลยีสารสนเทศ</p>
                     </div>
-                    <p><strong>รหัสวิชา:</strong> 819605</p>
-                    <p><strong>ชื่อวิชา:</strong> วิยุตคณิต (Discrete Mathematics)</p>
-                    <p><strong>หน่วยกิต:</strong> 3(3-0-9)</p>
-                    <p><strong>ภาคการศึกษา:</strong> ภาคปลาย ปีการศึกษา 2568</p>
-                    <p><strong>ระยะเวลา:</strong> 1 พฤศจิกายน 2568 – 1 มีนาคม 2569</p>
+                    <p><strong>รหัสวิชา:</strong> 720401</p>
+                    <p><strong>ชื่อวิชา:</strong> เทคโนโลยีสารสนเทศเพื่อธุรกิจ (Information Technology for Business)</p>
+                    <p><strong>หน่วยกิต:</strong> 3(2-2-9)</p>
+                    <p><strong>ภาคการศึกษา:</strong> Block 3 ภาคต้น ปีการศึกษา 2568</p>
+                    <p><strong>ระยะเวลา:</strong> 23 พฤศจิกายน 2568 – 14 ธันวาคม 2568</p>
                 </section>
 
                 <!-- Description Section -->
-                <section id="description" class="content-section">
+                <!-- <section id="description" class="content-section">
                     <div class="section-header">
                         <span class="section-icon">📖</span>
                         <h2 class="section-title">คำอธิบายรายวิชา</h2>
                     </div>
-                    <p>หลักการและแนวคิดพื้นฐานของคณิตศาสตร์ไม่ต่อเนื่อง ทฤษฎีเซต ตรรกศาสตร์ และการพิสูจน์ ฟังก์ชันและความสัมพันธ์ การนับและความน่าจะเป็น กราฟและต้นไม้ พีชคณิตบูลีน</p>
-                </section>
+                    <p>ความรู้เบื้องต้นเกี่ยวกับระบบสารสนเทศ บทบาท รูปแบบ และองค์ประกอบของระบบสารสนเทศในองค์การธุรกิจ ประเภทและวิธีการประมวลผลข้อมูล การประยุกต์ใช้เทคโนโลยีสารสนเทศในการจัดเก็บ การเข้าถึงการประมวลผลและการควบคุมเทคโนโลยีสารสนเทศที่ใช้ในการบริหารจัดการ ระบบงานทางธุรกิจ และทักษะการใช้เทคโนโลยีสารสนเทศ</p>
+                </section> -->
 
                 <!-- Materials Section -->
                 <section id="materials" class="content-section">
@@ -149,7 +478,13 @@
                         <span class="section-icon">📄</span>
                         <h2 class="section-title">เอกสารประกอบการสอน</h2>
                     </div>
-                    <p><a href="../assets/latex/text_discrete/main_discrete_prog.pdf" target="_blank">หนังสืออ่านประกอบ</a></p>
+                    <ul class="styled-list">
+                        <li><a href="assets/textbook/720401-CH1-ระบบสารสนเทศและการจัดการในโลกยุคดิจิ.pdf" target="_blank">CH1-ระบบสารสนเทศและการจัดการในโลกยุคดิจิตอล</a> </li>
+                        <li><a href="assets/textbook/720401-CH2-ระบบสารสนเทศสำหรับองค์กร.pdf" target="_blank">CH2-ระบบสารสนเทศสำหรับองค์กร</a> </li>
+                        <li><a href="assets/textbook/720401-CH3-II-การเปลี่ยนข้อมูลให้เป็นสารสนเทศในเช.pdf" target="_blank">720401-CH3-การเปลี่ยนข้อมูลให้เป็นสารสนเทศในเชิงธุรกิจ</a> </li>
+                        <li><a href="assets/textbook/720401-CH4-Google Data Studio.pdf" target="_blank">720401-CH4-Google Data Studio</a> </li>
+                        <li><a href="assets/textbook/720401-CH5-โครงสร้างพื้นฐานและเทคโนโลยีใหม่.pdf" target="_blank">720401-CH5-โครงสร้างพื้นฐานและเทคโนโลยีใหม่</a> </li>
+                    </ul>
                 </section>
 
                 <!-- CLOs Section -->
