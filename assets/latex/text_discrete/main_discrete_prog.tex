@@ -11,6 +11,9 @@
 \usepackage{amssymb,amsmath,amsthm,graphicx,mathrsfs}
 \usepackage{fontspec}
 \usepackage{polyglossia}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
 \setdefaultlanguage{english}
 \setotherlanguage{thai} 
 
@@ -80,7 +83,7 @@ BoldItalicFont = *-BoldItalic
 % BoldItalicFont = *-BoldItalic
 % ]
 
-\linespread{1.5} 
+%\linespread{1.5} 
 
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip = 0pt plus 1pt
@@ -232,16 +235,16 @@ BoldItalicFont = *-BoldItalic
 \tcbuselibrary{theorems}
 
 \newtcbtheorem[use counter*=defin,number within=section]{defn}{นิยาม~}%
-{colback=yellow!0,colframe=black,fonttitle=\bfseries,colbacktitle=white,coltitle=black}{}
+{breakable, colback=yellow!0,colframe=black,fonttitle=\bfseries,colbacktitle=white,coltitle=black}{}
 %
 \newtcbtheorem[use counter*=defin,number within=section]{lem}{บทตั้ง}%
-{colback=yellow!0,colframe=black,fonttitle=\bfseries}{}
+{breakable,colback=yellow!0,colframe=black,fonttitle=\bfseries}{}
 
 \newtcbtheorem[use counter*=defin,number within=section]{prop}{คุณสมบัติ}%
-{colback=yellow!0,colframe=black,fonttitle=\bfseries}{}
+{breakable,colback=yellow!0,colframe=black,fonttitle=\bfseries}{}
 
 \newtcbtheorem[use counter*=defin,number within=section]{thm}{ทฤษฎีบท}%
-{colback=yellow!0,colframe=black,fonttitle=\bfseries}{}
+{breakable,colback=yellow!0,colframe=black,fonttitle=\bfseries}{}
 
 \newcommand{\progpart}{
 	\begin{center}
@@ -319,7 +322,8 @@ BoldItalicFont = *-BoldItalic
 	\part{Basic Algorithm Design based upon Discrete Mathematics}
 	
 	\part{In-Class Worksheet}
-	\include{week1}
+%	\include{../discrete_week_material/syllabus/discrete_syllabus}
+%	\include{../discrete_week_material/week1/week1_mat}
 	
 	\include{chapters/recurseAlgor}
 	\backmatter

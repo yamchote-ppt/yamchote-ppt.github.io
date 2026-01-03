@@ -2,52 +2,243 @@
   "course": {
     "title": "725103 Data Structure and Algorithm",
     "term": "ภาคปลาย ปีการศึกษา 2568 (1 พ.ย. 2568 – 1 มี.ค. 2569)",
-    "schedule": "พุธ 13:00-17:00",
-    "room": "LAB-COM-1"
+    "schedule": "เวลาเรียน: (ใส่วัน-เวลาเรียนที่นี่)",
+    "room": "(ใส่ห้องเรียนที่นี่)",
+    "description": "โครงสร้างข้อมูลแบบต่างๆ ทั้งแบบเชิงเส้น อะเรย์ ลิงค์ลิสต์ แสตกคิวและแบบไม่ใช่เชิงเส้น ทรี กราฟ อัลกอริทึมพื้นฐานที่ใช้กับโครงสร้างข้อมูล เทคนิคการเรียงลำดับข้อมูลในหน่วยความจำหลักแบบต่างๆ ค้นหาข้อมูล การพัฒนาอัลกอริทึมและการวิเคราะห์อัลกอริทึมอย่างง่าย และการเขียนโปรแกรมเพื่อจัดการกับโครงสร้างแบบต่างๆ"
   },
   "clos": [
-    { "id": "CLO1", "description": "อธิบายหลักการและแนวคิดของโครงสร้างข้อมูลและอัลกอริทึมพื้นฐานได้", "bloom": "Understand", "type": "K" },
-    { "id": "CLO2", "description": "วิเคราะห์ความซับซ้อนของอัลกอริทึม (Algorithm Complexity) และเลือกใช้อัลกอริทึมที่เหมาะสมได้", "bloom": "Analyze", "type": "K/S" },
-    { "id": "CLO3", "description": "ประยุกต์ใช้โครงสร้างข้อมูลและอัลกอริทึมในการแก้ปัญหาโจทย์พื้นฐานได้", "bloom": "Apply", "type": "S" },
-    { "id": "CLO4", "description": "ออกแบบและเขียนโปรแกรมคอมพิวเตอร์เพื่อจัดการโครงสร้างข้อมูลและอัลกอริทึมได้", "bloom": "Create", "type": "S" },
-    { "id": "CLO5", "description": "ทำงานร่วมกับผู้อื่นและสื่อสารเพื่อแก้ปัญหาตามที่ได้รับมอบหมายได้", "bloom": "Apply", "type": "A" }
+    {
+      "id": "CLO1",
+      "description": "อธิบายแนวคิดพื้นฐานของ data, data structure, algorithm, memory model และแนวคิด Abstract Data Type (ADT) พร้อมยกตัวอย่างการใช้งานได้",
+      "bloom": "Understand",
+      "type": "K"
+    },
+    {
+      "id": "CLO2",
+      "description": "อ่าน/เขียน pseudocode ระดับพื้นฐาน และ trace ขั้นตอนการทำงานด้วยแผนภาพหรือการไล่ค่าตัวแปรได้อย่างถูกต้อง",
+      "bloom": "Apply",
+      "type": "S"
+    },
+    {
+      "id": "CLO3",
+      "description": "วิเคราะห์ประสิทธิภาพเชิงเวลา/หน่วยความจำของอัลกอริทึมในระดับ Big-O และแยก best/worst case ของตัวอย่างมาตรฐานได้",
+      "bloom": "Analyze",
+      "type": "K"
+    },
+    {
+      "id": "CLO4",
+      "description": "เลือกใช้และอธิบาย trade-off ของโครงสร้างข้อมูล (array, linked list, stack, queue, tree, heap, hash table, graph) ให้เหมาะกับโจทย์ และให้เหตุผลเชิงประสิทธิภาพได้",
+      "bloom": "Analyze",
+      "type": "S"
+    },
+    {
+      "id": "CLO5",
+      "description": "สื่อสารแนวคิดและคำตอบอย่างเป็นระบบ ทำงานร่วมกันอย่างรับผิดชอบ และปฏิบัติตามความซื่อสัตย์ทางวิชาการ",
+      "bloom": "Evaluate",
+      "type": "A"
+    }
   ],
   "plos": ["PLO1", "PLO2", "PLO3", "PLO4", "PLO5", "PLO6"],
   "mapping": [
-    { "clo": "CLO1", "weights": [3, 2, "", "", "", ""] },
-    { "clo": "CLO2", "weights": [3, 3, 2, "", "", ""] },
-    { "clo": "CLO3", "weights": ["", 3, 3, 2, "", ""] },
-    { "clo": "CLO4", "weights": ["", 3, 3, 2, "", ""] },
-    { "clo": "CLO5", "weights": ["", "", "", "", 3, 2] }
+    { "clo": "CLO1", "weights": [1, 3, 2, 1, 1, 2] },
+    { "clo": "CLO2", "weights": [1, 2, 3, 1, 2, 3] },
+    { "clo": "CLO3", "weights": [1, 2, 3, 1, 1, 3] },
+    { "clo": "CLO4", "weights": [1, 3, 3, 2, 2, 3] },
+    { "clo": "CLO5", "weights": [3, 1, 2, 3, 3, 1] }
   ],
   "assessments": [
-    { "tool": "การบ้าน / แบบฝึกหัดในชั้นเรียน", "weight": "20%", "clos": ["CLO1", "CLO2", "CLO3"], "threshold": "≥ 60%", "analysis": "Rubric" },
-    { "tool": "สอบกลางภาค", "weight": "30%", "clos": ["CLO1", "CLO2"], "threshold": "≥ 50%", "analysis": "Item Analysis" },
-    { "tool": "สอบปลายภาค", "weight": "40%", "clos": ["CLO3", "CLO4"], "threshold": "≥ 50%", "analysis": "Item Analysis" },
-    { "tool": "งานกลุ่ม (Project)", "weight": "10%", "clos": ["CLO5"], "threshold": "≥ 60%", "analysis": "Rubric" }
+    {
+      "tool": "พฤติกรรมเข้าเรียน/ส่งงาน/การมีส่วนร่วม",
+      "weight": "10%",
+      "clos": ["CLO5"],
+      "threshold": "≥ 60%",
+      "analysis": "เช็คชื่อ + checklist การมีส่วนร่วม + สรุปผลรายสัปดาห์"
+    },
+    {
+      "tool": "งานเดี่ยว/ใบงานท้ายบท (Worksheet)",
+      "weight": "10%",
+      "clos": ["CLO1", "CLO2", "CLO3", "CLO4"],
+      "threshold": "≥ 60%",
+      "analysis": "Rubric แบบสั้น (ถูกต้อง/เหตุผล/การสื่อสาร) + สรุปข้อผิดพลาดที่พบบ่อย"
+    },
+    {
+      "tool": "สอบย่อย (Quiz)",
+      "weight": "15%",
+      "clos": ["CLO1", "CLO2", "CLO3"],
+      "threshold": "≥ 60%",
+      "analysis": "Item analysis (ง่าย/ยาก) + ปรับการสอนตามหัวข้อที่ตกหล่น"
+    },
+    {
+      "tool": "งานกลุ่ม (Group assignment / mini project)",
+      "weight": "15%",
+      "clos": ["CLO4", "CLO5"],
+      "threshold": "≥ 60%",
+      "analysis": "Rubric (ความเหมาะสมของ DS/Algorithm + เหตุผล + การนำเสนอ/รายงาน)"
+    },
+    {
+      "tool": "สอบกลางภาค (Midterm exam)",
+      "weight": "20%",
+      "clos": ["CLO1", "CLO2", "CLO3"],
+      "threshold": "≥ 50%",
+      "analysis": "แยกคะแนนตาม CLO + วิเคราะห์หัวข้อที่ต้อง remedial"
+    },
+    {
+      "tool": "สอบปลายภาค (Final exam)",
+      "weight": "30%",
+      "clos": ["CLO2", "CLO3", "CLO4"],
+      "threshold": "≥ 50%",
+      "analysis": "แยกคะแนนตาม CLO + สรุปผลการบรรลุ CLO รายภาพรวมรายวิชา"
+    }
+  ],
+  "schedule": [
+    {
+      "week": "สัปดาห์ที่ 1",
+      "date": "(ใส่วันที่)",
+      "topic": "Introduction • Data Structures • Data in Memory • Abstract Data Type (ADT)",
+      "notes": "วันนี้เราจะเริ่มจากคำถามว่า “ทำไมต้องมี Data Structures” แล้วค่อย ๆ เปิดภาพว่าข้อมูลอยู่ในหน่วยความจำอย่างไร ก่อนปิดท้ายด้วยแนวคิด ADT ที่ทำให้เราแยก “สิ่งที่ทำได้” ออกจาก “วิธีทำ”",
+      "materials": [
+        { "label": "Slides Week 1", "href": "../assets/handout/725103/week01_slides.pdf" },
+        { "label": "Worksheet Week 1", "href": "../assets/latex/ds_week_material/week1/week1_mat.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 2",
+      "date": "(ใส่วันที่)",
+      "topic": "Pseudocode • Asymptotic Notation • Best/Worst Case",
+      "notes": "เราจะเริ่ม “อ่านภาษาอัลกอริทึม” ด้วย pseudocode และเรียนรู้วิธีพูดเรื่องความเร็ว/การเติบโตของเวลาแบบไม่ติดตัวเลขเครื่องจริง ด้วย Big-O พร้อมรู้จัก best/worst case",
+      "materials": [
+        { "label": "Slides Week 2", "href": "../assets/handout/725103/week02_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 3",
+      "date": "(ใส่วันที่)",
+      "topic": "Arrays • Sequential Organization • Binary Search",
+      "notes": "วันนี้เราจะเห็นพลังของการเก็บข้อมูลแบบ “เรียงเป็นช่อง ๆ” ใน array ที่เข้าถึงเร็วมาก แล้วใช้เงื่อนไข “ข้อมูลต้องเรียง” เพื่อทำ Binary Search แบบเร็วขึ้นอย่างชัดเจน",
+      "materials": [
+        { "label": "Slides Week 3", "href": "../assets/handout/725103/week03_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 4",
+      "date": "(ใส่วันที่)",
+      "topic": "Dynamic Arrays • List • Singly Linked List",
+      "notes": "เมื่อ array โตไม่ทันใจ เราต้องรู้จัก dynamic array และเมื่อการแทรก/ลบกลายเป็นปัญหา เราจะเปิดโลก linked list ที่เชื่อมกันด้วย pointer (แบบเข้าใจจากภาพ ไม่ต้องโค้ดจริง)",
+      "materials": [
+        { "label": "Slides Week 4", "href": "../assets/handout/725103/week04_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 5",
+      "date": "(ใส่วันที่)",
+      "topic": "Doubly Linked List • Circular Doubly Linked List",
+      "notes": "วันนี้เราจะเพิ่ม “ทางกลับ” ให้ linked list ด้วย prev และต่อยอดเป็นแบบ “วงกลม” เพื่อจัดการงานที่วนซ้ำได้สะดวก แต่ต้องระวังกรณีขอบให้ดี",
+      "materials": [
+        { "label": "Slides Week 5", "href": "../assets/handout/725103/week05_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 6",
+      "date": "(ใส่วันที่)",
+      "topic": "Stack • Queue • Implementations • Expression Evaluation",
+      "notes": "เราจะได้โครงสร้างที่เหมือน “กองจาน” (stack) และ “แถวต่อคิว” (queue) แล้วนำ stack ไปใช้แก้ปัญหานิพจน์คณิตฯ แบบจับต้องได้ (trace ทีละสเต็ปจนเห็นคำตอบ)",
+      "materials": [
+        { "label": "Slides Week 6", "href": "../assets/handout/725103/week06_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 7",
+      "date": "(ใส่วันที่)",
+      "topic": "Recursion • Divide-and-Conquer • Efficiency of Recursion",
+      "notes": "วันนี้เราจะเรียนวิธีคิดแบบ “เรียกตัวเองให้เล็กลง” (recursion) พร้อมมองภาพ call stack และรู้จัก divide-and-conquer จากตัวอย่างง่าย ๆ ก่อนเริ่มแตะการวิเคราะห์เวลาแบบคร่าว ๆ",
+      "materials": [
+        { "label": "Slides Week 7", "href": "../assets/handout/725103/week07_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 8",
+      "date": "(ใส่วันที่)",
+      "topic": "Midterm Exam",
+      "notes": "สอบกลางภาค",
+      "materials": []
+    },
+    {
+      "week": "สัปดาห์ที่ 9",
+      "date": "(ใส่วันที่)",
+      "topic": "Trees • Binary Tree • BFS/DFS Traversal",
+      "notes": "หลัง midterm เราจะเปิดโลก “โครงสร้างแบบลำดับชั้น” (tree) เรียนคำศัพท์สำคัญ และฝึก “เดินต้นไม้” แบบ BFS/DFS จนเห็นว่าแต่ละแบบให้ลำดับต่างกันอย่างไร",
+      "materials": [
+        { "label": "Slides Week 9", "href": "../assets/handout/725103/week09_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 10",
+      "date": "(ใส่วันที่)",
+      "topic": "Tree Representation • Binary Search Tree (BST) • Insert/Delete",
+      "notes": "เราจะทำให้ BST เป็น “แผนที่การค้นหา” ที่เร็วขึ้นด้วยกฎการจัดวาง และฝึกเคสลบที่มักสับสน (ลบใบ/มีลูกหนึ่ง/มีลูกสอง) ด้วยการ trace แบบเป็นขั้นตอน",
+      "materials": [
+        { "label": "Slides Week 10", "href": "../assets/handout/725103/week10_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 11",
+      "date": "(ใส่วันที่)",
+      "topic": "Tries (Prefix Trees) • Prefix Matching",
+      "notes": "เราจะเห็นโครงสร้างที่เหมาะกับ “ค้นหาตามคำนำหน้า” เช่นคำศัพท์/ชื่อ/รหัสสินค้า ด้วย trie ที่ทำให้การค้นหาขึ้นกับ “ความยาวคำ” มากกว่าจำนวนคำทั้งหมด",
+      "materials": [
+        { "label": "Slides Week 11", "href": "../assets/handout/725103/week11_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 12",
+      "date": "(ใส่วันที่)",
+      "topic": "Priority Queue • Heaps • Heap Sort",
+      "notes": "วันนี้เราจะเรียนการจัดคิวแบบ “มาก่อนไม่สำคัญเท่าความสำคัญ” ด้วย priority queue และทำให้ทำงานได้มีประสิทธิภาพด้วย heap ก่อนปิดท้ายด้วย Heap Sort",
+      "materials": [
+        { "label": "Slides Week 12", "href": "../assets/handout/725103/week12_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 13",
+      "date": "(ใส่วันที่)",
+      "topic": "Hash Table • Hash Function • Collision (concept)",
+      "notes": "เราจะรู้จักแนวคิด “ค้นหาเหมือนเปิดลิ้นชักด้วยกุญแจ (key)” ผ่าน hash table และเรียนว่า hash function ที่ดีควรมีคุณสมบัติอย่างไร รวมถึงรับมือปัญหา key ชนกัน (collision)",
+      "materials": [
+        { "label": "Slides Week 13", "href": "../assets/handout/725103/week13_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 14",
+      "date": "(ใส่วันที่)",
+      "topic": "Graphs • Traversal • Shortest Path • MST (concept)",
+      "notes": "เราจะใช้ graph แทน “โลกของความเชื่อมโยง” เช่น แผนที่/เครือข่าย/ความสัมพันธ์ แล้วเรียนทั้งการท่องกราฟ (BFS/DFS) และแนวคิดสำคัญอย่าง shortest path กับ MST จากตัวอย่างเล็ก ๆ",
+      "materials": [
+        { "label": "Slides Week 14", "href": "../assets/handout/725103/week14_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 15",
+      "date": "(ใส่วันที่)",
+      "topic": "Searching & Sorting • Complexity Trade-offs",
+      "notes": "เราจะปิดเนื้อหาหลักด้วยคลังเครื่องมือ “ค้นหาและเรียงลำดับ” เพื่อให้เลือกใช้ได้เหมาะกับสถานการณ์ พร้อมฝึกดู Big-O และ trade-off แบบที่อธิบายได้เป็นเหตุเป็นผล",
+      "materials": [
+        { "label": "Slides Week 15", "href": "../assets/handout/725103/week15_slides.pdf" }
+      ]
+    },
+    {
+      "week": "สัปดาห์ที่ 16",
+      "date": "(ใส่วันที่)",
+      "topic": "Review • Mock Quiz • Final Preparation",
+      "notes": "สัปดาห์สุดท้ายเราจะเชื่อมทุกบทเข้าด้วยกัน: เห็นโจทย์แล้วเลือกโครงสร้างข้อมูลให้เหมาะ อธิบายเหตุผล และ trace ให้ถูกต้อง พร้อมแบบทดสอบย่อยเพื่อเช็คความพร้อมก่อนปลายภาค",
+      "materials": [
+        { "label": "Review Sheet", "href": "../assets/handout/725103/review_sheet.pdf" }
+      ]
+    }
   ],
   "policies": {
-    "submission": "ส่งงานผ่านระบบ LMS ภายในเวลาที่กำหนด หากส่งช้าจะถูกหักคะแนนวันละ 10%",
-    "attendance": "ต้องมีเวลาเรียนไม่ต่ำกว่า 80% ของเวลาเรียนทั้งหมด",
-    "integrity": "ไม่อนุญาตให้มีการคัดลอกงานหรือทุจริตในการสอบ หากตรวจพบจะให้เกรด F ในรายวิชานี้ทันที",
-    "resources": "เอกสารประกอบการสอน, หนังสืออ้างอิง: Data Structures and Algorithms in Python by Goodrich, Tamassia, Goldwasser"
-  },
-  "schedule": [
-    { "week": "ครั้งที่ 1", "topic": "Introduction to Data Structures & Algorithms, Algorithm Analysis (Big O)", "notes": "ปฐมนิเทศ, แนะนำรายวิชาและเกณฑ์การประเมิน" },
-    { "week": "ครั้งที่ 2", "topic": "Arrays and Linked Lists (Singly, Doubly, Circular)" },
-    { "week": "ครั้งที่ 3", "topic": "Stacks: Array & Linked List Implementation, Applications" },
-    { "week": "ครั้งที่ 4", "topic": "Queues: Array & Linked List Implementation, Deques, Applications" },
-    { "week": "ครั้งที่ 5", "topic": "Recursion and Algorithm Design Strategies" },
-    { "week": "ครั้งที่ 6", "topic": "Trees: Terminology, Binary Trees, Tree Traversal" },
-    { "week": "ครั้งที่ 7", "topic": "Binary Search Trees (BST)" },
-    { "week": "ครั้งที่ 8", "topic": "สอบกลางภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 1-7" },
-    { "week": "ครั้งที่ 9", "topic": "Advanced Trees: AVL Trees, Heaps and Priority Queues" },
-    { "week": "ครั้งที่ 10", "topic": "Sorting Algorithms I: Bubble, Selection, Insertion Sort" },
-    { "week": "ครั้งที่ 11", "topic": "Sorting Algorithms II: Merge Sort, Quick Sort" },
-    { "week": "ครั้งที่ 12", "topic": "Searching Algorithms: Linear Search, Binary Search, Hashing" },
-    { "week": "ครั้งที่ 13", "topic": "Graphs: Terminology, Representations (Adjacency Matrix/List)" },
-    { "week": "ครั้งที่ 14", "topic": "Graph Traversal: Breadth-First Search (BFS), Depth-First Search (DFS)" },
-    { "week": "ครั้งที่ 15", "topic": "Final Project Presentation & Review", "notes": "นำเสนอโครงงานกลุ่มและทบทวนก่อนสอบปลายภาค" },
-    { "week": "ครั้งที่ 16", "topic": "สอบปลายภาค", "notes": "ครอบคลุมเนื้อหาครั้งที่ 9-15" }
-  ]
+    "submission": "ส่งงานผ่านเมนู Assignment ใน Microsoft Teams ในกรณีที่เป็นงานกลุ่มจะต้องส่งเข้าระบบทุกคน ทุกงานมีวันกำหนดส่งงาน 1 สัปดาห์หลังจากมอบหมายในระบบภายในเวลา 23:59 น. นักศึกษาทุกคนมีโควต้าส่งงานช้าได้ 3 วัน ตลอดภาคการศึกษา โดยจะนับโควต้าเต็มวันเสมอในแต่ละงาน กล่าวคือ ถ้าหากส่งช้าไม่ถึง 24 ชั่วโมง จะถูกนับเป็น 1 วัน (ต่อให้เกินมาแค่ 1 นาทีก็ตาม)  นักศึกษาไม่จำเป็นต้องระบุเหตุผลการส่งงานช้า ระบบจะทำการคำนวณตามเวลาส่งให้อัตโนมัติ การช้าเกินโควต้าที่กำหนดจะไม่ได้รับคะแนนในงานนั้น ๆ",
+    "attendance": "แนะนำให้เข้าเรียนสม่ำเสมอ (มีการเช็คชื่อ/กิจกรรมในคาบ ถึงแม้จะใช้เป็นแค่คะแนนช่วยในตอนท้าย) และต้องมีเวลาเรียนตามเกณฑ์ที่มหาวิทยาลัยกำหนด",
+    "integrity": "ห้ามคัดลอกผลงาน/ทุจริตในการสอบ หากตรวจพบจะดำเนินการตามระเบียบของมหาวิทยาลัย และอาจส่งผลต่อคะแนนรายวิชา",
+    "resources": "ทรัพยากรเสริม: สไลด์รายสัปดาห์, ใบงาน (worksheet), แบบฝึก trace/pseudocode และหนังสืออ้างอิงมาตรฐานด้าน Data Structures"
+  }
 }

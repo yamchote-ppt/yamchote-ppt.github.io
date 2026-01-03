@@ -8,27 +8,38 @@
 
 ดังนั้น หนังสือเล่มนี้จึงจัดทำขึ้นเพื่อใช้ประกอบการสอนและเป็นคู่มือให้กับผู้เรียน โดยเนื้อหาการสอนจริงในห้องเรียนอาจไม่ได้เรียงตรงตามหนังสือทั้งหมด แต่จะมีโครงสร้างหลักตามแผนการสอน 16 สัปดาห์ดังต่อไปนี้ ซึ่งระบุหัวข้อการสอน วิธีพิสูจน์ที่เรียนรู้ และบทที่สอดคล้องกับหนังสือ
 
-\scalebox{0.7}{\begin{tabular}{|c|l|l|c|}
+\scalebox{0.6}{\begin{tabular}{c|l|l|l}
 	\hline
-	\textbf{Week} & \textbf{Main Topic} & \textbf{Method of Proof} & \textbf{Book Chapter} \\
+	\textbf{สป} & \textbf{หัวข้อหลัก} & \textbf{โฟกัสการให้เหตุผล} & \textbf{กิจกรรมเด่นในห้อง}\\
 	\hline
-	1 & Mathematical Language \& Sets; Recursive Definitions & Direct Proof, Counterexample & Ch.1 \\
-	2 & Propositional Logic \& Inference Rules & Direct, Contrapositive, Contradiction & Ch.2 \\
-	3 & Predicate Logic \& Quantifiers & Contradiction, Countermodel & Ch.2 \\
-	4 & Induction I: Basic Induction on $\mathbb{N}$ & Weak Induction, Base \& Step Structure & Ch.3 \\
-	5 & Induction II: Strong \& Structural Induction & Structural Induction, Minimal Counterexample & Ch.3 \\
-	6 & Functions \& Relations & Proof from Definitions, Counterexample & Ch.4 \\
-	7 & Equivalence Relations \& Partial Orders & Proof from Properties, Diagram Reasoning & Ch.4 \\
-	8 & \textbf{Midterm Exam} & --- & --- \\
-	9 & Review all methods of proof & --- & --- \\
-	10 & Counting I: Basic Rules \& Bijections & Combinatorial Proof, Bijection & Ch.5 \\
-	11 & Counting II: Inclusion–Exclusion \& Pigeonhole & Inductive Combinatorial Proof & Ch.5 \\
-	12 & Recursive Problem Solving & Inductive Reasoning in Algorithms & Ch.6 \\
-	13 & Recurrences: Linear Homogeneous & Inductive Verification of Closed Forms & Ch.6 \\
-	14 & Graphs I: Fundamentals \& Connectivity & Parity / Invariant Proofs & Ch.7 \\
-	15 & Trees \& Spanning Trees & Induction on Graph Size, Cut/Cycle Property & Ch.7 \\
-	16 & \textbf{Final Exam} & --- & --- \\
+	1 & ภาษาและโครงสร้างของพิสูจน์ & claim vs reason, legal line, unpack definition & annotate proof, debug ขั้นพื้นฐาน, workshop even/odd\\
+	2 & Propositional logic ในการพิสูจน์ & implication, contrapositive, contradiction, cases & แปลงข้อความให้เข้ารูปพิสูจน์, แก้การใช้ \(\Rightarrow\)/\(\Leftrightarrow\)\\
+	3 & Quantifiers \(\forall/\exists\) & โดเมน, การปฏิเสธ, ลำดับตัวบ่งปริมาณ & translate NL\(\leftrightarrow\)symbols, counterexample จากสลับ \(\forall\exists\)\\
+	4 & เซตและฟังก์ชัน & double inclusion, image/preimage & พิสูจน์ความเท่ากันของเซต 2 วิธี, reasoning กับ \(f^{-1}\)\\
 	\hline
+	\multicolumn{4}{c}{สอบย่อย 1 (ตรรกะการพิสูจน์เบื้องต้น)}  \\
+	\hline
+	5 & Relations/equivalence & RST, class/partition & สร้าง relation แล้วให้เพื่อนหา counterexample\\
+	6 & Partial orders & minimal vs minimum, DAG thinking & พิสูจน์การมี/ไม่มี minimal element\\
+	7 & Induction I & template, IH ที่ถูกต้อง & debug induction, เขียน induction สั้น ๆ\\
+	8 & \multicolumn{3}{c}{สัปดาห์สอบกลางภาคของมหาวิทยาลัย}\\
+	9 & Induction II & strong/structural, recursion correctness & พิสูจน์ความถูกต้องของฟังก์ชันเวียนเกิด\\
+	10 & Invariants/Monovariants & impossibility, termination & เกม/กระบวนการ: หา invariant\\
+	\hline
+	\multicolumn{4}{c}{สอบย่อย 2 (การพิสูจน์ induction และ recursion)}  \\
+	\hline
+	11 & Graphs I & degree, paths, contradiction on graphs & เหตุผลเชิงโครงสร้าง, parity idea\\
+	12 & Graphs II (Trees) & induction on trees, \(|V|-|E|=1\) & พิสูจน์คุณสมบัติต้นไม้ 2 เทคนิค\\
+	13 & Algorithmic proofs & loop invariant, correctness sketches & วิเคราะห์ pseudocode + invariant\\
+	14 & Stable matching & termination, stability, optimality & lemma-by-lemma, blocking pair contradiction\\
+	\hline
+	\multicolumn{4}{c}{สอบย่อย 3 (การพิสูจน์บน graph และ algorithm อย่างง่าย)}  \\
+	\hline
+	15 & Counting as proof & bijection, pigeonhole, double counting & existence/impossibility ด้วยการนับเชิงเหตุผล\\
+	16 & Probability as reasoning & events as sets, expectation, probabilistic method (light) & ใช้ความน่าจะเป็นพิสูจน์การมีอยู่\\
+	\hline
+	\multicolumn{4}{c}{สอบปลายภาค (ทุกหัวข้อ เน้นทักษะการพิสูจน์ในภาพรวมในหัวข้อที่เกี่ยวกับคอมพิวเตอร์)}  \\
+	\bottomrule
 \end{tabular}}
 \vspace{1em}
 

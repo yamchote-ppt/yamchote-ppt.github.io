@@ -263,8 +263,8 @@
         .styled-list li {
             padding: 0.8rem 0;
             border-bottom: 1px solid var(--gray-200);
-            display: flex;
-            align-items: flex-start;
+            /* display: flex; */
+            /* align-items: flex-start; */
             gap: 1rem;
         }
 
@@ -418,10 +418,9 @@
         <div class="content-card">
             <!-- Reference: OBE PDF -->
             <div class="alert-box alert-warning" style="margin-top: -0.5rem;">
-                <h5>📎 เอกสารอ้างอิง OBE</h5>
+                <h5>ประกาศสำคัญ</h5>
                 <p>
-                    ใช้อ้างอิงในการกรอก CLO, Mapping และแผนการประเมิน: 
-                    <a href="../obe3 dsa.pdf" target="_blank"><strong>obe3 dsa.pdf</strong></a>
+                    ไม่มี
                 </p>
             </div>
             <!-- Announcements (Optional - Remove if not needed) -->
@@ -433,13 +432,13 @@
             </div> -->
 
             <!-- Course Description -->
-            <div class="section-block">
+            <div class="section-block" id="description">
                 <div class="section-header">
                     <span class="section-icon">📖</span>
                     <h2 class="section-title">คำอธิบายรายวิชา</h2>
                 </div>
-                <p>
-                    โครงสร้างข้อมูลแบบต่างๆ ทั้งแบบเชิงเส้น อะเรย์ ลิงค์ลิสต์ แสตกคิวและแบบไม่ใช่เชิงเส้น ทรี กราฟ อัลกอริทึมพื้นฐานที่ใช้กับโครงสร้างข้อมูล เทคนิคการเรียงลำดับข้อมูลในหน่วยความจำหลักแบบต่างๆ ค้นหาข้อมูล การพัฒนาอัลกอริทึมและการวิเคราะห์อัลกอริทึมอย่างง่าย และการเขียนโปรแกรมเพื่อจัดการกับโครงสร้างแบบต่างๆ
+                <p id="description-text">
+                    <!-- Course description will be loaded from JSON -->
                 </p>
             </div>
 
@@ -456,6 +455,43 @@
                     -->
                     <li><em style="color: var(--gray-700);">เอกสารจะประกาศเร็วๆ นี้</em></li>
                 </ul>
+            </div>
+
+
+            <!-- Policies and Resources -->
+            <div class="section-block" id="policies">
+                <div class="section-header">
+                    <span class="section-icon">📜</span>
+                    <h2 class="section-title">นโยบายรายวิชาและทรัพยากร</h2>
+                </div>
+                <ul class="styled-list" id="policies-list">
+                    <li><strong>ส่งงาน:</strong> <span id="policy-submission">ส่งงานผ่านระบบ LMS ภายในเวลาที่กำหนด หากส่งช้าจะถูกหักคะแนนวันละ 10%</span></li>
+                    <li><strong>เข้าชั้นเรียน:</strong> <span id="policy-attendance">ต้องมีเวลาเรียนไม่ต่ำกว่า 80% ของเวลาเรียนทั้งหมด</span></li>
+                    <li><strong>ความซื่อสัตย์ทางวิชาการ:</strong> <span id="policy-integrity">ไม่อนุญาตให้มีการคัดลอกงานหรือทุจริตในการสอบ หากตรวจพบจะให้เกรด F ในรายวิชานี้ทันที</span></li>
+                    <li><strong>ทรัพยากรเสริม:</strong> <span id="policy-resources">เอกสารประกอบการสอน, หนังสืออ้างอิง: Data Structures and Algorithms in Python by Goodrich, Tamassia, Goldwasser</span></li>
+                </ul>
+            </div>
+
+            <!-- Schedule -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📅</span>
+                    <h2 class="section-title">ตารางสอน</h2>
+                </div>
+                
+                <div id="schedule-list">
+                <!-- ADD SCHEDULE ITEMS HERE -->
+                <!-- Example:
+                <div class="schedule-item">
+                    <strong>ครั้งที่ 1 (DD Month)</strong>
+                    <p>Topic description here</p>
+                    <ul>
+                        <li>Note: <a href="../assets/handout/DSA_Week1.pdf">download</a></li>
+                    </ul>
+                </div>
+                -->
+                </div>
+                <p id="schedule-placeholder" style="color: var(--gray-700); font-style: italic;">ตารางสอนจะประกาศเร็วๆ นี้</p>
             </div>
 
             <!-- OBE: Course Learning Outcomes (CLOs) -->
@@ -497,6 +533,88 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+
+            <!-- Grading -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📊</span>
+                    <h2 class="section-title">การประเมินผล</h2>
+                </div>
+                <div class="table-wrap">
+                    <table class="modern" id="assessment-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%">กิจกรรม/เครื่องมือประเมิน</th>
+                                <th style="width: 15%">สัดส่วน (%)</th>
+                                <th>CLO ที่วัด</th>
+                                <th style="width: 18%">เกณฑ์ผ่าน (Threshold)</th>
+                                <!-- <th style="width: 18%">วิธีตรวจสอบ/วิเคราะห์ผล</th> -->
+                            </tr>
+                        </thead>
+                        <tbody id="assessment-tbody">
+                            <tr>
+                                <td><!-- Quiz / Assignment / Project / Lab / Midterm / Final --></td>
+                                <td><!-- % --></td>
+                                <td><!-- CLO1, CLO2, ... --></td>
+                                <td><!-- >= 60% เป็นต้น --></td>
+                                <td><!-- Rubric, Item analysis, ฯลฯ --></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Homework -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">✏️</span>
+                    <h2 class="section-title">การบ้าน</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD HOMEWORK HERE -->
+                    <!-- Example:
+                    <li><strong>การบ้าน 1:</strong> Topic <small style="color: var(--gray-700);">(due date DD Month YYYY)</small> <a href="../assets/handout/homework/hw1.pdf">(โจทย์)</a> <a href="../assets/handout/homework/hw1_sol.pdf">(เฉลย)</a></li>
+                    -->
+                    <li><em style="color: var(--gray-700);">การบ้านจะประกาศเร็วๆ นี้</em></li>
+                </ul>
+            </div>
+
+            <!-- Exams -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">📝</span>
+                    <h2 class="section-title">ข้อสอบ</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD EXAMS HERE -->
+                    <!-- Example:
+                    <li><strong>สอบย่อยครั้งที่ 1:</strong> Topic <a href="../assets/handout/exam/quiz1.pdf">(โจทย์)</a> <a href="../assets/handout/exam/quiz1_sol.pdf">(เฉลย)</a></li>
+                    -->
+                    <li><em style="color: var(--gray-700);">ข้อสอบจะประกาศหลังการสอบ</em></li>
+                </ul>
+            </div>
+
+            <!-- Video Resources (Optional) -->
+            <div class="section-block">
+                <div class="section-header">
+                    <span class="section-icon">🎥</span>
+                    <h2 class="section-title">วิดีโอเรียนเพิ่มเติม</h2>
+                </div>
+                <ul class="styled-list">
+                    <!-- ADD VIDEOS HERE -->
+                    <!-- Example:
+                    <li><a href="https://www.youtube.com/watch?v=..." target="_blank">Video Title</a></li>
+                    -->
+                    <li><em style="color: var(--gray-700);">วิดีโอเรียนเพิ่มเติมจะประกาศเร็วๆ นี้</em></li>
+                </ul>
             </div>
 
             <!-- OBE: CLO-PLO Mapping -->
@@ -558,150 +676,7 @@
                     <span class="section-icon">🧪</span>
                     <h2 class="section-title">แผนการประเมินผลเพื่อวัด CLO</h2>
                 </div>
-                <div class="table-wrap">
-                    <table class="modern" id="assessment-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 22%">กิจกรรม/เครื่องมือประเมิน</th>
-                                <th style="width: 15%">สัดส่วน (%)</th>
-                                <th>CLO ที่วัด</th>
-                                <th style="width: 18%">เกณฑ์ผ่าน (Threshold)</th>
-                                <th style="width: 18%">วิธีตรวจสอบ/วิเคราะห์ผล</th>
-                            </tr>
-                        </thead>
-                        <tbody id="assessment-tbody">
-                            <tr>
-                                <td><!-- Quiz / Assignment / Project / Lab / Midterm / Final --></td>
-                                <td><!-- % --></td>
-                                <td><!-- CLO1, CLO2, ... --></td>
-                                <td><!-- >= 60% เป็นต้น --></td>
-                                <td><!-- Rubric, Item analysis, ฯลฯ --></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Policies and Resources -->
-            <div class="section-block" id="policies">
-                <div class="section-header">
-                    <span class="section-icon">📜</span>
-                    <h2 class="section-title">นโยบายรายวิชาและทรัพยากร</h2>
-                </div>
-                <ul class="styled-list" id="policies-list">
-                    <li><strong>นโยบายการส่งงาน:</strong> <span id="policy-submission">ส่งงานผ่านระบบ LMS ภายในเวลาที่กำหนด หากส่งช้าจะถูกหักคะแนนวันละ 10%</span></li>
-                    <li><strong>นโยบายการเข้าชั้นเรียน:</strong> <span id="policy-attendance">ต้องมีเวลาเรียนไม่ต่ำกว่า 80% ของเวลาเรียนทั้งหมด</span></li>
-                    <li><strong>ความซื่อสัตย์ทางวิชาการ:</strong> <span id="policy-integrity">ไม่อนุญาตให้มีการคัดลอกงานหรือทุจริตในการสอบ หากตรวจพบจะให้เกรด F ในรายวิชานี้ทันที</span></li>
-                    <li><strong>ทรัพยากรเสริม:</strong> <span id="policy-resources">เอกสารประกอบการสอน, หนังสืออ้างอิง: Data Structures and Algorithms in Python by Goodrich, Tamassia, Goldwasser</span></li>
-                </ul>
-            </div>
-
-            <!-- Schedule -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📅</span>
-                    <h2 class="section-title">ตารางสอน</h2>
-                </div>
                 
-                <div id="schedule-list">
-                <!-- ADD SCHEDULE ITEMS HERE -->
-                <!-- Example:
-                <div class="schedule-item">
-                    <strong>ครั้งที่ 1 (DD Month)</strong>
-                    <p>Topic description here</p>
-                    <ul>
-                        <li>Note: <a href="../assets/handout/DSA_Week1.pdf">download</a></li>
-                    </ul>
-                </div>
-                -->
-                </div>
-                <p id="schedule-placeholder" style="color: var(--gray-700); font-style: italic;">ตารางสอนจะประกาศเร็วๆ นี้</p>
-            </div>
-
-            <!-- Grading -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📊</span>
-                    <h2 class="section-title">การประเมินผล</h2>
-                </div>
-                <ul class="styled-list">
-                    <li>
-                        <div>
-                            <strong>การบ้าน / แบบฝึกหัดในชั้นเรียน (20%)</strong><br>
-                            <small style="color: var(--gray-700);">วัด CLO1, CLO2, CLO3 — เกณฑ์ผ่าน ≥ 60%</small>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>สอบกลางภาค (30%)</strong><br>
-                            <small style="color: var(--gray-700);">วัด CLO1, CLO2 — เกณฑ์ผ่าน ≥ 50%</small>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>สอบปลายภาค (40%)</strong><br>
-                            <small style="color: var(--gray-700);">วัด CLO3, CLO4 — เกณฑ์ผ่าน ≥ 50%</small>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <strong>งานกลุ่ม / Project (10%)</strong><br>
-                            <small style="color: var(--gray-700);">วัด CLO5 — เกณฑ์ผ่าน ≥ 60%</small>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Homework -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">✏️</span>
-                    <h2 class="section-title">การบ้าน</h2>
-                </div>
-                <ul class="styled-list">
-                    <!-- ADD HOMEWORK HERE -->
-                    <!-- Example:
-                    <li><strong>การบ้าน 1:</strong> Topic <small style="color: var(--gray-700);">(due date DD Month YYYY)</small> <a href="../assets/handout/homework/hw1.pdf">(โจทย์)</a> <a href="../assets/handout/homework/hw1_sol.pdf">(เฉลย)</a></li>
-                    -->
-                    <li><em style="color: var(--gray-700);">การบ้านจะประกาศเร็วๆ นี้</em></li>
-                </ul>
-            </div>
-
-            <!-- Exams -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">📝</span>
-                    <h2 class="section-title">ข้อสอบ</h2>
-                </div>
-                <ul class="styled-list">
-                    <!-- ADD EXAMS HERE -->
-                    <!-- Example:
-                    <li><strong>สอบย่อยครั้งที่ 1:</strong> Topic <a href="../assets/handout/exam/quiz1.pdf">(โจทย์)</a> <a href="../assets/handout/exam/quiz1_sol.pdf">(เฉลย)</a></li>
-                    -->
-                    <li><em style="color: var(--gray-700);">ข้อสอบจะประกาศหลังการสอบ</em></li>
-                </ul>
-            </div>
-
-            <!-- Video Resources (Optional) -->
-            <div class="section-block">
-                <div class="section-header">
-                    <span class="section-icon">🎥</span>
-                    <h2 class="section-title">วิดีโอเรียนเพิ่มเติม</h2>
-                </div>
-                <ul class="styled-list">
-                    <!-- ADD VIDEOS HERE -->
-                    <!-- Example:
-                    <li><a href="https://www.youtube.com/watch?v=..." target="_blank">Video Title</a></li>
-                    -->
-                    <li><em style="color: var(--gray-700);">วิดีโอเรียนเพิ่มเติมจะประกาศเร็วๆ นี้</em></li>
-                </ul>
             </div>
         </div>
     </main>
@@ -732,6 +707,12 @@
                     if (subtitle && data.course.term) subtitle.innerHTML = `${data.course.term}`;
                     if (info && (data.course.schedule || data.course.room)) {
                         info.innerHTML = `${data.course.schedule || ''}${data.course.schedule && data.course.room ? ' • ' : ''}Room: ${data.course.room || ''}`;
+                    }
+                }
+                if (data?.course?.description) {
+                    const descText = document.getElementById('description-text');
+                    if (descText) {
+                        descText.textContent = data.course.description;
                     }
                 }
                 // Populate CLOs
@@ -778,12 +759,18 @@
                         tb.innerHTML = '';
                         for (const a of data.assessments) {
                             const tr = document.createElement('tr');
+                            // tr.innerHTML = `
+                            //     <td>${a.tool || ''}</td>
+                            //     <td>${a.weight ?? ''}</td>
+                            //     <td>${Array.isArray(a.clos) ? a.clos.join(', ') : ''}</td>
+                            //     <td>${a.threshold || ''}</td>
+                            //     <td>${a.analysis || ''}</td>
+                            // `;
                             tr.innerHTML = `
                                 <td>${a.tool || ''}</td>
                                 <td>${a.weight ?? ''}</td>
                                 <td>${Array.isArray(a.clos) ? a.clos.join(', ') : ''}</td>
                                 <td>${a.threshold || ''}</td>
-                                <td>${a.analysis || ''}</td>
                             `;
                             tb.appendChild(tr);
                         }
@@ -804,7 +791,7 @@
                                 </ul>` : '';
                             div.innerHTML = `
                                 <strong>${s.week || ''}${s.date ? ' ('+s.date+')' : ''}</strong>
-                                <p>${s.topic || ''}${s.notes ? ' — <small style=\"color: var(--gray-700);\">'+s.notes+'</small>' : ''}</p>
+                                <p>${s.topic || ''}${s.notes ? '<br>— <small style=\"color: var(--gray-700);\">'+s.notes+'</small>' : ''}</p>
                                 ${materials}
                             `;
                             list.appendChild(div);
