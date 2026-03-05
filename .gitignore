@@ -74,7 +74,6 @@ Desktop.ini
 *.ind
 
 # Images and fonts used only in LaTeX
-*.png
 *.jpg
 *.jpeg
 *.ttf
