@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M/M/s Queue Theory Simulator</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Outfit:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Outfit', sans-serif; }
+    .mono { font-family: 'Space Mono', monospace; }
+    
+    @keyframes slideIn {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .person-enter { animation: slideIn 0.3s ease-out forwards; }
+    .pulse { animation: pulse 0.5s ease-in-out; }
+    .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+    
+    .stat-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    input[type="range"] {
+      -webkit-appearance: none;
+      height: 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.2);
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #10b981;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    
+    input[type="range"]::-webkit-slider-thumb:disabled {
+      background: #6b7280;
+      cursor: not-allowed;
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #10b981;
+      cursor: pointer;
+      border: none;
+    }
+    
+    input[type="range"]:disabled {
+      background: rgba(255,255,255,0.1);
+    }
+    
+    .server-box {
+      background: linear-gradient(135deg, rgba(16,185,129,0.2) 0%, rgba(16,185,129,0.1) 100%);
+      border: 2px solid rgba(16,185,129,0.5);
+    }
+    
+    .server-idle {
+      background: linear-gradient(135deg, rgba(100,116,139,0.2) 0%, rgba(100,116,139,0.1) 100%);
+      border: 2px dashed rgba(100,116,139,0.5);
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-slate-900 text-white overflow-auto">
+  <div id="app" class="min-h-full w-full p-6">
+   <!-- Header -->
+   <header class="text-center mb-8 fade-in">
+    <h1 id="main-title" class="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-2">M/M/s Queue Theory Simulator</h1>
+    <p class="text-slate-400">M/M/s Queue Simulation • Control λ (arrival), μ (service) rates, and s (servers)</p>
+   </header>
+   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Controls Panel -->
+    <div class="lg:col-span-1 space-y-4">
+     <!-- Number of Servers Control -->
+     <div class="stat-card rounded-2xl p-5">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
+        <span class="text-xl">s</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-blue-400">Number of Servers</h3>
+        <p class="text-xs text-slate-400">Service units</p>
+       </div>
+      </div><input type="range" id="num-servers" min="1" max="5" step="1" value="1" class="w-full mb-2">
+      <div class="flex justify-between text-sm">
+       <span class="text-slate-500">1</span> <span id="servers-value" class="mono text-blue-400 font-bold">1</span> <span class="text-slate-500">5</span>
+      </div>
+      <p class="text-xs text-slate-500 mt-2">⚠ Can only change before starting</p>
+     </div><!-- Arrival Rate Control -->
+     <div class="stat-card rounded-2xl p-5">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center">
+        <span class="text-xl">λ</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-amber-400">Arrival Rate</h3>
+        <p class="text-xs text-slate-400">People per second</p>
+       </div>
+      </div><input type="range" id="arrival-rate" min="0.1" max="3" step="0.1" value="0.8" class="w-full mb-2">
+      <div class="flex justify-between text-sm">
+       <span class="text-slate-500">0.1</span> <span id="arrival-value" class="mono text-amber-400 font-bold">0.8</span> <span class="text-slate-500">3.0</span>
+      </div>
+     </div><!-- Service Rate Control -->
+     <div class="stat-card rounded-2xl p-5">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+        <span class="text-xl">μ</span>
+       </div>
+       <div>
+        <h3 class="font-semibold text-emerald-400">Service Rate</h3>
+        <p class="text-xs text-slate-400">People per second (per server)</p>
+       </div>
+      </div><input type="range" id="service-rate" min="0.1" max="2" step="0.1" value="0.8" class="w-full mb-2">
+      <div class="flex justify-between text-sm">
+       <span class="text-slate-500">0.1</span> <span id="service-value" class="mono text-emerald-400 font-bold">0.8</span> <span class="text-slate-500">2.0</span>
+      </div>
+     </div><!-- Utilization Warning -->
+     <div id="utilization-warning" class="stat-card rounded-2xl p-4 border-2 border-red-500/50 hidden">
+      <div class="flex items-center gap-2 text-red-400">
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+       </svg><span class="text-sm font-semibold">Unstable Queue!</span>
+      </div>
+      <p class="text-xs text-slate-400 mt-1">ρ ≥ 1: Queue will grow indefinitely</p>
+     </div><!-- Control Buttons -->
+     <div class="flex gap-3">
+      <button id="start-btn" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-4 rounded-xl transition-all transform hover:scale-105"> ▶ Start </button> <button id="reset-btn" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-4 rounded-xl transition-all"> ↺ Reset </button>
+     </div><!-- Theoretical Values -->
+     <div class="stat-card rounded-2xl p-5">
+      <h3 class="font-semibold text-cyan-400 mb-3 flex items-center gap-2">
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+       </svg> Theoretical (M/M/s)</h3>
+      <div class="space-y-2 text-sm">
+       <div class="flex justify-between">
+        <span class="text-slate-400">Utilization (ρ)</span> <span id="theory-rho" class="mono text-white">-</span>
+       </div>
+       <div class="flex justify-between">
+        <span class="text-slate-400">Erlang C (Pw)</span> <span id="theory-pw" class="mono text-white">-</span>
+       </div>
+       <div class="flex justify-between">
+        <span class="text-slate-400">Avg Queue (Lq)</span> <span id="theory-lq" class="mono text-white">-</span>
+       </div>
+       <div class="flex justify-between">
+        <span class="text-slate-400">Avg Wait (Wq)</span> <span id="theory-wq" class="mono text-white">-</span>
+       </div>
+      </div>
+     </div>
+    </div><!-- Visualization Panel -->
+    <div class="lg:col-span-2 space-y-4">
+     <!-- Real-time Stats -->
+     <div class="grid grid-cols-4 gap-3">
+      <div class="stat-card rounded-xl p-4 text-center">
+       <div id="stat-queue" class="text-3xl font-bold text-amber-400 mono">
+        0
+       </div>
+       <div class="text-xs text-slate-400 mt-1">
+        In Queue
+       </div>
+      </div>
+      <div class="stat-card rounded-xl p-4 text-center">
+       <div id="stat-service" class="text-3xl font-bold text-emerald-400 mono">
+        0
+       </div>
+       <div class="text-xs text-slate-400 mt-1">
+        In Service
+       </div>
+      </div>
+      <div class="stat-card rounded-xl p-4 text-center">
+       <div id="stat-served" class="text-3xl font-bold text-cyan-400 mono">
+        0
+       </div>
+       <div class="text-xs text-slate-400 mt-1">
+        Served
+       </div>
+      </div>
+      <div class="stat-card rounded-xl p-4 text-center">
+       <div id="stat-time" class="text-3xl font-bold text-purple-400 mono">
+        0
+       </div>
+       <div class="text-xs text-slate-400 mt-1">
+        Time (s)
+       </div>
+      </div>
+     </div><!-- Queue Visualization -->
+     <div class="stat-card rounded-2xl p-6">
+      <h3 class="font-semibold text-white mb-4">Queue Visualization</h3>
+      <div class="flex items-start gap-4">
+       <!-- Arrival -->
+       <div class="text-center">
+        <div class="w-12 h-12 rounded-full bg-amber-500/20 border-2 border-amber-500 flex items-center justify-center mb-1">
+         <span class="text-lg">→</span>
+        </div><span class="text-xs text-slate-400">Arrive</span>
+       </div><!-- Queue Area -->
+       <div class="flex-1 min-h-[100px] bg-slate-800/50 rounded-xl p-3 border-2 border-dashed border-slate-700 relative overflow-hidden">
+        <div id="queue-visual" class="flex flex-wrap gap-2 items-center">
+         <!-- People in queue will appear here -->
+        </div>
+        <div class="absolute bottom-1 right-2 text-xs text-slate-500">
+         Queue
+        </div>
+       </div><!-- Service Areas -->
+       <div id="service-areas" class="flex flex-col gap-2">
+        <!-- Server boxes will appear here -->
+       </div><!-- Exit -->
+       <div class="text-center">
+        <div class="w-12 h-12 rounded-full bg-cyan-500/20 border-2 border-cyan-500 flex items-center justify-center mb-1">
+         <span class="text-lg">✓</span>
+        </div><span class="text-xs text-slate-400">Done</span>
+       </div>
+      </div>
+     </div><!-- Live Chart -->
+     <div class="stat-card rounded-2xl p-6">
+      <h3 class="font-semibold text-white mb-4">Queue Length Over Time</h3>
+      <div class="relative h-40 bg-slate-800/50 rounded-xl overflow-hidden">
+       <canvas id="chart" class="w-full h-full"></canvas><!-- Y-axis labels -->
+       <div class="absolute left-2 top-2 text-xs text-slate-500">
+        People
+       </div>
+      </div>
+     </div><!-- Simulation Stats -->
+     <div class="stat-card rounded-2xl p-5">
+      <h3 class="font-semibold text-purple-400 mb-3 flex items-center gap-2">
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+       </svg> Simulation Statistics</h3>
+      <div class="grid grid-cols-2 gap-4 text-sm">
+       <div class="flex justify-between">
+        <span class="text-slate-400">Avg Queue Length</span> <span id="sim-avg-queue" class="mono text-white">-</span>
+       </div>
+       <div class="flex justify-between">
+        <span class="text-slate-400">Avg Wait Time</span> <span id="sim-avg-wait" class="mono text-white">-</span>
+       </div>
+       <div class="flex justify-between">
+        <span class="text-slate-400">Max Queue Length</span> <span id="sim-max-queue" class="mono text-white">-</span>
+       </div>
+       <div class="flex justify-between">
+        <span class="text-slate-400">Server Utilization</span> <span id="sim-utilization" class="mono text-white">-</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      title: 'M/M/s Queue Theory Simulator',
+      background_color: '#0f172a',
+      surface_color: '#1e293b',
+      text_color: '#ffffff',
+      primary_color: '#10b981',
+      accent_color: '#f59e0b'
+    };
+
+    let config = { ...defaultConfig };
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (newConfig) => {
+          config = { ...defaultConfig, ...newConfig };
+          document.getElementById('main-title').textContent = config.title || defaultConfig.title;
+        },
+        mapToCapabilities: (cfg) => ({
+          recolorables: [
+            {
+              get: () => cfg.background_color || defaultConfig.background_color,
+              set: (v) => { cfg.background_color = v; window.elementSdk.setConfig({ background_color: v }); }
+            },
+            {
+              get: () => cfg.surface_color || defaultConfig.surface_color,
+              set: (v) => { cfg.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); }
+            },
+            {
+              get: () => cfg.text_color || defaultConfig.text_color,
+              set: (v) => { cfg.text_color = v; window.elementSdk.setConfig({ text_color: v }); }
+            },
+            {
+              get: () => cfg.primary_color || defaultConfig.primary_color,
+              set: (v) => { cfg.primary_color = v; window.elementSdk.setConfig({ primary_color: v }); }
+            },
+            {
+              get: () => cfg.accent_color || defaultConfig.accent_color,
+              set: (v) => { cfg.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); }
+            }
+          ],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (cfg) => new Map([
+          ['title', cfg.title || defaultConfig.title]
+        ])
+      });
+    }
+
+    // Simulation State
+    let isRunning = false;
+    let simulationTime = 0;
+    let queue = [];
+    let servers = [];
+    let numServers = 1;
+    let served = 0;
+    let nextArrival = 0;
+    let queueHistory = [];
+    let totalWaitTime = 0;
+    let totalQueueSamples = 0;
+    let busyTime = 0;
+    let maxQueueLength = 0;
+
+    // DOM Elements
+    const numServersSlider = document.getElementById('num-servers');
+    const arrivalSlider = document.getElementById('arrival-rate');
+    const serviceSlider = document.getElementById('service-rate');
+    const numServersValue = document.getElementById('servers-value');
+    const arrivalValue = document.getElementById('arrival-value');
+    const serviceValue = document.getElementById('service-value');
+    const startBtn = document.getElementById('start-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const utilizationWarning = document.getElementById('utilization-warning');
+
+    // Canvas for chart
+    const canvas = document.getElementById('chart');
+    const ctx = canvas.getContext('2d');
+
+    // Exponential random variable
+    function exponential(rate) {
+      return -Math.log(Math.random()) / rate;
+    }
+
+    // Erlang C formula (probability that arriving customer waits)
+    function erlangC(lambda, mu, s) {
+      const rho = lambda / (s * mu);
+      if (rho >= 1) return Infinity;
+
+      const a = lambda / mu; // traffic intensity
+      let numerator = Math.pow(a, s) / factorial(s);
+      let denominator = 0;
+
+      for (let k = 0; k < s; k++) {
+        denominator += Math.pow(a, k) / factorial(k);
+      }
+      denominator += (Math.pow(a, s) / factorial(s)) * (s / (s - a));
+
+      return numerator / denominator;
+    }
+
+    function factorial(n) {
+      if (n <= 1) return 1;
+      let result = 1;
+      for (let i = 2; i <= n; i++) {
+        result *= i;
+      }
+      return result;
+    }
+
+    // Update theoretical values
+    function updateTheory() {
+      const lambda = parseFloat(arrivalSlider.value);
+      const mu = parseFloat(serviceSlider.value);
+      const s = numServers;
+      const rho = lambda / (s * mu);
+
+      document.getElementById('theory-rho').textContent = rho.toFixed(3);
+
+      if (rho >= 1) {
+        document.getElementById('theory-pw').textContent = '∞';
+        document.getElementById('theory-lq').textContent = '∞';
+        document.getElementById('theory-wq').textContent = '∞';
+        utilizationWarning.classList.remove('hidden');
+      } else {
+        const Pw = erlangC(lambda, mu, s);
+        const a = lambda / mu;
+        const Lq = (Math.pow(a, s) / factorial(s)) * Pw * mu / ((s * mu - lambda) * (s * mu - lambda));
+        const Wq = Lq / lambda;
+
+        document.getElementById('theory-pw').textContent = Pw.toFixed(4);
+        document.getElementById('theory-lq').textContent = Lq.toFixed(3);
+        document.getElementById('theory-wq').textContent = Wq.toFixed(3) + 's';
+        utilizationWarning.classList.add('hidden');
+      }
+    }
+
+    // Create server UI elements
+    function createServerUI() {
+      const serviceAreas = document.getElementById('service-areas');
+      serviceAreas.innerHTML = '';
+
+      for (let i = 0; i < numServers; i++) {
+        const serverBox = document.createElement('div');
+        serverBox.className = 'server-box w-20 h-20 rounded-xl flex items-center justify-center text-center';
+        serverBox.id = `server-${i}`;
+        serverBox.innerHTML = '<div class="text-sm text-slate-500">Server ' + (i + 1) + '<br><span class="text-2xl mt-1">⬡</span></div>';
+        serviceAreas.appendChild(serverBox);
+      }
+
+      // Initialize servers array
+      servers = Array(numServers).fill(null).map(() => ({ busy: false, endTime: Infinity }));
+    }
+
+    // Update display
+    function updateDisplay() {
+      const inService = servers.filter(s => s.busy).length;
+
+      document.getElementById('stat-queue').textContent = queue.length;
+      document.getElementById('stat-service').textContent = inService;
+      document.getElementById('stat-served').textContent = served;
+      document.getElementById('stat-time').textContent = Math.floor(simulationTime);
+
+      // Update queue visualization
+      const queueVisual = document.getElementById('queue-visual');
+      queueVisual.innerHTML = '';
+      queue.forEach((person, i) => {
+        const personEl = document.createElement('div');
+        personEl.className = 'w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-sm person-enter';
+        personEl.style.animationDelay = `${i * 0.05}s`;
+        personEl.textContent = '👤';
+        queueVisual.appendChild(personEl);
+      });
+
+      // Update server visualization
+      servers.forEach((server, i) => {
+        const serverBox = document.getElementById(`server-${i}`);
+        if (server.busy) {
+          serverBox.className = 'server-box w-20 h-20 rounded-xl flex items-center justify-center text-center';
+          serverBox.innerHTML = '<span class="pulse text-3xl">👤</span>';
+        } else {
+          serverBox.className = 'server-idle w-20 h-20 rounded-xl flex items-center justify-center text-center';
+          serverBox.innerHTML = '<div class="text-sm text-slate-500">Server ' + (i + 1) + '<br><span class="text-2xl mt-1">⬡</span></div>';
+        }
+      });
+
+      // Update simulation stats
+      if (simulationTime > 0) {
+        const avgQueue = totalQueueSamples > 0 ? (totalQueueSamples / (simulationTime * 10)).toFixed(2) : '0';
+        const avgWait = served > 0 ? (totalWaitTime / served).toFixed(2) + 's' : '-';
+        const utilization = ((busyTime / (simulationTime * numServers)) * 100).toFixed(1) + '%';
+
+        document.getElementById('sim-avg-queue').textContent = avgQueue;
+        document.getElementById('sim-avg-wait').textContent = avgWait;
+        document.getElementById('sim-max-queue').textContent = maxQueueLength;
+        document.getElementById('sim-utilization').textContent = utilization;
+      }
+    }
+
+    // Draw chart
+    function drawChart() {
+      const width = canvas.width = canvas.offsetWidth * 2;
+      const height = canvas.height = canvas.offsetHeight * 2;
+      ctx.scale(2, 2);
+
+      const displayWidth = width / 2;
+      const displayHeight = height / 2;
+
+      ctx.clearRect(0, 0, displayWidth, displayHeight);
+
+      if (queueHistory.length < 2) return;
+
+      // Draw grid
+      ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 5; i++) {
+        const y = (displayHeight / 5) * i;
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(displayWidth, y);
+        ctx.stroke();
+      }
+
+      // Find max for scaling
+      const maxVal = Math.max(...queueHistory.map(h => h.total), 5);
+      const visiblePoints = Math.min(queueHistory.length, 100);
+      const startIdx = Math.max(0, queueHistory.length - visiblePoints);
+
+      // Draw total in system (queue + service)
+      ctx.strokeStyle = '#06b6d4';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let i = startIdx; i < queueHistory.length; i++) {
+        const x = ((i - startIdx) / visiblePoints) * displayWidth;
+        const y = displayHeight - (queueHistory[i].total / maxVal) * (displayHeight - 20);
+        if (i === startIdx) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      // Draw queue only
+      ctx.strokeStyle = '#f59e0b';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let i = startIdx; i < queueHistory.length; i++) {
+        const x = ((i - startIdx) / visiblePoints) * displayWidth;
+        const y = displayHeight - (queueHistory[i].queue / maxVal) * (displayHeight - 20);
+        if (i === startIdx) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      // Legend
+      ctx.font = '10px Outfit';
+      ctx.fillStyle = '#f59e0b';
+      ctx.fillText('● Queue', displayWidth - 100, 15);
+      ctx.fillStyle = '#06b6d4';
+      ctx.fillText('● Total', displayWidth - 50, 15);
+    }
+
+    // Simulation step
+    function simulationStep() {
+      if (!isRunning) return;
+
+      const lambda = parseFloat(arrivalSlider.value);
+      const mu = parseFloat(serviceSlider.value);
+      const dt = 0.1; // Time step
+
+      simulationTime += dt;
+
+      // Track busy time
+      const busyServers = servers.filter(s => s.busy).length;
+      busyTime += busyServers * dt;
+
+      // Sample queue length
+      totalQueueSamples += queue.length;
+
+      // Check for arrival
+      if (simulationTime >= nextArrival) {
+        queue.push({ arrivalTime: simulationTime });
+        nextArrival = simulationTime + exponential(lambda);
+        maxQueueLength = Math.max(maxQueueLength, queue.length);
+      }
+
+      // Check for service completions
+      for (let i = 0; i < servers.length; i++) {
+        if (servers[i].busy && simulationTime >= servers[i].endTime) {
+          served++;
+          servers[i].busy = false;
+          servers[i].endTime = Infinity;
+        }
+      }
+
+      // Assign customers from queue to idle servers
+      while (queue.length > 0) {
+        const idleServer = servers.find(s => !s.busy);
+        if (!idleServer) break;
+
+        const customer = queue.shift();
+        totalWaitTime += simulationTime - customer.arrivalTime;
+        idleServer.busy = true;
+        idleServer.endTime = simulationTime + exponential(mu);
+      }
+
+      // Record history
+      const inService = servers.filter(s => s.busy).length;
+      queueHistory.push({
+        time: simulationTime,
+        queue: queue.length,
+        total: queue.length + inService
+      });
+
+      updateDisplay();
+      drawChart();
+
+      requestAnimationFrame(simulationStep);
+    }
+
+    // Reset simulation
+    function resetSimulation() {
+      isRunning = false;
+      simulationTime = 0;
+      queue = [];
+      served = 0;
+      nextArrival = exponential(parseFloat(arrivalSlider.value));
+      queueHistory = [];
+      totalWaitTime = 0;
+      totalQueueSamples = 0;
+      busyTime = 0;
+      maxQueueLength = 0;
+
+      // Reinitialize servers
+      createServerUI();
+
+      startBtn.textContent = '▶ Start';
+      startBtn.classList.remove('bg-amber-500', 'hover:bg-amber-600');
+      startBtn.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+      numServersSlider.disabled = false;
+
+      updateDisplay();
+      drawChart();
+
+      document.getElementById('sim-avg-queue').textContent = '-';
+      document.getElementById('sim-avg-wait').textContent = '-';
+      document.getElementById('sim-max-queue').textContent = '-';
+      document.getElementById('sim-utilization').textContent = '-';
+    }
+
+    // Event listeners
+    numServersSlider.addEventListener('input', () => {
+      if (!isRunning) {
+        numServers = parseInt(numServersSlider.value);
+        numServersValue.textContent = numServers;
+        createServerUI();
+        updateTheory();
+        updateDisplay();
+      }
+    });
+
+    arrivalSlider.addEventListener('input', () => {
+      arrivalValue.textContent = arrivalSlider.value;
+      updateTheory();
+    });
+
+    serviceSlider.addEventListener('input', () => {
+      serviceValue.textContent = serviceSlider.value;
+      updateTheory();
+    });
+
+    startBtn.addEventListener('click', () => {
+      if (isRunning) {
+        isRunning = false;
+        startBtn.textContent = '▶ Resume';
+        startBtn.classList.remove('bg-amber-500', 'hover:bg-amber-600');
+        startBtn.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+      } else {
+        isRunning = true;
+        numServersSlider.disabled = true;
+        if (simulationTime === 0) {
+          nextArrival = exponential(parseFloat(arrivalSlider.value));
+        }
+        startBtn.textContent = '⏸ Pause';
+        startBtn.classList.remove('bg-emerald-500', 'hover:bg-emerald-600');
+        startBtn.classList.add('bg-amber-500', 'hover:bg-amber-600');
+        simulationStep();
+      }
+    });
+
+    resetBtn.addEventListener('click', resetSimulation);
+
+    // Initialize
+    createServerUI();
+    updateTheory();
+    updateDisplay();
+    drawChart();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d206631f4cbd4de',t:'MTc3MTc4MzM5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

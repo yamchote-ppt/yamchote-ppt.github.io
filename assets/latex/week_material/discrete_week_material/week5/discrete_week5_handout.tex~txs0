@@ -1,0 +1,551 @@
+% !TEX program = xelatex
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguage{english}
+
+% ---------------- Fonts (adjust Path if needed) ----------------
+\setmainfont{SarabunLibertinus}[
+Extension=.ttf,
+Path=./,
+Scale=1.2,
+Script=Thai,
+UprightFont = *-Regular,
+BoldFont    = *-Bold,
+ItalicFont  = *-Italic,
+BoldItalicFont = *-BoldItalic
+]
+\newfontfamily\thaifont{SarabunLibertinus}[
+Extension=.ttf,
+Path=./,
+Scale=1.2,
+Script=Thai,
+UprightFont = *-Regular,
+BoldFont    = *-Bold,
+ItalicFont  = *-Italic,
+BoldItalicFont = *-BoldItalic
+]
+\newfontfamily\thaifonttt{SarabunLibertinus}[
+Extension=.ttf,
+Path=./,
+Scale=1.2,
+Script=Thai,
+UprightFont = *-Regular,
+BoldFont    = *-Bold,
+ItalicFont  = *-Italic,
+BoldItalicFont = *-BoldItalic
+]
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue
+}
+
+\setlist[itemize]{topsep=4pt, itemsep=2pt, leftmargin=18pt}
+\setlist[enumerate]{topsep=4pt, itemsep=2pt, leftmargin=20pt}
+
+% ---------------- Answer spaces ----------------
+\newcommand{\ansspace}[1]{\par\vspace{#1}\par}
+
+\newtcolorbox{ansbox}[1][]{
+	colback=white,
+	colframe=black,
+	boxrule=0.6pt,
+	arc=2pt,
+	left=8pt,right=8pt,top=6pt,bottom=6pt,
+	#1
+}
+\newcommand{\blankbox}[1]{%
+	\begin{ansbox}
+		\vspace{#1}
+	\end{ansbox}
+}
+
+% ---------------- Course macros ----------------
+\newcommand{\N}{\mathbb{N}}   % convention: N = {0,1,2,...}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\boxx}{\(\square\)}
+\newcommand{\TF}{\(\square\)\,T\quad\(\square\)\,F}
+
+\newcommand{\Claim}{\textbf{Claim.} }
+\newcommand{\Idea}{\textbf{Proof idea.} }
+\newcommand{\Proof}{\textbf{Proof.} }
+\newcommand{\QED}{\hfill \(\square\)}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}[definition]{Example}
+\newtheorem{exercise}[definition]{Exercise}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{claim}[definition]{Claim}
+
+\setlength{\parindent}{0pt}
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\begin{document}
+	
+	%====================
+	% Cover
+	%====================
+	\begin{center}
+		{\LARGE\bfseries Lecture 5}\\[2pt]
+		{\LARGE\bfseries บท: Recursion}\\[4pt]
+		{\large\bfseries วิชา: 819605 Discrete Mathematics}\\[6pt]
+		อาจารย์ผู้สอน: ปพนธีร์ แย้มโชติ \quad | \quad วิศวกรรมคอมพิวเตอร์ \quad | \quad ภาคปลาย ปีการศึกษา 2568
+	\end{center}
+	
+%	\vspace{2pt}
+%	\begin{ansbox}[colback=yellow!4,colframe=black,title={แนวคิดสำคัญของสัปดาห์นี้}]
+%		\textbf{เราจะใช้ตรรกศาสตร์ประพจน์เป็น “แผนผังโครงสร้างพิสูจน์”} ไม่ใช่เป็นแค่การทำตารางค่าความจริง\\
+%		\textbf{รูปประโยค} $\Rightarrow$ \textbf{วิธีพิสูจน์ที่เหมาะสม}\\
+%		(implication $\to$ สมมติส่วนหน้า / contrapositive / contradiction / cases / iff)
+%	\end{ansbox}
+	
+	\begin{ansbox}[colback=blue!2,colframe=blue,title={เป้าหมายการเรียนรู้ของเอกสารประกอบนี้ (Week 5): เน้นที่การ solving มากกว่า proving}]
+		\begin{enumerate}
+			\item เข้าใจหลักการของแนวคิดการแก้ปัญหาด้วยวิธีการเวียนเกิด (recursion)
+			\item สามารถพิจารณาลักษณะของปัญหาที่สามารถแก้ด้วยการเวียนเกิดได้
+			\item และสามารถแก้ปัญหาดังกล่าวด้วยวิธีการเวียนเกิดได้
+			\item (optional) สามารถ implement การเวียนเกิดด้วยการเขียน code ได้ (สอนด้วย C (อาจจะ Python ขึ้นกับข้อสรุปในห้อง))
+		\end{enumerate}
+	\end{ansbox}
+	
+	\section{แนวคิดพื้นฐานของการเวียนเกิด}
+	\begin{ansbox}
+		\textbf{การเวียนเกิด} (recursion) คือรูปแบบการแก้ปัญหา (หรือการคำนวณ) ปัญหาหนึ่ง ๆ ที่อาศัยผลลัพธ์จากการแก้ปัญหาเดียวกันแต่ input เล็กกว่านำมาประกอบขึ้นเป็นผลลัพธ์ของปัญหาที่กำลังแก้
+		
+		ซึ่งในทางการเขียนโปรแกรมนั้น input ที่เล็กกว่ามักจะเป็นส่วนย่อยของ input ที่อยากแก้ปัญหา ตัวอย่างเช่น
+		\begin{itemize}
+			\item อยากแก้ปัญหาที่รับ array $A[1...n]$ เป็น input โดยใช้ผลลัพธ์จากโจทย์เดียวกันแต่แก้กับ $A[1...(n-1)]$ (กล่าวคือลองดูกับแค่ตัวแรกจนถึงตัวรองสุดท้ายก่อนว่าได้ผลลัพธ์เป็นอะไร แล้วค่อยนำคนสุดท้ายมาพิจารณาพร้อมผลลัพธ์ที่ได้มา)
+			\item อยากคำนวณค่าของโจทย์หนึ่งที่รับ $n$ เข้าไป โดยใช้ผลลัพธ์จากโจทย์เดียวกันที่คำนวณกับ $n-1$ และ $n-2$ มาแล้ว
+		\end{itemize}
+	\end{ansbox}
+	
+	การแก้ปัญหาทาง computational บนโลกนี้มี 2 แนวคิดหลัก
+	\begin{enumerate}
+		\item \textbf{Iterative programming}: ใช้ loop ที่ผู้พัฒนาตั้ง logic การแก้ปัญหาในแต่ละรอบไว้แบบชัดเจนแล้ว -- อ่านง่าย(สำหรับคนส่วนใหญ่) วิธีการแก้ปัญหาเหมือนพาจับมือทำ ภาษาโปรแกรมส่วนใหญ่ออกแบบมาเพื่อเขียนแบบนี้อยู่แล้ว แต่การได้วิธีการแก้บางโจทย์ค่อนข้างยากและไม่ตรงไปตรงมา และตรวจสอบความถูกต้องทางทฤษฎีได้ลำบาก
+		\item \textbf{Recursive programming}: ฟังก์ชันเรียกใช้ตัวเองเพื่อเอาคำตอบจากปัญหาที่เล็กกว่า -- บางคนบอกว่าอ่านยาก(แต่สำหรับผม code คลีนกว่า) วิธีการได้มาของผลลัพธ์เหมือนต้องอาศัยความรู้เก่าเลยไม่รู้ว่าได้มายังไง ภาษาแบบ functional programming ถูกพัฒนาเพื่อเขียนแบบนี้ (เช่น Haskell, Scala) แต่ภาษาที่ iterative ก็ทำได้ แต่ว่าการคิดวิธีการแก้โจทย์ค่อนข้างชัดเจนและเป็นธรรมชาติกับวิธีคิดมากกว่า และที่สำคัญ ตรวจสอบความถูกต้องของการทำงานของโปรแกรมด้วยการพิสูจน์ทางคณิตศาสตร์ได้ (อาจารย์คิดว่าวิธีคิดของมนุษย์ใกล้เคียงการแก้ปัญหาแบบ recursive มากกว่า iterative เพราะปกติมนุษย์มักใช้ประสบการณ์ในการลองแก้ปัญหาที่ง่ายกว่าก่อนแล้วค่อยพัฒนาผลลัพธ์ปัญหาง่ายให้เป็นผลลัพธ์ของปัญหาที่ยากขึ้น)
+	\end{enumerate}
+	
+	\newpage	
+	\begin{example}
+		ขอเริ่มที่ตัวอย่างที่ยังไม่ใช่การแก้ที่ปัญหา แต่เป็นเรื่องของวิธีการคำนวณแบบเวียนเกิดเพื่อให้เข้าใจรูปแบบการคำนวณแบบเวียนเกิดก่อน ซึ่งคือลำดับที่รู้จักกันในชื่อ "ลำดับเลขคณิต" (arithmetic sequence) ที่นิยามแบบคำอธิบายภาษามนุษย์ว่า "คือลำดับที่ผลต่างของพจน์ใด ๆ และพจน์ก่อนหน้าจะมีค่าคงที่เสมอในทุก ๆ พจน์"
+		
+		ถ้ากำหนดสำัญลักษณ์สำหรับพจน์ที่ $n$ ให้เขียนแทนด้วย $a(n)$ และสมมติให้ค่าคงที่คือ $d$ เราจะเขียนอธิบายข้อความดังกล่าวเป็นภาษาคณิตศาสตร์ได้เป็น:
+		\[
+		\forall n\in \N, \underline{\hspace{10cm}}
+		\]
+		\vfill
+		ถ้าสมมติให้ $a(0) = 5$ และ ค่าคงที่ที่กล่าวถึงคือ $d=3$ จงคำนวณหา $a(7)$
+		\vfill
+	\end{example}
+	
+	\begin{example}
+		อีกตัวอย่างการคำนวณคือ Fibonacci ซึ่งมีสมการนิยามคือ
+		\[
+		Fib(n) = Fib(n-1) + Fib(n-2)
+		\]
+		โดยที่ $Fib(0) = 1$ และ $Fib(1) = 1$\\
+		จงคำนวณหา $Fib(7)$
+		\vfill
+	\end{example}
+	
+	\begin{ansbox}
+		จากตัวอย่างการคำนวณ 2 ข้อที่ผ่านมา นักศึกษาสังเกตเห็นอะไรที่เป็นส่วนสำคัญของการนิยามการคำนวณแบบเวียนเกิดบ้าง (ถามอีกแบบคือ ถ้าเอาเงื่อนไขอะไรออกจะทำให้การคำนวณเราพัง)
+	\end{ansbox}
+	
+	\newpage
+	\section{First Recursion: เกม Tower of Hanoi (เล่นอย่างไร + ต้องเล่นกี่ครั้ง)}
+
+	\begin{center}
+		\includegraphics[width=1\linewidth, height=0.2\textheight]{TowerOfHanoi}
+	\end{center}
+	
+	ลองพิจารณาเกม \emph{Tower of Hanoi} ที่มีเสา 3 ต้น (ให้เรียกชื่อว่า $A,B,C$) และมีแผ่นดิสก์ซ้อนกันอยู่บนเสาต้นหนึ่ง โดยมีกติกาว่า
+	
+	\begin{itemize}[leftmargin=2em]
+		\item ย้ายได้ครั้งละ 1 แผ่นเท่านั้น
+		\item ห้ามวางแผ่นใหญ่ทับแผ่นเล็ก (แผ่นเล็กกว่าอยู่ด้านบนของแผ่นใหญ่กว่าเสมอ)
+	\end{itemize}
+	
+	ตอนนี้ให้สมมติสถานการณ์ดังนี้:
+	\begin{ansbox}
+		คุณกำลังอยากเล่น Tower of Hanoi ที่มี 4 แผ่นโดยนึกขึ้นได้ว่ามีเพื่อนคนหนึ่งที่มีความสามารถพิเศษว่า
+		
+		\begin{quote}
+			\textbf{ความสามารถพิเศษของเพื่อน:}\\
+			สำหรับเกมที่มี \textbf{3 แผ่น} และไม่ว่าจะเริ่มต้นด้วยการวางแผ่นทั้ง 3 ซ้อนกันอยู่บนเสาต้นไหนก็ตาม เพื่อนของคุณสามารถย้ายทั้ง 3 แผ่นไปยังเสาอีกต้นหนึ่ง (ที่คุณบอก) ได้ถูกต้องเสมอ โดยใช้เสาที่เหลือเป็นตัวช่วยตามกติกา
+		\end{quote}
+		
+		กล่าวคือ เพื่อนของคุณเป็น ``ผู้เชี่ยวชาญ Tower of Hanoi 3 แผ่น'' ที่คุณสามารถสั่งได้ว่า
+		
+		\[
+		\text{``ช่วยย้าย 3 แผ่นจากเสา } X \text{ ไปเสา } Y \text{ ให้หน่อย''}
+		\]
+		
+		และเขาจะทำสำเร็จให้คุณเองโดยอัตโนมัติ
+	\end{ansbox}
+
+	
+	
+	
+	\vspace{0.8em}
+	
+	\textbf{โจทย์:} ตอนนี้คุณต้องการออกแบบวิธีเล่นเกม Tower of Hanoi แบบ \textbf{4 แผ่น} โดยให้เพื่อนคนเก่งที่เล่นแบบ 3 แผ่นเป็นผู้ช่วยอยู่เบื้องหลัง เป้าหมายคือ
+	
+	\begin{itemize}[leftmargin=2em]
+		\item เริ่มต้น: แผ่นทั้ง 4 ซ้อนกันอยู่บนเสาต้นหนึ่ง (เช่น เสา $A$)
+		\item เป้าหมาย: ย้ายแผ่นทั้ง 4 ไปยังอีกเสาต้นหนึ่ง (เช่น เสา $C$)
+		\item ใช้เพื่อนคนเก่ง 3 แผ่นเป็น ``ชายชุดดำ'' ช่วยย้ายชุดของ 3 แผ่นเล็กตามที่คุณสั่ง (โดยที่คุณไม่จำเป็นต้องเข้าใจหรือรู้เห็นว่าเล่นอย่างไร รู้แค่ว่าสั่งเมื่อไหร่คุณจะเห็นกอง 3 แผ่นนั้นย้ายไปในพริบตา)
+	\end{itemize}
+	
+	\newpage
+	ให้ตอบคำถามต่อไปนี้
+	
+	\begin{enumerate}
+		\item สมมติว่าเริ่มต้นมีแผ่นทั้ง 4 อยู่บนเสา $A$ และคุณต้องการย้ายไปที่เสา $C$ โดยใช้เสา $B$ เป็นเสาตัวช่วย
+		\begin{enumerate}[label=\alph*)]
+			\item ในมุมมองของคุณ แผ่น \textbf{แผ่นล่างสุด} (แผ่นที่ใหญ่ที่สุด) ควรถูกย้ายจากเสา $A$ ไปเสา $C$ \textbf{เมื่อไร} ในลำดับการเล่น (ต้นเกม กลางเกม หรือท้ายเกม) และเพราะอะไร?
+			
+			\vspace{0.3em}
+			\rule{0.95\linewidth}{0.4pt}\\[0.3em]
+			\rule{0.95\linewidth}{0.4pt}
+			
+			\item ไม่ว่าคุณจะกำหนดให้แผ่นใหญ่สุดอยู่ที่เสาใดก็ตาม ทำไมถึงไม่กระทบการเล่น 3 แผ่นที่เหลือของเพื่อนผู้ช่วย
+			
+			\vspace{0.3em}
+			\rule{0.95\linewidth}{0.4pt}\\[0.3em]
+			\rule{0.95\linewidth}{0.4pt}
+			
+			\item ก่อนที่คุณจะย้ายแผ่นล่างสุดจาก $A$ ไป $C$ คุณจำเป็นต้องจัดการกับแผ่นเล็กอีก 3 แผ่นด้านบนอย่างไรบ้าง?
+			
+			\vspace{0.3em}
+			\rule{0.95\linewidth}{0.4pt}\\[0.3em]
+			\rule{0.95\linewidth}{0.4pt}
+		\end{enumerate}
+		
+		\item ตอนนี้ให้คุณ \textbf{เขียนแผนการเล่น 4 แผ่นแบบทีละขั้น} โดยใช้เพื่อนคนเก่ง 3 แผ่นเป็น ``ชายชุดดำ'' (ไม่ต้องสนใจรายละเอียดว่าเขาย้ายอย่างไร):
+		
+		\medskip
+		\textbf{แผนการเล่น Tower of Hanoi 4 แผ่น (จาก $A$ ไป $C$ โดยใช้ $B$ เป็นตัวช่วย):}
+		\vfill
+		
+		จากแผนข้างบน ลองเขียนสรุปให้เป็น ``ขั้นตอนวิธี'' (เป็นภาษาคน) สำหรับการย้าย \textbf{4 แผ่น} ว่า
+		
+		\medskip
+		\emph{``ในการย้าย Tower of Hanoi 4 แผ่นจากเสาเริ่มต้นไปยังเสาปลายทาง เราจะ''}
+		
+		%		\medskip
+		\begin{enumerate}[label=\textbf{(\arabic*)}, leftmargin=2.5em]
+			\item \rule{0.95\linewidth}{0.4pt}\\
+			\item \rule{0.95\linewidth}{0.4pt}\\
+			\item \rule{0.95\linewidth}{0.4pt}\\
+			\item \rule{0.95\linewidth}{0.4pt}
+		\end{enumerate}
+		
+		\newpage
+		\item (Beyond specific case) จากไอเดียการเล่น 4 แผ่นข้างต้น ถ้าต้องการออกแบบวิธีเล่นสำหรับ \textbf{$n$ แผ่น} ใด ๆ เราต้องการอะไรบ้าง และจะออกแบบขั้นตอนวิธีการเล่นอย่างไร
+		\vfill
+		\item (Extended Question) ในกรณีของเกม $n$ แผ่นที่นักศึกษามีเพื่อนคนเก่งที่เล่นเกม $n-1$ แผ่นได้เทพมาก ๆ คราวนี้นักศึกษาเกิดคำถามขึ้นมาเกี่ยวกับจำนวนตาที่ต้องใช้เล่นว่าถ้าอยากเล่นให้เทพที่สุดก็ต้องเล่นแบบที่ใช้จำนวนรอบการย้ายให้ต่ำที่สุด ถ้าสมมติว่าเพื่อนของนักศึกษาถูกฝึกให้เล่นเกม $n-1$ แผ่นโดยใช้จำนวนรอบการย้ายแผ่นน้อยที่สุดแล้ว จงหาว่าสำหรับเกม $n$ แผ่นนั้นจะต้องย้ายกี่รอบ
+		\vfill
+		
+	\end{enumerate}
+	
+	\newpage
+	\section{Second Recursion: หั่นแผ่นกระดาษได้มากสุดกี่ชิ้น}
+	\begin{example}
+		สมมตินักศึกษามีแผ่นกระดาษที่มีขอบเขตไม่สิ้นสุด (แผ่นระนาบ) ในโจทย์นี้ เราสนใจจำนวนชิ้นจากการลากเส้นตรงแบ่งกระดาษ โดยต้องการแบ่งให้ได้จำนวนชิ้นให้มากที่สุด ซึ่งชัดเจนมากว่าถ้านักศึกษาลากเส้นตรง 1 เส้น จะแบ่งกระดาษได้ออกเป็น 2 ชิ้น และถ้าลากเส้นตรง 2 เส้นให้ตัดกัน จะแบ่งกระดาษออกเป็น 4 ชิ้น (และแบ่งได้มากที่สุดแล้วด้วย 2 เส้น) จงหาว่าถ้าเราจะตัดกระดาษด้วยเส้นตรง $n$ เส้น (เมื่อ $n$ เป็นจำนวนนับ) แล้วจำนวนชิ้นจากการแบ่งได้มากที่สุดจะเป็นกี่ชิ้น
+	\end{example}
+	
+	\newpage
+	\section{Third Recursion: เดินขึ้นบันไดให้ใช้จำนวนก้าวที่น้อยที่สุด}
+	\begin{example}
+		ในการเดินขึ้นบันได $n$ ขั้น กำหนดให้เดินขึ้นได้ 2 แบบ คือ เดินขึ้นทีละ 1 ขั้น หรือทีละ 2 ขั้น จงเขียนสมการความสัมพันธ์เวียนเกิดแสดงจำนวนวิธีในการเดินขึ้นบันไดว่ามีกี่วิธีที่แตกต่างกันที่จะเดินไปขั้นที่ $n$
+	\end{example}
+	
+	\newpage
+	\section{Fourth Recursion: จำนวนเซตย่อย}
+	\begin{example}
+		จงหาจำนวนเซตย่อยทั้งหมดของเซตที่มีสมาชิก $n$ ตัว โดยสมมติว่าเป็นเซต $A = \{1,2,3,...,n\}$
+	\end{example}
+		
+	\newpage	
+	\section{Homework: Week 5}
+	\begin{ansbox}
+		ในสัปดาห์นี้เราจะทำแค่ส่วนการแก้ปัญหา หรือก็คือส่วนการออกแบบ แต่เราจะกลับมาที่โจทย์เหล่านี้อีกรอบเพื่อพิสูจน์ว่าวิธีการดังกล่าวถูกต้อง
+	\end{ansbox}
+	\begin{enumerate}
+		\item ทุกคนทราบดีว่านิยามของการคำนวณ factorial คือ $n! = 1 \times 2 \times 3 \times \dots (n-1) \times n$ หรือถ้ากล่าวเป็นภาษาชาวบ้านคือ "ผลคุณของจำนวนนับตั้งแต่ 1 จนถึง $n$" เช่นตอนเป็นนักเรียนมัธยมถ้าอยากคำนวณ $5!$ เราก็จะคำนวณ $1\times 2 \times 3 \times 4 \times 5$ ได้ผลลัพธ์เป็น $120$
+		
+		จงเขียนนิยามของการคำนวณ factorial ในรูปแบบ recursion โดยสมมติให้สัญลักษณ์ $Fac(n)$ แทนค่า factorial ของ $n$ พร้อมทั้งระบุผลลัพธ์ขั้นฐานเมื่อ $n = 0$
+		
+		นอกจากนี้ จงเขียน code (Pseudocode หรือ syntax ภาษาที่ถนัดก็ได้) ที่แสดงการคำนวณ factorial แบบ iteration และ recursion
+		
+		\item นักศึกษากำลังพิจารณาโจทย์ปัญหาการหาว่าจำนวนเต็มที่กำหนดมาให้มีอยู่ใน array ที่กำหนดมาให้หรือไม่ ถ้ามีให้คืนค่า index แรกสุดที่เจอ แต่ถ้าไม่มีให้คืน -1 ตัวอย่างเช่น ให้ $A = [1,-5,0,3,-5]$ และถ้าค้นหา $-5$ จะต้องได้ค่า return ออกมาเป็น $1$ หรือถ้าค้นหา $7$ จะต้องได้ค่า return ออกมาเป็น $-1$
+		
+		แน่นอนว่าวิธีการหนึ่งที่นักศึกษาทุกคนต้องเคยทำมาแล้วคือการวนลูปตาม index แต่ในคราวนี้ ให้นักศึกษาอธิบายวิธีการแก้ปัญหานี้ด้วยแนวคิด recursion โดยสมมติว่านักศึกษากำลังออกแบบวิธีคิดของฟังก์ชัน \texttt{FindFirst(arr,x)} โดยที่ \texttt{arr} เป็น array และ \texttt{x} คือสมาชิกที่อยากค้นหาใน \texttt{arr}
+		
+		\item ในบริบทเดียวกันกับข้อ 2 แต่คราวนี้อยากให้ทำ \texttt{FindLast(arr,x)} กล่าวคือค้นหา index สุดท้ายที่ \texttt{x} ปรากฏใน \texttt{arr} เช่น \texttt{FindLast($[1,-5,0,3,-5]$,$-5$)} ต้องได้ $4$
+		
+		(หมายเหตุ: กันคนหัวหมอ - ห้าม reverse แล้วใช้ \texttt{FindFirst})
+		
+		\item สมมตินักศึกษาอยากนิยามเซตของ bit strings (ตัวอักษรที่สร้างมาจากเลข 0 หรือ 1) ที่มีคุณสมบัติว่าห้ามมีเลข 0 อยู่ติดกันเกิน 2 ตัว กล่าวคืออยากได้เซต
+		\[
+		A = \{ 0,1,00,01,10,11,001,010,011,100,101,110,111,0010, \dots \}
+		\]
+		กล่าวคือสมาชิกที่หายไปจากเซตที่เขียนไว้คือ $000, 0000, 0001$ เป็นต้น
+		
+		แต่แน่นอนการจะเขียนโปรแกรมให้คอมพิวเตอร์ช่วยสร้าง bit strings นี้ด้วย for loop อาจจะต้องมีการควบคุม flow ที่มีเงื่อนไขจุกจิก (แต่ยังทำได้จริงอยู่) คราวนี้เลยอยากออกแบบวิธีสร้างแบบ recursion โดยสมมติว่าจะแบ่งการนิยามออกเป็นตามความยาว $A = A_1 \cup A_2 \cup A_3 \cup ...$ โดยที่ $A_n$ คือเซตของ bit strings ความยาว $n$ ที่สอดคล้องเงื่อนไขที่เรากำลังสนใจ กล่าวคือ
+		\[
+		A_1 = \{0,1\}, A_2 = \{00,01,10,11\}, A_3 = \{001,010,011,100,101,110,111\}
+		\]
+		\[
+		A_4 = \{0010, 0011, 0100, 0101, 0110, 0111, 1001, 1010, 1001, 1100, 1101, 1110, 1111\}
+		\]
+		
+		จงนิยาม $A_n$ โดย recursion (คำใบ้: ต้องใช้ $A_{n-2}$ มาช่วยนิยาม และนิยาม $A_1$ และ $A_2$ เป็นขั้นฐาน)
+	\end{enumerate}
+	
+	\newpage
+	\section{เฉลยการบ้าน}
+		
+	\begin{enumerate}
+		\item ทุกคนทราบดีว่านิยามของการคำนวณ factorial คือ $n! = 1 \times 2 \times 3 \times \dots (n-1) \times n$ หรือถ้ากล่าวเป็นภาษาชาวบ้านคือ "ผลคุณของจำนวนนับตั้งแต่ 1 จนถึง $n$" เช่นตอนเป็นนักเรียนมัธยมถ้าอยากคำนวณ $5!$ เราก็จะคำนวณ $1\times 2 \times 3 \times 4 \times 5$ ได้ผลลัพธ์เป็น $120$
+		
+		จงเขียนนิยามของการคำนวณ factorial ในรูปแบบ recursion โดยสมมติให้สัญลักษณ์ $Fac(n)$ แทนค่า factorial ของ $n$ พร้อมทั้งระบุผลลัพธ์ขั้นฐานเมื่อ $n = 0$
+		
+		นอกจากนี้ จงเขียน code (Pseudocode หรือ syntax ภาษาที่ถนัดก็ได้) ที่แสดงการคำนวณ factorial แบบ iteration และ recursion
+		
+		\begin{ansbox}
+			\textbf{แนวคิด}: $n! = 1\times 2 \times 3 \times \cdots \times (n-1) \times n = (1\times 2 \times 3 \times \cdots \times (n-1)) \times n = (n-1)! \times n$
+			
+			ดังนั้น เราจึงสามารถเขียนนิยาม factorial ในรูปแบบ recursion ได้เป็น $Fac(n) = F(n-1)\times n$ โดยที่ $Fac(0) = 1$
+			
+			\textbf{หมายเหตุ}: สาเหตุที่ทำให้เราต้องนิยาม $Fac(0) = 1$ เพราะเราต้องการใช้ $1 = Fac(1) = Fac(0) \times 1$
+			
+			\begin{algorithm}[H]
+				\caption{Factorial แบบ iteration}
+				\begin{algorithmic}[1]
+					\Require จำนวนนับ $n\geq 0$
+					
+					\State $fac = 1$ \Comment{$fac(0) = 1$}
+					\For{$i=1..n$}
+					\State $fac = fac\times i$
+					\EndFor
+					\State\Return $fac$
+
+				\end{algorithmic}
+			\end{algorithm}
+			
+			\begin{algorithm}[H]
+				\caption{$fac(n)$: Factorial แบบ recursion}
+				\begin{algorithmic}[1]
+					\Require จำนวนนับ $n\geq 0$
+					\If{$n==0$}
+						\State\Return $1$ \Comment{$fac(0) = 1$}
+					\Else
+						\State\Return $fac(n-1) \times n$
+					\EndIf
+				\end{algorithmic}
+			\end{algorithm}
+			
+%			{\small\begin{proof}[พิสูจน์ความถูกต้อง]
+%				เราจะพิสูจน์ด้วยอุปนัยเชิงคณิตศาสตร์กับข้อความ $P(n)$ ที่แทนข้อความว่า "fac($n$) = $n!$"
+%				
+%				\underline{ขั้นฐาน ($n = 0$)}: จากขั้นฐานของ algorithm จะได้ว่า fac(0) = 1 (บรรทัดที่ 2 ของ code) และเนื่องจาก $0!=1$ จึงได้ว่า fac(0) = 0! ดังนั้น $P(0)$ เป็นจริง
+%				
+%				\underline{ขั้นอุปนัย ($n \geq 0$)}: กำหนดให้ $k\in \N$ ที่ $k\geq 0$ สมมติให้ $P(k)$ เป็นจริง กล่าวคือ fac($k$) = $k!$
+%				
+%				ในตอนนี้ เรา\textit{กำลังจะ}พิสูจน์ว่า $P(k+1)$ เป็นจริง หรือก็\textit{กำลังจะ}พิสูจน์ว่า fac($k + 1$) = $(k+1)!$:\\
+%				เนื่องจาก $k\geq 0$ จึงได้ว่า $k + 1 \geq 1$ ซึ่งจะได้ว่า $fac(k+1) = fac(k) \times (k+1)$ (บรรทัดที่ 4 ของ code) 
+%				\[
+%				\therefore fac(k+1) = fac(k) \times (k+1) = k! \times (k+1) = (k+1)! 
+%				\]
+%				กล่าวคือ เราสามารถพิสูจน์ได้ว่า fac($k+1$) = $(k+1)!$ ตามที่ต้องการ ดังนั้น $P(k+1)$ เป็นจริง
+%				
+%				โดยอุปนัยเชิงคณิตศาสตร์ จึงได้ว่า fac($n$) จะคืนค่า $n!$ ถูกต้องทุก $n\in\N$
+%			\end{proof}}
+			
+		\end{ansbox}
+		
+		\newpage
+		\item นักศึกษากำลังพิจารณาโจทย์ปัญหาการหาว่าจำนวนเต็มที่กำหนดมาให้มีอยู่ใน array ที่กำหนดมาให้หรือไม่ ถ้ามีให้คืนค่า index แรกสุดที่เจอ แต่ถ้าไม่มีให้คืน -1 ตัวอย่างเช่น ให้ $A = [1,-5,0,3,-5]$ และถ้าค้นหา $-5$ จะต้องได้ค่า return ออกมาเป็น $1$ หรือถ้าค้นหา $7$ จะต้องได้ค่า return ออกมาเป็น $-1$
+		
+		แน่นอนว่าวิธีการหนึ่งที่นักศึกษาทุกคนต้องเคยทำมาแล้วคือการวนลูปตาม index แต่ในคราวนี้ ให้นักศึกษาอธิบายวิธีการแก้ปัญหานี้ด้วยแนวคิด recursion โดยสมมติว่านักศึกษากำลังออกแบบวิธีคิดของฟังก์ชัน \texttt{FindFirst(arr,x)} โดยที่ \texttt{arr} เป็น array และ \texttt{x} คือสมาชิกที่อยากค้นหาใน \texttt{arr}
+		
+		\begin{ansbox}
+			เผื่อใครยังไม่รู้แม้กระทั่งการทำ loop
+			\begin{algorithm}[H]
+				\caption{FindFirst แบบ iteration}
+				\begin{algorithmic}[1]
+					\Require อารเรย์ของจำนวนเต็ม arr และจำนวนเต็ม x
+					\For{idx = 0..(len(arr)-1)}
+						\If{x == arr[idx]}
+							\State\Return idx
+						\EndIf
+					\EndFor
+					\State\Return -1
+				\end{algorithmic}
+			\end{algorithm}
+			
+			และจะสามารถเขียนแบบ recursion ได้ดังนี้
+			{\small\begin{algorithm}[H]
+				\caption{FindFirst(arr,x): FindFirst แบบ recursion}
+				\begin{algorithmic}[1]
+					\Require อารเรย์ของจำนวนเต็ม arr และจำนวนเต็ม x
+					\If{len(arr) == 0}
+						\State\Return -1
+					\Else
+						\State induct\_result = FindFirst(arr[1:], x)
+						\If{x == arr[0]}
+							\State\Return 0
+						\ElsIf{induct\_result == -1}
+							\State\Return -1
+						\Else
+							\State\Return 1 + induct\_result
+						\EndIf
+					\EndIf
+				\end{algorithmic}
+			\end{algorithm}}
+			
+%			{\tiny\textbf{หมายเหตุ}: เวอร์ชันนี้ยังไม่ได้ optimize ให้ recurse เท่าที่จำเป็น เพราะบรรทัด induct\_result = FindFirst(arr[1:], x) จะทำก่อนเสมอไม่ว่าเราจะเจอ x ตั้งแต่ arr[0] หรือไม่ ฝากเป็นการบ้านลองคิดเล่นว่าถ้าเราอยาก optimize ให้ไม่ต้อง recurse เกินความจำเป็น เราควรจะแก้ code อย่างไรบ้าง}
+			
+%			{\small\begin{proof}
+%				ให้ $P(n)$ แทน "FindFirst(arr, x) ทำงานถูกต้องสำหรับทุกจำนวนเต็ม x กับทุก ๆ arr ที่มีความยาว $n$"
+%				
+%				\underline{ขั้นฐาน ($n = 0$)}: เนื่องจากถ้า arr มีความยาว 0 จะหมายความว่าไม่มีสมาชิกอะไรเก็บไว้ใน arr เลย จึงทำให้สำหรับทุกจำนวนเต็ม x จะไม่มีสมาชิกดังกล่าวอยู่ใน arr จึงชัดเจนว่าผลลัพธ์ที่ต้องการคือ -1 และจาก code ถ้า arr เป็นอาร์เรย์ว่าง จะต้อง return ค่า -1 ออกมาจากบรรทัดที่ 2 จึงได้ว่า FindFirst(arr, x) = -1
+%				
+%				\underline{ขั้นอุปนัย ($n \geq 0$)}: กำหนดให้ $k\in \N$ ที่ $k\geq 0$ สมมติให้ $P(k)$ เป็นจริง กล่าวคือ FindFirst(arr, x) ทำงานได้ถูกต้องสำหรับทุกจำนวนเต็ม x และทุกอาร์เรย์ arr ที่มีความยาว $k$
+%				
+%				เพื่อพิสูจน์ $P(k+1)$ กำหนดให้ arr1 เป็นอาร์เรย์ใด ๆ ที่มีสมาชิก $k+1$ ตัว และให้ $x$ เป็นจำนวนเต็มใด ๆ จากสมมติฐานขั้นอุปนัย เราจึงได้ว่า FindFirst(arr1[1:], x) จะคืนค่าออกมาได้ถูกต้อง เพราะ arr1[1:] เป็นอาร์เรย์ที่มีความยาว $k$ ในที่นี้ เราจะแบ่งกรณีการพิสูจน์ออกเป็น 2 กรณีหลัก
+%				
+%				กรณีที่ 1 x อยู่ที่สมาชิกตัวแรก: ซึ่งชัดเจนว่าจะต้องคืน 0 และ code ก็คืน 0 ตามที่ต้องการจากบรรทัดที่ 6
+%				
+%				กรณีที่ 2 x ไม่ได้อยู่ที่สมาชิกตัวแรก: ซึ่งหมายความว่าผลที่ได้จะขึ้นอยู่ผลการค้นหาที่ได้จาก arr1[1:]\\
+%				กรณีที่ 2.1 มี x ปรากฏใน arr1[1:]: ซึ่งจะได้ว่า FindFirst(arr1[1:], x) ต้องคืน index ใน arr1[1:] ที่ถูกต้องออกมาให้ สมมติให้เป็น induct\_result = FindFirst(arr1[1:], x) ซึ่งชัดเจนว่า arr1[1:] เป็นส่วนย่อยใน arr1 ด้วยการเลื่อน index ไปทางด้านซ้าย 1 ช่อง จึงได้ว่า index จาก arr1 จะมีค่าเท่ากับ ผลบวกระหว่าง 1 กับ index จาก arr1[1:] จึงได้ว่า index ที่ปรากฏ x ใน arr1 จึงเป็น 1 + induct\_result ซึ่งจะได้คืนออกมาจากบรรทัดที่ 10 ของ code ตามที่ต้องการ\\
+%				กรณีที่ 2.2 ไม่มี x ปรากฏใน arr1[1:]: จึงได้ว่า induct\_result = FindFirst(arr1[1:], x) = -1 และเนื่องจากตัวแรกของ arr1 ก็ไม่ใช่ x จึงได้ว่าไม่มี x อยู่ใน arr1 เลย ดังนั้น algorithm จึงควรคืนค่า -1 ออกมา และถ้าดูตาม code จะได้ว่ากรณีนี้ตรงกับเงื่อนไขในบรรทัดที่ 7 ทำให้ algorithm คืนค่า -1 (บรรทัด 8) ออกมาตามที่ต้องการ
+%			\end{proof}}
+		\end{ansbox}
+		
+		
+		\newpage
+		\item ในบริบทเดียวกันกับข้อ 2 แต่คราวนี้อยากให้ทำ \texttt{FindLast(arr,x)} กล่าวคือค้นหา index สุดท้ายที่ \texttt{x} ปรากฏใน \texttt{arr} เช่น \texttt{FindLast($[1,-5,0,3,-5]$,$-5$)} ต้องได้ $4$
+		
+		(หมายเหตุ: กันคนหัวหมอ - ห้าม reverse แล้วใช้ \texttt{FindFirst})
+		
+		\begin{ansbox}
+			\begin{algorithm}[H]
+					\caption{FindLast(arr,x): FindLast แบบ recursion}
+					\begin{algorithmic}[1]
+						\Require อารเรย์ของจำนวนเต็ม arr และจำนวนเต็ม x
+						\If{len(arr) == 0}
+						\State\Return -1
+						\Else
+						\State induct\_result = FindLast(arr[0..(len(arr)-2)], x)
+						\If{x == arr[len(arr)-1]}
+						\State\Return len(arr)-1
+						\ElsIf{induct\_result == -1}
+						\State\Return -1
+						\Else
+						\State\Return induct\_result
+						\EndIf
+						\EndIf
+					\end{algorithmic}
+			\end{algorithm}
+		\end{ansbox}
+		
+%		\newpage
+		\item สมมตินักศึกษาอยากนิยามเซตของ bit strings (ตัวอักษรที่สร้างมาจากเลข 0 หรือ 1) ที่มีคุณสมบัติว่าห้ามมีเลข 0 อยู่ติดกันเกิน 2 ตัว กล่าวคืออยากได้เซต
+		\[
+		A = \{ 0,1,00,01,10,11,001,010,011,100,101,110,111,0010, \dots \}
+		\]
+		กล่าวคือสมาชิกที่หายไปจากเซตที่เขียนไว้คือ $000, 0000, 0001$ เป็นต้น
+		
+		แต่แน่นอนการจะเขียนโปรแกรมให้คอมพิวเตอร์ช่วยสร้าง bit strings นี้ด้วย for loop อาจจะต้องมีการควบคุม flow ที่มีเงื่อนไขจุกจิก (แต่ยังทำได้จริงอยู่) คราวนี้เลยอยากออกแบบวิธีสร้างแบบ recursion โดยสมมติว่าจะแบ่งการนิยามออกเป็นตามความยาว $A = A_1 \cup A_2 \cup A_3 \cup ...$ โดยที่ $A_n$ คือเซตของ bit strings ความยาว $n$ ที่สอดคล้องเงื่อนไขที่เรากำลังสนใจ กล่าวคือ
+		\[
+		A_1 = \{0,1\}, A_2 = \{00,01,10,11\}, A_3 = \{001,010,011,100,101,110,111\}
+		\]
+		\[
+		A_4 = \{0010, 0011, 0100, 0101, 0110, 0111, 1001, 1010, 1011, 1100, 1101, 1110, 1111\}
+		\]
+		
+		จงนิยาม $A_n$ โดย recursion (คำใบ้: ต้องใช้ $A_{n-2}$ มาช่วยนิยาม และนิยาม $A_1$ และ $A_2$ เป็นขั้นฐาน)
+		
+		\begin{ansbox}
+			สาเหตุที่จะต้องนิยามโดยอาศัย $A_{n-2}$ (ก่อนหน้า 2 ขั้น) เพราะการดูแค่ 1 ตัวก่อนหน้าไม่เพียงพอในกรณีลงท้ายด้วย 0 เพราะถ้าเป็น [...0]0 เราจะไม่สามารถต่อ 0 ได้ แต่ถ้าเป็น [...1]0 เราจะต่อได้ทั้ง 0 และ 1
+			
+			ซึ่งทำได้โดยการดูว่าสมาชิก $x\in A_{n-2}$ นั้นมี 2 ตัวท้ายเป็นอะไร ถ้าลงท้ายด้วย 00 จะเติมได้แค่ 10 และ 11 แต่ถ้าลงท้ายด้วย 10 จะเติม 01, 10, 11 ได้ ในขณะที่ถ้าลงท้ายด้วย 1 จะเติมต่อได้หมด
+			
+			ดังนั้น เราจะนิยามแบบ recursion ได้เป็น
+			{\tiny \[
+			A_n = \{x10, x11 | x[:-2]00 \in A_{n-2} \} \cup \{x01, x10, x11 | x[:-2]10 \in A_{n-2}\} \cup \{x00, x01, x10, x11 | x[:-1]1 \in A_{n-2}\}
+			\]}
+			
+			โดย $A_1 = \{0,1\}, A_2 = \{00,01,10,11\}$
+		\end{ansbox}
+		สำหรับนักศึกษาที่คิดว่าอ่านโค้ดง่ายกว่าอ่านคณิตศาสตร์ แต่ทั้งนี้โค้ดที่เขียนมายังไม่เป็นรูปแบบ pure functional (ยังเหลือ for loop อยู่เพื่อให้นักศึกษาอ่านเข้าใจง่ายแบ่งตามเซตที่แบ่งยูเนียนไว้ //เพราะลองเขียนเป็น pure functional แล้วรู้สึกยากไปนิดสำหรับนักศึกษา):
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\linewidth]{screenshot001}
+		\end{figure}
+		อันนี้เป็น Pure Functional ใน Haskell สำหรับนักศึกษาที่อยากลอง challenge ตัวเอง:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\linewidth]{haskell}
+		\end{figure}
+		
+		\begin{ansbox}
+			อีกไอเดียเพื่อเขียนโปรแกรมแบบ pure functional เราจะแบ่งการนิยามออกเป็นเซตย่อย 3 ตามส่วนหลัง (เหมือนที่เขียน for loop ไว้ด้านบน) ทว่า เราต้องแก้ปัญหาการเขียน for loop ด้วยการสร้าง function สำหรับการจะเติมอักษรต่อท้ายเข้าไปก่อนแทนการใช้ for loop ซึ่งใน code ด้านล่างคือฟังก์ชัน \texttt{append\_all} นอกจากนี้ เรายังต้องการฟังก์ชันที่ใช้ในการแยกชิ้นส่วนของเซตปัจจุบันออกเป็น 3 เซตย่อย กล่าวคือเราต้องการ
+			\[
+			A_n = A_n^{(1)} \cup A_n^{(00)} \cup A_n^{(10)} 
+			\]
+			โดยที่ $A_n^{(x)}$ คือเซตของ bit string ความยาว $n$ ที่เราต้องการ (ไม่มีเลข 0 ติดกันเกิน 2 ตัว) และลงท้ายด้วย $x$
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=1\linewidth]{pureFunctional}
+			\end{figure}
+			
+		\end{ansbox}
+		
+		
+	\end{enumerate}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+\end{document}
