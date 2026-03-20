@@ -1,0 +1,865 @@
+ได้ครับ ด้านล่างนี้เป็น **reference แบบตรงตำแหน่งใน HTML** ว่า **ส่วนไหนควรแทนด้วยข้อความอะไร** โดยอ้างอิงจาก `id`, heading เดิม, และข้อความปัจจุบัน เพื่อให้คุณเอาไปให้ GitHub Copilot ช่วยแทน content ต่อได้ง่าย
+
+ผมจะจัดเป็นรูปแบบนี้:
+
+* **ตำแหน่งใน HTML**
+* **ข้อความเดิม**
+* **ควรแทนเป็น**
+
+---
+
+## 1) Hero Section
+
+### 1.1 ชื่อผู้สมัคร
+
+**ตำแหน่งใน HTML**
+
+```html
+<h1 id="hero-name" ...>Alexander Chen</h1>
+```
+
+**ควรแทนเป็น**
+
+```html
+Phaphontee Yamchote
+```
+
+---
+
+### 1.2 Professional Summary — ย่อหน้าแรก
+
+**ตำแหน่งใน HTML**
+
+```html
+<p id="hero-summary" class="text-lg leading-relaxed mb-6" ...>
+  A senior AI practitioner with 12+ years bridging academic research and industry applications. Specialized in mathematical modeling, deep learning architectures, and scalable ML systems.
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+I am a data and AI practitioner with a background that combines university teaching, machine learning research, and applied industry solution development. Over the past five years, I have worked across data analytics, ML research, and production-oriented AI systems, with the last two years focused more directly on real-world deployment and decision support use cases.
+```
+
+---
+
+### 1.3 Professional Summary — ย่อหน้าที่สอง
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="text-base leading-relaxed" ...>
+  Background spans teaching graduate-level machine learning, leading data science teams, and deploying production AI systems serving millions of users. Known for structured problem-solving and mentoring emerging talent.
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+My core strength is math-driven problem solving: I prefer to understand the structure of a problem first, then choose the most appropriate method for the business context. I am particularly interested in work that connects rigorous thinking with practical implementation, especially in forecasting, recommendation, optimization, and data workflow design.
+```
+
+---
+
+### 1.4 Core Strengths tags
+
+**ตำแหน่งใน HTML**
+
+```html
+<div class="flex flex-wrap gap-3">
+  <span ...>Mathematical Modeling</span>
+  <span ...>Deep Learning</span>
+  <span ...>MLOps</span>
+  <span ...>Team Leadership</span>
+</div>
+```
+
+**ควรแทนเป็น**
+
+```html
+<div class="flex flex-wrap gap-3">
+  <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Mathematical Modeling</span>
+  <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Structured Problem Solving</span>
+  <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Forecasting &amp; Optimization</span>
+  <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Applied ML for Business</span>
+  <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Data Workflow Design</span>
+  <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Mentoring &amp; Knowledge Sharing</span>
+</div>
+```
+
+---
+
+## 2) Key Achievements Section
+
+### 2.1 Achievement Card 1
+
+**ตำแหน่งใน HTML**
+หัวข้อเดิม:
+
+```html
+<h3 ...>Prediction Accuracy Improvement</h3>
+```
+
+ตัวเลขเดิม:
+
+```html
+<span class="stat-number text-3xl font-medium">47%</span>
+```
+
+คำอธิบายเดิม:
+
+```html
+<p class="text-sm" ...>Redesigned core recommendation engine using transformer architecture, directly increasing user engagement metrics.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<span class="stat-number text-3xl font-medium">30x</span>
+```
+
+```html
+<h3 class="font-medium mb-1" style="color: var(--text-primary);">Faster Data Access</h3>
+```
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);">Redesigned a cloud-based data workflow for a retail fuel business, reducing report pagination time from around 5 minutes to about 10 seconds through better aggregation design.</p>
+```
+
+---
+
+### 2.2 Achievement Card 2
+
+**ตำแหน่งใน HTML**
+หัวข้อเดิม:
+
+```html
+<h3 ...>Annual Cost Reduction</h3>
+```
+
+ตัวเลขเดิม:
+
+```html
+<span class="stat-number text-3xl font-medium">$2.3M</span>
+```
+
+คำอธิบายเดิม:
+
+```html
+<p class="text-sm" ...>Optimized ML infrastructure and model serving pipeline, reducing cloud compute costs while improving latency.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<span class="stat-number text-3xl font-medium">AI</span>
+```
+
+```html
+<h3 class="font-medium mb-1" style="color: var(--text-primary);">Order Suggestion Workflow</h3>
+```
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);">Designed an ML-based order suggestion flow connected to full truck load optimization, helping bridge sales planning with downstream logistics decisions.</p>
+```
+
+---
+
+### 2.3 Achievement Card 3
+
+**ตำแหน่งใน HTML**
+หัวข้อเดิม:
+
+```html
+<h3 ...>Engineers Mentored to Senior</h3>
+```
+
+ตัวเลขเดิม:
+
+```html
+<span class="stat-number text-3xl font-medium">15+</span>
+```
+
+คำอธิบายเดิม:
+
+```html
+<p class="text-sm" ...>Established ML guild and structured mentorship program, accelerating team capability and retention.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<span class="stat-number text-3xl font-medium">~80%</span>
+```
+
+```html
+<h3 class="font-medium mb-1" style="color: var(--text-primary);">Adoption in Target Transactions</h3>
+```
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);">AI-assisted recommendations were used in approximately 80% of target transactions during February 2026, showing practical adoption by end users.</p>
+```
+
+---
+
+### 2.4 Achievement Card 4
+
+**ตำแหน่งใน HTML**
+หัวข้อเดิม:
+
+```html
+<h3 ...>Production ML Systems</h3>
+```
+
+ตัวเลขเดิม:
+
+```html
+<span class="stat-number text-3xl font-medium">8</span>
+```
+
+คำอธิบายเดิม:
+
+```html
+<p class="text-sm" ...>Designed and deployed end-to-end ML systems across fraud detection, NLP, and computer vision domains.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<span class="stat-number text-3xl font-medium">Mentor</span>
+```
+
+```html
+<h3 class="font-medium mb-1" style="color: var(--text-primary);">Research and Delivery Support</h3>
+```
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);">Mentored interns, junior developers, and graduate students in machine learning, ETL implementation, and research-oriented project execution.</p>
+```
+
+---
+
+## 3) Work History / Career Evolution Section
+
+### 3.1 Section title ยังคงเดิมได้
+
+**ตำแหน่งใน HTML**
+
+```html
+<h2 class="font-display text-5xl md:text-6xl font-medium mb-4" ...>Career Evolution</h2>
+```
+
+**คงไว้ได้**
+
+```html
+Career Evolution
+```
+
+---
+
+### 3.2 Timeline Item 1
+
+**ตำแหน่งใน HTML**
+ปีเดิม:
+
+```html
+<p ...>2024 — Present</p>
+```
+
+ชื่อตำแหน่งเดิม:
+
+```html
+<h3 ...>University Lecturer</h3>
+```
+
+subtitle เดิม:
+
+```html
+<p ...>Computer Science Department · Full-Time</p>
+```
+
+description เดิม:
+
+```html
+<p ...>Design and deliver graduate-level courses in machine learning, data analytics, and applied mathematics. Mentor students on thesis projects spanning NLP, computer vision, and reinforcement learning. Conduct active research in explainable AI and model interpretability.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Current</p>
+```
+
+```html
+<h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">University Lecturer</h3>
+```
+
+```html
+<p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Computer Science, Data Analytics, Machine Learning, and Mathematics</p>
+```
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Teach technical and quantitative subjects while helping students build structured thinking and problem-solving skills. Also mentor project and research work across applied analytics and machine learning topics.</p>
+```
+
+---
+
+### 3.3 Timeline Item 2
+
+**ตำแหน่งใน HTML**
+ปีเดิม:
+
+```html
+<p ...>2022 — 2024</p>
+```
+
+ตำแหน่งเดิม:
+
+```html
+<h3 ...>Senior ML Engineer</h3>
+```
+
+subtitle เดิม:
+
+```html
+<p ...>TechCorp AI Labs · Product Development</p>
+```
+
+description เดิม:
+
+```html
+<p ...>Led development of 8 production ML systems supporting recommendation, fraud detection, and demand forecasting. Scaled model serving infrastructure reducing latency by 60% and compute costs by $2.3M annually. Established ML guild and mentored 15+ engineers through senior promotion cycles.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Parallel Work</p>
+```
+
+```html
+<h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Contract-Based ML / AI Solution Developer</h3>
+```
+
+```html
+<p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Applied ML, Forecasting, Recommendation, Optimization</p>
+```
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Work on real-world industry use cases involving machine learning pipelines, forecasting logic, recommendation systems, and business-facing decision support workflows.</p>
+```
+
+---
+
+### 3.4 Timeline Item 3
+
+**ตำแหน่งใน HTML**
+ปีเดิม:
+
+```html
+<p ...>2019 — 2022</p>
+```
+
+ตำแหน่งเดิม:
+
+```html
+<h3 ...>ML Research Scientist</h3>
+```
+
+subtitle เดิม:
+
+```html
+<p ...>DataCore Analytics · Research Group</p>
+```
+
+description เดิม:
+
+```html
+<p ...>Developed transformer-based recommendation architecture improving prediction accuracy by 47%. Published 6 peer-reviewed papers on deep learning optimization and model efficiency. Bridged gap between academic research and production deployment, establishing MLOps best practices.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Research Background</p>
+```
+
+```html
+<h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Machine Learning Research</h3>
+```
+
+```html
+<p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Research, Experimentation, Model Design</p>
+```
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Built experience through machine learning research and guided research implementation, especially in structured-data problems and mathematically motivated model design.</p>
+```
+
+---
+
+### 3.5 Timeline Item 4
+
+**ตำแหน่งใน HTML**
+ปีเดิม:
+
+```html
+<p ...>2016 — 2019</p>
+```
+
+ตำแหน่งเดิม:
+
+```html
+<h3 ...>Data Science Lead</h3>
+```
+
+subtitle เดิม:
+
+```html
+<p ...>Insight Analytics · Team Management</p>
+```
+
+description เดิม:
+
+```html
+<p ...>Managed team of 8 data scientists building predictive models for business intelligence. Established statistical rigor and experimentation practices. Transitioned team from traditional analytics to modern ML workflows using PyTorch and Kubernetes.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Foundation</p>
+```
+
+```html
+<h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Data and Analytical Work</h3>
+```
+
+```html
+<p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">From Analytical Work to Applied AI</p>
+```
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Started from data-focused analytical work and gradually evolved toward data science, machine learning research, and applied AI solution development.</p>
+```
+
+---
+
+### 3.6 Timeline Item 5
+
+**ตำแหน่งใน HTML**
+ปีเดิม:
+
+```html
+<p ...>2013 — 2016</p>
+```
+
+ตำแหน่งเดิม:
+
+```html
+<h3 ...>Data Analyst</h3>
+```
+
+subtitle เดิม:
+
+```html
+<p ...>StartupVenture Inc. · Analytics Foundation</p>
+```
+
+description เดิม:
+
+```html
+<p ...>Built data infrastructure and analytics dashboards from scratch. Learned SQL, Python, and statistical methods. Foundation for progression into machine learning and research domains.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Trajectory</p>
+```
+
+```html
+<h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Career Evolution Summary</h3>
+```
+
+```html
+<p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Data Analyst → Data Science / ML Research → Applied AI Solutions</p>
+```
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Career progression has consistently moved toward solving more complex problems, connecting analytical depth with implementation, and designing solutions that can be used in real business contexts.</p>
+```
+
+---
+
+## 4) Featured Project Section
+
+### 4.1 Project Title
+
+**ตำแหน่งใน HTML**
+
+```html
+<h2 class="font-display text-5xl md:text-6xl font-medium mb-4" ...>Order Intelligence System</h2>
+```
+
+**ควรแทนเป็น**
+
+```html
+Order Suggestion and Full Truck Load Optimization
+```
+
+---
+
+### 4.2 Project intro paragraph
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="mt-6 text-lg leading-relaxed max-w-2xl" ...>
+  Architected and deployed an ML-driven decision support platform connecting AI-powered order recommendations to logistics optimization, directly improving sales velocity and operational efficiency.
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+An applied AI decision-support workflow that connected machine learning-based order prediction with downstream logistics planning, helping improve sales support and transportation efficiency.
+```
+
+---
+
+## 5) Project Block 01 — Business Problem
+
+### 5.1 Main paragraph
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="leading-relaxed" style="color: var(--text-secondary);">
+  Sales teams lacked intelligent support for order assembly decisions. Recommendation processes were manual, slow, and didn't account for logistics constraints. Missed opportunities meant delayed fulfillment and suboptimal load utilization costing $1.2M annually in extra freight.
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+Sales teams faced a recurring challenge because turnover was relatively high, and new sales staff often lacked familiarity with customer ordering patterns. As a result, order planning depended heavily on individual judgment and prior experience. This created inconsistency in order suggestion and made downstream truck-loading decisions less efficient, especially when many smaller orders had to be grouped along shared delivery routes.
+```
+
+---
+
+### 5.2 Impact line ใต้เส้นคั่น
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);"><strong>Impact:</strong> 40% of orders required manual revision; average recommendation time: 3-5 minutes per order.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);"><strong>Context:</strong> The main challenge was not only prediction accuracy, but also how to support real sales decisions and improve route-based load planning.</p>
+```
+
+---
+
+## 6) Project Block 02 — My Role
+
+### 6.1 Main paragraph
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="leading-relaxed mb-4" style="color: var(--text-secondary);">
+  Led end-to-end solution architecture and development. Worked with sales operations, logistics, and data teams to define requirements. Designed the prediction pipeline, selection algorithm, and integration layer.
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+I helped design the overall solution flow that connected ML-based demand or order suggestion with the full truck load optimization process. My role was not only to think about prediction, but also to make sure the output could be used in an operational workflow that sales and logistics teams could actually work with.
+```
+
+---
+
+### 6.2 Key Responsibility paragraph
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;"><em>Key Responsibility:</em> Making the system not just technically sound, but operationally useful—ensuring recommendations aligned with business constraints and evolved based on actual usage patterns.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;"><em>Key Responsibility:</em> Making the solution useful in practice by aligning model outputs with business constraints, operational logic, and how experienced users actually make decisions.</p>
+```
+
+---
+
+## 7) Project Block 03 — Solution Approach
+
+### 7.1 Prediction Layer
+
+**ตำแหน่งใน HTML**
+
+```html
+<p style="color: var(--text-tertiary);">Gradient boosting model (XGBoost) predicting order-product likelihood based on historical patterns, seasonality, and customer attributes. Achieved 82% precision in top-3 recommendations.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p style="color: var(--text-tertiary);">Used machine learning to estimate suggested order quantities for the next cycle based on historical purchasing behavior and time-related patterns.</p>
+```
+
+---
+
+### 7.2 Optimization Layer
+
+**ตำแหน่งใน HTML**
+
+```html
+<p style="color: var(--text-tertiary);">Mixed-integer linear program ranking recommendations by profit-density while respecting truck capacity and delivery zone constraints. Solved in sub-second time.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p style="color: var(--text-tertiary);">Connected prediction outputs to a truck-loading and route-aware planning process so that smaller orders along similar routes could be grouped more effectively.</p>
+```
+
+---
+
+### 7.3 Feedback Loop
+
+**ตำแหน่งใน HTML**
+
+```html
+<p style="color: var(--text-tertiary);">Real-time collection of acceptance/rejection signals. Retrained model weekly to adapt to sales trends and seasonal shifts.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p style="color: var(--text-tertiary);">Treated the system as decision support rather than pure automation, allowing recommendations to align with practical business judgment and operational constraints.</p>
+```
+
+---
+
+## 8) Project Block 04 — Deployment & Adoption
+
+### 8.1 Main paragraph
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="leading-relaxed mb-4" style="color: var(--text-secondary);">
+  Deployed as batch inference service in Azure ML Studio, running 4x daily. Integrated into sales dashboard with confidence scores and rationale explanations for each recommendation. Implemented A/B testing with 500-user pilot.
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="leading-relaxed mb-4" style="color: var(--text-secondary);">The solution was deployed as a batch inference workflow on Azure ML Studio, running once every two weeks. The output was used as operational guidance for planning rather than fully automated execution, making it easier for teams to adopt the system gradually.</p>
+```
+
+---
+
+### 8.2 Adoption line
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);"><strong>Adoption:</strong> 92% opt-in rate within first month; expanded to full team of 180 sales reps within 6 weeks.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);"><strong>Usage:</strong> The recommendation flow was used in practice and became part of the planning process for the target business group.</p>
+```
+
+---
+
+## 9) Project Block 05 — Impact & Why I’m Proud
+
+### 9.1 ตัวเลข 3 ช่อง
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="stat-number text-4xl font-medium mb-1">38%</p>
+<p class="text-sm" ...>Increase in order per salesperson per day</p>
+
+<p class="stat-number text-4xl font-medium mb-1">$890K</p>
+<p class="text-sm" ...>Additional annual profit from logistics optimization</p>
+
+<p class="stat-number text-4xl font-medium mb-1">12 mins</p>
+<p class="text-sm" ...>Time saved per salesperson per shift</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="stat-number text-4xl font-medium mb-1">~80%</p>
+<p class="text-sm" style="color: var(--text-tertiary);">AI-supported usage in target transactions during February 2026</p>
+
+<p class="stat-number text-4xl font-medium mb-1">Batch</p>
+<p class="text-sm" style="color: var(--text-tertiary);">Inference deployed on Azure ML Studio every two weeks</p>
+
+<p class="stat-number text-4xl font-medium mb-1">Reduced</p>
+<p class="text-sm" style="color: var(--text-tertiary);">Wasted truck capacity through better grouping of smaller orders</p>
+```
+
+---
+
+### 9.2 Main paragraph
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="leading-relaxed mb-4" style="color: var(--text-secondary);">
+  This project exemplifies what I value most: connecting AI to tangible business outcomes. The system wasn't just a model—it was a complete decision-support platform integrating prediction, optimization, and human workflow.
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="leading-relaxed mb-4" style="color: var(--text-secondary);">One of the most meaningful outcomes was that the AI-assisted recommendation flow was actually used in practice. In February 2026, approximately 80% of target transactions in the relevant group used AI-supported recommendations. Just as importantly, the outputs were considered reasonable by experienced sales staff, which increased trust in the system.</p>
+```
+
+---
+
+### 9.3 Why it matters to me paragraph
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;"><strong>Why it matters to me:</strong> The work required bridging domains—machine learning, operations research, system design, and change management. It demonstrated that senior-level impact comes from solving <em>the right problem</em>, not just building the fanciest model. I learned that explainability and feedback mechanisms are as critical as raw accuracy for real-world adoption.</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;"><strong>Why it matters to me:</strong> I am proud of this project because it was not just about building a model. It required connecting machine learning to a real business process, making the outputs usable for people with different levels of experience, and designing the workflow so that it created operational value rather than just predictive output.</p>
+```
+
+---
+
+## 10) Closing Statement
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="text-lg leading-relaxed max-w-3xl mx-auto text-center" ...>
+  I approach problems as a practitioner who values rigorous thinking, real-world impact, and continuous learning. <span ...>I'm ready to bring this mindset to challenging work where AI can drive measurable value.</span>
+</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+<p class="text-lg leading-relaxed max-w-3xl mx-auto text-center" style="color: var(--text-secondary); font-weight: 300;">I see myself as a practitioner who values rigorous thinking, real-world usefulness, and continuous learning. <span style="color: var(--accent); font-weight: 500;">I am most motivated by work that connects analytical depth with deployable solutions and helps turn data or AI into something people can actually use to make better decisions.</span></p>
+```
+
+---
+
+## 11) Footer
+
+### 11.1 Footer left
+
+**ตำแหน่งใน HTML**
+
+```html
+<p class="text-sm" style="color: var(--text-tertiary);">Prepared for Interview · 2025</p>
+```
+
+**ควรแทนเป็น**
+
+```html
+Prepared for Interview · March 2026
+```
+
+---
+
+### 11.2 Footer right
+
+**ตำแหน่งใน HTML**
+
+```html
+<span class="text-sm" style="color: var(--text-tertiary);">alexander.chen@email.com</span>
+<span class="text-sm" style="color: var(--text-tertiary);">linkedin.com/in/alexanderchen</span>
+```
+
+**ถ้าไม่อยากใส่ข้อมูลติดต่อจริง**
+ให้แทนเป็น
+
+```html
+<span class="text-sm" style="color: var(--text-tertiary);">Phaphontee Yamchote</span>
+<span class="text-sm" style="color: var(--text-tertiary);">Senior AI Developer Candidate</span>
+```
+
+---
+
+## 12) JavaScript defaultConfig
+
+### 12.1 candidate_name
+
+**ตำแหน่งใน HTML**
+
+```javascript
+candidate_name: 'Alexander Chen',
+```
+
+**ควรแทนเป็น**
+
+```javascript
+candidate_name: 'Phaphontee Yamchote',
+```
+
+---
+
+### 12.2 summary_text
+
+**ตำแหน่งใน HTML**
+
+```javascript
+summary_text: 'A senior AI practitioner with 12+ years bridging academic research and industry applications. Specialized in mathematical modeling, deep learning architectures, and scalable ML systems.',
+```
+
+**ควรแทนเป็น**
+
+```javascript
+summary_text: 'I am a data and AI practitioner with a background that combines university teaching, machine learning research, and applied industry solution development.',
+```
+
+---
+
+## 13) สิ่งที่ควรลบหรือหลีกเลี่ยงจากทั้งหน้า
+
+ให้ Copilot ช่วยเช็กและแทนออกจากหน้าให้หมด ถ้ายังหลงเหลืออยู่
+
+* Alexander Chen
+* 12+ years
+* $2.3M
+* $890K
+* 92% opt-in
+* 180 sales reps
+* 500-user pilot
+* 47% prediction improvement
+* 8 production ML systems
+* TechCorp AI Labs
+* DataCore Analytics
+* Insight Analytics
+* StartupVenture Inc.
+
+---
+
+ถ้าคุณต้องการ ผมช่วยทำต่อได้อีกแบบคือ **สรุปเป็น checklist แบบ “find this text → replace with this text” ล้วน ๆ** เพื่อให้เอาไปแปะใน Copilot chat ได้ง่ายกว่าแบบนี้.

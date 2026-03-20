@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior AI Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #2d4a5e;
+      --accent-light: #3d6a8e;
+      --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a;
+      --text-tertiary: #8a8a8a;
+      --bg-subtle: #f8f9fa;
+    }
+    
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: var(--text-primary);
+    }
+    
+    .font-display {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Flowing guide line */
+    .guide-line {
+      position: absolute;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+      opacity: 0.3;
+    }
+    
+    /* Floating elements */
+    .float-element {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    
+    .float-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      opacity: 0.4;
+    }
+    
+    .float-ring {
+      border: 1px solid var(--accent);
+      opacity: 0.2;
+    }
+    
+    /* Scroll animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    
+    /* Parallax elements */
+    .parallax {
+      transition: transform 0.1s ease-out;
+    }
+    
+    /* Achievement cards */
+    .achievement-card {
+      background: white;
+      border: 1px solid #eee;
+      transition: all 0.3s ease;
+    }
+    
+    .achievement-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(45, 74, 94, 0.08);
+    }
+    
+    /* Accent underline */
+    .accent-underline {
+      position: relative;
+    }
+    
+    .accent-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+    }
+    
+    /* Section connector */
+    .section-connector {
+      position: relative;
+    }
+    
+    .section-connector::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, #eee, transparent);
+    }
+    
+    /* Smooth scrolling container */
+    .scroll-container {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 100%;
+    }
+    
+    /* Number styling */
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+    }
+    
+    /* Flowing guide curve */
+    .guide-curve-svg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .guide-curve-path {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      opacity: 0.15;
+      stroke-linecap: round;
+    }
+    
+    /* Moving node along curve */
+    .guide-node {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 3;
+      opacity: 0.4;
+      box-shadow: 0 0 12px rgba(45, 74, 94, 0.2);
+    }
+    
+    /* Supporting node dots */
+    .guide-dot-small {
+      width: 3px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="scroll-container w-full" id="main-container"><!-- Guide curve SVG -->
+   <svg class="guide-curve-svg" id="guide-curve-svg" viewbox="0 0 1200 3600" preserveaspectratio="xMidYMid slice"><defs>
+     <style>
+       @media (max-width: 768px) {
+         .guide-curve-svg { display: none; }
+       }
+     </style>
+    </defs> <!-- Main flowing curve --> <path class="guide-curve-path" d="M 200 150 Q 250 400 280 800 Q 300 1200 320 1600 Q 340 2000 350 2400 Q 360 2800 370 3200 Q 375 3400 380 3600" /> <!-- Supporting accent points --> <circle cx="200" cy="150" r="2.5" fill="var(--accent)" opacity="0.1" /> <circle cx="280" cy="800" r="2" fill="var(--accent)" opacity="0.15" /> <circle cx="320" cy="1600" r="2" fill="var(--accent)" opacity="0.15" /> <circle cx="350" cy="2400" r="2" fill="var(--accent)" opacity="0.15" /> <circle cx="370" cy="3200" r="2.5" fill="var(--accent)" opacity="0.1" />
+   </svg><!-- Moving guide node -->
+   <div class="guide-node" id="guide-node"></div><!-- Floating guide elements -->
+   <div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: 1;"><!-- Main vertical guide line -->
+    <div class="guide-line parallax" id="guide-line-1" style="left: 10%; height: 200%; top: 5%;"></div>
+    <div class="guide-line parallax" id="guide-line-2" style="right: 15%; height: 150%; top: 20%;"></div><!-- Floating geometric elements -->
+    <div class="float-element float-dot parallax" id="dot-1" style="left: 8%; top: 15%;"></div>
+    <div class="float-element float-dot parallax" id="dot-2" style="right: 20%; top: 25%;"></div>
+    <div class="float-element float-dot parallax" id="dot-3" style="left: 12%; top: 45%;"></div>
+    <div class="float-element float-ring parallax" id="ring-1" style="width: 20px; height: 20px; left: 6%; top: 30%;"></div>
+    <div class="float-element float-ring parallax" id="ring-2" style="width: 30px; height: 30px; right: 12%; top: 55%;"></div>
+    <div class="float-element float-ring parallax" id="ring-3" style="width: 15px; height: 15px; left: 15%; top: 70%;"></div>
+   </div><!-- ==================== SECTION 1: HERO & WORK SUMMARY ==================== -->
+   <section id="section-hero" class="min-h-screen relative" style="padding: 8% 6%;">
+    <div class="max-w-6xl mx-auto"><!-- Hero Header -->
+     <div class="reveal mb-16">
+      <p class="text-sm tracking-widest uppercase mb-4" style="color: var(--text-tertiary); letter-spacing: 0.2em;">Senior AI Developer</p>
+      <h1 id="hero-name" class="font-display text-5xl md:text-6xl lg:text-7xl font-medium mb-6" style="color: var(--text-primary); line-height: 1.1;">Phaphontee Yamchote</h1>
+      <div class="w-16 h-0.5 mb-8" style="background: var(--accent);"></div>
+     </div><!-- Two Column Layout -->
+     <div class="grid md:grid-cols-2 gap-16 lg:gap-24"><!-- Left: Professional Summary -->
+      <div class="reveal reveal-delay-1">
+       <h2 class="text-xs tracking-widest uppercase mb-6" style="color: var(--accent); letter-spacing: 0.15em;">Professional Summary</h2>
+       <p id="hero-summary" class="text-lg leading-relaxed mb-6" style="color: var(--text-secondary); font-weight: 300;">I am a data and AI practitioner with a background that combines university teaching, machine learning research, and applied industry solution development. Over the past five years, I have worked across data analytics, ML research, and production-oriented AI systems, with the last two years focused more directly on real-world deployment and decision support use cases.</p>
+       <p class="text-base leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">My core strength is math-driven problem solving: I prefer to understand the structure of a problem first, then choose the most appropriate method for the business context. I am particularly interested in work that connects rigorous thinking with practical implementation, especially in forecasting, recommendation, optimization, and data workflow design.</p><!-- Core Strengths -->
+       <div class="mt-10">
+        <h3 class="text-xs tracking-widest uppercase mb-4" style="color: var(--text-tertiary); letter-spacing: 0.1em;">Core Strengths</h3>
+        <div class="flex flex-wrap gap-3"><span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Mathematical Modeling</span> <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Structured Problem Solving</span> <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Forecasting &amp; Optimization</span> <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Applied ML for Business</span> <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Data Workflow Design</span> <span class="px-4 py-2 text-sm" style="background: var(--bg-subtle); color: var(--text-secondary); border-radius: 2px;">Mentoring &amp; Knowledge Sharing</span>
+        </div>
+       </div>
+      </div><!-- Right: Key Achievements -->
+      <div>
+       <h2 class="text-xs tracking-widest uppercase mb-6 reveal reveal-delay-1" style="color: var(--accent); letter-spacing: 0.15em;">Key Achievements</h2><!-- Achievement 1 -->
+       <div class="achievement-card p-6 mb-4 reveal reveal-delay-2" style="border-radius: 4px;">
+        <div class="flex items-start gap-4"><span class="stat-number text-3xl font-medium">30x</span>
+         <div>
+          <h3 class="font-medium mb-1" style="color: var(--text-primary);">Faster Data Access</h3>
+          <p class="text-sm" style="color: var(--text-tertiary);">Redesigned a cloud-based data workflow for a retail fuel business, reducing report pagination time from around 5 minutes to about 10 seconds through better aggregation design.</p>
+         </div>
+        </div>
+       </div><!-- Achievement 2 -->
+       <div class="achievement-card p-6 mb-4 reveal reveal-delay-3" style="border-radius: 4px;">
+        <div class="flex items-start gap-4"><span class="stat-number text-3xl font-medium">AI</span>
+         <div>
+          <h3 class="font-medium mb-1" style="color: var(--text-primary);">Order Suggestion Workflow</h3>
+          <p class="text-sm" style="color: var(--text-tertiary);">Designed an ML-based order suggestion flow connected to full truck load optimization, helping bridge sales planning with downstream logistics decisions.</p>
+         </div>
+        </div>
+       </div><!-- Achievement 3 -->
+       <div class="achievement-card p-6 mb-4 reveal reveal-delay-4" style="border-radius: 4px;">
+        <div class="flex items-start gap-4"><span class="stat-number text-3xl font-medium">~80%</span>
+         <div>
+          <h3 class="font-medium mb-1" style="color: var(--text-primary);">Adoption in Target Transactions</h3>
+          <p class="text-sm" style="color: var(--text-tertiary);">AI-assisted recommendations were used in approximately 80% of target transactions during February 2026, showing practical adoption by end users.</p>
+         </div>
+        </div>
+       </div><!-- Achievement 4 -->
+       <div class="achievement-card p-6 reveal reveal-delay-4" style="border-radius: 4px;">
+        <div class="flex items-start gap-4"><span class="stat-number text-3xl font-medium">Mentor</span>
+         <div>
+          <h3 class="font-medium mb-1" style="color: var(--text-primary);">Research and Delivery Support</h3>
+          <p class="text-sm" style="color: var(--text-tertiary);">Mentored interns, junior developers, and graduate students in machine learning, ETL implementation, and research-oriented project execution.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><!-- Section Transition Element -->
+     <div class="flex justify-center mt-20 reveal reveal-delay-4">
+      <div class="flex flex-col items-center">
+       <div class="w-px h-16" style="background: linear-gradient(to bottom, transparent, var(--accent));"></div>
+       <div class="w-2 h-2 rounded-full mt-2" style="background: var(--accent); opacity: 0.5;"></div>
+      </div>
+     </div>
+    </div>
+   </section><!-- ==================== SECTION 2: PLACEHOLDER FOR CAREER TIMELINE ==================== -->
+   <section id="section-timeline" class="min-h-screen relative" style="padding: 8% 6%; background: var(--bg-subtle);">
+    <div class="max-w-6xl mx-auto">
+     <!-- Section Header -->
+     <div class="reveal mb-20">
+      <p class="text-sm tracking-widest uppercase mb-4" style="color: var(--text-tertiary); letter-spacing: 0.2em;">Professional Journey</p>
+      <h2 class="font-display text-5xl md:text-6xl font-medium mb-4" style="color: var(--text-primary);">Career Evolution</h2>
+      <div class="w-16 h-0.5" style="background: var(--accent);"></div>
+     </div><!-- Timeline Container -->
+     <div class="max-w-3xl">
+      <!-- Timeline vertical line -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 w-px h-full" style="background: linear-gradient(to bottom, var(--accent), transparent); opacity: 0.2; top: 0;"></div><!-- Timeline Item 1 -->
+      <div class="reveal reveal-delay-1 mb-16 relative" style="padding-left: 0;">
+       <!-- Timeline node -->
+       <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center" style="width: 12px; height: 12px; background: var(--accent); border-radius: 50%; top: 8px; box-shadow: 0 0 0 6px var(--bg-subtle);"></div><!-- Content -->
+       <div class="md:ml-auto md:w-5/12 pl-12 md:pl-0 md:pr-12 md:text-right">
+        <p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Current</p>
+        <h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">University Lecturer</h3>
+        <p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Computer Science, Data Analytics, Machine Learning, and Mathematics</p>
+        <p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Teach technical and quantitative subjects while helping students build structured thinking and problem-solving skills. Also mentor project and research work across applied analytics and machine learning topics.</p>
+       </div>
+      </div><!-- Timeline Item 2 -->
+      <div class="reveal reveal-delay-2 mb-16 relative" style="padding-left: 0;">
+       <!-- Timeline node -->
+       <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center" style="width: 12px; height: 12px; background: var(--accent); border-radius: 50%; top: 8px; box-shadow: 0 0 0 6px var(--bg-subtle);"></div><!-- Content -->
+       <div class="md:w-5/12 pr-12 md:pr-0 md:pl-12">
+        <p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Parallel Work</p>
+        <h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Contract-Based ML / AI Solution Developer</h3>
+        <p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Applied ML, Forecasting, Recommendation, Optimization</p>
+        <p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Work on real-world industry use cases involving machine learning pipelines, forecasting logic, recommendation systems, and business-facing decision support workflows.</p>
+       </div>
+      </div><!-- Timeline Item 3 -->
+      <div class="reveal reveal-delay-3 mb-16 relative" style="padding-left: 0;">
+       <!-- Timeline node -->
+       <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center" style="width: 12px; height: 12px; background: var(--accent); border-radius: 50%; top: 8px; box-shadow: 0 0 0 6px var(--bg-subtle);"></div><!-- Content -->
+       <div class="md:ml-auto md:w-5/12 pl-12 md:pl-0 md:pr-12 md:text-right">
+        <p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Research Background</p>
+        <h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Machine Learning Research</h3>
+        <p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Research, Experimentation, Model Design</p>
+        <p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Built experience through machine learning research and guided research implementation, especially in structured-data problems and mathematically motivated model design.</p>
+       </div>
+      </div><!-- Timeline Item 4 -->
+      <div class="reveal reveal-delay-4 mb-16 relative" style="padding-left: 0;">
+       <!-- Timeline node -->
+       <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center" style="width: 12px; height: 12px; background: var(--accent); border-radius: 50%; top: 8px; box-shadow: 0 0 0 6px var(--bg-subtle);"></div><!-- Content -->
+       <div class="md:w-5/12 pr-12 md:pr-0 md:pl-12">
+        <p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Foundation</p>
+        <h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Data and Analytical Work</h3>
+        <p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">From Analytical Work to Applied AI</p>
+        <p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Started from data-focused analytical work and gradually evolved toward data science, machine learning research, and applied AI solution development.</p>
+       </div>
+      </div><!-- Timeline Item 5 -->
+      <div class="reveal reveal-delay-4 relative" style="padding-left: 0;">
+       <!-- Timeline node -->
+       <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center" style="width: 12px; height: 12px; background: var(--accent); border-radius: 50%; top: 8px; box-shadow: 0 0 0 6px var(--bg-subtle);"></div><!-- Content -->
+       <div class="md:ml-auto md:w-5/12 pl-12 md:pl-0 md:pr-12 md:text-right">
+        <p class="text-xs tracking-widest uppercase" style="color: var(--accent); letter-spacing: 0.1em;">Trajectory</p>
+        <h3 class="text-2xl font-medium mt-2 mb-2" style="color: var(--text-primary);">Career Evolution Summary</h3>
+        <p class="text-sm mb-3" style="color: var(--text-secondary); font-weight: 500;">Data Analyst → Data Science / ML Research → Applied AI Solutions</p>
+        <p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;">Career progression has consistently moved toward solving more complex problems, connecting analytical depth with implementation, and designing solutions that can be used in real business contexts.</p>
+       </div>
+      </div>
+     </div><!-- Section Transition Element -->
+     <div class="flex justify-center mt-24 reveal reveal-delay-4">
+      <div class="flex flex-col items-center">
+       <div class="w-px h-16" style="background: linear-gradient(to bottom, transparent, var(--accent));"></div>
+       <div class="w-2 h-2 rounded-full mt-2" style="background: var(--accent); opacity: 0.5;"></div>
+      </div>
+     </div>
+    </div>
+   </section><!-- ==================== SECTION 3: PLACEHOLDER FOR PROJECT CASE STUDY ==================== -->
+   <section id="section-project" class="min-h-screen relative" style="padding: 8% 6%;">
+    <div class="max-w-6xl mx-auto">
+     <!-- Section Header -->
+     <div class="reveal mb-20">
+      <p class="text-sm tracking-widest uppercase mb-4" style="color: var(--text-tertiary); letter-spacing: 0.2em;">Featured Work</p>
+      <h2 class="font-display text-5xl md:text-6xl font-medium mb-4" style="color: var(--text-primary);">Order Suggestion and Full Truck Load Optimization</h2>
+      <div class="w-16 h-0.5" style="background: var(--accent);"></div>
+      <p class="mt-6 text-lg leading-relaxed max-w-2xl" style="color: var(--text-secondary); font-weight: 300;">An applied AI decision-support workflow that connected machine learning-based order prediction with downstream logistics planning, helping improve sales support and transportation efficiency.</p>
+     </div><!-- Project Structure -->
+     <div class="max-w-5xl">
+      <!-- Block 1: Business Problem -->
+      <div class="reveal reveal-delay-1 mb-16 p-8" style="background: white; border: 1px solid #eee; border-radius: 4px;">
+       <div class="flex gap-6">
+        <div style="flex-shrink: 0;">
+         <div class="w-12 h-12 rounded flex items-center justify-center" style="background: var(--accent); color: white;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500;">01</span>
+         </div>
+        </div>
+        <div style="flex: 1;">
+         <h3 class="text-2xl font-medium mb-3" style="color: var(--text-primary);">Business Problem</h3>
+         <p class="leading-relaxed" style="color: var(--text-secondary);">Sales teams faced a recurring challenge because turnover was relatively high, and new sales staff often lacked familiarity with customer ordering patterns. As a result, order planning depended heavily on individual judgment and prior experience. This created inconsistency in order suggestion and made downstream truck-loading decisions less efficient, especially when many smaller orders had to be grouped along shared delivery routes.</p>
+         <div class="mt-4 pt-4 border-t" style="border-color: #eee;">
+          <p class="text-sm" style="color: var(--text-tertiary);"><strong>Context:</strong> The main challenge was not only prediction accuracy, but also how to support real sales decisions and improve route-based load planning.</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Visual connector -->
+      <div class="flex justify-center mb-8 reveal reveal-delay-1">
+       <div style="width: 2px; height: 24px; background: linear-gradient(to bottom, var(--accent), transparent); opacity: 0.3;"></div>
+      </div><!-- Block 2: My Role -->
+      <div class="reveal reveal-delay-2 mb-16 p-8" style="background: white; border: 1px solid #eee; border-radius: 4px;">
+       <div class="flex gap-6">
+        <div style="flex-shrink: 0;">
+         <div class="w-12 h-12 rounded flex items-center justify-center" style="background: var(--accent); color: white;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500;">02</span>
+         </div>
+        </div>
+        <div style="flex: 1;">
+         <h3 class="text-2xl font-medium mb-3" style="color: var(--text-primary);">My Role</h3>
+         <p class="leading-relaxed mb-4" style="color: var(--text-secondary);">I helped design the overall solution flow that connected ML-based demand or order suggestion with the full truck load optimization process. My role was not only to think about prediction, but also to make sure the output could be used in an operational workflow that sales and logistics teams could actually work with.</p>
+         <p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;"><em>Key Responsibility:</em> Making the solution useful in practice by aligning model outputs with business constraints, operational logic, and how experienced users actually make decisions.</p>
+        </div>
+       </div>
+      </div><!-- Visual connector -->
+      <div class="flex justify-center mb-8 reveal reveal-delay-2">
+       <div style="width: 2px; height: 24px; background: linear-gradient(to bottom, var(--accent), transparent); opacity: 0.3;"></div>
+      </div><!-- Block 3: Solution Approach -->
+      <div class="reveal reveal-delay-3 mb-16 p-8" style="background: white; border: 1px solid #eee; border-radius: 4px;">
+       <div class="flex gap-6">
+        <div style="flex-shrink: 0;">
+         <div class="w-12 h-12 rounded flex items-center justify-center" style="background: var(--accent); color: white;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500;">03</span>
+         </div>
+        </div>
+        <div style="flex: 1;">
+         <h3 class="text-2xl font-medium mb-3" style="color: var(--text-primary);">Solution Approach</h3>
+         <div class="space-y-4">
+          <div>
+           <p class="font-medium mb-1" style="color: var(--text-primary);">Prediction Layer:</p>
+           <p style="color: var(--text-tertiary);">Used machine learning to estimate suggested order quantities for the next cycle based on historical purchasing behavior and time-related patterns.</p>
+          </div>
+          <div>
+           <p class="font-medium mb-1" style="color: var(--text-primary);">Optimization Layer:</p>
+           <p style="color: var(--text-tertiary);">Connected prediction outputs to a truck-loading and route-aware planning process so that smaller orders along similar routes could be grouped more effectively.</p>
+          </div>
+          <div>
+           <p class="font-medium mb-1" style="color: var(--text-primary);">Feedback Loop:</p>
+           <p style="color: var(--text-tertiary);">Treated the system as decision support rather than pure automation, allowing recommendations to align with practical business judgment and operational constraints.</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Visual connector -->
+      <div class="flex justify-center mb-8 reveal reveal-delay-3">
+       <div style="width: 2px; height: 24px; background: linear-gradient(to bottom, var(--accent), transparent); opacity: 0.3;"></div>
+      </div><!-- Block 4: Deployment & Adoption -->
+      <div class="reveal reveal-delay-4 mb-16 p-8" style="background: white; border: 1px solid #eee; border-radius: 4px;">
+       <div class="flex gap-6">
+        <div style="flex-shrink: 0;">
+         <div class="w-12 h-12 rounded flex items-center justify-center" style="background: var(--accent); color: white;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500;">04</span>
+         </div>
+        </div>
+        <div style="flex: 1;">
+         <h3 class="text-2xl font-medium mb-3" style="color: var(--text-primary);">Deployment &amp; Adoption</h3>
+         <p class="leading-relaxed mb-4" style="color: var(--text-secondary);">The solution was deployed as a batch inference workflow on Azure ML Studio, running once every two weeks. The output was used as operational guidance for planning rather than fully automated execution, making it easier for teams to adopt the system gradually.</p>
+         <div class="mt-4 pt-4 border-t" style="border-color: #eee;">
+          <p class="text-sm" style="color: var(--text-tertiary);"><strong>Usage:</strong> The recommendation flow was used in practice and became part of the planning process for the target business group.</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Visual connector -->
+      <div class="flex justify-center mb-8 reveal reveal-delay-4">
+       <div style="width: 2px; height: 24px; background: linear-gradient(to bottom, var(--accent), transparent); opacity: 0.3;"></div>
+      </div><!-- Block 5: Impact & Why I'm Proud -->
+      <div class="reveal reveal-delay-4 p-8" style="background: white; border: 2px solid var(--accent); border-radius: 4px;">
+       <div class="flex gap-6">
+        <div style="flex-shrink: 0;">
+         <div class="w-12 h-12 rounded flex items-center justify-center" style="background: var(--accent); color: white;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500;">05</span>
+         </div>
+        </div>
+        <div style="flex: 1;">
+         <h3 class="text-2xl font-medium mb-4" style="color: var(--text-primary);">Impact &amp; Why I'm Proud</h3>
+         <div class="grid md:grid-cols-3 gap-6 mb-6">
+          <div>
+           <p class="stat-number text-4xl font-medium mb-1">~80%</p>
+           <p class="text-sm" style="color: var(--text-tertiary);">AI-supported usage in target transactions during February 2026</p>
+          </div>
+          <div>
+           <p class="stat-number text-4xl font-medium mb-1">Batch</p>
+           <p class="text-sm" style="color: var(--text-tertiary);">Inference deployed on Azure ML Studio every two weeks</p>
+          </div>
+          <div>
+           <p class="stat-number text-4xl font-medium mb-1">Reduced</p>
+           <p class="text-sm" style="color: var(--text-tertiary);">Wasted truck capacity through better grouping of smaller orders</p>
+          </div>
+         </div>
+         <p class="leading-relaxed mb-4" style="color: var(--text-secondary);">One of the most meaningful outcomes was that the AI-assisted recommendation flow was actually used in practice. In February 2026, approximately 80% of target transactions in the relevant group used AI-supported recommendations. Just as importantly, the outputs were considered reasonable by experienced sales staff, which increased trust in the system.</p>
+         <p class="leading-relaxed" style="color: var(--text-tertiary); font-weight: 300;"><strong>Why it matters to me:</strong> I am proud of this project because it was not just about building a model. It required connecting machine learning to a real business process, making the outputs usable for people with different levels of experience, and designing the workflow so that it created operational value rather than just predictive output.</p>
+        </div>
+       </div>
+      </div>
+     </div><!-- Closing Statement -->
+     <div class="mt-20 reveal reveal-delay-4">
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto text-center" style="color: var(--text-secondary); font-weight: 300;">I see myself as a practitioner who values rigorous thinking, real-world usefulness, and continuous learning. <span style="color: var(--accent); font-weight: 500;">I am most motivated by work that connects analytical depth with deployable solutions and helps turn data or AI into something people can actually use to make better decisions.</span></p>
+     </div><!-- Footer -->
+     <footer class="mt-24 pt-12 border-t reveal reveal-delay-4" style="border-color: #eee;">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+       <p class="text-sm" style="color: var(--text-tertiary);">Prepared for Interview · March 2026</p>
+       <div class="flex gap-6 flex-wrap justify-center md:justify-start"><span class="text-sm" style="color: var(--text-tertiary);">Phaphontee Yamchote</span> <span class="text-sm" style="color: var(--text-tertiary);">Senior AI Developer Candidate</span>
+       </div>
+      </div>
+     </footer>
+    </div>
+   </section>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      candidate_name: 'Phaphontee Yamchote',
+      job_title: 'Senior AI Developer',
+      summary_text: 'I am a data and AI practitioner with a background that combines university teaching, machine learning research, and applied industry solution development.',
+      primary_color: '#2d4a5e',
+      secondary_color: '#f8f9fa',
+      text_color: '#1a1a1a',
+      accent_color: '#3d6a8e',
+      font_family: 'Inter'
+    };
+
+    // Scroll reveal functionality
+    function initScrollReveal() {
+      const reveals = document.querySelectorAll('.reveal');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      
+      reveals.forEach(el => observer.observe(el));
+    }
+
+    // Parallax effect for floating elements
+    function initParallax() {
+      const container = document.getElementById('main-container');
+      const parallaxElements = document.querySelectorAll('.parallax');
+      
+      container.addEventListener('scroll', () => {
+        const scrollY = container.scrollTop;
+        
+        parallaxElements.forEach((el, index) => {
+          const speed = 0.03 + (index * 0.01);
+          const yPos = scrollY * speed;
+          el.style.transform = `translateY(${yPos}px)`;
+        });
+      });
+    }
+
+    // Guide curve and node animation
+    function initGuideCurve() {
+      const container = document.getElementById('main-container');
+      const guideNode = document.getElementById('guide-node');
+      const svg = document.getElementById('guide-curve-svg');
+      
+      // Get the curve path to calculate positions
+      const path = svg.querySelector('.guide-curve-path');
+      
+      container.addEventListener('scroll', () => {
+        const scrollY = container.scrollTop;
+        const scrollHeight = container.scrollHeight - container.clientHeight;
+        const scrollPercent = scrollHeight > 0 ? scrollY / scrollHeight : 0;
+        
+        // Map scroll to SVG path length
+        const pathLength = 3600; // Approximate path length in viewBox units
+        const targetLength = scrollPercent * pathLength;
+        
+        // Calculate approximate position on curve (using quadratic Bezier segments)
+        let x = 200;
+        let y = 150 + (targetLength * 0.5);
+        
+        // Adjust x position based on curve segments
+        if (targetLength < 800) {
+          x = 200 + (targetLength * 0.0625);
+        } else if (targetLength < 1600) {
+          x = 250 + ((targetLength - 800) * 0.025);
+        } else if (targetLength < 2400) {
+          x = 270 + ((targetLength - 1600) * 0.0125);
+        } else {
+          x = 280 + ((targetLength - 2400) * 0.0083);
+        }
+        
+        // Convert SVG coords to viewport coords
+        const svgRect = svg.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        
+        // Scale SVG coords to viewport
+        const viewBoxWidth = 1200;
+        const viewBoxHeight = 3600;
+        const scaleX = svgRect.width / viewBoxWidth;
+        const scaleY = svgRect.height / viewBoxHeight;
+        
+        const nodeX = x * scaleX;
+        const nodeY = y * scaleY;
+        
+        // Position the node
+        guideNode.style.left = nodeX + 'px';
+        guideNode.style.top = nodeY + 'px';
+        guideNode.style.transform = 'translate(-50%, -50%)';
+      });
+    }
+
+    // Element SDK integration
+    async function onConfigChange(config) {
+      const nameEl = document.getElementById('hero-name');
+      const summaryEl = document.getElementById('hero-summary');
+      
+      if (nameEl) {
+        nameEl.textContent = config.candidate_name || defaultConfig.candidate_name;
+      }
+      
+      if (summaryEl) {
+        summaryEl.textContent = config.summary_text || defaultConfig.summary_text;
+      }
+      
+      // Apply font family
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      document.body.style.fontFamily = `${fontFamily}, sans-serif`;
+      
+      // Apply colors
+      document.documentElement.style.setProperty('--accent', config.primary_color || defaultConfig.primary_color);
+      document.documentElement.style.setProperty('--bg-subtle', config.secondary_color || defaultConfig.secondary_color);
+      document.documentElement.style.setProperty('--text-primary', config.text_color || defaultConfig.text_color);
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['candidate_name', config.candidate_name || defaultConfig.candidate_name],
+        ['job_title', config.job_title || defaultConfig.job_title],
+        ['summary_text', config.summary_text || defaultConfig.summary_text]
+      ]);
+    }
+
+    // Initialize
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Initialize scroll effects
+    initScrollReveal();
+    initParallax();
+    initGuideCurve();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9da3c2d9f4e7fd9e',t:'MTc3MzE2MDgyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
