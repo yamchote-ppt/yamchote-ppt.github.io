@@ -48,9 +48,479 @@
         <link rel="stylesheet" href="./assets/css/plugins/owl.carousel.min.css">
         <link rel="stylesheet" href="./assets/font/flaticon.css">
         <link rel="stylesheet" href="./assets/css/style.css">
+
+        <!-- ===== MODERN ACADEMIC REDESIGN ===== -->
+        <style>
+        /* --- CSS Variables --- */
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b27;
+            --bg-elevated: #1e2535;
+            --accent-red: #E31C25;
+            --accent-red-dim: rgba(227, 28, 37, 0.12);
+            --accent-red-glow: rgba(227, 28, 37, 0.35);
+            --text-primary: #e8edf2;
+            --text-secondary: #8892a4;
+            --border: rgba(255, 255, 255, 0.07);
+            --border-accent: rgba(227, 28, 37, 0.35);
+            --radius: 10px;
+            --radius-sm: 6px;
+            --transition: all 0.25s ease;
+        }
+
+        /* --- Global --- */
+        html { scroll-behavior: smooth; }
+        body { background: var(--bg-primary) !important; color: var(--text-primary); }
+        section { background: var(--bg-primary); scroll-margin-top: 64px; }
+        #about { background: var(--bg-secondary) !important; }
+        #resume { background: var(--bg-primary) !important; }
+        #portfolio { background: var(--bg-secondary) !important; }
+        #contact { background: var(--bg-primary) !important; }
+
+        /* --- Modern Sticky Nav --- */
+        #modern-nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 2000;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(13, 17, 23, 0.88);
+            border-bottom: 1px solid var(--border);
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+        .mnav-inner {
+            max-width: 1170px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .mnav-brand {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .mnav-brand span { color: var(--accent-red); }
+        .mnav-links {
+            display: flex;
+            list-style: none;
+            padding: 0; margin: 0;
+            gap: 2px;
+        }
+        .mnav-links li a {
+            display: block;
+            padding: 7px 14px;
+            color: var(--text-secondary);
+            font-size: 0.83rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .mnav-links li a:hover {
+            color: var(--text-primary);
+            background: rgba(255,255,255,0.06);
+            text-decoration: none;
+        }
+        .mnav-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .mnav-actions a {
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .mnav-actions a:hover {
+            color: var(--text-primary);
+            border-color: rgba(255,255,255,0.2);
+            text-decoration: none;
+        }
+        .mnav-actions a.mnav-cta {
+            background: var(--accent-red);
+            color: #fff;
+            border-color: transparent;
+        }
+        .mnav-actions a.mnav-cta:hover {
+            background: #c0171f;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px var(--accent-red-glow);
+        }
+        .mnav-hamburger {
+            display: none;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        @media (max-width: 767px) {
+            .mnav-links, .mnav-actions { display: none !important; }
+            .mnav-hamburger { display: flex; align-items: center; }
+        }
+
+        /* Hide old nav buttons on desktop, keep hamburger toggle accessible */
+        @media (min-width: 768px) {
+            #home header .social-media { display: none !important; }
+            #home header .main-nav .my-toogle { display: none !important; }
+        }
+
+        /* Offset hero for fixed nav */
+        #home { padding-top: 60px; }
+        #home .copy-right { display: none !important; }
+
+        /* --- Hero Section --- */
+        #home .my-wrapper { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-red-dim);
+            border: 1px solid var(--border-accent);
+            border-radius: 100px;
+            padding: 5px 16px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: #ff9090;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 1.4rem;
+        }
+        .hero-pill::before {
+            content: '';
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--accent-red);
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.7); }
+        }
+        .hero-name {
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.4rem;
+        }
+        .hero-name .hero-accent { color: var(--accent-red); }
+        @media (max-width: 768px) { .hero-name { font-size: 2.4rem; } }
+        .hero-thai {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1.2rem;
+        }
+        .hero-tag {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 4px 13px;
+            border-radius: 100px;
+            font-size: 0.77rem;
+            font-weight: 500;
+        }
+        .hero-affiliation {
+            font-size: 0.87rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-affiliation::before {
+            content: '';
+            display: inline-block;
+            width: 22px; height: 2px;
+            background: var(--accent-red);
+            flex-shrink: 0;
+        }
+        .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+        .hero-cta a {
+            padding: 10px 22px;
+            border-radius: var(--radius-sm);
+            font-size: 0.87rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+        }
+        .hero-btn-primary {
+            background: var(--accent-red);
+            color: #fff !important;
+        }
+        .hero-btn-primary:hover {
+            background: #c0171f !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 24px var(--accent-red-glow) !important;
+            text-decoration: none !important;
+        }
+        .hero-btn-outline {
+            background: transparent;
+            color: var(--text-primary) !important;
+            border: 1px solid var(--border);
+        }
+        .hero-btn-outline:hover {
+            background: var(--bg-elevated) !important;
+            border-color: rgba(255,255,255,0.18) !important;
+            transform: translateY(-2px) !important;
+            text-decoration: none !important;
+        }
+
+        /* Hide old hero elements */
+        #home .welcome-box { display: none !important; }
+        #home .name-box { display: none !important; }
+        #home .inter { display: none !important; }
+        #home .line { display: none !important; }
+        #home .my-wrapper .inter { display: none !important; }
+
+        /* --- Section Labels --- */
+        .inter h6 {
+            font-size: 0.68rem !important;
+            letter-spacing: 3px !important;
+            color: rgba(255,255,255,0.15) !important;
+            font-weight: 400 !important;
+        }
+
+        /* --- About Section --- */
+        #about .left-wrapper .title h2 {
+            font-size: 1.45rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        #about .left-wrapper .title h2 span { color: var(--accent-red); }
+        #about .left-wrapper .title p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-top: 1rem;
+        }
+        #about .right-wrapper ._ol_ew_xs {
+            color: var(--text-secondary);
+            font-size: 0.87rem;
+            line-height: 1.8;
+            background: var(--bg-elevated);
+            border-left: 3px solid var(--accent-red);
+            padding: 14px 18px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin-bottom: 1rem;
+        }
+        #about .right-wrapper h5 {
+            color: var(--text-primary);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.75rem;
+        }
+        #about .right-wrapper ._re_uy_iu ol li {
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            line-height: 1.7;
+            padding: 5px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        #about .right-wrapper ._re_uy_iu ol li:last-child { border-bottom: none; }
+
+        /* --- Resume Section --- */
+        #resume .head h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+        }
+        #resume .head h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(to right, var(--accent-red), transparent);
+        }
+        #resume .list-inner ol {
+            position: relative;
+            padding-left: 1.75rem;
+        }
+        #resume .list-inner ol::before {
+            content: '';
+            position: absolute;
+            left: 7px; top: 8px; bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-red) 0%, rgba(227,28,37,0.1) 100%);
+        }
+        #resume .list-inner ol li {
+            position: relative;
+            margin-bottom: 0.6rem;
+        }
+        #resume .list-inner ol li::before {
+            content: '';
+            position: absolute;
+            left: -16px; top: 13px;
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--accent-red);
+            border: 2px solid var(--bg-primary);
+            z-index: 1;
+        }
+        .exp-toggle {
+            background: var(--bg-elevated) !important;
+            color: var(--text-primary) !important;
+            border: 1px solid var(--border) !important;
+            border-radius: var(--radius-sm) !important;
+            padding: 8px 14px !important;
+            font-size: 0.84rem !important;
+            box-shadow: none !important;
+            transition: var(--transition) !important;
+        }
+        .exp-toggle:hover {
+            border-color: var(--border-accent) !important;
+            background: rgba(227, 28, 37, 0.08) !important;
+        }
+        .exp-arrow { color: var(--accent-red) !important; }
+        .exp-detail h6 { color: var(--accent-red); font-size: 0.8rem; margin-bottom: 4px; }
+        .exp-detail > span {
+            display: inline-block !important;
+            font-size: 0.73rem !important;
+            color: var(--text-secondary) !important;
+            background: var(--bg-elevated) !important;
+            padding: 2px 10px !important;
+            border-radius: 100px !important;
+            margin-bottom: 8px !important;
+            border: 1px solid var(--border) !important;
+        }
+        .exp-detail p { color: var(--text-secondary); font-size: 0.82rem; line-height: 1.7; }
+        .exp-detail p > span { background: none !important; padding: 0 !important; border-radius: 0 !important; color: var(--text-primary) !important; font-weight: 600 !important; display: inline !important; border: none !important; }
+        .exp-detail a { color: var(--accent-red); }
+
+        /* --- Portfolio / Tabs --- */
+        .nav-tabs { border-bottom: 1px solid var(--border) !important; margin-bottom: 1.5rem; gap: 2px; }
+        .nav-tabs .nav-link {
+            color: var(--text-secondary) !important;
+            border: none !important;
+            border-bottom: 2px solid transparent !important;
+            border-radius: 0 !important;
+            padding: 9px 18px !important;
+            font-size: 0.84rem !important;
+            font-weight: 500 !important;
+            background: transparent !important;
+            transition: var(--transition) !important;
+        }
+        .nav-tabs .nav-link:hover { color: var(--text-primary) !important; }
+        .nav-tabs .nav-link.active {
+            color: var(--text-primary) !important;
+            border-bottom: 2px solid var(--accent-red) !important;
+        }
+
+        /* --- Skills Section (What I Can Do) --- */
+        #about .center-three-wrapper ._re_uy_iu > span,
+        #about .right-three-wrapper ._re_uy_iu > span {
+            display: block !important;
+            font-size: 0.73rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px !important;
+            text-transform: uppercase !important;
+            color: var(--accent-red) !important;
+            margin-bottom: 1rem !important;
+            padding-bottom: 0.5rem !important;
+            border-bottom: 1px solid var(--border-accent) !important;
+        }
+        #about .center-three-wrapper ul li,
+        #about .right-three-wrapper ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+        #about .center-three-wrapper ul li:last-child,
+        #about .right-three-wrapper ul li:last-child { border-bottom: none; }
+        #about .center-three-wrapper ul li B,
+        #about .right-three-wrapper ul li B { color: var(--text-primary); font-weight: 600; }
+        #about .center-three-wrapper ul li p,
+        #about .right-three-wrapper ul li p { color: var(--text-secondary); font-size: 0.78rem; margin: 0; }
+        #about .left-three-wrapper .title h4 {
+            font-size: 0.73rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--accent-red); margin-bottom: 1rem;
+        }
+        #about .left-three-wrapper .title h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+        #about .left-three-wrapper .title h3 span { color: var(--accent-red); }
+        #about .left-three-wrapper .title h3 p { font-size: 0.78rem; color: var(--text-secondary); margin: 2px 0 10px; }
+
+        /* --- Contact --- */
+        #contact .heading h2 { font-size: 1.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.2rem; }
+        #contact .row { align-items: center; gap: 4px; }
+        #contact .row p { color: var(--text-secondary) !important; font-size: 0.9rem; margin-right: 6px; }
+        #contact .row a { color: var(--accent-red) !important; font-weight: 500; font-size: 0.9rem; }
+        #contact .row span { color: var(--text-primary) !important; font-size: 0.9rem; }
+
+        /* --- Project cards refinement --- */
+        .project-card { background: var(--bg-elevated) !important; border-color: var(--border) !important; }
+        .project-card:hover { box-shadow: 0 6px 20px rgba(227,28,37,0.15) !important; }
+        .card-body p { color: var(--text-secondary) !important; }
+        .tech-tag, .author-tag { background: var(--bg-secondary) !important; border-color: var(--border) !important; color: var(--text-secondary) !important; }
+        .author-tag a { color: var(--text-secondary) !important; }
+        .author-tag a:hover { color: var(--accent-red) !important; }
+
+        /* --- Research gallery --- */
+        ._ok-vd_zs figure img { border-radius: var(--radius-sm); transition: filter 0.3s, transform 0.3s; }
+        ._ok-vd_zs figure:hover img { filter: brightness(1.05); }
+        </style>
     </head>
     <!-- =================Body Started==================== -->
     <body>
+
+        <!-- ===== Modern Sticky Navigation ===== -->
+        <nav id="modern-nav">
+            <div class="mnav-inner">
+                <a href="#home" class="mnav-brand">P<span>.</span> Yamchote</a>
+                <ul class="mnav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">CV</a></li>
+                    <li><a href="#portfolio">Research</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="seminar_2_2025/presentation.html">Seminar</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mnav-actions">
+                    <a href="https://github.com/yamchote-ppt" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/phaphontee-yamchote" target="_blank">LinkedIn</a>
+                    <a href="resume.html" class="mnav-cta">Resume</a>
+                </div>
+                <button class="mnav-hamburger" onclick="show_menu()" aria-label="Open menu">
+                    <i class="flaticon-menu"></i>
+                </button>
+            </div>
+        </nav>
+
         <!-- =================================********================================= -->
         <div id="show_menuitems" class="my-menu">
             <div class="menu-box">
@@ -123,20 +593,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="my-wrapper">
-                            <div class="inter">
-                                <h6>Introduce</h6>
+                            <div class="hero-pill">Ph.D. Candidate &nbsp;·&nbsp; Computer Science</div>
+                            <h1 class="hero-name">Phaphontee <span class="hero-accent">Yamchote</span></h1>
+                            <p class="hero-thai">ปพนธีร์ แย้มโชติ &nbsp;(เต้ย)</p>
+                            <div class="hero-tags">
+                                <span class="hero-tag">Machine Learning</span>
+                                <span class="hero-tag">Graph Neural Networks</span>
+                                <span class="hero-tag">Data Science</span>
+                                <span class="hero-tag">Mathematics</span>
                             </div>
-                            <div class="welcome-box">
-                                <h3>Welcome to<span>Phaphontee's World</span></h3>
+                            <p class="hero-affiliation">Faculty of ICT, Mahidol University</p>
+                            <div class="hero-cta">
+                                <a href="resume.html" class="hero-btn-primary">View Resume</a>
+                                <a href="#portfolio" class="hero-btn-outline">Research & Projects</a>
+                                <a href="#contact" class="hero-btn-outline">Contact</a>
                             </div>
-                            <div class="name-box">
-                                <font color="#ffffff">My name is</font> <h1>  <span>Phaphontee Yamchote.</span></h1>
-                                <font color="#ffffff">ปพนธีร์ แย้มโชติ (เต้ย)</font>
-                            </div>
-                            <div class="line"></div>
-                        </div>
-                        <div class="copy-right">
-                            <h6>Template by © Smith 2020</h6>
                         </div>
                     </div>
                 </div>

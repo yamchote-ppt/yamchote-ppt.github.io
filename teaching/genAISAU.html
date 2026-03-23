@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Prompting Workshop</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FAF8F5',
+            warmgray: '#E8E4DF',
+            midgray: '#B5B0A9',
+            charcoal: '#1A1A1A',
+            softblack: '#2C2C2C',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { height: 100%; }
+    body { height: 100%; margin: 0; }
+    * { box-sizing: border-box; }
+
+    .font-heading {
+      font-family: 'Instrument Serif', Georgia, serif;
+    }
+    .font-body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+    .accordion-content.open {
+      opacity: 1;
+    }
+
+    .accordion-chevron {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .accordion-chevron.rotated {
+      transform: rotate(180deg);
+    }
+
+    .section-card {
+      border: 1px solid #E8E4DF;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .section-card:hover {
+      border-color: #000333;
+    }
+    .section-card.active {
+      border-color: #000333;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .hero-line {
+      width: 48px;
+      height: 2px;
+      background: #1A1A1A;
+    }
+
+    .section-number {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #000333;
+      font-weight: 500;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .fade-up-delay-3 { animation-delay: 0.35s; opacity: 0; }
+    .fade-up-delay-4 { animation-delay: 0.5s; opacity: 0; }
+
+    @media print {
+      body { height: auto !important; background-color: #FAF8F5 !important; }
+      #app-wrapper { overflow: visible !important; height: auto !important; }
+      header { padding: 24px 0 16px !important; }
+      .fade-up { animation: none !important; opacity: 1 !important; }
+      .fade-up-delay-1, .fade-up-delay-2, .fade-up-delay-3, .fade-up-delay-4 { opacity: 1 !important; animation: none !important; }
+      .accordion-content {
+        max-height: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        display: block !important;
+      }
+      .accordion-chevron { display: none !important; }
+      .section-card { break-inside: avoid; page-break-inside: avoid; border: 1px solid #E8E4DF !important; margin-bottom: 12px !important; }
+      button { pointer-events: none !important; }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="font-body" style="background-color: #FAF8F5; color: #1A1A1A;">
+  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Hero Section -->
+   <header class="w-full" style="padding: 10% 0 8%;">
+    <div style="max-width: 720px; margin: 0 auto; padding: 0 24px;">
+     <div class="fade-up fade-up-delay-1">
+      <div class="hero-line" style="margin-bottom: 32px;"></div>
+     </div>
+     <h1 id="hero-title" class="font-heading fade-up fade-up-delay-2" style="font-size: clamp(36px, 5vw, 56px); line-height: 1.1; font-weight: 400; letter-spacing: -0.02em; margin: 0 0 20px 0;">Prompting for AI Content Creation &amp; Video Planning</h1>
+     <p id="hero-tagline" class="fade-up fade-up-delay-3" style="font-size: clamp(16px, 2vw, 19px); line-height: 1.6; color: #2C2C2C; margin: 0 0 32px 0; font-weight: 300;">A hands-on workshop for crafting effective prompts and planning AI-driven video content.</p>
+     <p id="hero-speaker" class="fade-up fade-up-delay-4 section-number" style="margin: 0;">Workshop Session · Your Name Here</p>
+    </div>
+   </header><!-- Thin divider -->
+   <div style="max-width: 720px; margin: 0 auto; padding: 0 24px;">
+    <div style="height: 1px; background: #E8E4DF;"></div>
+   </div><!-- Accordion Sections -->
+   <main style="max-width: 760px; margin: 0 auto; padding: 48px 24px 80px;">
+    <div id="sections-container" style="display: flex; flex-direction: column; gap: 16px;">
+    </div>
+   </main><!-- Footer -->
+   <footer style="max-width: 720px; margin: 0 auto; padding: 0 24px 64px;">
+    <div style="height: 1px; background: #E8E4DF; margin-bottom: 24px;"></div>
+    <p style="font-size: 13px; color: #B5B0A9; font-weight: 400; margin: 0;">Workshop materials for educational use.</p>
+   </footer>
+  </div>
+  <script>
+    // Section data
+    const sectionsData = [
+      {
+        key: 'overview_title',
+        defaultTitle: 'ภาพรวมของเวิร์กช็อป',
+        number: '01',
+        content: `
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div>
+              <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ช่วงนี้เกี่ยวกับอะไร</p>
+              <p style="margin: 0; line-height: 1.8; font-weight: 300;">เรียนรู้วิธีเขียน prompt ให้ชัดเจนและเป็นระบบ เพื่อดึงศักยภาพของเครื่องมือ AI มาใช้ในการสร้างคอนเทนต์และวางแผนวิดีโอ ช่วงเช้านี้จะเน้นเรื่องการคิดเชิงกลยุทธ์และการวางแผน ส่วนช่วงบ่ายคุณจะได้ลงมือสร้างวิดีโอจริงใน Sora</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">สิ่งที่คุณจะเข้าใจ</p>
+              <p style="margin: 0; line-height: 1.8; font-weight: 300;">วิธีคิดอย่างเป็นระบบในการสร้างคอนเทนต์ด้วย AI ตั้งแต่ไอเดียที่ยังคลุมเครือ ไปจนถึง prompt ที่ชัดเจน นำไปใช้ได้จริง และให้ผลลัพธ์ที่มีคุณภาพอย่างสม่ำเสมอ</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ส่วนนี้เชื่อมกับช่วงบ่ายอย่างไร</p>
+              <p style="margin: 0; line-height: 1.8; font-weight: 300;">เมื่อจบช่วงนี้ คุณจะมี storyboard ที่ครบถ้วนและ prompt สำหรับ Sora ที่ผ่านการทดลองและปรับแล้ว พร้อมเริ่มสร้างวิดีโอได้ทันทีหลังพักกลางวัน</p>
+            </div>
+          </div>
+        `
+      },
+      {
+        key: 'flow_title',
+        defaultTitle: 'โครงสร้างกิจกรรม',
+        number: '02',
+        content: `
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div style="background: #F3F0EC; border-radius: 12px; padding: 24px; border-left: 4px solid #1A1A1A;">
+              <p style="margin: 0 0 4px 0; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #1A1A1A;">ช่วงที่ 1: สาธิตรวมถึงกิจกรรม</p>
+              <p style="margin: 0 0 12px 0; font-weight: 300; font-size: 13px; color: #B5B0A9;">90 นาที</p>
+              <ul style="margin: 0; padding-left: 16px; list-style: disc; color: #2C2C2C; font-size: 14px; line-height: 1.7;">
+                <li>ปูพื้นฐานเรื่องการเขียน prompt</li>
+                <li>อธิบาย framework และแนวปฏิบัติที่ดี</li>
+                <li>สาธิตสดจาก prompt ไปสู่ storyboard</li>
+                <li>ถามตอบและทบทวนประเด็นสำคัญ</li>
+              </ul>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 12px; padding: 24px; border-left: 4px solid #1A1A1A;">
+              <p style="margin: 0 0 4px 0; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #1A1A1A;">ช่วงที่ 2: ลงมือทำด้วยตนเอง</p>
+              <p style="margin: 0 0 12px 0; font-weight: 300; font-size: 13px; color: #B5B0A9;">90 นาที</p>
+              <ul style="margin: 0; padding-left: 16px; list-style: disc; color: #2C2C2C; font-size: 14px; line-height: 1.7;">
+                <li>สร้าง prompt ของตนเอง</li>
+                <li>รับคำแนะนำและ feedback จากผู้สอน</li>
+                <li>ปรับแก้และพัฒนางานเป็นรอบ ๆ</li>
+                <li>เตรียมความพร้อมสำหรับใช้ Sora ในช่วงบ่าย</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      {
+        key: 'goals_title',
+        defaultTitle: 'เป้าหมายการเรียนรู้',
+        number: '02',
+        content: `
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 5px; height: 5px; background: #1A1A1A; border-radius: 50%; margin-top: 8px; display: block;"></span>
+              <span style="line-height: 1.6; font-weight: 300;">เข้าใจว่าปัจจัยใดทำให้ prompt มีประสิทธิภาพและมีความเฉพาะเจาะจง</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 5px; height: 5px; background: #1A1A1A; border-radius: 50%; margin-top: 8px; display: block;"></span>
+              <span style="line-height: 1.6; font-weight: 300;">ประยุกต์ใช้ framework อย่างเป็นระบบในการสร้างคอนเทนต์</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 5px; height: 5px; background: #1A1A1A; border-radius: 50%; margin-top: 8px; display: block;"></span>
+              <span style="line-height: 1.6; font-weight: 300;">ปรับแก้และพัฒนา prompt จากผลลัพธ์ที่ได้รับ</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 5px; height: 5px; background: #1A1A1A; border-radius: 50%; margin-top: 8px; display: block;"></span>
+              <span style="line-height: 1.6; font-weight: 300;">วางแผนคอนเทนต์วิดีโอที่ขับเคลื่อนด้วย AI ผ่าน storyboard ที่ชัดเจน</span>
+            </li>
+          </ul>
+        `
+      },
+      {
+        key: 'framework_title',
+        defaultTitle: 'โครงสร้างของ Prompt',
+        number: '03',
+        content: `
+          <p style="margin: 0 0 20px; line-height: 1.7; font-weight: 300;">แนวทางง่าย ๆ และเป็นระบบในการเขียน prompt เพื่อให้ได้ผลลัพธ์ที่สม่ำเสมอ ชัดเจน และมีคุณภาพสูง</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">เป้าหมาย</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">จุดประสงค์หลักของคอนเทนต์นี้คืออะไร</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">กลุ่มเป้าหมาย</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">เรากำลังสร้างคอนเทนต์นี้เพื่อใคร</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">บริบท</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">มีข้อมูลพื้นฐานหรือข้อจำกัดอะไรที่ควรระบุให้ชัดเจน</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">โทนและสไตล์</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">ต้องการให้งานมีน้ำเสียง อารมณ์ หรือรูปแบบภาพแบบใด</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">รูปแบบผลลัพธ์</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">ต้องการผลลัพธ์ในรูปแบบใด หรือมีความยาวประมาณเท่าไร</p>
+            </div>
+          </div>
+        `
+      },
+      {
+        key: 'examples_title',
+        defaultTitle: 'Prompt ที่ดี vs. Prompt ที่ยังไม่ชัด',
+        number: '04',
+        content: `
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div>
+              <p style="margin: 0 0 12px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">❌ Prompt ที่ยังไม่ชัด</p>
+              <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #B5B0A9;">
+                <p style="margin: 0; font-size: 14px; line-height: 1.8; font-weight: 300; font-style: italic;">"ช่วยทำวิดีโอเกี่ยวกับเคล็ดลับการเพิ่มประสิทธิภาพการทำงานให้หน่อย"</p>
+              </div>
+              <p style="margin: 12px 0 0 0; font-size: 13px; color: #B5B0A9; line-height: 1.6;">จุดอ่อน: เป้าหมายกว้างเกินไป ไม่มีกลุ่มเป้าหมายที่ชัดเจน และไม่ได้ระบุรูปแบบหรือโทนของงาน</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 12px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #1A1A1A;">✓ Prompt ที่ดีขึ้น</p>
+              <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+                <p style="margin: 0; font-size: 14px; line-height: 1.8; font-weight: 300;">"ช่วยสร้างวิดีโอความยาว 60 วินาทีสำหรับคนทำงานที่มีเวลาจำกัด เรื่องการจัดการเวลา โดยใช้ภาพลักษณ์เรียบ ทันสมัย และสงบ เน้น 3 เทคนิคที่นำไปใช้ได้จริง ได้แก่ การจัดลำดับความสำคัญ การจัดกลุ่มงาน และการพักอย่างมีคุณภาพ โทนควรดูเป็นมืออาชีพ แต่เข้าถึงง่าย ไม่สอนแบบกดดัน"</p>
+              </div>
+              <p style="margin: 12px 0 0 0; font-size: 13px; color: #1A1A1A; line-height: 1.6; font-weight: 500;">จุดแข็ง: ระบุกลุ่มเป้าหมาย ความยาว โทนภาพ เนื้อหาหลัก และน้ำเสียงที่ต้องการไว้อย่างชัดเจน</p>
+            </div>
+          </div>
+        `
+      },
+      {
+        key: 'refinement_title',
+        defaultTitle: 'กระบวนการปรับ Prompt ให้ดีขึ้น',
+        number: '05',
+        content: `
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 20px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                <span style="flex-shrink: 0; width: 28px; height: 28px; background: #1A1A1A; color: #FAF8F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px;">1</span>
+                <div>
+                  <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 14px;">ร่างแรก: ไอเดียตั้งต้น</p>
+                  <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #2C2C2C; font-weight: 300;">"ช่วยเขียนวิดีโอตลกเกี่ยวกับการติดกาแฟ"</p>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center; color: #B5B0A9; font-size: 12px; font-weight: 500;">↓ ทดลองใช้และประเมินผล</div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 20px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                <span style="flex-shrink: 0; width: 28px; height: 28px; background: #1A1A1A; color: #FAF8F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px;">2</span>
+                <div>
+                  <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 14px;">ปรับครั้งที่หนึ่ง: เพิ่มความชัดเจน</p>
+                  <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #2C2C2C; font-weight: 300;">"ช่วยสร้างวิดีโอความยาว 30 วินาทีแนวตลกสำหรับพนักงานออฟฟิศเกี่ยวกับการพึ่งพากาแฟ โดยใช้น้ำเสียงเบาสบายและสถานการณ์ที่คนดูรู้สึกร่วมได้"</p>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center; color: #B5B0A9; font-size: 12px; font-weight: 500;">↓ ทบทวนและปรับให้คมขึ้น</div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 20px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                <span style="flex-shrink: 0; width: 28px; height: 28px; background: #1A1A1A; color: #FAF8F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px;">3</span>
+                <div>
+                  <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 14px;">ปรับสมบูรณ์: ครบและละเอียด</p>
+                  <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #2C2C2C; font-weight: 300;">"วิดีโอความยาว 30 วินาที กลุ่มเป้าหมายคือพนักงานออฟฟิศอายุ 25–45 ปี แสดง 3 ฉากตลก ได้แก่ ตื่นสายเพราะยังไม่ได้ดื่มกาแฟ รีบชงกาแฟอย่างวุ่นวาย และความโล่งใจหลังจิบคำแรก สไตล์เป็นเสียงบรรยายแบบมีไหวพริบ ฉากหลังเป็นออฟฟิศสมัยใหม่ มีดนตรีจังหวะสนุก โทนเป็นอารมณ์ขันที่เข้าถึงง่าย ไม่หยาบคาย"</p>
+                </div>
+              </div>
+            </div>
+            <p style="margin: 16px 0 0 0; padding: 12px; background: #F3F0EC; border-radius: 8px; font-size: 13px; line-height: 1.6; font-weight: 300; color: #2C2C2C;"><strong style="font-weight: 500;">ข้อสังเกต:</strong> ในแต่ละรอบ เราเพิ่มความชัดเจนเรื่องเป้าหมาย กลุ่มเป้าหมาย รูปแบบ และข้อจำกัด Prompt ที่ดีไม่ใช่ prompt ที่กว้าง แต่คือ prompt ที่เฉพาะเจาะจงพอให้ AI ทำงานได้ตรงจุด</p>
+          </div>
+        `
+      },
+      {
+        key: 'demo_title',
+        defaultTitle: 'เส้นทางสาธิตโดยผู้สอน',
+        number: '06',
+        content: `
+          <p style="margin: 0 0 20px; line-height: 1.7; font-weight: 300; font-size: 14px; color: #2C2C2C;">ติดตามตัวอย่างครบทั้งกระบวนการ ตั้งแต่ไอเดียตั้งต้นไปจนถึง storyboard และ prompt ที่พร้อมใช้กับ Sora</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ขั้นที่ 1: ไอเดียกว้าง</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">"อยากทำอะไรสักอย่างเกี่ยวกับการใช้ชีวิตอย่างยั่งยืน"</p>
+            </div>
+            <div style="text-align: center; color: #B5B0A9; font-size: 12px; font-weight: 500;">↓</div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ขั้นที่ 2: เป้าหมายของคอนเทนต์</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">สร้างวิดีโอเชิงให้ความรู้ความยาว 90 วินาที เรื่อง 3 วิธีง่าย ๆ ในการใช้ชีวิตอย่างยั่งยืนที่บ้าน สำหรับคนทำงานที่มีเวลาจำกัด</p>
+            </div>
+            <div style="text-align: center; color: #B5B0A9; font-size: 12px; font-weight: 500;">↓</div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ขั้นที่ 3: Content Brief</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">กลุ่มเป้าหมาย: คนรุ่นใหม่ที่ใส่ใจสิ่งแวดล้อม โทน: เข้าถึงง่าย ทันสมัย รูปแบบ: 90 วินาที ประเด็นหลัก: ลดการใช้พลาสติก ประหยัดพลังงาน และการทำปุ๋ยหมัก</p>
+            </div>
+            <div style="text-align: center; color: #B5B0A9; font-size: 12px; font-weight: 500;">↓</div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ขั้นที่ 4: โครง Storyboard</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">ฉาก 1: เปิดเรื่องด้วยภาพตัดเร็วของอุปกรณ์รักษ์โลก ฉาก 2: วิธีที่ 1 พร้อมภาพประกอบ ฉาก 3: วิธีที่ 2 พร้อมภาพประกอบ ฉาก 4: วิธีที่ 3 พร้อมภาพประกอบ ฉาก 5: ปิดท้ายพร้อมชวนลงมือทำ</p>
+            </div>
+            <div style="text-align: center; color: #B5B0A9; font-size: 12px; font-weight: 500;">↓</div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ขั้นที่ 5: Prompt ที่พร้อมใช้กับ Sora</p>
+              <p style="margin: 0; font-size: 13px; line-height: 1.6; font-weight: 300; font-style: italic;">"วิดีโอเชิงให้ความรู้ความยาว 90 วินาทีเกี่ยวกับการใช้ชีวิตอย่างยั่งยืนในบ้าน กลุ่มเป้าหมายคือคนรุ่นใหม่ที่ใส่ใจสิ่งแวดล้อม นำเสนอ 3 วิธี ได้แก่ ลดการใช้พลาสติก ประหยัดพลังงาน และการทำปุ๋ยหมัก ใช้ภาพลักษณ์ทันสมัย ดนตรีจังหวะสดใส รองรับการใส่เสียงบรรยาย ลำดับฉากคือ เปิดเรื่อง → วิธีที่ 1 → วิธีที่ 2 → วิธีที่ 3 → ชวนลงมือทำ"</p>
+            </div>
+          </div>
+        `
+      },
+      {
+        key: 'video_title',
+        defaultTitle: 'การเขียน Prompt สำหรับงานวิดีโอ',
+        number: '07',
+        content: `
+          <p style="margin: 0 0 20px; line-height: 1.7; font-weight: 300;">Prompt สำหรับวิดีโอจำเป็นต้องคิดเป็นฉากและลำดับภาพ ไม่ใช่เพียงแค่คำสั่งกว้าง ๆ เพียงครั้งเดียว</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">วัตถุประสงค์ของวิดีโอ</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">ต้องการให้ความรู้ สร้างความบันเทิง สร้างแรงบันดาลใจ หรือประชาสัมพันธ์?</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">กลุ่มเป้าหมาย</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">อายุ ความสนใจ และช่องทางการรับชมคืออะไร เช่น โซเชียล เว็บ หรืออีเมล?</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">โทนและอารมณ์</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">เป็นทางการ เป็นกันเอง มีพลัง หรือสงบ?</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ลำดับของฉาก</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">มีกี่ฉาก และภาพจะค่อย ๆ ดำเนินไปอย่างไร?</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">สารหลัก</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">สิ่งสำคัญที่สุดที่อยากให้ผู้ชมจดจำหรืออยากให้ทำต่อคืออะไร?</p>
+            </div>
+          </div>
+        `
+      },
+      {
+        key: 'storyboard_title',
+        defaultTitle: 'การวาง Storyboard',
+        number: '08',
+        content: `
+          <p style="margin: 0 0 20px; line-height: 1.7; font-weight: 300; font-size: 14px; color: #2C2C2C;">วางแผนวิดีโอเป็นรายฉาก โดยใช้โครงสร้างนี้เพื่อให้งานมีความชัดเจนและต่อเนื่อง</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px;">
+              <div style="display: grid; grid-template-columns: 60px 1fr; gap: 16px; margin-bottom: 12px;">
+                <p style="margin: 0; font-weight: 600; font-size: 12px; color: #B5B0A9; text-transform: uppercase; letter-spacing: 0.06em;">ฉากที่ 1</p>
+                <div></div>
+              </div>
+              <div style="display: grid; grid-template-columns: 80px 1fr; gap: 12px; font-size: 13px;">
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">ภาพที่ต้องการเห็น</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่แนวคิดของภาพ</p>
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">ข้อความ / คำบรรยาย</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่บทพูดหรือเสียงบรรยาย</p>
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">อารมณ์ / โทน</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่คำอธิบายอารมณ์ของฉาก</p>
+              </div>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px;">
+              <div style="display: grid; grid-template-columns: 60px 1fr; gap: 16px; margin-bottom: 12px;">
+                <p style="margin: 0; font-weight: 600; font-size: 12px; color: #B5B0A9; text-transform: uppercase; letter-spacing: 0.06em;">ฉากที่ 2</p>
+                <div></div>
+              </div>
+              <div style="display: grid; grid-template-columns: 80px 1fr; gap: 12px; font-size: 13px;">
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">ภาพที่ต้องการเห็น</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่แนวคิดของภาพ</p>
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">ข้อความ / คำบรรยาย</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่บทพูดหรือเสียงบรรยาย</p>
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">อารมณ์ / โทน</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่คำอธิบายอารมณ์ของฉาก</p>
+              </div>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px;">
+              <div style="display: grid; grid-template-columns: 60px 1fr; gap: 16px; margin-bottom: 12px;">
+                <p style="margin: 0; font-weight: 600; font-size: 12px; color: #B5B0A9; text-transform: uppercase; letter-spacing: 0.06em;">ฉากที่ 3</p>
+                <div></div>
+              </div>
+              <div style="display: grid; grid-template-columns: 80px 1fr; gap: 12px; font-size: 13px;">
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">ภาพที่ต้องการเห็น</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่แนวคิดของภาพ</p>
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">ข้อความ / คำบรรยาย</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่บทพูดหรือเสียงบรรยาย</p>
+                <p style="margin: 0; font-weight: 500; color: #B5B0A9;">อารมณ์ / โทน</p>
+                <p style="margin: 0; color: #2C2C2C; font-weight: 300;">ตำแหน่งสำหรับใส่คำอธิบายอารมณ์ของฉาก</p>
+              </div>
+            </div>
+          </div>
+          <p style="margin: 16px 0 0 0; font-size: 12px; color: #B5B0A9; font-weight: 300;">ทำซ้ำในฉากที่ 4–6 ได้ตามความเหมาะสม</p>
+        `
+      },
+      {
+        key: 'hands_on_title',
+        defaultTitle: 'ช่วงลงมือทำของผู้เรียน',
+        number: '09',
+        content: `
+          <p style="margin: 0 0 20px; line-height: 1.7; font-weight: 300; font-size: 14px; color: #2C2C2C;"><strong style="font-weight: 500;">ถึงเวลาสร้างงานของคุณเองแล้ว</strong> ทำตามขั้นตอนต่อไปนี้ โดยมีผู้สอนคอยให้คำแนะนำตลอดกิจกรรม คุณมีเวลา 90 นาที</p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #1A1A1A;">ขั้นที่ 1: เลือกหัวข้อของคุณ</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">เลือกหัวข้อที่คุณรู้จักดีหรือสนใจเป็นพิเศษ โดยจะพัฒนาเป็นวิดีโอความยาวประมาณ 60–120 วินาที</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #1A1A1A;">ขั้นที่ 2: ระบุกลุ่มเป้าหมาย</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">ใครคือผู้ชมของวิดีโอนี้ พวกเขาสนใจอะไร และคาดหวังอะไรจากคอนเทนต์นี้ เขียนสั้น ๆ 1–2 ประโยค</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #1A1A1A;">ขั้นที่ 3: เขียน Content Brief</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">ใช้ framework ที่เรียนไป ได้แก่ เป้าหมาย กลุ่มเป้าหมาย บริบท โทน และรูปแบบ สรุปให้ได้ประมาณ 3–4 ประโยค</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #1A1A1A;">ขั้นที่ 4: สร้าง Storyboard</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">วางแผน 3–5 ฉาก สำหรับแต่ละฉากให้ระบุภาพที่ต้องการเห็น คำบรรยายหรือเสียงบรรยาย และอารมณ์ของฉากให้ชัดเจน</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px; border-left: 3px solid #1A1A1A;">
+              <p style="margin: 0 0 6px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #1A1A1A;">ขั้นที่ 5: ร่าง Prompt สำหรับ Sora</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">เขียน prompt สำหรับ Sora โดยอิงจาก brief และ storyboard ของคุณ ระบุความยาว ลำดับฉาก สไตล์ และองค์ประกอบสำคัญให้ครบ</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px;">
+              <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">💡 การสนับสนุนจากผู้สอน</p>
+              <p style="margin: 0; font-size: 13px; line-height: 1.6; font-weight: 300; color: #2C2C2C;">ผู้สอนจะเดินให้คำแนะนำ ตอบคำถาม และช่วยปรับ prompt ให้คมขึ้น ไม่ต้องกังวลเรื่องความสมบูรณ์แบบในรอบแรก ให้เน้นที่ความชัดเจนและความเฉพาะเจาะจงก่อน</p>
+            </div>
+          </div>
+        `
+      },
+      {
+        key: 'checklist_title',
+        defaultTitle: 'รายการตรวจสอบก่อนพักกลางวัน',
+        number: '10',
+        content: `
+          <p style="margin: 0 0 16px; line-height: 1.7; font-weight: 300; font-size: 14px; color: #2C2C2C;">ก่อนพักกลางวัน ตรวจสอบให้แน่ใจว่าคุณทำสิ่งต่อไปนี้ครบแล้ว:</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 18px; height: 18px; background: #F3F0EC; border: 1px solid #B5B0A9; border-radius: 3px; margin-top: 3px; display: flex; align-items: center; justify-content: center;"><span style="font-size: 12px; color: #B5B0A9;">✓</span></span>
+              <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">เลือกหัวข้อและจดไว้เรียบร้อยแล้ว</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 18px; height: 18px; background: #F3F0EC; border: 1px solid #B5B0A9; border-radius: 3px; margin-top: 3px; display: flex; align-items: center; justify-content: center;"><span style="font-size: 12px; color: #B5B0A9;">✓</span></span>
+              <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">ระบุกลุ่มเป้าหมายไว้อย่างชัดเจนแล้ว 1–2 ประโยค</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 18px; height: 18px; background: #F3F0EC; border: 1px solid #B5B0A9; border-radius: 3px; margin-top: 3px; display: flex; align-items: center; justify-content: center;"><span style="font-size: 12px; color: #B5B0A9;">✓</span></span>
+              <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">เขียน content brief ตาม framework เรียบร้อยแล้ว</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 18px; height: 18px; background: #F3F0EC; border: 1px solid #B5B0A9; border-radius: 3px; margin-top: 3px; display: flex; align-items: center; justify-content: center;"><span style="font-size: 12px; color: #B5B0A9;">✓</span></span>
+              <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">ร่าง storyboard ไว้แล้ว 3–5 ฉาก พร้อมภาพ ข้อความหรือคำบรรยาย และอารมณ์ของแต่ละฉาก</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="flex-shrink: 0; width: 18px; height: 18px; background: #F3F0EC; border: 1px solid #B5B0A9; border-radius: 3px; margin-top: 3px; display: flex; align-items: center; justify-content: center;"><span style="font-size: 12px; color: #B5B0A9;">✓</span></span>
+              <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">เขียน prompt ฉบับร่างสำหรับ Sora และทบทวนเรียบร้อยแล้ว</span>
+            </li>
+          </ul>
+          <p style="margin: 16px 0 0 0; padding: 12px; background: #F3F0EC; border-radius: 8px; font-size: 13px; line-height: 1.6; font-weight: 300; color: #2C2C2C;"><strong style="font-weight: 500;">พร้อมสำหรับช่วงบ่ายหรือยัง?</strong> นำรายการทั้งหมดและ prompt ฉบับร่างของคุณไปใช้ต่อ เราจะทดลองใช้และปรับปรุงต่อใน Sora ช่วงบ่าย</p>
+        `
+      },
+      {
+        key: 'wrapup_title',
+        defaultTitle: 'สรุปและเชื่อมต่อสู่ช่วงบ่าย',
+        number: '11',
+        content: `
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div>
+              <p style="margin: 0 0 12px 0; font-weight: 500; font-size: 14px;">ประเด็นสำคัญจากช่วงเช้า</p>
+              <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="flex-shrink: 0; width: 4px; height: 4px; background: #1A1A1A; border-radius: 50%; margin-top: 7px; display: block;"></span>
+                  <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">ความเฉพาะเจาะจงสำคัญมาก เพราะ prompt ที่กว้างเกินไปมักให้ผลลัพธ์ที่ทั่วไปเกินไป</span>
+                </li>
+                <li style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="flex-shrink: 0; width: 4px; height: 4px; background: #1A1A1A; border-radius: 50%; margin-top: 7px; display: block;"></span>
+                  <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">ใช้ framework อย่างสม่ำเสมอ ได้แก่ เป้าหมาย กลุ่มเป้าหมาย บริบท โทน และรูปแบบ</span>
+                </li>
+                <li style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="flex-shrink: 0; width: 4px; height: 4px; background: #1A1A1A; border-radius: 50%; margin-top: 7px; display: block;"></span>
+                  <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">การปรับแก้หลายรอบช่วยให้งานดีขึ้น เพราะผลลัพธ์ครั้งแรกมักยังไม่ใช่เวอร์ชันสุดท้าย</span>
+                </li>
+                <li style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="flex-shrink: 0; width: 4px; height: 4px; background: #1A1A1A; border-radius: 50%; margin-top: 7px; display: block;"></span>
+                  <span style="line-height: 1.6; font-weight: 300; font-size: 14px;">Prompt สำหรับวิดีโอต้องคิดทั้งเรื่องฉากและการไหลของภาพ ไม่ใช่แค่ลำดับการเล่าเรื่องเท่านั้น</span>
+                </li>
+              </ul>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px;">
+              <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">สิ่งที่ควรเตรียมให้พร้อม</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">หัวข้อของคุณ คำอธิบายกลุ่มเป้าหมาย content brief โครง storyboard และ prompt ฉบับร่างสำหรับ Sora</p>
+            </div>
+            <div style="background: #F3F0EC; border-radius: 8px; padding: 16px;">
+              <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #B5B0A9;">ช่วงบ่ายใน Sora</p>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300;">เราจะนำ prompt ของคุณไปทดลองใช้ใน Sora ปรับแก้ตามผลลัพธ์ที่ได้ และสร้างวิดีโอจริงจากแผนที่เตรียมไว้ในช่วงเช้า เตรียมของให้พร้อมและพร้อมปรับงานต่อได้เลย</p>
+            </div>
+          </div>
+        `
+      }
+    ];
+
+    // Track open state
+    const openSections = new Set();
+
+    function buildSections(config) {
+      const container = document.getElementById('sections-container');
+      container.innerHTML = '';
+
+      sectionsData.forEach((section, index) => {
+        const title = config[section.key] || section.defaultTitle;
+        const isOpen = openSections.has(section.key);
+
+        const card = document.createElement('div');
+        card.className = `section-card ${isOpen ? 'active' : ''}`;
+        card.style.cssText = 'border-radius: 12px; overflow: hidden;';
+        card.dataset.sectionKey = section.key;
+
+        card.innerHTML = `
+          <button onclick="toggleSection('${section.key}')" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; background: none; border: none; cursor: pointer; text-align: left; gap: 16px;">
+            <div style="display: flex; align-items: baseline; gap: 16px; min-width: 0;">
+              <span class="section-number" style="flex-shrink: 0;">${section.number}</span>
+              <span class="font-heading" style="font-size: clamp(18px, 2.5vw, 22px); font-weight: 400; color: #1A1A1A; line-height: 1.3;">${title}</span>
+            </div>
+            <i data-lucide="chevron-down" class="accordion-chevron ${isOpen ? 'rotated' : ''}" style="width: 18px; height: 18px; color: #B5B0A9; flex-shrink: 0;"></i>
+          </button>
+          <div class="accordion-content ${isOpen ? 'open' : ''}" style="${isOpen ? '' : 'max-height: 0;'}">
+            <div style="padding: 0 24px 24px 24px; margin-left: 0; font-size: 15px; color: #2C2C2C;">
+              ${section.content}
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+
+      // Restore open states
+      openSections.forEach(key => {
+        const card = container.querySelector(`[data-section-key="${key}"]`);
+        if (card) {
+          const content = card.querySelector('.accordion-content');
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        }
+      });
+    }
+
+    function toggleSection(key) {
+      const container = document.getElementById('sections-container');
+      const card = container.querySelector(`[data-section-key="${key}"]`);
+      if (!card) return;
+
+      const content = card.querySelector('.accordion-content');
+      const chevron = card.querySelector('.accordion-chevron');
+      const isOpen = openSections.has(key);
+
+      if (isOpen) {
+        openSections.delete(key);
+        content.style.maxHeight = content.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          content.style.maxHeight = '0';
+          content.classList.remove('open');
+        });
+        chevron.classList.remove('rotated');
+        card.classList.remove('active');
+      } else {
+        openSections.add(key);
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        chevron.classList.add('rotated');
+        card.classList.add('active');
+      }
+    }
+
+    // Default config
+    const defaultConfig = {
+      workshop_title: 'Prompting for AI Content Creation & Video Planning with Sora',
+      workshop_tagline: 'A half-day workshop for crafting effective prompts and planning AI-driven video content.',
+      speaker_info: 'Workshop Session · Morning Track',
+      overview_title: 'Workshop Overview',
+      flow_title: 'Session Flow',
+      goals_title: 'Learning Goals',
+      framework_title: 'Prompt Framework',
+      examples_title: 'Weak Prompt vs. Strong Prompt',
+      refinement_title: 'Prompt Refinement Process',
+      demo_title: 'Instructor Demo Pipeline',
+      video_title: 'Prompting for Video',
+      storyboard_title: 'Storyboard Planning',
+      hands_on_title: 'Learner Hands-On Workshop',
+      checklist_title: 'Output Checklist',
+      wrapup_title: 'Wrap-Up & Transition',
+      background_color: '#FAF8F5',
+      text_color: '#1A1A1A',
+      accent_color: '#B5B0A9',
+      font_family: 'DM Sans',
+      font_size: 16
+    };
+
+    function applyConfig(config) {
+      // Hero
+      document.getElementById('hero-title').textContent = config.workshop_title || defaultConfig.workshop_title;
+      document.getElementById('hero-tagline').textContent = config.workshop_tagline || defaultConfig.workshop_tagline;
+      document.getElementById('hero-speaker').textContent = config.speaker_info || defaultConfig.speaker_info;
+
+      // Background
+      const bg = config.background_color || defaultConfig.background_color;
+      document.body.style.backgroundColor = bg;
+
+      // Text color
+      const textCol = config.text_color || defaultConfig.text_color;
+      document.body.style.color = textCol;
+      document.getElementById('hero-title').style.color = textCol;
+
+      // Accent
+      const accent = config.accent_color || defaultConfig.accent_color;
+      document.getElementById('hero-speaker').style.color = accent;
+
+      // Font
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'system-ui, sans-serif';
+      document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+
+      // Font size
+      const baseSize = config.font_size || defaultConfig.font_size;
+      document.body.style.fontSize = `${baseSize}px`;
+      document.getElementById('hero-tagline').style.fontSize = `${baseSize * 1.1}px`;
+
+      // Rebuild sections with current config
+      buildSections(config);
+    }
+
+    // Element SDK init
+    if (!window.elementSdk) {
+      applyConfig(defaultConfig);
+    } else
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => {
+        applyConfig(config);
+      },
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+        }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['workshop_title', config.workshop_title || defaultConfig.workshop_title],
+        ['workshop_tagline', config.workshop_tagline || defaultConfig.workshop_tagline],
+        ['speaker_info', config.speaker_info || defaultConfig.speaker_info],
+        ['overview_title', config.overview_title || defaultConfig.overview_title],
+        ['flow_title', config.flow_title || defaultConfig.flow_title],
+        ['goals_title', config.goals_title || defaultConfig.goals_title],
+        ['framework_title', config.framework_title || defaultConfig.framework_title],
+        ['examples_title', config.examples_title || defaultConfig.examples_title],
+        ['refinement_title', config.refinement_title || defaultConfig.refinement_title],
+        ['demo_title', config.demo_title || defaultConfig.demo_title],
+        ['video_title', config.video_title || defaultConfig.video_title],
+        ['storyboard_title', config.storyboard_title || defaultConfig.storyboard_title],
+        ['hands_on_title', config.hands_on_title || defaultConfig.hands_on_title],
+        ['checklist_title', config.checklist_title || defaultConfig.checklist_title],
+        ['wrapup_title', config.wrapup_title || defaultConfig.wrapup_title]
+      ])
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dfef1fa301ace32',t:'MTc3NDExNjk2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
