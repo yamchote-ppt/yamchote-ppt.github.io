@@ -92,6 +92,129 @@
     .fade-up-delay-3 { animation-delay: 0.35s; opacity: 0; }
     .fade-up-delay-4 { animation-delay: 0.5s; opacity: 0; }
 
+    /* ── Mode Toggle Button ── */
+    #mode-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      background: #1A1A1A;
+      color: #FAF8F5;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      letter-spacing: 0.04em;
+      transition: background 0.2s ease, opacity 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    #mode-toggle:hover { background: #333; }
+
+    /* ── Slide Overlay ── */
+    #slide-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #FAF8F5;
+      z-index: 500;
+      flex-direction: column;
+    }
+    #slide-overlay.active { display: flex; }
+
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      border-bottom: 1px solid #E8E4DF;
+      flex-shrink: 0;
+      gap: 16px;
+    }
+
+    .slide-content {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      padding: 48px 40px;
+    }
+
+    .slide-inner {
+      width: 100%;
+      max-width: 1100px;
+      font-size: 22px;
+    }
+
+    .slide-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      border-top: 1px solid #E8E4DF;
+      flex-shrink: 0;
+    }
+
+    .slide-nav-btn {
+      background: #1A1A1A;
+      color: #FAF8F5;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      transition: background 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 90px;
+      justify-content: center;
+    }
+    .slide-nav-btn:hover:not(:disabled) { background: #333; }
+    .slide-nav-btn:disabled { background: #E8E4DF; color: #B5B0A9; cursor: default; }
+
+    .slide-counter {
+      font-size: 13px;
+      font-weight: 400;
+      color: #B5B0A9;
+      letter-spacing: 0.06em;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    .slide-progress {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+    }
+    .slide-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #E8E4DF;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    .slide-dot.active { background: #1A1A1A; transform: scale(1.5); }
+    .slide-dot:hover { background: #B5B0A9; }
+
+    @keyframes slideFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-inner { animation: slideFadeIn 0.3s ease forwards; }
+
     @media print {
       body { height: auto !important; background-color: #FAF8F5 !important; }
       #app-wrapper { overflow: visible !important; height: auto !important; }
@@ -107,6 +230,8 @@
       .accordion-chevron { display: none !important; }
       .section-card { break-inside: avoid; page-break-inside: avoid; border: 1px solid #E8E4DF !important; margin-bottom: 12px !important; }
       button { pointer-events: none !important; }
+      #mode-toggle { display: none !important; }
+      #slide-overlay { display: none !important; }
     }
   </style>
   <style>body { box-sizing: border-box; }</style>
@@ -657,12 +782,117 @@
       document.body.style.fontSize = `${baseSize}px`;
       document.getElementById('hero-tagline').style.fontSize = `${baseSize * 1.1}px`;
 
+      // Track active config for slide mode
+      currentActiveConfig = config;
+
       // Rebuild sections with current config
       buildSections(config);
     }
 
+    // ===== SLIDE MODE =====
+    let isSlideMode = false;
+    let currentSlide = 0;
+    let slideSlides = [];
+    let currentActiveConfig = null;
+
+    function buildSlideData(config) {
+      slideSlides = [
+        {
+          number: '',
+          title: config.workshop_title || defaultConfig.workshop_title,
+          content: `
+            <div style="padding: 48px 0;">
+              <div class="hero-line" style="margin-bottom: 32px;"></div>
+              <h1 class="font-heading" style="font-size: clamp(48px, 7vw, 80px); line-height: 1.1; font-weight: 400; letter-spacing: -0.02em; margin: 0 0 24px 0; color: #1A1A1A;">${(config.workshop_title || defaultConfig.workshop_title).replace(/&/g,'&amp;')}</h1>
+              <p style="font-size: clamp(22px, 2.8vw, 30px); line-height: 1.6; color: #2C2C2C; margin: 0 0 28px 0; font-weight: 300;">${(config.workshop_tagline || defaultConfig.workshop_tagline).replace(/&/g,'&amp;')}</p>
+              <p class="section-number" style="margin: 0; font-size: 17px;">${(config.speaker_info || defaultConfig.speaker_info).replace(/&/g,'&amp;')}</p>
+            </div>
+          `
+        },
+        ...sectionsData.map(s => ({
+          number: s.number,
+          title: config[s.key] || s.defaultTitle,
+          content: `
+            <h2 class="font-heading" style="font-size: clamp(34px, 5vw, 56px); font-weight: 400; line-height: 1.2; margin: 0 0 32px 0; letter-spacing: -0.01em; color: #1A1A1A;">${(config[s.key] || s.defaultTitle).replace(/&/g,'&amp;')}</h2>
+            <div style="font-size: 22px; line-height: 1.7; color: #2C2C2C;">${s.content}</div>
+          `
+        }))
+      ];
+    }
+
+    function buildDots() {
+      const container = document.getElementById('slide-dots');
+      container.innerHTML = '';
+      slideSlides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'slide-dot' + (i === currentSlide ? ' active' : '');
+        dot.title = 'Slide ' + (i + 1);
+        dot.addEventListener('click', () => { currentSlide = i; renderCurrentSlide(); });
+        container.appendChild(dot);
+      });
+    }
+
+    function renderCurrentSlide() {
+      const slide = slideSlides[currentSlide];
+      const inner = document.getElementById('slide-inner-content');
+      // Trigger re-animation
+      inner.style.animation = 'none';
+      inner.offsetHeight; // reflow
+      inner.style.animation = '';
+      inner.innerHTML = slide.content;
+
+      document.getElementById('slide-section-number').textContent = slide.number || '';
+      document.getElementById('slide-section-title').textContent = slide.number ? slide.title : '';
+      document.getElementById('slide-counter').textContent = (currentSlide + 1) + ' / ' + slideSlides.length;
+      document.getElementById('slide-prev').disabled = currentSlide === 0;
+      document.getElementById('slide-next').disabled = currentSlide === slideSlides.length - 1;
+
+      // Update dots
+      document.querySelectorAll('.slide-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+
+      lucide.createIcons();
+    }
+
+    function changeSlide(dir) {
+      const next = currentSlide + dir;
+      if (next >= 0 && next < slideSlides.length) {
+        currentSlide = next;
+        renderCurrentSlide();
+      }
+    }
+
+    function toggleMode() {
+      isSlideMode = !isSlideMode;
+      const overlay = document.getElementById('slide-overlay');
+      const label = document.getElementById('mode-label');
+      const icon = document.getElementById('mode-icon');
+      if (isSlideMode) {
+        buildSlideData(currentActiveConfig);
+        buildDots();
+        renderCurrentSlide();
+        overlay.classList.add('active');
+        label.textContent = 'Scroll Mode';
+        icon.textContent = '\u2261';
+      } else {
+        overlay.classList.remove('active');
+        icon.innerHTML = '&#9635;';
+        label.textContent = 'Slide Mode';
+      }
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!isSlideMode) return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); changeSlide(1); }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); changeSlide(-1); }
+      if (e.key === 'Escape') toggleMode();
+    });
+
     // Element SDK init
     if (!window.elementSdk) {
+      currentActiveConfig = defaultConfig;
       applyConfig(defaultConfig);
     } else
     window.elementSdk.init({
@@ -714,5 +944,31 @@
       ])
     });
   </script>
+ <!-- Mode Toggle Button -->
+ <button id="mode-toggle" onclick="toggleMode()">
+   <span id="mode-icon">&#9635;</span>
+   <span id="mode-label">Slide Mode</span>
+ </button>
+
+ <!-- Slide Overlay -->
+ <div id="slide-overlay">
+   <div class="slide-header">
+     <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+       <span id="slide-section-number" class="section-number" style="font-size:13px;min-width:28px;"></span>
+       <span id="slide-section-title" class="font-heading" style="font-size:clamp(15px,2vw,18px);font-weight:400;color:#1A1A1A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px;"></span>
+     </div>
+     <div class="slide-progress" id="slide-dots"></div>
+     <button onclick="toggleMode()" style="background:none;border:none;cursor:pointer;color:#B5B0A9;font-size:13px;font-weight:500;font-family:'DM Sans',system-ui,sans-serif;letter-spacing:0.04em;flex-shrink:0;padding:4px 8px;border-radius:6px;transition:color 0.2s;" onmouseover="this.style.color='#1A1A1A'" onmouseout="this.style.color='#B5B0A9'">&#10005; Exit</button>
+   </div>
+   <div class="slide-content">
+     <div class="slide-inner font-body" id="slide-inner-content"></div>
+   </div>
+   <div class="slide-footer">
+     <button id="slide-prev" class="slide-nav-btn" onclick="changeSlide(-1)">&#8592; Prev</button>
+     <span class="slide-counter" id="slide-counter"></span>
+     <button id="slide-next" class="slide-nav-btn" onclick="changeSlide(1)">Next &#8594;</button>
+   </div>
+ </div>
+
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dfef1fa301ace32',t:'MTc3NDExNjk2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
