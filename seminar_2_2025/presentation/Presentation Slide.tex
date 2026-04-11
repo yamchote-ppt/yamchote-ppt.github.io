@@ -1,0 +1,158 @@
+% !TeX document-id = {2870843d-1baa-4f6a-bd0a-a5c796104a32}
+% !BIB TS-program = biber
+% !TeX encoding = UTF-8
+% TU Delft beamer template
+
+\documentclass[aspectratio=169]{beamer}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{calc}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{comment}
+\usepackage{siunitx}
+\usepackage{MnSymbol,wasysym}
+\usepackage{array}
+\usepackage{qrcode}
+\usepackage{tikz}
+
+\setbeamertemplate{navigation symbols}{} % remove navigation symbols
+\mode<presentation>{\usetheme[verticalbar=false]{tud}}
+\setbeamercovered{transparent}
+
+% BIB SETTINGS
+\usepackage[
+backend=biber,
+giveninits=true,
+maxnames=30,
+maxcitenames=20,
+uniquename=init,
+url=false,
+style=authoryear,
+]{biblatex}
+\addbibresource{bibfile.bib}
+\setlength\bibitemsep{0.3cm} % space between entries in the reference list
+\renewcommand{\bibfont}{\normalfont\scriptsize}
+\setbeamerfont{footnote}{size=\tiny}
+\renewcommand{\cite}[1]{\footnote<.->[frame]{\fullcite{#1}}}
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+\newcommand{\absimage}[4][0.5,0.5]{%
+	\begin{textblock}{#3}%width
+		[#1]% alignment anchor within image (centered by default)
+		(#2)% position on the page (origin is top left)
+		\includegraphics[width=#3\paperwidth]{#4}%
+\end{textblock}}
+
+\newcommand{\mininomen}[2][1]{{\let\thefootnote\relax%
+		\footnotetext{\begin{tabular}{*{#1}{@{\!}>{\centering\arraybackslash}p{1em}@{\;}p{\textwidth/#1-2em}}}%
+				#2\end{tabular}}}}
+
+
+% to solve spurious empty pages before a frame containing footnotes
+\setbeamertemplate{footnote}{%
+	\makebox[1em][l]{\insertfootnotemark}%
+	\begin{minipage}{\dimexpr\linewidth-1em}
+		\usebeamerfont{footnote}\insertfootnotetext
+	\end{minipage}\vskip 0pt}
+
+
+\title[]{Improving Data Analysis of Incomplete Tabular Data by Learning Representation of Data via Graph Neural Networks}
+\institute[]{Faculty of ICT, Mahidol University}
+\author{Phaphontee Yamchote}
+\date{November 18, 2023}
+
+\AtBeginSection[]
+{
+	\begin{frame}[noframenumbering,plain]
+		\frametitle{Outline: Next Topic}
+		\tableofcontents[currentsection]
+%		\addtocounter{framenumber}{-1}
+	\end{frame}
+}
+\theoremstyle{definition}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{eq}[theorem]{Equation}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+	
+	\addtocounter{framenumber}{-1}
+	{
+		\setbeamertemplate{footline}{\usebeamertemplate*{minimal footline}}
+		\frame{\titlepage}
+	}
+	
+	\begin{frame}[noframenumbering,plain]{Outline}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Introduction}
+	
+
+	\begin{frame}[t,noframenumbering,plain]{\bibname}
+	\tiny \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+			\bibitem{Borisov} Borisov, Vadim, et al. "Deep neural networks and tabular data: A survey." arXiv preprint arXiv:2110.01889 (2021).
+			\bibitem{PET} Du, Kounianhua, et al. "Learning enhanced representations for tabular data via neighborhood propagation." arXiv preprint arXiv:2206.06587 (2022).
+			%	
+			\bibitem{Gorishniy} Gorishniy, Yury, et al. "Revisiting deep learning models for tabular data." Advances in Neural Information Processing Systems 34 (2021): 18932-18943.
+			%
+			\bibitem{Grinsztajn} Grinsztajn, Léo, Edouard Oyallon, and Gaël Varoquaux. "Why do tree-based models still outperform deep learning on tabular data?." arXiv preprint arXiv:2207.08815 (2022).
+
+			\bibitem{criteo} Jean-Baptiste Tien, joycenv, Olivier Chapelle. (2014). Display Advertising Challenge. Kaggle. https://kaggle.com/competitions/criteo-display-ad-challenge
+			%
+			\bibitem{lightgbm} Ke, Guolin, et al. "Lightgbm: A highly efficient gradient boosting decision tree." Advances in neural information processing systems 30 (2017).
+			%
+			\bibitem{GCN} Kipf, Thomas N., and Max Welling. "Semi-supervised classification with graph convolutional networks." arXiv preprint arXiv:1609.02907 (2016).
+			%	
+			\bibitem{fi-gnn} Li, Zekun, et al. "Fi-gnn: Modeling feature interactions via graph neural networks for ctr prediction." Proceedings of the 28th ACM International Conference on Information and Knowledge Management. 2019.
+			%
+			\bibitem{PyG} “PyG Documentation - Pytorch\_Geometric Documentation.” PyG Documentation - Pytorch\_Geometric Documentation, pytorch-geometric.readthedocs.io. Accessed 14 Nov. 2022. <https://pytorch-geometric.readthedocs.io>
+			%
+			\bibitem{Rendle} Rendle, Steffen. "Factorization machines." 2010 IEEE International conference on data mining. IEEE, 2010.
+			%
+			\bibitem{transformerconv} Shi, Yunsheng, et al. "Masked label prediction: Unified message passing model for semi-supervised classification." arXiv preprint arXiv:2009.03509 (2020).
+			%
+			\bibitem{Shwartz} Shwartz-Ziv, Ravid, and Amitai Armon. "Tabular data: Deep learning is not all you need." Information Fusion 81 (2022): 84-90.
+			%	
+			\bibitem{avazu} Steve Wang, Will Cukierski. (2014). Click-Through Rate Prediction. Kaggle. https://kaggle.com/competitions/avazu-ctr-prediction
+		\end{thebibliography}
+	\end{frame}
+	
+	\begin{frame}[noframenumbering,plain]
+		\begin{center}
+			{\Large Q\&A}
+		\end{center}
+	\end{frame}
+	
+%	\section*{More on Main Theorem}
+%	
+%	\begin{frame}[t,noframenumbering,plain]{\secname}
+%		\begin{prop}
+%			Let $C_1$ and $C_2$ be cluster graphs in $\mathcal{G}(n)$ for $n \in \N$. Then
+%			$[C_1]_\sim = [C_2]_\sim$ if and only if $C_1 = C_2$.
+%		\end{prop}
+%	\end{frame}
+%	\begin{frame}[t,noframenumbering,plain]{\secname}
+%		\begin{lem} \label{lem1}
+%			The set of partition of the set $N_n$, named $P(n)$, one-to-one corresponds to $\mathfrak{G}(n)$
+%		\end{lem}
+%		\begin{lem} \label{lem2}
+%			$\mathcal{DM}$ one-to-one corresponds to $P(n)$.
+%		\end{lem}
+%	\end{frame}
+	
+	
+\end{document}
+

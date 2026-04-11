@@ -55,11 +55,8 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# LaTeX source files - EXCLUDE ALL (keep only PDFs for webpage)
-*.tex
-*.sty
-*.cls
-*.bib
+# NOTE: tex/sty/cls/bib source files are excluded only under assets/latex/
+# via assets/latex/.gitignore — not globally, to allow other .tex files in the repo.
 
 # LaTeX support files
 *.tikz
@@ -73,14 +70,8 @@ Desktop.ini
 *.ilg
 *.ind
 
-# Images and fonts used only in LaTeX
-*.jpg
-*.jpeg
-*.ttf
-*.otf
-
-# Data files used in LaTeX
-*.csv
+# NOTE: image/font/csv rules are intentionally scoped to assets/latex/.gitignore
+# to avoid excluding website assets (images, fonts) at the root level.
 
 # Keep PDF files (this line ensures PDFs are tracked)
 !*.pdf
