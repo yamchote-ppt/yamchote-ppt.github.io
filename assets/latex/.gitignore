@@ -1,0 +1,11 @@
+# Ignore everything in this directory tree
+*
+
+# Allow subdirectories to be traversed (so rules apply recursively)
+!*/
+
+# Allow .gitignore files themselves to be tracked
+!.gitignore
+
+# Allow only compiled PDF files
+!*.pdf
